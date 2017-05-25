@@ -5,106 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feda3866-345d-4f42-8077-f06ffb61c655" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/css/icomoon/fonts/icomoon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/css/icomoon/fonts/icomoon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/css/icomoon/fonts/icomoon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jsweb_node_modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/express.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/action/ajax/getUserlogin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/action/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/dao/rap.postgres.api.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/dao/rap.postgres.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/dao/rap.sql.cache.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/dao/rap.sql.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/dao/sql/create_t_user.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/doc/服务器request架构思路.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/doc/服务器数据库架构思路.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/doc/服务器日志架构思路.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/doc/腾讯云账号" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/doc/调试nodejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/jquery-1.11.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.filesystem.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.filesystem.promise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.server.debug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.server.debug.zip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.server.init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.server.middleware.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.server.require.filter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.server.require.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.server.response.action.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.server.response.filter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.server.response.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.server.response.types.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.util.color.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.util.core.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.util.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.util.prototype.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.util.timeout.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/rap.util.tool.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/response.types.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/indexStatic.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/map.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/mapjpg.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/nodeTool/conver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/nodeTool/createMap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/nodeTool/ex.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/nodeTool/getsize.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/nodeTool/merge.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/nodeTool/mergeTogger.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/nodeTool/mergeTool.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/nodeTool/nav.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/nodeTool/navtemp.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/nodeTool/node.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/nodeTool/run.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/nodeTool/run.command" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/nodeTool/webpack.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/css/common/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/css/common/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/css/common/main_color.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/css/common/main_common.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/css/icomoon/Read Me.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/css/icomoon/demo-files/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/css/icomoon/demo-files/demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/css/icomoon/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/css/icomoon/fonts/icomoon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/css/icomoon/selection.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/css/icomoon/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/js/common/base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/js/common/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/js/common/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/js/common/page.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/js/common/pagination.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/js/common/setNav.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/js/common/setREM.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/js/lib/echarts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/js/lib/jquery-1.12.4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/js/lib/rap.util.prototype.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/js/lib/vue.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/js/module/js/form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/public/js/module/js/jquery.carousel.v1.0.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/web/animate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/web/btn.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/web/form.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/web/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/web/page.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/web/process.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/web/uidemo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/web/uidemo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/web/uidemo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/tool/merge_config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/tool/merge_normal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/tool/merge_spa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/tool/rap.clear.file.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/tool/rap.copy.static.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/tool/rap.parse.html.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/tool/rap.parse.js.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dao/base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dao/createsql.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dao/modal/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dao/sql/create_t_user.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/toolLib/ix.core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/rap.server.init.js" afterPath="$PROJECT_DIR$/bin/rap.server.init.js" />
     </list>
     <ignored path="jsweb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -127,44 +29,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="uidemo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/static_src/web/uidemo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#11;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#12;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#13;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#14;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#15;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#16;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#17;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="demo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/static_src/public/css/icomoon/demo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-420">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/static_src/web/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="75" column="34" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="form.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/static_src/web/form.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -175,27 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="animate.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/static_src/web/animate.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="17" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/static_src/public/css/icomoon/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="50" column="18" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="form.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/module/js/form.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="504">
@@ -205,31 +49,87 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="btn.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/static_src/web/btn.css">
+      <file leaf-file-name="base.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dao/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="98" selection-end-column="119" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/static_src/web/page.css">
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dao/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createsql.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dao/createsql.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rap.server.init.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/rap.server.init.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run-debug.bat" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/run-debug.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rap.server.debug.zip.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/rap.server.debug.zip.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="20">
-              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+              <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_color.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/static_src/public/css/common/main_color.css">
+      <file leaf-file-name="rap.util.core.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/rap.util.core.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="17" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dao/modal/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -278,7 +178,6 @@
         <option value="$PROJECT_DIR$/bin/rap.util.tool.js" />
         <option value="$PROJECT_DIR$/bin/rap.server.response.types.js" />
         <option value="$PROJECT_DIR$/bin/rap.util.module.js" />
-        <option value="$PROJECT_DIR$/bin/rap.server.init.js" />
         <option value="$PROJECT_DIR$/bin/rap.server.response.js" />
         <option value="$PROJECT_DIR$/bin/tool/merge_normal.js" />
         <option value="$PROJECT_DIR$/bin/static_src/nodeTool/mergeTogger.js" />
@@ -307,13 +206,12 @@
         <option value="$PROJECT_DIR$/bin/static_src/web/uidemo.html" />
         <option value="$PROJECT_DIR$/bin/static_src/web/form.css" />
         <option value="$PROJECT_DIR$/bin/static_src/public/js/module/js/form.js" />
+        <option value="$PROJECT_DIR$/bin/rap.server.init.js" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" />
-  <component name="JsBuildToolPackageJson" detection-done="true">
-    <package-json value="$PROJECT_DIR$/package.json" />
-  </component>
+  <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
@@ -384,7 +282,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -398,25 +296,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
+              <option name="myItemId" value="sql" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -430,11 +314,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static_src" />
+              <option name="myItemId" value="modal" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -449,224 +333,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static_src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static_src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static_src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static_src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static_src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static_src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static_src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icomoon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static_src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1158,12 +824,12 @@
       <workItem from="1494800862208" duration="9062000" />
       <workItem from="1494942655167" duration="1751000" />
       <workItem from="1495115943652" duration="13723000" />
-      <workItem from="1495371210128" duration="29559000" />
+      <workItem from="1495371210128" duration="30801000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="401094000" />
+    <option name="totallyTimeSpent" value="402336000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1186,8 +852,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4173318" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.03534778" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="37" y="208" width="1864" height="507" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41666666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39269406" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="37" y="208" width="1864" height="507" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19892474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1270,59 +936,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/rap.util.core.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/createsql.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/dao/rap.postgres.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/jquery-1.11.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/run-debug.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/static_src/public/css/common/main_common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/rap.util.prototype.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/lib/layui.all.js" />
     <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/lib/jquery-1.12.4.min.js" />
     <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/lib/echarts.min.js" />
     <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/lib/echarts.js">
@@ -1371,6 +984,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1378,6 +992,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1587,6 +1202,76 @@
         <state relative-caret-position="504">
           <caret line="36" column="120" selection-start-line="36" selection-start-column="120" selection-end-line="36" selection-end-column="120" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/modal/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/createsql.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/rap.util.core.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/rap.server.debug.zip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/run-debug.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/rap.server.init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

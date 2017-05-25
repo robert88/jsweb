@@ -52,7 +52,16 @@ process.on('uncaughtException', function (err) {
 });
 
 server.listen(3000);
-
+if(process.env.DEBUG){
+	var exec = require('child_process').exec;
+	exec('start C:\\"Program Files (x86)"\\Google\\Chrome\\Application\\chrome.exe http://localhost:3000',function (err,stdout) {
+		if(err){
+			rap.error(err);
+		}else {
+			rap.log("chrome run 3000");
+		}
+	});
+}
 var endTime = new Date();
 
 rap.info("静态文件路径为",rap.staticPath,rap.rootPath+rap.staticPath);
