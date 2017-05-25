@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<pre id="test" style="display:none;">
+create table t_user (
+id serial PRIMARY KEY NOT NULL,
+cardid varchar(20),--//身份证号
+realname varchar(64),
+nickname varchar(64),
+email varchar(128),
+userType varchar(64),--sys系统管理员，admin网站管理员，normal普通用户
+age smallint,
+brithday timestamp,
+picture varchar(128),
+address varchar(512),
+mobile varchar(20),
+qq varchar(64),
+sex smallint,--//0男1女2其他
+turn serial,--自定义顺序
+password varchar(256),--未加密的密码
+passwordMd5 varchar(256),--加密的密码
+logintime timestamp,
+createtime timestamp,
+updatetime timestamp,
+status varchar(20) default 'used'--"used"正在使用 "unuse"未使用 "lock"锁住
+);
+</pre>
+<dl>
+	<dt class="title">简单表</dt>
+	<dd class="body">
+		<pre>
+			var smpileTable = {name: "t_user"};
+			console.log(new SQL(smpileTable))
+		</pre>
+	</dd>
+	<dt class="title">输出</dt>
+	<dd class="result">
+		<pre>
+			$ready:Array[5]
+			config:Object
+			joinType:","
+			name:"t_user"
+			nameID:"t0"
+			selectCondition:""
+			selectResult:"t0.qq as qq,t0.nickname as nickname,t0.age as age,t0.id as id,t0.email as email"
+			selectSql:""
+			wrapName:"t_user t0"
+		</pre>
+	</dd>
+	<dt class="title">返回值是个对象</dt>
+	<dd>
+		<pre>
+			var smpileTable = {
+				name: "t_user",
+				result: {
+					qq: 1,
+					nickname: true,
+					age: false,
+					id: "user_id",
+					email: "",
+					noattr: 1,
+					noexec: "max(id)"
+				},
+			};
+
+			var complexTable = {
+				tables: [smpileTable, {name: "t_name"}],
+				result: {
+					"$1.nickname": true,//指定第二个参数
+					age: false,
+					user_id: "user_id",
+					email: "",
+					  的			}
+			console.log(new SQL(complexTable))
+		</pre>
+	</dd>
+	<dt class="title">输出</dt>
+	<dd>
+		<img src="../public/img/returnisobject.JPG" alt="">
+	</dd>
+</dl>
+</body>
+<script src="../toolLib/ix.core.js"></script>
+<script src="createsql.js"></script>
+<script>
+	var smpileTable = {
+		name: "t_user",
+		result:"$1.id as user_id ,qq as qq"
+	};
+
+	var complexTable = {
+		tables: [smpileTable, {name: "t_name"}],
+		result: {
+			"$1.nickname": true,//指定第二个参数
+			qq:1,
+			age: false,
+			user_id: "user_id",
+			email: "",
+			noattr: 1,
+			noexec: "max(id)"
+		},
+		condition:{
+			defaultType:"and",
+			qq:"1",
+			user_id:{
+				exec:"=",
+				right:"$1.qq"
+			}
+		},
+		order:{
+			qq:"asc",
+			user_id:0,
+		}
+	}
+	console.log(new SQL(complexTable))
+/*简单*/
+
+</script>
+</html>

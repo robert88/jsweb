@@ -1,0 +1,10 @@
+1、request可以获取的信息有：请求ip，参数，url，协议，客户端信息，请求时间，cookie，session，tag，请求类型
+2、request可以自定义请求处理
+3、request可以做ip过滤
+4、request可以action过滤
+5、request可以做静态路由过滤
+6、指定action的根目录，自动导入action
+action中的规则：
+文件名/属性名
+如果是以/开头的话就直接是属性名
+7、指定静态文件路径

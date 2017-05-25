@@ -1,0 +1,7 @@
+1、另起cmd，>node-inspector &
+端口占用就使用这个：
+node-inspector --web-port=8081
+
+复制提示中的url地址http://127.0.0.1:8081/?port=5858
+
+2、node --debug  www

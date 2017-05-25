@@ -1,0 +1,10 @@
+1、服务器上的日志文件格式为：type+createTime.log
+2、日志类型分为四种：warn（警告性的错误），error（错误），info（提示信息），log（调试信息）
+3、日志存储在log文件目录下
+4、每个日志文件控制在100M
+5、按类型压缩日志文件，当该类型已经集结10个log时这时候要启动压缩文件
+6、日志压缩文件格式：type+startlogcreateTime+endlogcreateTime.zip;
+7、日志保留时间为一周;
+8、日志压缩监控时间为早上8：00，中午12：00，下午18点 晚上0点
+9、日志消息格式：[type][date][caller]:message
+10、重启日志会记录到最后记录的文件中

@@ -1,0 +1,137 @@
+/*
+*按钮样式
+*/
+.btn-white,.btn-light,.btn-light-gray,.btn-muted,.btn-dark,
+.btn-light-danger,.btn-danger,.btn-light-warn,.btn-warn,
+.btn-order,.btn-light-sea-green,.btn-success,.btn-light-info,.btn-info,
+.btn-dodger-blue,.btn-link,.btn{
+	border: 1px solid transparent;
+	display: inline-block;
+	font-weight: 700;
+	cursor: pointer;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-bordder-radius: 3px;
+	-o-user-select: 3px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	line-height: 100%;
+	text-align: center;
+	padding: 9px 10px;
+}
+
+.btn-no-radius {
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-bordder-radius: 0;
+	-o-user-select: 0;
+}
+
+.btn-white {
+	background-color: #fff;
+	border-color: #ccc;
+	color: #000;
+}
+.btn-light{
+	background-color: #CBCDCC;
+	border-color: #333;
+	color: #727272;
+}
+.btn-light-gray {
+	background-color: #EFEFEF;
+	border-color: #333;
+	color: #727272;
+}
+.btn-gray{
+	background-color: #727272;
+	border-color: #ccc;
+	color: #eee;
+}
+.btn-muted {
+	background-color: #ccc;
+	border-color: #ccc;
+	color: #fff;
+}
+.btn-dark {
+	background-color: #333;
+	border-color: #000;
+	color: #eee;
+}
+.btn-light-danger {
+	background-color: #fdead9;
+	border-color: #cb0101;;
+	color: #da0e0e
+}
+.btn-danger {
+	background-color: #cb0101;
+	border-color: #da0e0e;
+	color:#fff;
+}
+.btn-light-warn {
+	background-color: #ffffcd;
+	border-color: #ffc600;
+	color: #FFD002;
+}
+.btn-warn {
+	background-color: #ffc600;
+	border-color: #FFD002;
+	color: #fff;
+}
+
+.btn-order {
+	background-color: #ff6402;
+	border-color:#ff6402;
+	color:#fff;
+}
+
+.btn-sea{
+	color:#fff;
+	background-color: #074737;
+	background-image: -moz-linear-gradient(top, #0cd09e, #0d7b60);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0cd09e), to(#0d7b60));
+	background-image: -webkit-linear-gradient(top, #0cd09e, #0d7b60);
+	background-image: -o-linear-gradient(top, #0cd09e, #0d7b60);
+	background-image: linear-gradient(to bottom, #0cd09e, #0d7b60);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0cd09e', endColorstr='#0d7b60', GradientType=0);
+}
+.btn-sea:hover{
+	color:#fff;
+	background-color: #074737;
+	background-image: -moz-linear-gradient(top, #0cdba7, #0d7b60);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0cdba7), to(#0d7b60));
+	background-image: -webkit-linear-gradient(top, #0cdba7, #0d7b60);
+	background-image: -o-linear-gradient(top, #0cdba7, #0d7b60);
+	background-image: linear-gradient(to bottom, #0cdba7, #0d7b60);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0cdba7', endColorstr='#0d7b60', GradientType=0);
+}
+.btn-success {
+	background-color: #95c53e;
+	border-color:#8FC31F;
+	color:#fff;
+}
+.btn-light-info {
+	background-color: #478b66;
+	border-color:#186B40;
+	color:#5bc0de;
+}
+.btn-info {
+	background-color: #186B40;
+	border-color:#186B40;
+	color:#fff;
+}
+.btn-dodger-blue{
+	background-color: #428bca;
+	border-color:#0101b9;
+	color:#fff;
+}
+
+.btn-link{
+	background-color: #0000cc;
+	border-color:#0101b9;
+	color:#fff;
+}
