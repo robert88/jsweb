@@ -1,0 +1,21 @@
+<textarea id="test">
+
+</textarea>
+<button class="submit"></button>
+<div class="html"></div>
+<script>
+	$(".submit").click(function () {
+		$("#test").val();
+		if($("#test").val()){
+			$.ajax({url:"/ajax/getCode",success:function (ret) {
+				console.log(ret)
+			},error:function (e) {
+				console.log(e)
+			}})
+		}
+	});
+	$.ajax({url:"/ajax/index/getCode",success:function (ret) {
+		$(".html").html(ret)
+	}})
+
+</script>

@@ -4,8 +4,9 @@ exports = module.exports = {
 	"/":function (request,response,next) {
 		 next(indexSqlApi.select());
 	},
-	"getip":function () {
-		console.log("getip");
+	"getCode":function (request,response,next) {
+		console.log("getCode");
+		next(indexSqlApi.getCode());
 	},
 	"getuser":function () {
 		console.log("getuser");
