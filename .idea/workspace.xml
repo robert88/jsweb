@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feda3866-345d-4f42-8077-f06ffb61c655" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/dao/sql/create_t_code.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/static_src/web/searchcode.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/action/index.js" afterPath="$PROJECT_DIR$/bin/action/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/dao/batis/rap.batis.index.js" afterPath="$PROJECT_DIR$/bin/dao/batis/rap.batis.index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/info20170526_072631.log" afterPath="$PROJECT_DIR$/log/info20170526_072631.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/dao/rap.sql.cache.js" afterPath="$PROJECT_DIR$/bin/dao/rap.sql.cache.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/dao/rap.sql.js" afterPath="$PROJECT_DIR$/bin/dao/rap.sql.js" />
     </list>
     <ignored path="jsweb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,34 +29,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/static_src/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uidemo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/static_src/web/uidemo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#11;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#12;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#13;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#14;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#15;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#16;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#17;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="searchcode.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/static_src/web/searchcode.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,11 +39,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rap.batis.index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="rap.batis.index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/dao/batis/rap.batis.index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state relative-caret-position="360">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rap.postgres.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/dao/rap.postgres.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rap.postgres.api.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/dao/rap.postgres.api.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-436">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rap.sql.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/dao/rap.sql.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="364" column="3" selection-start-line="364" selection-start-column="3" selection-end-line="364" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rap.sql.cache.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/dao/rap.sql.cache.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-116">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getUserlogin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/action/ajax/getUserlogin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -84,8 +102,8 @@
       <file leaf-file-name="create_t_user.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/dao/sql/create_t_user.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="2" />
+            <state relative-caret-position="340">
+              <caret line="17" column="21" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -94,8 +112,8 @@
       <file leaf-file-name="create_t_code.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/dao/sql/create_t_code.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+            <state relative-caret-position="40">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -106,38 +124,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
               <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rap.server.init.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/rap.server.init.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="run-debug.bat" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/run-debug.bat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rap.server.debug.zip.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/rap.server.debug.zip.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -173,8 +159,6 @@
         <option value="$PROJECT_DIR$/bin/dao/rap.postgres.config.js" />
         <option value="$PROJECT_DIR$/bin/dao/rap.batis.js" />
         <option value="$PROJECT_DIR$/bin/doc/服务器数据库架构思路.txt" />
-        <option value="$PROJECT_DIR$/bin/dao/rap.sql.cache.js" />
-        <option value="$PROJECT_DIR$/bin/dao/rap.sql.js" />
         <option value="$PROJECT_DIR$/bin/dao/rap.postgres.api.js" />
         <option value="$PROJECT_DIR$/bin/rap.server.response.action.js" />
         <option value="$PROJECT_DIR$/bin/rap.util.prototype.js" />
@@ -215,6 +199,8 @@
         <option value="$PROJECT_DIR$/bin/static_src/web/searchcode.html" />
         <option value="$PROJECT_DIR$/bin/action/index.js" />
         <option value="$PROJECT_DIR$/bin/dao/batis/rap.batis.index.js" />
+        <option value="$PROJECT_DIR$/bin/dao/rap.sql.cache.js" />
+        <option value="$PROJECT_DIR$/bin/dao/rap.sql.js" />
       </list>
     </option>
   </component>
@@ -1014,12 +1000,12 @@
       <workItem from="1494800862208" duration="9062000" />
       <workItem from="1494942655167" duration="1751000" />
       <workItem from="1495115943652" duration="13723000" />
-      <workItem from="1495371210128" duration="32830000" />
+      <workItem from="1495371210128" duration="34941000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="404365000" />
+    <option name="totallyTimeSpent" value="406476000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1109,7 +1095,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/bin/dao/rap.sql.js</url>
-          <line>370</line>
+          <line>422</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
@@ -1126,38 +1112,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/common/prototype.js" />
-    <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/common/setNav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/static_src/mapjpg.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/static_src/map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/static_src/indexStatic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/static_src/public/images/logo.png" />
     <entry file="file://$PROJECT_DIR$/bin/static_src/public/images/print.png" />
     <entry file="file://$PROJECT_DIR$/bin/static_src/public/images/wordIcon.png" />
@@ -1437,26 +1391,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/dao/sql/create_t_code.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/dao/sql/create_t_user.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/static_src/web/searchcode.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/action/ajax/getUserlogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1471,8 +1417,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/dao/batis/rap.batis.index.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/dao/rap.postgres.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/dao/rap.postgres.api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-436">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/dao/sql/create_t_code.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/dao/rap.sql.cache.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-116">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/dao/sql/create_t_user.sql">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/dao/rap.sql.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="364" column="3" selection-start-line="364" selection-start-column="3" selection-end-line="364" selection-end-column="3" />
           <folding />
         </state>
       </provider>

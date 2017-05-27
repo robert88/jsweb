@@ -210,6 +210,58 @@ var OrderTool = {
 	}
 };
 
+/*
+ *
+ * 排序条件
+ * */
+var insertTool = {
+	$init:function () {
+
+		if (this.name&&rap.sql.cache[this.name]) {
+			if(this.insertOptions){
+				this.getDataName();
+				this.getDataValue();
+				this.insert = "insert into {0}({1}) values({2})".tpl(this.name,this.insertDataName,this.insertDataValue);
+			}else{
+				rap.log(this.name+" can not find insetOptions");
+			}
+
+		}else{
+			rap.error("insert into not find table");
+		}
+
+	},
+	getDataName:function () {
+		this.insertDataName = [];
+		for(var key in this.insertOptions){
+			if(rap.sql.cache[this.name][key]){
+				this.insertDataName.push(key);
+			}else{
+				rap.warn("insert options of '{0}' key is not in table {1}".tpl(key,this.name))
+			}
+		}
+	},
+	getDataValue:function () {
+		this.insertDataValue = [];
+		var cacheTable = rap.sql.cache[this.name];
+		for(var i=0;i<this.insertDataName.length;i++){
+			var key = this.insertDataName[i];
+			switch (cacheTable[key].type){
+				case "varchar":
+				case "text":
+					this.insertDataValue.push("'{0}'".tpl(key.replace(/('|")/g,"\\$1")));
+					break;
+				case "smallint":
+				case "serial":
+					this.insertDataValue.push("{0}".tpl(key.toString().toInt()));
+					break;
+				case "timestamp":
+					this.insertDataValue.push("{0}".tpl(key.toDate().format("yy/MM/dd hh:mm:ss")));
+					break;
+			}
+		}
+	}
+};
 /**
  *基础表相关方法
  */
@@ -307,7 +359,7 @@ rap.registerModule({
 		}
 	}
 
-}, SettingsTool, ResultTool, ConditionTool, OrderTool);
+}, SettingsTool, ResultTool, ConditionTool, OrderTool,insertTool);
 /**
  * 复合表的相关操作
  */

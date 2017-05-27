@@ -9,6 +9,15 @@ var wake = require("../rap.filesystem.js");
  * 缓冲数据库表结构
  * 根据创建表的结构来得到表的数据结构
  *
+ * cache:{
+ *   t-user:{
+ * 		qq:{
+ * 			type:'varchar',
+ * 			limit:32
+ 	* 	}
+ *   }
+ * }
+ *
  * */
 rap.sql = rap.sql||{};
 rap.sql.cache =(function () {
