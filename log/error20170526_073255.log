@@ -1,2 +1,63 @@
 [error][2017/05/26 07:32:56][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static\favicon.ico'
     at Error (native)
+[error][2017/05/28 14:23:30][function () ]:insert into not find table
+[error][2017/05/28 14:23:30][function (req, response) ]:TypeError: The header content contains invalid characters
+    at storeHeader (_http_outgoing.js:309:11)
+    at ServerResponse.OutgoingMessage._storeHeader (_http_outgoing.js:223:9)
+    at ServerResponse.writeHead (_http_server.js:218:8)
+    at responseData (D:\newProject\jsweb\bin\rap.server.response.js:39:12)
+    at D:\newProject\jsweb\bin\rap.server.response.js:91:5
+    at Object.module.exports./ (D:\newProject\jsweb\bin\action\index.js:5:4)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+[error][2017/05/28 14:23:38][function () ]:insert into not find table
+[error][2017/05/28 14:23:38][function (req, response) ]:TypeError: The header content contains invalid characters
+    at storeHeader (_http_outgoing.js:309:11)
+    at ServerResponse.OutgoingMessage._storeHeader (_http_outgoing.js:223:9)
+    at ServerResponse.writeHead (_http_server.js:218:8)
+    at responseData (D:\newProject\jsweb\bin\rap.server.response.js:39:12)
+    at D:\newProject\jsweb\bin\rap.server.response.js:91:5
+    at Object.module.exports./ (D:\newProject\jsweb\bin\action\index.js:5:4)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+[error][2017/05/28 14:25:38][function () ]:insert into not find table
+[error][2017/05/28 14:25:38][function (req, response) ]:TypeError: The header content contains invalid characters
+    at storeHeader (_http_outgoing.js:309:11)
+    at ServerResponse.OutgoingMessage._storeHeader (_http_outgoing.js:223:9)
+    at ServerResponse.writeHead (_http_server.js:218:8)
+    at responseData (D:\newProject\jsweb\bin\rap.server.response.js:39:12)
+    at D:\newProject\jsweb\bin\rap.server.response.js:91:5
+    at Object.module.exports./ (D:\newProject\jsweb\bin\action\index.js:5:4)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+[error][2017/05/28 14:29:01][function () ]:insert into not find table
+[error][2017/05/28 14:29:01][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static\favicon.ico'
+    at Error (native)
+[error][2017/05/28 14:29:07][function (err,stdout) ]:{"killed":false,"code":1,"signal":[same object Object],"cmd":"start "%windir%\system32\cmd.exe" "node-inspector --web-port=8081""}
+[error][2017/05/28 14:29:37][function () ]:insert into not find table
+[error][2017/05/28 14:29:37][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static\favicon.ico'
+    at Error (native)
+[error][2017/05/28 14:31:37][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static\favicon.ico'
+    at Error (native)
+[error][2017/05/28 14:44:28][function () ]:insert into not find table
+[error][2017/05/28 14:44:28][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static\favicon.ico'
+    at Error (native)
+[error][2017/05/28 14:44:50][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static\favicon.ico'
+    at Error (native)
+[error][2017/05/28 14:44:52][function () ]:insert into not find table
+[error][2017/05/28 14:45:25][function () ]:insert into not find table
+[error][2017/05/28 14:45:25][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static\favicon.ico'
+    at Error (native)
+[error][2017/05/28 14:47:25][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static\favicon.ico'
+    at Error (native)
+[error][2017/05/28 14:51:13][function () ]:insert into not find table
+[error][2017/05/28 14:51:13][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static\favicon.ico'
+    at Error (native)
+[error][2017/05/28 14:53:13][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static\favicon.ico'
+    at Error (native)

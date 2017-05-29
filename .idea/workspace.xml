@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feda3866-345d-4f42-8077-f06ffb61c655" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/dao/rap.sql.cache.js" afterPath="$PROJECT_DIR$/bin/dao/rap.sql.cache.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/doc/服务器数据库思路.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/dao/rap.sql.js" afterPath="$PROJECT_DIR$/bin/dao/rap.sql.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/rap.server.init.js" afterPath="$PROJECT_DIR$/bin/rap.server.init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/rap.server.response.js" afterPath="$PROJECT_DIR$/bin/rap.server.response.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/static_src/web/form.css" afterPath="$PROJECT_DIR$/bin/static_src/web/form.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/error20170526_073255.log" afterPath="$PROJECT_DIR$/log/error20170526_073255.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/info20170526_072631.log" afterPath="$PROJECT_DIR$/log/info20170526_072631.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/log20170526_072631.log" afterPath="$PROJECT_DIR$/log/log20170526_072631.log" />
     </list>
     <ignored path="jsweb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,28 +36,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="rap.sql.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/dao/rap.sql.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="456" column="4" selection-start-line="456" selection-start-column="4" selection-end-line="456" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uidemo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/static_src/web/uidemo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="searchcode.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/static_src/web/searchcode.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+            <state relative-caret-position="300">
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rap.batis.index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/dao/batis/rap.batis.index.js">
+      <file leaf-file-name="rap.server.init.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/rap.server.init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            <state relative-caret-position="500">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run-debug.bat" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/run-debug.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rap.postgres.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/dao/rap.postgres.config.js">
+      <file leaf-file-name="rap.server.response.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/rap.server.response.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rap.util.prototype.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/rap.util.prototype.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -59,38 +108,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rap.postgres.api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/dao/rap.postgres.api.js">
+      <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/static_src/public/css/common/base.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-436">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="299">
+              <caret line="390" column="16" selection-start-line="390" selection-start-column="13" selection-end-line="390" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rap.sql.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bin/dao/rap.sql.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="364" column="3" selection-start-line="364" selection-start-column="3" selection-end-line="364" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rap.sql.cache.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/dao/rap.sql.cache.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-116">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getUserlogin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/action/ajax/getUserlogin.js">
+      <file leaf-file-name="服务器request架构思路.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/doc/服务器request架构思路.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -99,31 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_t_user.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/dao/sql/create_t_user.sql">
+      <file leaf-file-name="服务器数据库思路.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/doc/服务器数据库思路.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="21" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_t_code.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/dao/sql/create_t_code.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/action/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+            <state relative-caret-position="20">
+              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -150,7 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/log/info20170406_093803.log" />
         <option value="$PROJECT_DIR$/bin/doc/服务器request架构思路.txt" />
         <option value="$PROJECT_DIR$/bin/static/index.html" />
         <option value="$PROJECT_DIR$/bin/rap.server.require.js" />
@@ -166,7 +174,6 @@
         <option value="$PROJECT_DIR$/bin/rap.util.tool.js" />
         <option value="$PROJECT_DIR$/bin/rap.server.response.types.js" />
         <option value="$PROJECT_DIR$/bin/rap.util.module.js" />
-        <option value="$PROJECT_DIR$/bin/rap.server.response.js" />
         <option value="$PROJECT_DIR$/bin/tool/merge_normal.js" />
         <option value="$PROJECT_DIR$/bin/static_src/nodeTool/mergeTogger.js" />
         <option value="$PROJECT_DIR$/toolLib/mergeParseIndex.js" />
@@ -192,15 +199,17 @@
         <option value="$PROJECT_DIR$/bin/static_src/public/css/icomoon/demo.html" />
         <option value="$PROJECT_DIR$/bin/static_src/web/animate.css" />
         <option value="$PROJECT_DIR$/bin/static_src/web/uidemo.html" />
-        <option value="$PROJECT_DIR$/bin/static_src/web/form.css" />
         <option value="$PROJECT_DIR$/bin/static_src/public/js/module/js/form.js" />
-        <option value="$PROJECT_DIR$/bin/rap.server.init.js" />
         <option value="$PROJECT_DIR$/bin/dao/sql/create_t_code.sql" />
         <option value="$PROJECT_DIR$/bin/static_src/web/searchcode.html" />
         <option value="$PROJECT_DIR$/bin/action/index.js" />
         <option value="$PROJECT_DIR$/bin/dao/batis/rap.batis.index.js" />
         <option value="$PROJECT_DIR$/bin/dao/rap.sql.cache.js" />
+        <option value="$PROJECT_DIR$/bin/static_src/web/form.css" />
         <option value="$PROJECT_DIR$/bin/dao/rap.sql.js" />
+        <option value="$PROJECT_DIR$/bin/doc/服务器数据库思路.txt" />
+        <option value="$PROJECT_DIR$/bin/rap.server.response.js" />
+        <option value="$PROJECT_DIR$/bin/rap.server.init.js" />
       </list>
     </option>
   </component>
@@ -406,6 +415,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="static_src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static_src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="doc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -533,11 +598,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\newProject\jsweb\bin\doc" />
       <recent name="D:\newProject\jsweb\bin\dao\sql" />
       <recent name="D:\newProject\jsweb\bin\static_src\web" />
       <recent name="D:\newProject\jsweb\bin\static_src\public\js\module" />
       <recent name="D:\newProject\jsweb\bin\static_src\public\js\lib" />
-      <recent name="D:\newProject\jsweb\bin\static_src\public\css\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\newProject\jsweb\bin\static_src\public\js\module\js" />
@@ -1000,12 +1065,12 @@
       <workItem from="1494800862208" duration="9062000" />
       <workItem from="1494942655167" duration="1751000" />
       <workItem from="1495115943652" duration="13723000" />
-      <workItem from="1495371210128" duration="34941000" />
+      <workItem from="1495371210128" duration="40781000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="406476000" />
+    <option name="totallyTimeSpent" value="412316000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1028,7 +1093,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41666666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1849315" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39269406" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="37" y="208" width="1864" height="507" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1093,11 +1158,6 @@
           <line>319</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/bin/dao/rap.sql.js</url>
-          <line>422</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="6" />
     </breakpoint-manager>
@@ -1112,12 +1172,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/static_src/public/images/logo.png" />
-    <entry file="file://$PROJECT_DIR$/bin/static_src/public/images/print.png" />
-    <entry file="file://$PROJECT_DIR$/bin/static_src/public/images/wordIcon.png" />
-    <entry file="file://$PROJECT_DIR$/bin/static_src/public/images/excelIcon.png" />
-    <entry file="file://$PROJECT_DIR$/bin/static_src/public/images/import.png" />
-    <entry file="file://$PROJECT_DIR$/bin/static_src/public/images/jpgIcon.png" />
     <entry file="file://$PROJECT_DIR$/bin/static_src/public/images/excel.png" />
     <entry file="file://$PROJECT_DIR$/bin/static_src/public/images/clock.png" />
     <entry file="file://$PROJECT_DIR$/bin/static_src/public/images/header_bg.jpg">
@@ -1201,14 +1255,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/static_src/public/css/common/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="382" column="0" selection-start-line="382" selection-start-column="0" selection-end-line="382" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/static_src/web/process.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1375">
@@ -1281,14 +1327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/static_src/web/form.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="129" column="1" selection-start-line="129" selection-start-column="1" selection-end-line="129" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/module/js/form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -1326,7 +1364,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1336,7 +1374,7 @@
         <state relative-caret-position="120">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="17" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1349,52 +1387,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/run-debug.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/rap.server.init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/static_src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/static_src/web/uidemo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#11;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#12;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#13;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#14;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#15;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#16;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#17;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/static_src/web/searchcode.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1463,11 +1459,109 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/rap.server.require.filter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/static_src/web/form.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="130" column="21" selection-start-line="130" selection-start-column="21" selection-end-line="130" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/rap.server.require.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/rap.util.prototype.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/static_src/public/css/common/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="390" column="16" selection-start-line="390" selection-start-column="13" selection-end-line="390" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/doc/服务器数据库思路.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/doc/服务器request架构思路.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/dao/rap.sql.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="364" column="3" selection-start-line="364" selection-start-column="3" selection-end-line="364" selection-end-column="3" />
+        <state relative-caret-position="524">
+          <caret line="456" column="4" selection-start-line="456" selection-start-column="4" selection-end-line="456" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/static_src/web/uidemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/static_src/web/searchcode.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/rap.server.response.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/run-debug.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/rap.server.init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

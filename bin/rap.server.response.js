@@ -27,7 +27,8 @@ function responseData(ret,request, response,type) {
 	type = type|| "text/html";
 	var headerOption={
 		"X-Powered-By":"robert-rap-server",
-		"Content-Type":type
+		"Content-Type":type,
+		"X-Powered-By":"rap_robert"
 	}
 	var zip = zlibMap[zipType];
 

@@ -128,3 +128,6 @@ background: #1f2229;
 .label-radio-group input{
 	display: none;
 }
+.label-radio-group i{
+	display:inline-block;
+}

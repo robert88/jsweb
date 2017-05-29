@@ -448,6 +448,13 @@ rap.registerModule({
 
 /**
  * SQL对象
+ * config:{
+ * insertOptions:[{key1:value1,key2:value2}]定义插入数据
+ * name:t_user表名
+ * result：{key:ture,key:function,key:"otherKey"}//返回类型
+ * condition：{}
+ * order：{key：true倒序排序，key1:false 正序排序}
+ * }
  */
 var SQL = rap.SQL = function(config) {
 	if (config.tables) {

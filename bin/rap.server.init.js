@@ -4,6 +4,7 @@
 * @author：尹明
 *
 * */
+var childProcess = require('child_process');
 var startTime = new Date();
 
 require("./rap.util.core.config.js");
@@ -21,6 +22,16 @@ function requestRecord(){
 
 }
 
+if(process.env.DEBUG){
+
+	childProcess.exec('start "%windir%\\system32\\cmd.exe" node-inspector --web-port=8081',function (err,stdout) {
+		if(err){
+			rap.error(err);
+		}else {
+			rap.log("run debugger",stdout);
+		}
+	});
+}
 
 /**
  * Create HTTP server.
@@ -53,8 +64,7 @@ process.on('uncaughtException', function (err) {
 
 server.listen(3000);
 if(process.env.DEBUG){
-	var exec = require('child_process').exec;
-	exec('start C:\\"Program Files (x86)"\\Google\\Chrome\\Application\\chrome.exe http://localhost:3000',function (err,stdout) {
+	childProcess.exec('start C:\\"Program Files (x86)"\\Google\\Chrome\\Application\\chrome.exe http://localhost:3000',function (err,stdout) {
 		if(err){
 			rap.error(err);
 		}else {
