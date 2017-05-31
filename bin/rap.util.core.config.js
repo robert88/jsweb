@@ -9,7 +9,13 @@ global.rap = {};
 rap.debug_module = true;
 rap.requestStack = [];//过滤request
 rap.rootPath="D:/newProject/jsweb/bin";
-rap.staticPath="/static";//静态资源路径
+
+if(process.env.DEBUG){
+	rap.staticPath="/static_src";//debugger静态资源路径
+}else{
+	rap.staticPath="/static";//静态资源路径
+}
+
 rap.actionPath="/action";//ajax请求路径或者是拦截url
 rap.deflate = false;//deflate gzip压缩
 rap.perTool={

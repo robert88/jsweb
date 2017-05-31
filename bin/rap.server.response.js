@@ -14,9 +14,9 @@ var path = require("path");
 
 var zlibMap = {
 
-	"gzip": zlib.createGzip(),
-	"gunzip": zlib.createGunzip(),
-	"deflate": zlib.createInflate()
+	"gzip": zlib.createGzip,
+	"gunzip": zlib.createGunzip,
+	"deflate": zlib.createInflate
 
 };
 
@@ -30,7 +30,7 @@ function responseData(ret,request, response,type) {
 		"Content-Type":type,
 		"X-Powered-By":"rap_robert"
 	}
-	var zip = zlibMap[zipType];
+	var zip = zlibMap[zipType]();
 
 	//如果返回是json数据
 	if (rap.type(ret) == "object") {
@@ -55,12 +55,12 @@ function responseData(ret,request, response,type) {
 			rap.log("encoding by ", "gzip");
 			headerOption["Content-Encoding"] = "gzip";
 			response.writeHead(200, headerOption);
-			wakePromise.writeStream(absolutePath, response, zlibMap["gzip"])
+			wakePromise.writeStream(absolutePath, response, zlibMap["gzip"]())
 		} else if (acceptEncoding.match(/\bdeflate\b/)) {
 			rap.log("encoding by ", "deflate");
 			headerOption["Content-Encoding"] = "deflate";
 			response.writeHead(200, headerOption);
-			wakePromise.writeStream(absolutePath, response, zlibMap["deflate"])
+			wakePromise.writeStream(absolutePath, response, zlibMap["deflate"]())
 		} else {
 			rap.log("no encoding ");
 			response.writeHead(200, headerOption);

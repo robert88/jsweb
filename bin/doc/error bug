@@ -1,0 +1,27 @@
+[log][2017/05/31 13:05:10][function responseData(ret,request, response,type) ]: encoding by setting  gzip
+[error][2017/05/31 13:05:10][function (err) ]: Error: write after end
+    at writeAfterEnd (_stream_writable.js:166:12)
+    at Gzip.Writable.write (_stream_writable.js:217:5)
+    at ReadStream.ondata (_stream_readable.js:556:20)
+    at emitOne (events.js:96:13)
+    at ReadStream.emit (events.js:188:7)
+    at readableAddChunk (_stream_readable.js:177:18)
+    at ReadStream.Readable.push (_stream_readable.js:135:10)
+    at onread (fs.js:1780:12)
+    at FSReqWrap.wrapper [as oncomplete] (fs.js:681:17)
+
+    这个是同时压缩时候用了同一个实例，所以每次压缩的时候要创建实例
+
+
+
+    [error][2017/05/31 13:15:27][function (err) ]: Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+        at Error (native)
+    [log][2017/05/31 13:15:27][function (req, response) ]: 累计请求 15
+    [error][2017/05/31 13:15:27][function (req, response) ]: Error: not support resource of
+        at Error (native)
+        at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+        at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+        at emitTwo (events.js:106:13)
+        at Server.emit (events.js:191:7)
+        at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+        at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
