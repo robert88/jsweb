@@ -16,9 +16,9 @@ exports = module.exports = (function(){
 			splitTypes = splitTypes.concat(sameTypes);
 		}
 		//splitTypes --> ["fh","fhc","fh4","fh5","fh7"]
-		for( i=0;i<sameTypes.length;i++){
-			mineType[sameTypes[i]] = (mineType[sameTypes[i]]||[]);
-			mineType[sameTypes[i]].push(key);
+		for( i=0;i<splitTypes.length;i++){
+			mineType[splitTypes[i]] = (mineType[splitTypes[i]]||[]);
+			mineType[splitTypes[i]].push(key);
 		}
 	}
 	rap.log("服务器支持的类型有：",mineType);

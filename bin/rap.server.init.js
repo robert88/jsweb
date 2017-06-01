@@ -13,6 +13,8 @@ require("./dao/rap.sql.cache.js");
 var requestFilter = require("./rap.server.require.js");
 var handleResponse = require("./rap.server.response.js");
 
+var domain = require('domain');
+
 var http = require("http");
 
 var requestCount = 0;
@@ -37,29 +39,66 @@ if(process.env.DEBUG){
  * Create HTTP server.
  */
 var server = http.createServer(function(req, response) {
-	try{
 
-	requestCount++;
+	var d = domain.create();
 
-	rap.log("累计请求",requestCount);
+	d.run(function () {
+		try{
+		requestCount++;
 
-	//延时处理，节流
-	rap.debounce(requestRecord,60000);
+		rap.log("累计请求",requestCount);
 
-	var request = requestFilter(req);
+		//延时处理，节流
+		rap.debounce(requestRecord,60000);
 
-	handleResponse(request,response);
+		var request = requestFilter(req);
 
-		
-	}catch(e){
-		rap.error(e.stack);
-		// response.end();
+		handleResponse(request,response);
+		}catch (err){
+			handlerErr(err);
+		}
+	});
+
+	//捕获大部分异常
+	d.on('error', function (err) {
+		handlerErr(err);
+	});
+
+	//处理
+	function handlerErr(err){
+
+		rap.error(err.stack); // log the error
+
+		if(err.stack.indexOf("no such file or directory")!=-1){
+			response.writeHead(404);
+			response.end();
+		}else{
+			response.writeHead(500);
+			response.end(err.message);
+		}
+
 	}
 
 });
 
+//捕获部分异常
 process.on('uncaughtException', function (err) {
-	rap.error(err.stack); // log the error
+
+	rap.error("uncaughtException:",err.stack); // log the error
+
+	try {
+		var killTimer = setTimeout(function () {
+			process.exit(1);
+		}, 30000);
+		killTimer.unref();
+
+		server.close();
+	} catch (e) {
+		rap.error('error when uncaughtException', e.stack);
+	}
+
+
+
 });
 
 server.listen(3000);

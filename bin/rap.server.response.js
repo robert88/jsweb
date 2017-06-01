@@ -37,7 +37,7 @@ function responseData(ret,request, response,type) {
 		rap.log("请求结果为json对象：", JSON.stringify(ret));
 		//response.pipe( b );
 		response.writeHead(200,headerOption);
-		response.end(JSON.stringify(ret))
+		response.end(JSON.stringify(ret));
 		//如果返回的是文件
 	} else {
 		var absolutePath = (rap.rootPath + "/" + rap.staticPath + "/" + ret).toURI();
@@ -78,13 +78,13 @@ exports = module.exports = function (request, response) {
 
 	var url = filter(request.url, request.params) || request.url;
 
-	var extname = path.extname(url).replace(".","");
+	var extname = path.extname(path.basename(url)).replace(".","").replace(/\?.*/,"");
 
 	//匹配action文件
 	if (actionMap[url]) {
 		if (typeof actionMap[url] == "function") {
 			var timer = setTimeout(function () {
-				throw "response timeout";
+				throw new Error("response timeout");
 			},600000);
 			actionMap[request.url](request, response, function (ret) {
 				clearTimeout(timer);
@@ -104,8 +104,9 @@ exports = module.exports = function (request, response) {
 
 	//不支持的文件类型
 	}else {
-		throw Error("not support resource of ",mine[extname]);
+		//domain error只能捕获异步的错误
+		setTimeout(function () {
+			throw new Error("not support resource of mine type:"+mine[extname]+" url:"+url+" extname:"+extname);
+		});
 	}
-
-
 }

@@ -246,3 +246,636 @@
     at Server.emit (events.js:191:7)
     at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
     at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/05/31 13:46:43][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/05/31 13:46:43][function (req, response) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/05/31 13:46:43][function (req, response) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/05/31 13:46:43][function (req, response) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/05/31 13:46:43][function (req, response) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 06:49:59][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 06:49:59][function (req, response) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 06:49:59][function (req, response) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 06:49:59][function (req, response) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 06:49:59][function (req, response) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 06:51:59][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 06:51:59][function (req, response) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 06:51:59][function (req, response) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 06:51:59][function (req, response) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 06:51:59][function (req, response) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 06:55:37][function (req, response) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 06:55:37][function (req, response) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 06:55:37][function (req, response) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:51:2)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 06:57:37][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)
+[error][2017/06/01 07:16:29][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 07:16:29][function (err) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:55:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 07:16:29][function (err) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:55:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 07:16:29][function (err) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:55:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 07:16:29][function (err) ]:Error: not support resource of 
+    at Error (native)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:55:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 07:22:48][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 07:22:48][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 07:22:48][function (err) ]:uncaughtException: Error: not support resource of 
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:55:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 07:22:48][function (err) ]:uncaughtException: Error: not support resource of 
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:55:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 07:22:48][function (err) ]:uncaughtException: Error: not support resource of 
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:55:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 07:22:48][function (err) ]:uncaughtException: Error: not support resource of 
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:107:9)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:55:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 07:23:57][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 07:23:57][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:108:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:23:57][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:108:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:23:57][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:108:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:23:57][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:108:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:23:57][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:108:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:23:57][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:108:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:23:57][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:108:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:23:57][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)
+[error][2017/06/01 07:24:01][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:108:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:26:26][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 07:26:26][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 07:26:26][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:108:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:26:26][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:108:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:26:26][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:108:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:26:26][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:108:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:26:26][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:108:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:26:26][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:108:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:26:26][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:108:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:31:19][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 07:31:19][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:31:19][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+    at listOnTimeoutNT (timers.js:242:26)
+    at _combinedTickCallback (internal/process/next_tick.js:71:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:122:9)
+[error][2017/06/01 07:31:19][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:31:19][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:31:19][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:31:19][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 07:31:19][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:37:49][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 12:37:49][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:37:49][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:37:49][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:37:49][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:37:49][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:37:49][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:37:49][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:37:55][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:39:00][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 12:39:00][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:39:00][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:39:00][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:39:00][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:39:00][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:39:00][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:39:00][function (err) ]:Error: not support resource of 
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:39:57][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 12:39:57][function (err) ]:Error: not support resource of mine type:undefined url:/web/uidemo.css?v=1
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:39:57][function (err) ]:Error: not support resource of mine type:undefined url:/public/images/ge.jpg
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+    at listOnTimeoutNT (timers.js:242:26)
+    at _combinedTickCallback (internal/process/next_tick.js:71:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:122:9)
+[error][2017/06/01 12:39:57][function (err) ]:Error: not support resource of mine type:undefined url:/public/css/icomoon/fonts/icomoon.ttf?cq85lv
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:39:57][function (err) ]:Error: not support resource of mine type:undefined url:/web/uidemo.html?ver=1496291997958
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:39:57][function (err) ]:Error: not support resource of mine type:undefined url:/public/css/icomoon/fonts/icomoon.woff?cq85lv
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:39:57][function (err) ]:Error: not support resource of mine type:undefined url:/html/web404.css?v=1
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:39:57][function (err) ]:Error: not support resource of mine type:undefined url:/html/web404.html?ver=1496291997980
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:43:47][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 12:43:47][function (err) ]:Error: not support resource of mine type:undefined url:/public/images/ge.jpg extname:jpg
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:43:47][function (err) ]:Error: not support resource of mine type:undefined url:/public/css/icomoon/fonts/icomoon.ttf?cq85lv extname:ttf?cq85lv
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:43:47][function (err) ]:Error: not support resource of mine type:undefined url:/web/uidemo.css?v=1 extname:css?v=1
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:43:47][function (err) ]:Error: not support resource of mine type:undefined url:/web/uidemo.html?ver=1496292227659 extname:html?ver=1496292227659
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:43:47][function (err) ]:Error: not support resource of mine type:undefined url:/public/css/icomoon/fonts/icomoon.woff?cq85lv extname:woff?cq85lv
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:43:47][function (err) ]:Error: not support resource of mine type:undefined url:/html/web404.css?v=1 extname:css?v=1
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:43:47][function (err) ]:Error: not support resource of mine type:undefined url:/html/web404.html?ver=1496292227675 extname:html?ver=1496292227675
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:45:02][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 12:45:02][function (err) ]:Error: not support resource of mine type:undefined url:/public/images/ge.jpg extname:jpg
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:45:02][function (err) ]:Error: not support resource of mine type:undefined url:/public/css/icomoon/fonts/icomoon.ttf?cq85lv extname:ttf?cq85lv
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:45:02][function (err) ]:Error: not support resource of mine type:undefined url:/web/uidemo.css?v=1 extname:css?v=1
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:45:02][function (err) ]:Error: not support resource of mine type:undefined url:/web/uidemo.html?ver=1496292302253 extname:html?ver=1496292302253
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:45:02][function (err) ]:Error: not support resource of mine type:undefined url:/public/css/icomoon/fonts/icomoon.woff?cq85lv extname:woff?cq85lv
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:45:02][function (err) ]:Error: not support resource of mine type:undefined url:/html/web404.css?v=1 extname:css?v=1
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:45:02][function (err) ]:Error: not support resource of mine type:undefined url:/html/web404.html?ver=1496292302271 extname:html?ver=1496292302271
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:46:55][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 12:46:55][function (err) ]:Error: not support resource of mine type:undefined url:/web/uidemo.css?v=1 extname:css?v=1
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:111:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:46:55][function (err) ]:Error: not support resource of mine type:undefined url:/public/images/ge.jpg extname:jpg
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:111:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:46:55][function (err) ]:Error: not support resource of mine type:undefined url:/public/css/icomoon/fonts/icomoon.ttf?cq85lv extname:ttf?cq85lv
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:111:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:46:55][function (err) ]:Error: not support resource of mine type:undefined url:/web/uidemo.html?ver=1496292415279 extname:html?ver=1496292415279
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:111:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:46:55][function (err) ]:Error: not support resource of mine type:undefined url:/public/css/icomoon/fonts/icomoon.woff?cq85lv extname:woff?cq85lv
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:111:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:46:55][function (err) ]:Error: not support resource of mine type:undefined url:/html/web404.css?v=1 extname:css?v=1
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:111:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:46:55][function (err) ]:Error: not support resource of mine type:undefined url:/html/web404.html?ver=1496292415306 extname:html?ver=1496292415306
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:111:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+    at listOnTimeoutNT (timers.js:242:26)
+    at _combinedTickCallback (internal/process/next_tick.js:71:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:122:9)
+[error][2017/06/01 12:49:42][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 12:49:42][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 12:49:42][function (err) ]:Error: not support resource of mine type:undefined url:/public/images/ge.jpg extname:jpg
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:49:42][function (err) ]:Error: not support resource of mine type:undefined url:/public/css/icomoon/fonts/icomoon.ttf?cq85lv extname:ttf
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:49:42][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\uidemo.css?v=1'
+    at Error (native)
+[error][2017/06/01 12:49:42][function (err) ]:Error: not support resource of mine type:undefined url:/web/uidemo.html?ver=1496292582625 extname:html
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 12:49:42][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\css\icomoon\fonts\icomoon.woff?cq85lv'
+    at Error (native)
+[error][2017/06/01 12:49:42][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.css?v=1'
+    at Error (native)
+[error][2017/06/01 12:49:42][function (err) ]:Error: not support resource of mine type:undefined url:/html/web404.html?ver=1496292582655 extname:html
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 13:08:10][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 13:08:10][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\css\icomoon\fonts\icomoon.ttf?cq85lv'
+    at Error (native)
+[error][2017/06/01 13:08:10][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\uidemo.css?v=1'
+    at Error (native)
+[error][2017/06/01 13:08:10][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\uidemo.html?ver=1496293690388'
+    at Error (native)
+[error][2017/06/01 13:08:10][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\css\icomoon\fonts\icomoon.woff?cq85lv'
+    at Error (native)
+[error][2017/06/01 13:08:10][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.css?v=1'
+    at Error (native)
+[error][2017/06/01 13:08:10][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.html?ver=1496293690425'
+    at Error (native)
+[error][2017/06/01 13:08:17][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.css?v=1'
+    at Error (native)
+[error][2017/06/01 13:09:23][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 13:09:23][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\css\icomoon\fonts\icomoon.ttf?cq85lv'
+    at Error (native)
+[error][2017/06/01 13:09:23][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\uidemo.css?v=1'
+    at Error (native)
+[error][2017/06/01 13:09:23][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\uidemo.html?ver=1496293763588'
+    at Error (native)
+[error][2017/06/01 13:09:23][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\css\icomoon\fonts\icomoon.woff?cq85lv'
+    at Error (native)
+[error][2017/06/01 13:09:23][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.css?v=1'
+    at Error (native)
+[error][2017/06/01 13:09:23][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.html?ver=1496293763612'
+    at Error (native)
+[error][2017/06/01 13:26:57][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.css?v=1'
+    at Error (native)
+[error][2017/06/01 13:27:04][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\test.css?v=1'
+    at Error (native)
+[error][2017/06/01 13:27:04][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\test.html?ver=1496294824157'
+    at Error (native)
+[error][2017/06/01 13:27:04][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.css?v=1'
+    at Error (native)
+[error][2017/06/01 13:27:04][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.html?ver=1496294824235'
+    at Error (native)
+[error][2017/06/01 13:28:35][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\test.css?v=1'
+    at Error (native)
+[error][2017/06/01 13:28:35][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\test.html?ver=1496294915329'
+    at Error (native)
+[error][2017/06/01 13:28:35][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.css?v=1'
+    at Error (native)
+[error][2017/06/01 13:28:35][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.html?ver=1496294915399'
+    at Error (native)
+[error][2017/06/01 13:30:06][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\test.css?v=1'
+    at Error (native)
+[error][2017/06/01 13:30:06][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\test.html?ver=1496295006714'
+    at Error (native)
+[error][2017/06/01 13:30:06][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.css?v=1'
+    at Error (native)
+[error][2017/06/01 13:30:06][function (err) ]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.html?ver=1496295006730'
+    at Error (native)
+[error][2017/06/01 13:31:15][function (err) ]:uncaughtException: TypeError: Cannot read property 'replace' of undefined
+    at Object.obj.url (D:\newProject\jsweb\bin\rap.server.require.js:13:18)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:40:19)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:53:17)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 13:33:32][function handlerErr(err)]:TypeError: Cannot read property 'replace' of undefined
+    at Object.obj.url (D:\newProject\jsweb\bin\rap.server.require.js:13:18)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:40:19)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:17)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/01 13:34:46][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 13:34:46][function handlerErr(err)]:Error: not support resource of mine type:undefined url:v=1 extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 13:34:46][function handlerErr(err)]:Error: not support resource of mine type:undefined url:cq85lv extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 13:34:46][function handlerErr(err)]:Error: not support resource of mine type:undefined url:ver=1496295286978 extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 13:34:46][function handlerErr(err)]:Error: not support resource of mine type:undefined url:cq85lv extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 13:34:46][function handlerErr(err)]:Error: not support resource of mine type:undefined url:v=1 extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 13:34:46][function handlerErr(err)]:Error: not support resource of mine type:undefined url:ver=1496295286995 extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 13:34:50][function handlerErr(err)]:Error: not support resource of mine type:undefined url:v=1 extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
