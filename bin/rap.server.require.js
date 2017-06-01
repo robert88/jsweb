@@ -10,13 +10,13 @@ exports = module.exports = function (req) {
 		method:null,
 		params:null,
 		url:function(set){
-			return set.url.replace(/[^?]*\?/,"").replace(/#.*/,"")
+			return set.url.replace(/\?.*$/,"").replace(/#.*$/,"")
 		},
 		hash:function(set){
-			return set.url.replace(/[^?]*\?/,"").replace(/.*#/,"")
+			return set.url.replace(/^[^?]*\?/,"").replace(/^.*#/,"");
 		},
 		search:function(set){
-			return set.url.replace(/[^?]*\?/,"")
+			return set.url.replace(/^[^?]*\?/,"")
 		},
 		headers:null,
 		host:function (set) {

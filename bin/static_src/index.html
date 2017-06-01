@@ -17,6 +17,12 @@
     <!--start mergeCss:main.skin.min-->
     <link rel="stylesheet" type="text/css" href="public/css/common/main_color.css">
     <link rel="stylesheet" type="text/css" href="public/css/common/main_common.css">
+    <link rel="stylesheet" type="text/css" href="public/css/common/btn.css">
+    <link rel="stylesheet" type="text/css" href="public/css/common/page.css">
+    <link rel="stylesheet" type="text/css" href="public/css/common/process.css">
+    <link rel="stylesheet" type="text/css" href="public/css/common/base.css">
+    <link rel="stylesheet" type="text/css" href="public/css/common/animate.css">
+    <link rel="stylesheet" type="text/css" href="public/css/common/form.css">
     <link rel="stylesheet" type="text/css" href="public/css/icomoon/style.css">
     <!--end mergeCss-->
 
@@ -28,26 +34,65 @@
 </head>
 
 <body>
-
+<style>
+    header{
+        background: url(public/images/header_bg.jpg) repeat-x;
+    }
+    header .top-header{
+        position: relative;
+        padding-left: 228px;
+        height:80px;
+    }
+    header .top-header h1{
+        position:absolute;
+        left:0;
+        top:50%;
+        margin-top: -32px;
+        height:65px;
+        width:228px;
+    }
+    header .top-header .top-status{
+        text-align: right;
+        height:50%;
+    }
+    header .top-header .top-menu{
+        line-height: 40px;
+        font-size: 16px;
+        text-align: center;
+    }
+    header .top-header .top-status li,
+    header .top-header .top-menu li{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    header .top-header .top-status .btn-empty{
+        padding: 6px 10px;
+    }
+    footer{
+        background: url(public/images/header_bg.jpg) repeat-x;
+        height: 40px;
+        line-height: 40px;
+    }
+</style>
     <!--s:头部-->
     <header>
-        <div class="top-header">
+        <div class="top-header wrap">
             <h1><img src="public/images/logo.png"></h1>
-            <ul>
-                <li>登陆</li>
-                <li>注册</li>
-                <li>提现</li>
-                <li>发布</li>
-                <li><i class="icon-tel"></i>QQ登录</li>
-                <li><i class="icon-tel"></i>微信登陆</li>
+            <ul class="top-status col">
+                <li class="t-link">登陆</li>
+                <li class="t-link">注册</li>
+                <li class="t-link">提现</li>
+                <li class="t-link">发布</li>
+                <li class="btn-info btn-empty"><i class="icon-qq"></i>QQ登录</li>
+                <li class="btn-success btn-empty"><i class="icon-weixin"></i>微信登陆</li>
             </ul>
             <!--s:导航-->
-            <ul>
-                <li><a class="" title="">首页</a></li>
-                <li><a class="" title="">模型</a></li>
-                <li><a class="" title="">实物商场</a></li>
-                <li><a class="" title="">免费素材</a></li>
-                <li><a class="" title="">个人定制</a></li>
+            <ul class="top-menu col">
+                <li class="col20"><a class="" title="">首页</a></li>
+                <li class="col20"><a class="" title="">模型</a></li>
+                <li class="col20"><a class="" title="">实物商场</a></li>
+                <li class="col20"><a class="" title="">免费素材</a></li>
+                <li class="col20"><a class="" title="">个人定制</a></li>
             </ul>
             <!--e:导航-->
         </div>
@@ -63,7 +108,7 @@
 
     <!--s:尾部-->
     <footer>
-        <div>版权所有：环蔻珠宝科技有限公司</div>
+        <div class="wrap tc">版权所有：环蔻珠宝科技有限公司</div>
     </footer>
     <!--e:尾部-->
 

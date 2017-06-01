@@ -120,8 +120,8 @@
 	color:#5bc0de;
 }
 .btn-info {
-	background-color: #186B40;
-	border-color:#186B40;
+	background-color: #428bca;
+	border-color: #3187ca;
 	color:#fff;
 }
 .btn-dodger-blue{
@@ -134,4 +134,12 @@
 	background-color: #0000cc;
 	border-color:#0101b9;
 	color:#fff;
+}
+.btn-info.btn-empty{
+	background: none;
+	color:#3187ca;
+}
+.btn-success.btn-empty{
+	background: none;
+	color:#8FC31F;
 }

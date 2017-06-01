@@ -1,4 +1,4 @@
-@import url(form.css);
-@import url(page.css);
-@import url(process.css);
-@import url(btn.css);
+@import url(../public/css/common/form.css);
+@import url(../public/css/common/page.css);
+@import url(../public/css/common/process.css);
+@import url(../public/css/common/btn.css);

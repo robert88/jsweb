@@ -7,8 +7,8 @@
     var head = document.getElementsByTagName("head")[0];
 
     function parsePath(url) {
-    var root = "/jsweb/bin/static_src/";
-        return root+"/"+url;
+        var root =  window.location.pathname.replace(/\/[^/]+$/,"");
+        return (root+"/"+url).toURI();
     }
 
     window.require = function(url,id){

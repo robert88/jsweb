@@ -879,3 +879,79 @@
     at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
     at tryOnTimeout (timers.js:224:11)
     at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 19:25:48][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 19:25:48][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\jsweb\bin\static_src\public\js\module\js\form.js'
+    at Error (native)
+[error][2017/06/01 20:51:24][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 20:54:39][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 20:59:22][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 20:59:22][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 21:00:46][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 21:00:46][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 21:01:28][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/01 21:01:28][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/index/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/01 21:01:28][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/01 21:04:18][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/01 21:04:18][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\images\logo.png'
+    at Error (native)
+[error][2017/06/02 06:54:41][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 06:54:41][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/index/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 06:54:41][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 06:55:52][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 06:55:52][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/index/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 06:55:52][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 06:56:08][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 06:56:08][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/index/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 06:56:08][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 06:56:20][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 06:56:21][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 06:58:30][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 06:58:30][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/index/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 06:58:30][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 07:18:28][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 07:18:28][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 07:18:28][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/index/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)

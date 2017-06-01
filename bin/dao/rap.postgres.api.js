@@ -1,5 +1,4 @@
 var pg = require("pg");
-var config = require("./rap.postgres.config.js");
 require("./rap.sql.js");
 
 exports = module.exports = {
@@ -9,7 +8,7 @@ exports = module.exports = {
 	 * */
 	_connect: function () {
 		return new Promise(function (resolve, reject) {
-			var connectStr = config.connectionString;
+			var connectStr = rap.connectionString;
 			rap.info("connect postgres", connectStr);
 			pg.connect(connectStr, function (err, client, done) {
 				if (err) {
@@ -56,7 +55,7 @@ exports = module.exports = {
 		}
 
 		//是否打印SQL语句
-		if (config.sqldebug) {
+		if (rap.sqldebug) {
 			rap.log('[SQL:]', sql, '[:SQL]');
 			rap.log('[PARAMS:]', params, '[:PARAMS]');
 		}

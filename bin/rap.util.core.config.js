@@ -16,6 +16,10 @@ if(process.env.DEBUG){
 	rap.staticPath="/static";//静态资源路径
 }
 
+rap.connectionString = "postgres://postgres:'ym@20150904'@localhost/postgres";
+rap.sqlFile={path :"D:/newProject/jsweb/bin/dao/sql"};
+rap.sqldebug = true;
+
 rap.actionPath="/action";//ajax请求路径或者是拦截url
 rap.deflate = false;//deflate gzip压缩
 rap.perTool={

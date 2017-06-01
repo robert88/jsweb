@@ -1,4 +1,4 @@
-var config = require("./rap.postgres.config.js");
+
 var wake = require("../rap.filesystem.js");
 
 /*
@@ -24,7 +24,7 @@ rap.sql.cache =(function () {
 
 	var obj = {};
 
-	var files = wake.findFile(config.sqlFile.path,"sql");
+	var files = wake.findFile(rap.sqlFile.path,"sql");
 
 	rap.info("找到sql文件",files);
 
