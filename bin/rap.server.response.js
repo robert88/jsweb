@@ -106,7 +106,7 @@ exports = module.exports = function (request, response) {
 	}else {
 		//domain error只能捕获异步的错误
 		setTimeout(function () {
-			throw new Error("not support resource of mine type:"+mine[extname]+" url:"+url+" extname:"+extname);
+			throw new Error("not find action or not support resource of mine type:"+mine[extname]+" url:"+url+" extname:"+extname);
 		});
 	}
 }

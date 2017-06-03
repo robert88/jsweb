@@ -359,7 +359,7 @@ rap.registerModule({
 		}
 	}
 
-}, SettingsTool, ResultTool, ConditionTool, OrderTool,insertTool);
+},  ConditionTool, OrderTool,insertTool,ResultTool,SettingsTool );
 /**
  * 复合表的相关操作
  */

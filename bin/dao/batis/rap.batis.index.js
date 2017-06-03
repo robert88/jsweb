@@ -7,7 +7,7 @@ exports = module.exports  = {
 			name:"t_user"
 		});
 	},
-	getcode:function () {
+	getCode:function () {
 	return sqlApi.select({
 		name:"t_code"
 	});

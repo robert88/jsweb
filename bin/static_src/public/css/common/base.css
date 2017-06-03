@@ -1,14 +1,16 @@
 
 /*重构css*/
-html, body, h1, h2, h3, h4, h5, h6, div, ul, li, dl, dt, dd, ol, pre, form, fieldset, input, textarea, p, blockquote, th, td, hr, img, select {
+h1, h2, h3, h4, h5, h6, div, ul, li, dl, dt, dd, ol, pre, form, fieldset, input, textarea, p, blockquote, th, td, hr, img, select {
 	padding: 0;
 	margin: 0;
 	background-repeat: no-repeat;
 }
 
 html, body {
+	padding: 0;
+	margin: 0;
 	font-family: 'Microsoft Yahei', "細明體", tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
-	color: #333;
+	color: #ccc;
 }
 body{
 	position: relative;

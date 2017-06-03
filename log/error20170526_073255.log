@@ -955,3 +955,180 @@
     at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
     at tryOnTimeout (timers.js:224:11)
     at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 12:18:50][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:18:50][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 12:18:50][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/index/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 12:19:32][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:20:06][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:20:07][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/index/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 12:20:07][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 12:21:23][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:21:23][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/index/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 12:21:23][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 12:22:58][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:22:58][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/index/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 12:22:58][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 12:23:50][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:23:51][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/index/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 12:23:51][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 12:25:25][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:25:25][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/index/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 12:25:25][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 12:27:13][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:27:13][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/index/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 12:27:13][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 12:27:15][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 12:27:19][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:27:35][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 12:28:14][function handlerErr(err)]:Error: not support resource of mine type:undefined url:/ajax/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/02 12:37:46][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\seachcode.css'
+    at Error (native)
+[error][2017/06/02 12:37:46][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\seachcode.html'
+    at Error (native)
+[error][2017/06/02 12:37:46][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.css'
+    at Error (native)
+[error][2017/06/02 12:37:46][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.html'
+    at Error (native)
+[error][2017/06/02 12:38:13][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\seachcode.css'
+    at Error (native)
+[error][2017/06/02 12:38:13][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\seachcode.html'
+    at Error (native)
+[error][2017/06/02 12:38:13][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.css'
+    at Error (native)
+[error][2017/06/02 12:38:13][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.html'
+    at Error (native)
+[error][2017/06/02 12:38:13][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:38:13][function handlerErr(err)]:TypeError: indexSqlApi.getCode is not a function
+    at Object.module.exports.getCode [as /ajax/index/getCode] (D:\newProject\jsweb\bin\action\ajax\index.js:5:20)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:56:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/02 12:38:13][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 12:39:12][function handlerErr(err)]:TypeError: indexSqlApi.getCode is not a function
+    at Object.module.exports.getCode [as /ajax/index/getCode] (D:\newProject\jsweb\bin\action\ajax\index.js:5:20)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:56:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/06/02 12:40:25][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:40:25][function () ]:insert into not find table
+[error][2017/06/02 12:40:26][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 12:40:45][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:53:16][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:53:16][function () ]:insert into not find table
+[error][2017/06/02 12:53:16][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 12:57:20][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:57:20][function () ]:insert into not find table
+[error][2017/06/02 12:57:20][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 12:57:50][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:57:51][function () ]:insert into not find table
+[error][2017/06/02 12:57:51][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 12:58:25][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:58:25][function () ]:insert into not find table
+[error][2017/06/02 12:58:25][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 12:58:29][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 12:58:29][function () ]:insert into not find table
+[error][2017/06/02 12:58:29][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 13:00:47][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 13:01:10][function () ]:insert into not find table
+[error][2017/06/02 13:01:30][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.js'
+    at Error (native)
+[error][2017/06/02 13:03:00][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 13:03:00][function () ]:insert into not find table
+[error][2017/06/02 13:04:05][function () ]:insert into not find table
+[error][2017/06/02 13:23:55][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 13:23:55][function () ]:insert into not find table
+[error][2017/06/02 22:42:13][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 22:42:13][function () ]:insert into not find table
+[error][2017/06/02 22:42:41][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 22:43:17][function () ]:insert into not find table
+[error][2017/06/02 22:43:59][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/02 22:44:33][function () ]:insert into not find table
+[error][2017/06/03 19:44:54][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)
+[error][2017/06/03 19:45:03][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/03 19:45:08][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/03 19:46:12][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/03 19:48:32][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/03 20:49:01][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)

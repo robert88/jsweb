@@ -280,7 +280,7 @@
 }
 
 body{
-    background: url("../../images/ge.jpg");
+    background: url("../../images/ge.jpg") repeat;
     color:#828282;
 }
 

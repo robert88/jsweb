@@ -51,9 +51,11 @@ var server = http.createServer(function(req, response) {
 		//延时处理，节流
 		rap.debounce(requestRecord,60000);
 
-		var request = requestFilter(req);
+		requestFilter(req,function(request){
+			handleResponse(request,response);
+		});
 
-		handleResponse(request,response);
+
 		}catch (err){
 			handlerErr(err);
 		}

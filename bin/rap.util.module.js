@@ -1,16 +1,16 @@
 rap.module = {};
 
-rap.resursion_level = 0;
-rap.resursion_in = function (name) {
-	rap.resursion_level++;
-	if (rap.resursion_level >= 50){
-		console.error(name + "：递归死循环");
+function Count(){
+	this.resursion_level = 0;
+}
+Count.prototype.out = function () {
+	rap.resursion_level--;
+};
+Count.prototype.in = function () {
+	this.resursion_level++;
+	if (this.resursion_level >= 10){
 		return true;
 	}
-
-};
-rap.resursion_out = function () {
-	rap.resursion_level--;
 };
 /*
  * 注册模块
@@ -80,20 +80,28 @@ var isArray = function (obj) {
  * 重新解析
  * */
 var resursion_in_map=[];
-rap.stringify = function (obj,filter,space) {
+rap.stringify = function (obj,filter,space,count) {
 
-	rap.resursion_in();
+
 
 	if(resursion_in_map.indexOf(obj)==-1){
 		resursion_in_map.push(obj);
 	}else{
-		return "[same object Object]";
+		return "[same Object]";
 
 	}
 
 	// console.log("-----------",obj)
 
 	if(typeof obj=="object" && obj != null && !obj.nodeName){
+
+		if(count==null){
+			count = new Count();
+		}
+		if(count.in()){
+			count.out();
+			return "[deep Object]"
+		}
 
 		var str = [];
 
@@ -122,7 +130,7 @@ rap.stringify = function (obj,filter,space) {
 
 				if(typeof obj[key]=="object"){
 
-					str.push( keyStr + rap.stringify( obj[ key ] ) );
+					str.push( keyStr + rap.stringify( obj[ key ],null,null,count ) );
 
 				}else if(typeof  obj[key] == "function" ){
 
@@ -142,13 +150,15 @@ rap.stringify = function (obj,filter,space) {
 		}
 		space = (space==null)?",":space;
 
-		rap.resursion_out();
+		count.out();
+
+		if(count.resursion_level==0){
+			count=null;
+		}
 
 		return isArrayFlag?("["+str.join(space)+"]"):("{" + str.join(space) + "}");
 
 	}else{
-
-		rap.resursion_out();
 
 		return  obj+"";
 
