@@ -1132,3 +1132,21 @@
     at Error (native)
 [error][2017/06/03 20:49:01][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
     at Error (native)
+[error][2017/06/05 21:38:41][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)
+[error][2017/06/05 21:38:51][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/05 21:42:14][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/06 05:39:56][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/06 05:43:46][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/06 05:43:47][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)
+[error][2017/06/06 05:52:10][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/06 07:22:28][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/06 07:43:40][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)

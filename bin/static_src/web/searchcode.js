@@ -2,7 +2,8 @@ $(".submit").click(function () {
 	var val=$("#test").val();
 	if(val){
 		$.ajax({url:"/ajax/index/getCode",
-			data:val,
+			type:"post",
+			data:{content:val},
 			success:function (ret) {
 			console.log(ret)
 		},error:function (e) {
