@@ -4,6 +4,6 @@ exports = module.exports = {
 		next(indexSqlApi.getCode());
 	},
 	"insertCode":function (request,response,next) {
-		
+		next(indexSqlApi.insertCode(request.params));
 	}
 };

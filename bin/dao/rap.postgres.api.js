@@ -42,6 +42,9 @@ exports = module.exports = {
 		});
 
 	},
+	insert:function () {
+
+	},
 	/*
 	 *查询
 	 * */

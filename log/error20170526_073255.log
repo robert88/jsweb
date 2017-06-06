@@ -1150,3 +1150,20 @@
     at Error (native)
 [error][2017/06/06 07:43:40][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
     at Error (native)
+[error][2017/06/07 07:52:17][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)
+[error][2017/06/07 07:53:14][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/07 07:53:18][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/07 07:55:53][function (err) ]:uncaughtException: TypeError: sqlApi.insert is not a function
+    at Object.module.exports.insertCode (D:\newProject\jsweb\bin\dao\batis\rap.batis.index.js:17:17)
+    at Object.module.exports.insertCode [as /ajax/index/insertCode] (D:\newProject\jsweb\bin\action\ajax\index.js:7:20)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:55:4
+    at IncomingMessage.<anonymous> (D:\newProject\jsweb\bin\rap.server.require.js:67:4)
+    at emitNone (events.js:86:13)
+    at IncomingMessage.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:973:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:122:9)
