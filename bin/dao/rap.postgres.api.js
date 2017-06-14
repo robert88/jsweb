@@ -24,26 +24,46 @@ exports = module.exports = {
 	/*
 	 *select 查询
 	 * */
-	select: function (opts, params) {
+	select: function (next,opts, params) {
 
 		rap.info("select api createSql：", opts);
 
-		var sqlObj = new rap.SQL(opts);
+		var sqlObj = new rap.SQL(opts).getSelectOptions();
 
 		if (!sqlObj.selectSql) {
 			throw Error("cant find select sql");
 		}
 		return this.query(sqlObj.selectSql, params).then(function (queryResult) {
 
-			rap.info("查询到数据：", queryResult);
+			rap.info("查询到数据：", queryResult.rows);
 
-			return queryResult.rows;
+			next(queryResult.rows);
 
 		});
 
 	},
-	insert:function () {
+	/*插入数据*/
+	insert:function (next,opts,params) {
+		rap.info("insert api by option：", opts);
+		//没有插入的数据
+		if(!params){
+			return next({code:501,message:"insert fail by no params"});
+		}
+		opts.insertOptions = params;
 
+		var sqlObj = new rap.SQL(opts).getInsertOptions();
+
+		if (!sqlObj.insertSql) {
+			throw Error("cant find insert sql");
+		}
+		rap.info("insert sql:",sqlObj.insertSql);
+		return this.query(sqlObj.insertSql).then(function (queryResult) {
+
+			rap.info(sqlObj.name,"insert succees");
+
+			next({ret:"200",message:"insert success"});
+
+		});
 	},
 	/*
 	 *查询

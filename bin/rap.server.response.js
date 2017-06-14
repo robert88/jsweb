@@ -32,8 +32,8 @@ function responseData(ret,request, response,type) {
 	}
 	var zip = zlibMap[zipType]();
 
-	//如果返回是json数据
-	if (rap.type(ret) == "object") {
+	//如果是string就表示是路径
+	if (rap.type(ret) != "string") {
 		rap.log("请求结果为json对象：", JSON.stringify(ret));
 		//response.pipe( b );
 		response.writeHead(200,headerOption);

@@ -215,49 +215,59 @@ var OrderTool = {
  * 排序条件
  * */
 var insertTool = {
-	$init:function () {
+	getInsertOptions:function () {
 
 		if (this.name&&rap.sql.cache[this.name]) {
-			if(this.insertOptions){
-				this.getDataName();
-				this.getDataValue();
-				this.insert = "insert into {0}({1}) values({2})".tpl(this.name,this.insertDataName,this.insertDataValue);
+			if(this.config.insertOptions){
+				this.getInsertDataName();
+				this.getInsertDataValue();
+				if(this.hasInsertData){
+					this.insertSql = "insert into {0}({1}) values({2})".tpl(this.name,this.insertDataName.join(","),this.insertDataValue.join(","));
+				}else{
+					rap.log(this.name +" insert fail by the insetOptions is empty");
+				}
+
 			}else{
-				rap.log(this.name+" can not find insetOptions");
+				rap.log(this.name + " insert fail by can not find insetOptions");
 			}
 
 		}else{
-			rap.error("insert into not find table");
+			rap.error("insert fail by not find table");
 		}
 
+		return this;
 	},
-	getDataName:function () {
+	getInsertDataName:function () {
 		this.insertDataName = [];
-		for(var key in this.insertOptions){
+		for(var key in this.config.insertOptions){
 			if(rap.sql.cache[this.name][key]){
+				this.hasInsertData = true;
 				this.insertDataName.push(key);
 			}else{
 				rap.warn("insert options of '{0}' key is not in table {1}".tpl(key,this.name))
 			}
 		}
 	},
-	getDataValue:function () {
+	getInsertDataValue:function () {
 		this.insertDataValue = [];
 		var cacheTable = rap.sql.cache[this.name];
 		for(var i=0;i<this.insertDataName.length;i++){
 			var key = this.insertDataName[i];
+			var value = this.config.insertOptions[key];
 			switch (cacheTable[key].type){
 				case "varchar":
 				case "text":
-					this.insertDataValue.push("'{0}'".tpl(key.replace(/('|")/g,"\\$1")));
+					this.insertDataValue.push("'{0}'".tpl(value.replace(/('|")/g,"\\$1")));
 					break;
 				case "smallint":
 				case "serial":
-					this.insertDataValue.push("{0}".tpl(key.toString().toInt()));
+					this.insertDataValue.push("{0}".tpl(value.toString().toInt()));
 					break;
 				case "timestamp":
-					this.insertDataValue.push("{0}".tpl(key.toDate().format("yy/MM/dd hh:mm:ss")));
+					this.insertDataValue.push("{0}".tpl(value.toDate().format("yy/MM/dd hh:mm:ss")));
 					break;
+				default:
+					this.insertDataValue.push("");
 			}
 		}
 	}
@@ -267,19 +277,24 @@ var insertTool = {
  */
 rap.registerModule({
 	moduleName: "Table",
-	$init: function () {
+	$init:function () {
 		this.selectResult= "";
 		this.selectCondition= "";
 		this.selectOrder="";
 		this.selectSql = "";
-		this.selectName = "";
 		this.cells=[];
 		this._selectResult=[];
 		this._selectCondition=[];
 		this._selectOrder=[];
 		this.database={};
+	},
+	getTableOptions:function () {
 		this.setJoinType();
-		this.$ready.push(this.initDatabase, this.parseResult, this.parseCondition, this.parseOrder, this.toSql);
+		this.initDatabase();
+		this.parseResult();
+		this.parseCondition();
+		this.parseOrder();
+		this.toSql();
 	},
 	setJoinType: function () {
 		this.joinType = this.config.joinType || ","
@@ -365,9 +380,11 @@ rap.registerModule({
  */
 rap.registerModule({
 	moduleName: "ComplexTable",
-	$init: function () {
+	getSelectOptions:function () {
+		this.getTableOptions();
 		this._parseCells();
-		this.$ready.push(this.setWrapName);
+		this.setWrapName();
+		return this;
 	},
 	setWrapName: function () {
 		this.wrapName = "(" + this.selectSql + ") " + this.nameID;
@@ -434,6 +451,10 @@ rap.registerModule({
 			this.selectName = this.wrapName;
 		}
 	},
+	getSelectOptions:function () {
+		this.getTableOptions();
+		return this;
+	},
 	initDatabase: function () {
 		if (this.name&&rap.sql.cache[this.name]) {
 			for (var key in rap.sql.cache[this.name]) {
@@ -457,11 +478,14 @@ rap.registerModule({
  * }
  */
 var SQL = rap.SQL = function(config) {
+	var ret;
 	if (config.tables) {
-		rap.log("当前表id为：",config.nameID,"是复合表：");
-		return new rap.module.ComplexTable(config)
+		ret =  new rap.module.ComplexTable(config);
+		rap.log("当前表id为：",ret.nameID,"名称：",ret.name,"是复合表");
+		return ret;
 	} else {
-		rap.log("当前表id为：",config.nameID,"是单表：");
-		return new rap.module.SingleTable(config)
+		ret =  new rap.module.SingleTable(config);
+		rap.log("当前表id为：",ret.nameID,"名称：",ret.name,"是单表");
+		return ret;
 	}
 }

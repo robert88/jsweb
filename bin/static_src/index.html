@@ -58,12 +58,16 @@
     header .top-header .top-menu{
         line-height: 40px;
         font-size: 16px;
-        text-align: center;
+        text-align: right;
     }
     header .top-header .top-status li,
     header .top-header .top-menu li{
         display: inline-block;
         vertical-align: middle;
+        padding-left:15px;
+    }
+    header .top-header .top-menu a{
+        margin-left:15px;
     }
     header .top-header .top-status .btn-empty{
         padding: 6px 10px;
@@ -83,16 +87,24 @@
                 <li class="t-link">注册</li>
                 <li class="t-link">提现</li>
                 <li class="t-link">发布</li>
-                <li class="btn-info btn-empty"><i class="icon-qq"></i>QQ登录</li>
-                <li class="btn-success btn-empty"><i class="icon-weixin"></i>微信登陆</li>
+                <li >
+                    <a href="" class="btn-info btn-empty">
+                        <i class="icon-qq"></i>QQ登录
+                    </a>
+                </li>
+                <li>
+                    <a href=""  class="btn-success btn-empty">
+                        <i class="icon-weixin"></i>微信登陆
+                    </a>
+                </li>
             </ul>
             <!--s:导航-->
             <ul class="top-menu col">
-                <li class="col20"><a class="" title="" href="#/web/searchcode">首页</a></li>
-                <li class="col20"><a class="" title="">模型</a></li>
-                <li class="col20"><a class="" title="">实物商场</a></li>
-                <li class="col20"><a class="" title="">免费素材</a></li>
-                <li class="col20"><a class="" title="">个人定制</a></li>
+                <li><a class="" title="" href="#/web/searchcode">首页</a></li>
+                <li>|<a class="" title="">模型</a>  </li>
+                <li>|<a class="" title="">实物商场</a></li>
+                <li>|<a class="" title="">免费素材</a></li>
+                <li>|<a class="" title="">个人定制</a></li>
             </ul>
             <!--e:导航-->
         </div>
@@ -117,10 +129,11 @@
 <script src="public/js/common/main.js"></script>
 <script src="public/js/common/base.js"></script>
 <script src="public/js/common/config.js"></script>
+<script src="public/js/common/jquery.carousel.v1.0.1.js"></script>
 <script type="text/javascript">
     ;(function() {
         window.PAGE = {};
-        window.PAGE.HOME = "#web/uidemo.html";
+        window.PAGE.HOME = "#web/home.html";
         window.PAGE.ERROR404 = "#html/web404";
         window.PAGE.destroy = [];
         window.PAGE.loading = null;

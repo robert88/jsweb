@@ -1,9 +1,9 @@
-var indexSqlApi = require("../../dao/batis/rap.batis.index.js");
+var api = require("../../dao/rap.postgres.api.js");
 exports = module.exports = {
 	"getCode":function (request,response,next) {
-		next(indexSqlApi.getCode());
+		api.select(next,{name:"t_code"});
 	},
 	"insertCode":function (request,response,next) {
-		next(indexSqlApi.insertCode(request.params));
+		api.insert(next,{name:"t_code"},request.params);
 	}
 };

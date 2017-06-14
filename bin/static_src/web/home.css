@@ -1,0 +1,21 @@
+.ad-content .carousel-wrap{
+	position:absolute;
+	z-index: -1;
+}
+.ad-content{
+	height: 180px;
+}
+.recommend-content{
+	position:relative;
+	padding-left:240px;
+}
+.recommend-left-content{
+	width:240px;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+.recommend-portal{
+
+}

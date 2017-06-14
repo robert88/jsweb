@@ -86,7 +86,7 @@ rap.stringify = function (obj,filter,space,count) {
 
 	if(resursion_in_map.indexOf(obj)==-1){
 		resursion_in_map.push(obj);
-	}else{
+	}else if(obj!=null){
 		return "[same Object]";
 
 	}

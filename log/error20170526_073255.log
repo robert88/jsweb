@@ -1167,3 +1167,402 @@
     at endReadableNT (_stream_readable.js:973:12)
     at _combinedTickCallback (internal/process/next_tick.js:74:11)
     at process._tickDomainCallback (internal/process/next_tick.js:122:9)
+[error][2017/06/10 16:13:52][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)
+[error][2017/06/10 16:17:22][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/10 16:17:27][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/10 16:18:15][function (err) ]:uncaughtException: Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\undefined'
+    at Error (native)
+[error][2017/06/10 19:23:39][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/10 19:23:39][function handlerErr(err)]:TypeError: Cannot read property 'tables' of undefined
+    at new rap.SQL (D:\newProject\jsweb\bin\dao\rap.sql.js:460:12)
+    at Object.module.exports.select (D:\newProject\jsweb\bin\dao\rap.postgres.api.js:31:16)
+    at Object.module.exports.getCode (D:\newProject\jsweb\bin\dao\batis\rap.batis.index.js:11:16)
+    at Object.module.exports.getCode [as /ajax/index/getCode] (D:\newProject\jsweb\bin\action\ajax\index.js:4:15)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:55:4
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:78:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+[error][2017/06/10 19:23:43][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/10 19:28:54][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/10 19:28:54][function handlerErr(err)]:TypeError: Cannot read property 'tables' of undefined
+    at new rap.SQL (D:\newProject\jsweb\bin\dao\rap.sql.js:460:12)
+    at Object.module.exports.select (D:\newProject\jsweb\bin\dao\rap.postgres.api.js:31:16)
+    at Object.module.exports.getCode (D:\newProject\jsweb\bin\dao\batis\rap.batis.index.js:11:16)
+    at Object.module.exports.getCode [as /ajax/index/getCode] (D:\newProject\jsweb\bin\action\ajax\index.js:4:15)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:55:4
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:78:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+[error][2017/06/10 19:45:34][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/10 19:45:34][function (err) ]:uncaughtException: Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/06/10 19:45:54][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/10 19:49:02][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/10 19:49:16][function (err) ]:uncaughtException: Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/06/10 19:49:25][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/10 19:59:52][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/10 19:59:52][function (err) ]:uncaughtException: Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/06/10 19:59:56][function (err) ]:uncaughtException: Error: cant find insert sql
+    at Error (native)
+    at Object.module.exports.insert (D:\newProject\jsweb\bin\dao\rap.postgres.api.js:57:10)
+    at Object.module.exports.insertCode [as /ajax/index/insertCode] (D:\newProject\jsweb\bin\action\ajax\index.js:7:7)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:55:4
+    at IncomingMessage.<anonymous> (D:\newProject\jsweb\bin\rap.server.require.js:67:4)
+    at emitNone (events.js:86:13)
+    at IncomingMessage.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:973:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+[error][2017/06/10 20:01:30][function (err) ]:uncaughtException: Error: cant find insert sql
+    at Error (native)
+    at Object.module.exports.insert (D:\newProject\jsweb\bin\dao\rap.postgres.api.js:57:10)
+    at Object.module.exports.insertCode [as /ajax/index/insertCode] (D:\newProject\jsweb\bin\action\ajax\index.js:7:7)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:55:4
+    at IncomingMessage.<anonymous> (D:\newProject\jsweb\bin\rap.server.require.js:67:4)
+    at emitNone (events.js:86:13)
+    at IncomingMessage.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:973:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+[error][2017/06/10 20:03:30][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/10 20:03:43][function (err) ]:uncaughtException: Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/06/10 20:22:43][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/10 20:22:43][function handlerErr(err)]:TypeError: Cannot read property 'selectSql' of undefined
+    at Object.module.exports.select (D:\newProject\jsweb\bin\dao\rap.postgres.api.js:33:14)
+    at Object.module.exports.getCode [as /ajax/index/getCode] (D:\newProject\jsweb\bin\action\ajax\index.js:4:7)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:55:4
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:78:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+[error][2017/06/10 20:36:10][function (err) ]:uncaughtException: TypeError: Cannot read property 'insertSql' of undefined
+    at Object.module.exports.insert (D:\newProject\jsweb\bin\dao\rap.postgres.api.js:56:14)
+    at Object.module.exports.insertCode [as /ajax/index/insertCode] (D:\newProject\jsweb\bin\action\ajax\index.js:7:7)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:55:4
+    at IncomingMessage.<anonymous> (D:\newProject\jsweb\bin\rap.server.require.js:67:4)
+    at emitNone (events.js:86:13)
+    at IncomingMessage.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:973:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:122:9)
+[error][2017/06/10 20:37:08][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/10 20:37:08][function handlerErr(err)]:TypeError: Cannot read property 'selectSql' of undefined
+    at Object.module.exports.select (D:\newProject\jsweb\bin\dao\rap.postgres.api.js:33:14)
+    at Object.module.exports.getCode [as /ajax/index/getCode] (D:\newProject\jsweb\bin\action\ajax\index.js:4:7)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:55:4
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:78:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+[error][2017/06/10 21:05:25][function (err) ]:uncaughtException: TypeError: Cannot read property 'insertSql' of undefined
+    at Object.module.exports.insert (D:\newProject\jsweb\bin\dao\rap.postgres.api.js:56:14)
+    at Object.module.exports.insertCode [as /ajax/index/insertCode] (D:\newProject\jsweb\bin\action\ajax\index.js:7:7)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:55:4
+    at IncomingMessage.<anonymous> (D:\newProject\jsweb\bin\rap.server.require.js:67:4)
+    at emitNone (events.js:86:13)
+    at IncomingMessage.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:973:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:122:9)
+[error][2017/06/10 21:05:25][function handlerErr(err)]:Error: response timeout
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:87:11)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/10 21:05:25][function (err) ]:uncaughtException: Error: response timeout
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:87:11)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+    at listOnTimeoutNT (timers.js:242:26)
+    at _combinedTickCallback (internal/process/next_tick.js:71:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:122:9)
+[error][2017/06/11 14:53:09][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/11 14:53:09][function handlerErr(err)]:Error: cant find select sql
+    at Error (native)
+    at Object.module.exports.select (D:\newProject\jsweb\bin\dao\rap.postgres.api.js:34:10)
+    at Object.module.exports.getCode [as /ajax/index/getCode] (D:\newProject\jsweb\bin\action\ajax\index.js:4:7)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:55:4
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:78:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+[error][2017/06/11 14:53:13][function (err) ]:uncaughtException: Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/06/11 14:56:03][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/11 14:56:03][function handlerErr(err)]:Error: cant find select sql
+    at Error (native)
+    at Object.module.exports.select (D:\newProject\jsweb\bin\dao\rap.postgres.api.js:34:10)
+    at Object.module.exports.getCode [as /ajax/index/getCode] (D:\newProject\jsweb\bin\action\ajax\index.js:4:7)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:55:4
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:78:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+[error][2017/06/11 14:56:10][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/11 14:57:11][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/11 14:57:11][function handlerErr(err)]:Error: cant find select sql
+    at Error (native)
+    at Object.module.exports.select (D:\newProject\jsweb\bin\dao\rap.postgres.api.js:34:10)
+    at Object.module.exports.getCode [as /ajax/index/getCode] (D:\newProject\jsweb\bin\action\ajax\index.js:4:7)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:55:4
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:78:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+[error][2017/06/11 15:07:11][function handlerErr(err)]:Error: response timeout
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:87:11)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/06/11 19:35:37][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/11 19:35:37][function handlerErr(err)]:Error: cant find select sql
+    at Error (native)
+    at Object.module.exports.select (D:\newProject\jsweb\bin\dao\rap.postgres.api.js:34:10)
+    at Object.module.exports.getCode [as /ajax/index/getCode] (D:\newProject\jsweb\bin\action\ajax\index.js:4:7)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:55:4
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:78:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+[error][2017/06/11 19:38:15][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/11 19:39:41][function handlerErr(err)]:Error: cant find select sql
+    at Error (native)
+    at Object.module.exports.select (D:\newProject\jsweb\bin\dao\rap.postgres.api.js:34:10)
+    at Object.module.exports.getCode [as /ajax/index/getCode] (D:\newProject\jsweb\bin\action\ajax\index.js:4:7)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:55:4
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:78:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+[error][2017/06/11 19:40:45][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/11 19:44:17][function handlerErr(err)]:Error: cant find select sql
+    at Error (native)
+    at Object.module.exports.select (D:\newProject\jsweb\bin\dao\rap.postgres.api.js:34:10)
+    at Object.module.exports.getCode [as /ajax/index/getCode] (D:\newProject\jsweb\bin\action\ajax\index.js:4:7)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:55:4
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:78:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+[error][2017/06/11 19:49:28][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/11 19:58:23][function (err) ]:uncaughtException: Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\[objectObject],[objectObject]'
+    at Error (native)
+[error][2017/06/11 20:00:34][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/11 20:00:34][function (err) ]:uncaughtException: Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\[objectObject],[objectObject]'
+    at Error (native)
+[error][2017/06/11 20:30:25][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/11 20:30:26][function (err) ]:uncaughtException: Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\[objectObject],[objectObject]'
+    at Error (native)
+[error][2017/06/11 20:39:20][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/06/11 20:44:52][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.css'
+    at Error (native)
+[error][2017/06/11 20:44:52][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/11 20:44:53][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.css'
+    at Error (native)
+[error][2017/06/11 20:44:53][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/11 20:44:53][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.css'
+    at Error (native)
+[error][2017/06/11 20:44:53][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/11 20:47:10][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.css'
+    at Error (native)
+[error][2017/06/11 20:47:10][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/11 20:47:42][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.css'
+    at Error (native)
+[error][2017/06/11 20:47:42][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/11 20:48:17][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.css'
+    at Error (native)
+[error][2017/06/11 20:48:17][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/11 20:59:48][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 06:59:02][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 06:59:26][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\demoui.css'
+    at Error (native)
+[error][2017/06/12 06:59:26][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\demoui.html'
+    at Error (native)
+[error][2017/06/12 06:59:26][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.css'
+    at Error (native)
+[error][2017/06/12 06:59:26][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\html\web404.html'
+    at Error (native)
+[error][2017/06/12 07:02:38][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:02:59][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:14:23][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:14:41][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:17:09][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:17:23][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:21:55][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:22:11][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:23:07][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:24:41][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:26:03][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:27:02][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:31:08][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:32:44][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:34:30][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:40:32][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:43:24][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:44:04][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:44:18][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:47:12][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:47:26][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:52:30][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 07:52:51][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:15:38][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:15:41][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:15:46][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:16:15][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:17:31][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:18:40][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:19:14][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:19:40][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:20:41][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:23:40][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:23:53][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:25:50][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:26:31][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:26:40][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:27:08][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:27:41][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:27:58][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:28:52][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:33:02][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:38:58][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:39:14][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:41:02][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:42:36][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 19:43:07][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 20:17:25][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 20:17:45][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 20:18:30][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 20:19:46][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 20:20:55][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/12 21:40:25][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/13 21:05:04][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/13 21:11:33][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/13 21:12:57][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/13 21:13:25][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/13 21:13:48][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/13 21:14:11][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/13 21:14:28][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/13 21:14:35][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/13 21:15:27][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)
+[error][2017/06/13 21:21:18][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
+    at Error (native)

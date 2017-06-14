@@ -93,7 +93,24 @@ fieldset {
 .ipt-append .ipt{
 	 padding-right:30px;
 }
-
+.ipt-btn-append{
+	border-radius: 5px;
+	overflow: hidden;
+	background: #fff;
+}
+.ipt-btn-append .btn{
+	position: absolute;
+	right:0px;
+	top: 0px;
+	height: 34px;
+	border-radius: 0 5px 5px 0;
+}
+.ipt-btn-append .ipt{
+	border: none;
+	padding-right:80px;
+	width:92%;
+	background: none;
+}
 .ipt-radius .ipt{
 	border-radius: 5px;
 }
