@@ -1566,3 +1566,5 @@
     at Error (native)
 [error][2017/06/13 21:21:18][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\home.js'
     at Error (native)
+[error][2017/06/17 21:15:39][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)

@@ -1,3 +1,4 @@
+@import url(../public/css/common/page.css);
 .ad-content .carousel-wrap{
 	position:absolute;
 	z-index: -1;
@@ -18,4 +19,34 @@
 
 .recommend-portal{
 
+}
+
+.category-header{
+	background:#2e343e;
+	padding:10px;
+}
+.category-header .search-bar{
+	background: #1a2228;
+	display: inline-block;
+	padding:10px;
+	border-radius: 5px;
+}
+.category-header-item{
+	float: left;
+	width:300px;
+	height: 40px;
+	line-height: 40px;
+	border-left:1px solid #fff;
+	padding-left:10px;
+}
+.category-header-item:first-child{
+	border-left:none;
+}
+.category-group>li>img{
+	height:200px;
+	width:90%;
+}
+.recommend-group>li>img{
+	height:200px;
+	width:90%;
 }
