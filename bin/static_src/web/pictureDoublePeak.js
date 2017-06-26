@@ -7,10 +7,6 @@ demoimg.onload = function () {
 	ctx.drawImage(demoimg, 0, 0, demoimg.width, demoimg.height, 0, 0, demoimg.width, demoimg.height);
 	var imgdata = ctx.getImageData(0, 0, demoimg.width, demoimg.height);
 
-
-
-
-
 	//获取直方图数据
 	var histogramData = getHistogramData(imgdata);
 
@@ -25,7 +21,7 @@ demoimg.onload = function () {
 
 	//画最佳阈值二值图图
 	var canvasObj4 = getCanvas(demoimg.width, demoimg.height);
-	drawPeakAndBetterPeakImage(canvasObj4.ctx, histogramData, imgdata);
+	drawPeakAndBetterPeakImage(canvasObj3.ctx,canvasObj4.ctx, histogramData, imgdata);
 
 }
 demoimg.src = "public/images/handle/lena.jpg";
@@ -73,9 +69,11 @@ function getHistogramData(imgdata) {
 	}
 
 	drawStack.push({name: "beginPath"});
-	drawStack.push({name: "moveTo", arg: [0, countArr[0] / max * 500]});
-	for (var j = 0; j < countArr.length; j++) {
-		drawStack.push({name: "lineTo", arg: [0, countArr[j] / max * 500], gray: j});
+	var y =( countArr[0] / max * 500 )||0
+	drawStack.push({name: "moveTo", arg: [0, y]});
+	for (var j = 1; j < 256; j++) {
+		y =( countArr[j] / max * 500 )||0
+		drawStack.push({name: "lineTo", arg: [j, y], gray: j});
 	}
 	drawStack.push({name: "stroke"});
 
@@ -100,7 +98,7 @@ function scanThreshold(imgdata, canvasObj,canvasObj2, histogramData) {
 	canvasObj.threshold += 2;
 	var threshold = canvasObj.threshold;
 	if (threshold >= 255) {
-		drawPeakAndBetterPeakImage(canvasObj.ctx, histogramData, imgdata);
+		drawPeakAndBetterPeakImage(canvasObj2.ctx,canvasObj.ctx, histogramData, imgdata);
 		return;
 	}
 	//画灰度直方图
@@ -109,7 +107,7 @@ function scanThreshold(imgdata, canvasObj,canvasObj2, histogramData) {
 	drawBinaryImage(canvasObj.ctx, getBinaryImageData(imgdata,threshold), threshold);
 
 	setTimeout(function () {
-		scanThreshold(imgdata, canvasObj, histogramData);
+		scanThreshold(imgdata, canvasObj,canvasObj2, histogramData);
 	}, 1000)
 }
 
@@ -120,19 +118,18 @@ function getBinaryImageData(imgdata,threshold){
 	var width= imgdata.width;
 	var height=imgdata.height;
 	var data = imgdata.data;
-	var newData = new Uint8ClampedArray();
 	var newImageData = new ImageData(width, height);
 	for (var i = 0; i < data.length; i+=4) {
 		var R = data[i];
 		var G = data[i + 1];
 		var B = data[i + 2];
-
+		newImageData.data[i + 3]=data[i + 3];
 		var gray = Math.floor((R+G+B)/3);//getGray(R,G,B)
 
 		gray = gray > threshold ? 255 : 0;
 
 		newImageData.data[i] = newImageData.data[i + 1] = newImageData.data[i + 2] = gray
-		newImageData.data[i + 3]=1;
+		
 	}
 	return newImageData;
 }
@@ -167,9 +164,9 @@ function getOriginPeakData(histogramData) {
 
 	var peakData = [];
 	var helpInfo = {};
-	for (var i = 2; i < countArr.length; i++) {
+	for (var i = 1; i < 256; i++) {
 		checkPeak(helpInfo, countArr[i - 1], countArr[i], function (type,currValue,frontValue) {
-			peakData.push({type: type < 0 ? "up" : "down", idx: i - 1,count:frontValue});
+			peakData.push({type: type > 0 ? "up" : "down", idx: i - 1,count:frontValue});
 		});
 	}
 	return peakData;
@@ -181,31 +178,31 @@ function getPeakData(histogramData){
 
 	var max = histogramData.max;
 
-
 	var peakData = getOriginPeakData(histogramData);
 
-	//得到双峰之间的数据
-	var newPeakData = filterByDoubleMaxPeak(peakData);
-
 	//误差为10
-	newPeakData = filterPeakData(newPeakData, max, 10);
+	var newPeakData = filterPeakData(peakData, max, 10);
+	
+	//得到双峰之间的数据
+	newPeakData = filterByDoubleMaxPeak(newPeakData);
 
 	return newPeakData;
 }
 /*
 * 画直方图和最佳阈值二值图
 * */
-function drawPeakAndBetterPeakImage( ctx, histogramData, imgdata){
+function drawPeakAndBetterPeakImage(histogramCtx, ctx, histogramData, imgdata){
 
 	var max = histogramData.max;
 
 	var peakData = getPeakData(histogramData);
 
-	drawPeak(peakData, max, ctx);
+	drawPeak(peakData, max, histogramCtx);
 
 	var T = getbetterT(peakData);
-
-	drawBinaryImage(ctx, getBinaryImageData(imgdata,T), T);
+	if(!isNaN(T)){
+		drawBinaryImage(ctx, getBinaryImageData(imgdata,T), T);
+	}
 
 }
 
@@ -231,8 +228,8 @@ function drawPeak(peakData,max, ctx) {
 function filterPeakData(peakData, max,difference) {
 
 	for (j = 1; j < peakData.length; j++) {
-		var y1 = peakData[j].value / max * 500;
-		var y2 = peakData[j-1].value / max * 500;
+		var y1 = peakData[j].count / max * 500;
+		var y2 = peakData[j-1].count / max * 500;
 		if (Math.abs(y1 - y2) < difference) {
 			peakData[j] = peakData[j - 1]
 		}
@@ -241,7 +238,7 @@ function filterPeakData(peakData, max,difference) {
 	var helpInfo = {};
 	for (var j = 1; j < peakData.length; j++) {
 		checkPeak(helpInfo, peakData[j-1].count, peakData[j].count, function (type,currValue,frontValue) {
-			newPeakData.push(frontValue);
+			newPeakData.push(peakData[j-1]);
 		});
 	}
 
@@ -254,7 +251,7 @@ function filterByDoubleMaxPeak(peakData) {
 	var two = [{}, {}];
 	var newpeak = [];
 	for (var j = 1; j < peakData.length; j++) {
-		var y = peakData[j].value;
+		var y = peakData[j].count;
 		if (!(two[0].value > y)) {
 			two[0] = {value: y, idx: j};
 		} else if (!(two[1].value > y)) {
