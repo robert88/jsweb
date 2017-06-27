@@ -304,11 +304,9 @@
         var $this = this.$item;
         var curOffset = this.curIndex * (this.paddingLeft + this.itemWidth);
 
-        for (var i = 0; i < $this.length; i += this.itemNum) {
-            for (var j = 0; j < this.itemNum&&((i+j)< $this.length); j++) {
-                var left = ( this.paddingLeft + this.itemWidth ) * j + this.paddingLeft + this.width * i-curOffset;
-                $this.eq(i + j).stop(true,true).data("animateTargetLeft",left).css({left:left })
-            }
+        for (var i = 0; i < $this.length; i ++) {
+             var left = this.paddingLeft*(i+1) + this.itemWidth  * i -curOffset;
+                $this.eq(i).stop(true,true).data("animateTargetLeft",left).css({left:left })
         }
 
         $this.css({top: this.paddingTop})
