@@ -1005,3 +1005,4 @@
 [info][2017/06/25 16:57:16][function (exports, require, module, __filename, __dirname) ]:静态文件路径为 /static_src D:/newProject/jsweb/bin/static_src
 [info][2017/06/25 16:57:16][function (exports, require, module, __filename, __dirname) ]:服务器启动在3000端口上,启动消耗 576 ms
 [info][2017/06/25 18:00:00][function (callback, hours, name) ]:[intervalByHour]  下一次启动将在 24 小时后
+[info][2017/06/26 21:16:07][function (callback, hours, name) ]:[intervalByHour]  下一次启动将在 20.7 小时后

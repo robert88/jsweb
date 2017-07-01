@@ -1684,3 +1684,5 @@
     at Error (native)
 [error][2017/06/25 22:38:27][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\pictureDoublePeak.css'
     at Error (native)
+[error][2017/06/26 21:16:07][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\pictureDoublePeak.css'
+    at Error (native)
