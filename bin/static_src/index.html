@@ -128,26 +128,22 @@
 
 <script src="public/js/common/main.js"></script>
 <script src="public/js/common/base.js"></script>
-<script src="public/js/common/config.js"></script>
+<script src="public/js/common/require.js"></script>
 <script src="public/js/common/jquery.carousel.v1.0.1.js"></script>
 <script type="text/javascript">
     ;(function() {
         window.PAGE = {};
         window.PAGE.HOME = "#web/home.html";
         window.PAGE.ERROR404 = "#html/web404";
+        window.PAGE.MENU={};
+        window.PAGE.MENU.DEFAULT="";
         window.PAGE.destroy = [];
-        window.PAGE.loading = null;
-        window.PAGE.closeLoading = null;
-        window.PAGE.load = null;//相对于widow.onload
         window.PAGE.STATICDEBUG = true;//JSdebug
         window.PAGE.DEBUG = true;//ajax debug
         window.PAGE.language = {en:{}};
         window.PAGE.languagePath = "/lang_";
         window.PAGE.curLanguage = "en";
-        window.PAGE.reload = null;
-        window.PAGE.data = {};
-    })()
-
+    })();
 </script>
 <script src="public/js/common/page.js"></script>
 </html>

@@ -1,0 +1,12 @@
+.edit-wrap{
+	position:relative;
+	background:#fff;
+	min-height:300px;
+	overflow: auto;
+}
+.edit-page{
+	margin:0 auto;
+	min-width: 1024px;
+	max-width: 1336px;
+	height:700px;
+}

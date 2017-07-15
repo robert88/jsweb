@@ -1,184 +1,397 @@
 
 
 //全局使用方法
-window.LS = window.LS || {};
+;(function(){
+	var $pageLoadContain = $("#page");
+	var $pageCss = $("#pageCss");
+	var $pageJs = $("#pageJs");
+	var $pageLoad = $("#pageLoad");
+	var $body = $("body");
 
-var $pageLoadContain = $("#page");
-var $pageCss = $("#pageCss");
-var $pageJs = $("#pageJs");
-var $pageLoad = $("#pageLoad");
-var $body = $("body");
 
-//destroy是一个数组
-window.PAGE.destroy.push(function(){
-	window.PAGE.load = null;
-	$body.scrollTop(0);
-	$pageLoad.html("");
-	$pageJs.html("");
-});
+	var PAGE = window.PAGE||{};
 
-/*页面部分加载*/
-window.PAGE.reload = function(){
-	console.log("reload page");
-	//hashChange();
-	window.location.reload()
-};
+	/*对于局部需要使用定时器的时候，不要直接使用window.setTimeout*/
+	PAGE.timer = [];
 
-/*loading效果*/
-window.PAGE.loading = function(){
-	$pageLoad.css("display", "flex");
-};
-
-/*关闭loading效果*/
-window.PAGE.closeLoading = function(){
-	$pageLoad.hide()
-};
-
-/*自己调用只能调用一次，不然会出现死循环*/
-function destroyPage(){
-
-	var newDestroy = [];
-
-	for(var i=0;i<window.PAGE.destroy.length;i++){
-		if(typeof window.PAGE.destroy[i]=="function"){
-			//注意顺序，相同的destroy是不会被执行的
-			if(  newDestroy.indexOf(window.PAGE.destroy[i])==-1 && window.PAGE.destroy[i]()!=true){
-				newDestroy.push(window.PAGE.destroy[i])
-			}
+	function remove(index){
+		if(~index){
+			PAGE.timer.splice(index,1)
 		}
 	}
 
-	window.PAGE.destroy = newDestroy;
-}
+	PAGE.setTimeout = function(callback){
+		var args = Array.prototype.slice.call(arguments,0);
 
-/*自己调用只能调用一次，不然会出现死循环*/
-function hashChange(hash,self) {
+		args[0] = function(){
+			if(typeof callback=="function"){
+				callback.apply(window,args.slice(2));
+			}
+			remove(PAGE.timer.indexOf(timer));
+		}
 
-	hash = hash||window.location.hash.trim();
+		var timer = setTimeout.apply(window,args);
 
-	hash = hash ? hash : window.PAGE.HOME;
+		PAGE.timer.push(timer);
+		return timer
+	};
 
-	var params = $.getParam(hash);
+	PAGE.clearTimeout = function(timer){
+		clearTimeout(timer);
+	};
 
-	//"#/app/home.min.js?js=1&css=1" ==>"app/home.min"
-	var action = hash.replace(/^#/, "").replace(/\?.*/, "").replace(/\.html$/, "").replace(/\.htm$/, "");
+	/*
+	*页面重新加载
+	* */
+	PAGE.reload = function(){
+		window.location.reload()
+	};
 
-	//确保开发模式
-	if(window.PAGE.STATICDEBUG){
-		params.js = params.js||1;
-		params.css = params.css||1;
-	}else{
-		window.console = window.console||{};
-		window.console.log = function(){};//屏蔽console
+	/*
+	*页面loading效果
+	* */
+	PAGE.loading = function(){
+		$pageLoadContain.hide();
+		$pageLoad.css("display", "flex");
+	};
+
+	/**
+	 * 关闭loading效果
+	 * */
+	PAGE.closeLoading = function(){
+		$pageLoadContain.show();
+		$pageLoad.hide()
+	};
+
+	/**
+	 * 变数组
+	 * */
+	PAGE.toArray=function(){
+		return Object.prototype.toString.call(arr)=="[object Array]"?arr:[arr];
+	};
+
+
+	/**
+	 * 从url中获取参数
+	 * */
+	PAGE.getParamsByUrl = function (url) {
+		var obj = {};
+		url = url||"";
+		//？param還有param
+		var params = url.split("?")[1]||url.split("?")[0];
+		params = params?params.split("&"):"";
+		for(var i=0;i<params.length;i++){
+			var map = params[i].split("=");
+			var key = map[0];
+			var value = map[1];
+			if(key){
+				if(obj[key]){
+					obj[key] = this.toArray(obj[key]).push(value)
+				}else{
+					obj[key] = value;
+				}
+			}
+		}
+		return obj;
+	};
+
+	/**
+	 * 过滤掉没有用的include标签，提取include标签中的信息
+	 * */
+	function getIncludeInfo(innerHtml) {
+		innerHtml = innerHtml.replace(/\s+/g," ");
+		var includeReg = /<include[^>]*src\s*=\s*"?'?([^>]*)"?'?\s*[^>]*>([\u0000-\uFFFF]*?)<\/include>/gmi;
+		var includeTag = innerHtml.match(includeReg);
+		var includeFile = [];
+		if(includeTag){
+			$.each(includeTag,function (idx,val) {
+				includeReg.lastIndex = 0;
+				var files = includeReg.exec(val);
+				if(files&&files[1]){
+					//idx需要和tag同步
+					includeFile.push({url:files[1].replace(/\s+/g,""),idx:idx});
+				}else{
+					innerHtml.replace(val,"");
+				}
+			});
+		}
+		return {html:innerHtml,fileList:includeFile,tagList:includeTag}
 	}
 
-	//优先加载css
-	if(params.css) {
-		$pageCss.html('<link rel="stylesheet" type="text/css" href="{0}.css?v={1}">'.tpl(action, params.css));
-	} else {
-		$pageCss.html("");
+	/**
+	 * 从handlerInclude中获取参数
+	 * */
+	PAGE.handlerInclude = function (innerHtml,callBack) {
+
+		var includeInfo = getIncludeInfo(innerHtml);
+
+		var len = includeInfo.fileList.length;
+		if(len==0){
+			callBack(innerHtml,[]);
+			return;
+		}
+
+		var configs = [];
+		var uniqueAction={};
+
+		$.each(includeInfo.fileList,function (idx,val) {
+
+				PAGE.load(val.url,function (subhtml,config) {
+					//去重复
+					if(!uniqueAction[config.action]){
+						configs.push(config);
+						uniqueAction[config.action] =1;
+					}
+					len--;
+					includeInfo.html=includeInfo.html.replace(includeInfo.tagList[val.idx],subhtml);
+					if(len<=0){
+						uniqueAction=null;
+						callBack(includeInfo.html,configs);
+					}
+				});
+
+		});
+	};
+
+	/**
+	 *提供一个全局事件.当页面切换时候就清除
+	 * */
+	PAGE.on = function (type,selector,callback,context) {
+		if(context){
+			$(context).on(type,selector,callback);
+			this.destroy.push(function () {
+				$(context).off(type,selector,callback);
+				callback =null
+			});
+		}else{
+			$(selector).on(type,callback);
+			this.destroy.push(function () {
+				$(selector).off(type,callback);
+				callback =null
+			});
+		}
+
+	};
+
+	/**
+	 *获取hash值，如果没有hash就使用PAGE.HOME
+	 * */
+	PAGE.getHash = function (hash,home) {
+
+		home = home==false?"":this.HOME
+
+		 hash = hash||window.location.hash.trim();
+
+		hash = hash ? hash : home;
+
+		return hash;
+	};
+
+
+	/**
+	 *设置当前nav的激活状态
+	 * */
+	var pageCurrNav="";
+
+	PAGE.setNav = function (map) {
+		var current  = getNavClass(map);
+		$("html").removeClass(pageCurrNav).addClass(current);
+		pageCurrNav = current;
+	};
+
+	/**
+	 *更加自定义菜单map的或者配置的PAGE.MENU来获取菜单
+	 * */
+	function getNavClass(map) {
+		map = map||PAGE.MENU;
+		var config = PAGE.getHashConfig(window.location.hash);
+		return map[config.action]||map[PAGE.MENU.DEFAULT];
 	}
-	$pageLoadContain.hide();
-	//显示加载ui
-	window.PAGE.loading();
 
-	var ver = new Date().getTime();
+	/**
+	*根据PAGE.destroy中的函数执行一次就失效，但是返回true的函数保留
+	 * */
+	function destroyPage(){
 
-	//显示加载html
-	$.ajax({
-		url: action + ".html?ver="+ver,
-		dataType: "html",
-		success: function(innerHtml) {
+		$body.scrollTop(0);
 
-			destroyPage()
+		var newDestroy = [];
 
+		for(var i=0;i<PAGE.destroy.length;i++){
+			if(typeof PAGE.destroy[i]=="function"){
+				//注意顺序，相同的destroy是不会被执行的
+				if(  newDestroy.indexOf(PAGE.destroy[i])==-1 && PAGE.destroy[i]()!=true){
+					newDestroy.push(PAGE.destroy[i]);
+				}
+			}
+		}
+
+		PAGE.destroy = newDestroy;
+	}
+
+
+	/*
+	* 开发模式和生产模式的切换
+	* */
+	PAGE.getHashConfig = function(hash,home) {
+
+		hash = PAGE.getHash(hash,home);
+
+		var params = PAGE.getParamsByUrl(hash);
+
+		//"#/app/home.min.js?js=1&css=1" ==>"app/home.min"
+		var action = hash.replace(/^#/, "").replace(/"|'/g, "").replace(/\?.*/, "").replace(/\.html$/, "").replace(/\.htm$/, "");
+
+		//确保开发模式
+		if(window.PAGE.STATICDEBUG){
+			params.js = params.js||1;
+			params.css = params.css||1;
+		}else{
+			window.console = window.console||{};
+			window.console.log = function(){};//屏蔽console
+		}
+
+		return {
+			url:hash,
+			params:params,
+			action:action
+		}
+	}
+
+	/*
+	*自己调用只能调用一次，不然会出现死循环
+	* */
+
+	function pageLoadSuccess(innerHtml,config){
+
+		destroyPage();
+
+		PAGE.handlerInclude(innerHtml,function (innerHtml,subConfigs) {
+			//优先加载css
+			if(config.params.css) {
+				$pageCss.html('<link rel="stylesheet" type="text/css" href="{0}.css?v={1}">'.tpl(config.action, config.params.css));
+			} else {
+				$pageCss.html("");
+			}
+			$.each(subConfigs,function (idx,val) {
+				if(val.params.css) {
+					$pageCss.append('<link rel="stylesheet" type="text/css" href="{0}.css?v={1}">'.tpl(val.action, val.params.css));
+				}
+			});
 			//添加内容
-			$pageLoadContain.show().html("<div id='pageDsync'>"+innerHtml+"</div>");
+			$pageLoadContain.html("<div id='pageDsync'>"+innerHtml+"</div>");
 
-			//加载js
-			if(params.js) {
+			//加载js,必须创建script标签才会执行
+			if(config.params.js) {
 				var s = document.createElement("script");
 				$pageJs.html(s);
-				s.src = "{0}.js?v={1}".tpl(action, params.js)
-			}
-
-		},
-		error: function() {
-			//不死循环
-			if(self){
-				$pageLoadContain.html('<section style="text-align: center"><div> 404 sorry can find page! </section>');
+				s.src = "{0}.js?v={1}".tpl(config.action, config.params.js);
 			}else{
-				hashChange(window.PAGE.ERROR404,true);
+				$pageJs.html("");
 			}
-		},
-		complete: function() {
-			$pageLoad.hide()
-			$(document).trigger("pageloaded")
-			$.dialog&&$.dialog.closeAll();
-		}
-	})
-}
+			$.each(subConfigs,function (idx,val) {
+				if(val.params.js) {
+					var subJs = document.createElement("script");
+					$pageJs.append(subJs);
+					subJs.src = "{0}.js?v={1}".tpl(val.action, val.params.js);
+				}
+			});
+			$("#pageDsync").trigger("pagecontentloaded");
+		});
 
-function bindHashChage(){
+	}
+
+
+	/*
+	 *跳到404页面
+	 * */
+	function pageRedirect404(hash) {
+		//自己调用只能调用一次，不然会出现死循环
+		if(window.PAGE.ERROR404==hash){
+			$pageCss.html("");
+			$pageLoadContain.html('<section style="text-align: center"><div> 404 sorry can find page! </section>');
+			$pageJs.html("");
+		}else{
+			hashChange(window.PAGE.ERROR404);
+		}
+	}
+
+	/**
+	 *hashchange事件切换页面
+	 * */
+	function hashChange(hash) {
+
+		var config = PAGE.getHashConfig(hash);
+
+		//显示加载ui
+		PAGE.loading();
+
+		//显示加载html
+		$.ajax({
+			url: config.action + ".html",
+			dataType: "html",
+			success: function(innerHtml){
+				console.log("page load success:",config.action);
+				pageLoadSuccess(innerHtml,config);
+			},
+			error: function () {
+				pageRedirect404(hash);
+			},
+			complete: function() {
+				PAGE.closeLoading();
+				$.dialog&&$.dialog.closeAll();
+			}
+		});
+	}
+
+	PAGE.load = function (hash,callback) {
+
+		var config = PAGE.getHashConfig(hash,false);
+
+		if(!config.action){
+			callback("",config);
+			return;
+		}
+		//显示加载html
+		$.ajax({
+			url: config.action + ".html",
+			dataType: "html",
+			success: function(innerHtml){
+				console.log("page load include file success:",config.action);
+				callback(innerHtml,config);
+			},
+			error: function () {
+				callback("",config);
+			}
+		});
+	};
+
+	/**
+	 *国际化
+	 * */
+	PAGE.lang = function (type,name){
+		var path = this.languagePath +"/"+ type+"/"+name+".json"+"?ver="+this.language[type].version;
+		console.log("获取国际化",type,name,path);
+		$.ajax({
+			url:path.toURI(),
+			dataType: 'json', //json数据返回
+			success:function(ret){
+				PAGE.language[type] = PAGE.language[type]||{};
+				$.extend(PAGE.language[type],ret);
+			}
+		})
+	};
+
+	/**
+	 *监听hashchange事件切换页面，监听事件load事件
+	 * */
 	$(window).on("hashchange", function() {
 		hashChange();
-		//im ie8~9支持https
-		// if(~navigator.userAgent.indexOf("MSIE 9.0")){
-		// 	window.location.href = window.location.href.replace("http:","https:")
-		// }
-		// window.location.reload()
-	}).on("load",function(){
-		if(typeof window.PAGE.load =="function"){
-			// window.PAGE.load();
-			hashChange();
-		}
-	})
-}
+	});
 
-
-/*自定义input*/
-function bindInput(){
-
-	$(document).on("focus","input",function(){
-
-		$(this).parents(".J-input-focus").addClass("input-box-focus");
-
-	}).on("blur","input",function(){
-
-		$(this).parents(".J-input-focus").removeClass("input-box-focus");
-	})
-}
-
-function getCommonLang(type){
-	var ver = +new Date()
-	var path = window.PAGE.languagePath + type+"/common.json?ver="+ver;
-	$.ajax({
-		url:path.toURI(),
-		dataType: 'json', //json数据返回
-		async:true,
-		success:function(ret){
-			window.PAGE.language[type] = window.PAGE.language[type]||{};
-			$.extend(window.PAGE.language[type],ret);
-		}
-	})
-}
-
-function bindHashChangeSelf(){
-	$(document).on("click","a",function(){
-		var $this = $(this);
-		var href = ($this.attr("href")||"").split("#")[1];
-		if(href&&href==window.location.hash.split("#")[1]){
-			window.PAGE.reload();
-		}
-	})
-}
-
-bindHashChage();
-
-hashChange();
-
-bindInput();
-
-
-bindHashChangeSelf()
+	/**
+	 *启动页面
+	 * */
+	hashChange();
+}());
 
