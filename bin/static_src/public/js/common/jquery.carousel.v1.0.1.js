@@ -55,7 +55,7 @@
     }
 
     function checkAbsolute(str) {
-        return /absolute|relative/i.test(str);
+        return /absolute|relative|fixed/i.test(str);
 
     }
 

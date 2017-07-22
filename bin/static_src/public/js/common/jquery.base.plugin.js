@@ -67,11 +67,6 @@
 			return this.width()+(this.css("padding-left")||"").toFloat()+(this.css("padding-right")||"").toFloat()
 		}
 	}
-	if(!$.fn.changeSize){
-		$.fn.changeSize = function(type){
-			
-			return this.width()+(this.css("padding-left")||"").toFloat()+(this.css("padding-right")||"").toFloat()
-		}
-	}
+	
 
 })();

@@ -21,7 +21,14 @@
 	width:100px;
 }
 .tool-menu>ul>li.hoverActive>dl>dd{
-	padding:0px 10px;
+	padding:0px 10px 0px 30px;
+	position: relative;
+}
+.tool-menu>ul>li.hoverActive>dl>dd .toggle-icon{
+	position:absolute;
+	left:10px;
+	top:50%;
+	margin-top:-7px;
 }
 .tool-menu>ul>li.hoverActive>dl>dd:hover{
 	background:#00ce9a;

@@ -282,21 +282,24 @@
 			$pageLoadContain.html("<div id='pageDsync'>"+innerHtml+"</div>");
 
 			//加载js,必须创建script标签才会执行
-			if(config.params.js) {
-				var s = document.createElement("script");
-				$pageJs.html(s);
-				s.src = "{0}.js?v={1}".tpl(config.action, config.params.js);
-			}else{
-				$pageJs.html("");
-			}
-			$.each(subConfigs,function (idx,val) {
-				if(val.params.js) {
-					var subJs = document.createElement("script");
-					$pageJs.append(subJs);
-					subJs.src = "{0}.js?v={1}".tpl(val.action, val.params.js);
+			//css加载必须在js前，渲染也必须在js前，所以js和css不应该在同一线程里面
+			setTimeout(function () {
+				if(config.params.js) {
+					var s = document.createElement("script");
+					$pageJs.html(s);
+					s.src = "{0}.js?v={1}".tpl(config.action, config.params.js);
+				}else{
+					$pageJs.html("");
 				}
-			});
-			$("#pageDsync").trigger("pagecontentloaded");
+				$.each(subConfigs,function (idx,val) {
+					if(val.params.js) {
+						var subJs = document.createElement("script");
+						$pageJs.append(subJs);
+						subJs.src = "{0}.js?v={1}".tpl(val.action, val.params.js);
+					}
+				});
+				$("#pageDsync").trigger("pagecontentloaded");
+			},0);
 		});
 
 	}

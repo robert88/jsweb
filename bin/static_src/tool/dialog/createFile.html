@@ -1,20 +1,33 @@
-<form class="form-block">
-	<fieldset class="ipt-label-block ipt-append J-input-focus">
+<form class="form-block" data-allcheck="true">
+	<fieldset class="ipt-label-block J-input-focus ">
 		<label class="ipt-label">文件名</label>
-		<div class="ipt-inline ipt-radius">
-			<i class="icon-search abs"></i>
-			<input type="text" placeholder="请输入标题" autocomplete="off" class="ipt">
+		<div class="ipt-inline ipt-radius J-validItem validItem">
+			<input type="text"
+				   placeholder="请输入标题"
+				   autocomplete="off"
+				   class="ipt"
+				   check-type="required,checkFile"
+				   data-accept-file="js,css,html">
+			<div class="validErrMsg J-validErr-msg"></div>
+			<div class="validIcon J-validIcon"></div>
 		</div>
+
 	</fieldset>
-	<fieldset class="ipt-label-block J-input-focus">
+	<fieldset class="ipt-label-block J-input-focus ">
 		<label class="ipt-label">文件存放路径</label>
-		<div class="ipt-inline">
-			<select class="ipt">
+		<div class="ipt-inline ipt-radius J-validItem validItem">
+			<select class="ipt" check-type="required">
 				<option value=""></option>
 				<option value="0">/tool</option>
 				<option value="1">/tool/dialog</option>
-				<option value="2">新建</option>
+				<option value="">新建</option>
 			</select>
+			<div class="validErrMsg J-validErr-msg"></div>
+			<div class="validIcon J-validIcon"></div>
 		</div>
+
+	</fieldset>
+	<fieldset class="ipt-label-block J-input-focus">
+		<a class="J-submitBtn btn-danger" style="width: 100px">提交</a>
 	</fieldset>
 </form>

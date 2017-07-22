@@ -35,7 +35,8 @@ fieldset {
 	line-height: 35px;
 	height: 35px;
 	position:relative;
-	padding:10px 8px 0px 100px;
+	padding:0px 8px 0px 100px;
+	margin-bottom: 25px;
 	margin-top:5px;
 }
 .ipt-label{
@@ -43,9 +44,8 @@ fieldset {
 	width:90px;
 	left:0;
 	text-align: right;
-	top:0;
-	height: 100%;
-	padding-top:10px;
+	top: 2px;
+	height: 35px;
 }
 .ipt-block{
 	display: block;
@@ -77,10 +77,10 @@ fieldset {
 	padding-left:30px;
 }
 .ipt-append.ipt-label-block{
-	padding:10px 38px 0px 100px;
+	padding:0px 38px 0px 100px
 }
 .ipt-prepend.ipt-label-block{
-	padding: 10px 33px 0px 100px;
+	padding: 0px 33px 0px 100px;
 }
 
 .ipt-append [class^="icon-"],
@@ -146,4 +146,31 @@ background: #1f2229;
 }
 .label-radio-group i{
 	display:inline-block;
+}
+.validErr input,.validErr select{
+	border:1px solid #da0e0e;
+}
+.validItem{
+	position:relative;
+}
+.validErrMsg{
+	display: none;
+	position: absolute;
+	top:100%;
+	line-height: 23px;
+}
+.validErr .validErrMsg{
+	color:#da0e0e;
+	display: block;
+}
+.validIcon{
+	display: none;
+	position: absolute;
+	top: 50%;
+	margin-top: -13px;
+	right: -30px;
+}
+.validErr .validIcon{
+	color:#da0e0e;
+	display: block;
 }

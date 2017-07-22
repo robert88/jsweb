@@ -59,3 +59,39 @@
     height: 30px;
     line-height: 30px
 }
+.dl-tips-img{
+    display:inline-block;
+    width:28px;
+    height:28px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.dl-tips-text{
+    display:inline-block;
+    vertical-align: middle;
+    margin-left:10px;
+}
+.dl-tips-error .dl-tips-img{
+    background-image: url(dl-img/tips-error.png);
+}
+.dl-tips-info .dl-tips-img{
+    background-image: url(dl-img/tips-info.png);
+}
+.dl-tips-success .dl-tips-img{
+    background-image: url(dl-img/tips-success.png);
+}
+.dl-tips-warn .dl-tips-img{
+    background-image: url(dl-img/tips-warn.png);
+}
+.dl-tips-error .dl-tips-text{
+   color:#da0e0e;
+}
+.dl-tips-info .dl-tips-text{
+  color:#0b6b3b
+}
+.dl-tips-success .dl-tips-text{
+   color:#95c53e
+}
+.dl-tips-warn .dl-tips-text{
+   color:#ffc600
+}

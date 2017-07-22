@@ -26,7 +26,8 @@
 		height:"auto",//兼容之前代码
 		closeAfter:null,//关闭之前
 		closeBefore:null,//关闭之后
-		changeSize:false//调节宽高
+		changeSize:false,//调节宽高
+		ready:null//dialog的dom已经初始化
 		//headerStyle,titleStyle,closeStyle,bodyStyle,maskStyle
 		//renderAfter
 	}
@@ -43,7 +44,7 @@
 		var $close = get$("dl-close").html("×");
 		var $body = get$("dl-body");
 		var $footer = get$("dl-footer");
-		var $loading = get$("dl-load").html("<img src='/pc/public/images/dl-img/loading.gif'/>");
+		var $loading = get$("dl-load").html("<img src='dl-img/loading.gif'/>");
 		var $mask = get$("dl-mask");//创建一次 dl-mask全局
 
 		//dialog 避免id
@@ -83,7 +84,7 @@
 			initDialog($dialog,$header,$title,$close,$body,$footer,$mask,opts);
 			
 		}
-
+		return $dialog;
 	}
 
 	function initDialog($dialog,$header,$title,$close,$body,$footer,$mask,opts){
@@ -131,8 +132,8 @@
 			renderStyle($title,""+(opts.titleStyle||"") );
 			//已title为最小宽度
 			
-			var $test = $("<div style='position:absolute;left:-1000px;'></div>").html($header[0].outerHTML).appendTo('body')
-			$dialog.css("min-width",$test.width());
+			var $test = $("<div style='position:absolute;left:-1000px;'></div>").html($header[0].outerHTML).appendTo('body');
+			$header.css("min-width",$test.width());
 			$test.remove();
 			$header.appendTo($dialog);
 
@@ -218,9 +219,9 @@
 		if(opts.button&&opts.button.length){
 			for(var i=0;i<opts.button.length;i++){
 				;(function(idx){
-					opts.button[idx].btn.click(function(){
+					opts.button[idx].btn.click(function(e){
 						if(typeof opts.button[idx].click=="function"){
-							if(opts.button[idx].click()===false){
+							if(opts.button[idx].click(e)===false){
 								return;
 							}
 						}
@@ -277,31 +278,24 @@
 
 			return new Dialog(content,opts);
 		},
-		tips: function(msg, opts) {
+		tips: function(msg, type,time,callback) {
+			var opts = {};
+			if(typeof type=="object"){
+				opts = type;
 
-
-            opts = $.extend(true,{type:"warning",callback:null,time:3000,btnText:""},opts);
-
-			if(opts.callback===true){
-                opts.callback = function(){window.location.reload();}
+			}else{
+				opts = {type:type,time:time,closeAfter:callback}
 			}
 
-            var content = [
-            '<div class="popup-box popup-sys">',
-            opts.title?('<div class="hd-tit">{0}</div>').tpl(opts.title):"",
-            opts.close===true?('<a class="close dl-close" title="close"><i class="i-font i-close">X</i></a>'):"",
-            '<div class="bd">',
-            '<div class="tips-txt align-c">',
-            '<i class="i-icon i-tip-l i-tip-{0}"></i>'.tpl(opts.type),
-            '<div class="txt">',
-            '<p>{0}</p>'.tpl($.i18n(msg)),
-            '</div>',
-            '</div>',
-            '</div>',
-            opts.btnText?'<div class="ft-btn align-c"><a class="btn btn-primary btn-m dl-bottom dl-close">{0}</a></div>'.tpl($.i18n(opts.btnText)):"",
-            '</div>'].join("");
+            opts = $.extend(true,{type:"warn",time:3000,zindex:1000,frameType:"tips",maskClose:true},opts);
 
-			return new Dialog(content,{zindex:1000,time:opts.time,frameType:"tips",closeAfter:opts.callback,mask:true});
+			if(opts.reload===true){
+				opts.reload = function(){window.location.reload();}
+			}
+
+            var content = '<div class="dl-tips-{0}"><i class="dl-tips-img"></i><span class="dl-tips-text">{1}</span></div>'.tpl(opts.type,msg);
+
+			return new Dialog(content,opts);
 
 		}
 	});
@@ -344,9 +338,15 @@
 		},
 		//删除一个触发
 		closeOneAfter:function(idx){
-			if(this.dlOpts[idx] && typeof this.dlOpts[idx].closeAfter  == "function"){
-				this.dlOpts[idx].closeAfter($(this.dlOpts[idx].frame));
+			if(this.dlOpts[idx]){
+				if(typeof this.dlOpts[idx].closeAfter  == "function"){
+					this.dlOpts[idx].closeAfter($(this.dlOpts[idx].frame));
+				}
+				if(typeof this.dlOpts[idx].reload =="function"){
+					this.dlOpts[idx].reload($(this.dlOpts[idx].frame))
+				}
 			}
+
 		},
 		//始终会触发
 		before:function(){

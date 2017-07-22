@@ -1,0 +1,73 @@
+.helper-resize-left{
+	position:absolute;
+
+	width:5px;
+	height:100%;
+	left:0px;
+	top:0px;
+	cursor: col-resize;
+}
+.helper-resize-right{
+	position:absolute;
+
+	width:5px;
+	height:100%;
+	right:0px;
+	top:0px;
+	cursor: col-resize;
+}
+.helper-resize-top{
+	position:absolute;
+
+	height:5px;
+	width:100%;
+	top:0px;
+	cursor: row-resize;
+}
+.helper-resize-bottom{
+	position:absolute;
+
+	height:5px;
+	width:100%;
+	bottom:0px;
+	cursor: row-resize;
+}
+.helper-resize-leftTop{
+	position:absolute;
+
+	width:5px;
+	height:5px;
+	left:0px;
+	top:0px;
+	cursor: nw-resize;
+}
+.helper-resize-rightTop{
+	position:absolute;
+
+	width:5px;
+	height:5px;
+	right:0px;
+	top:0px;
+	cursor: ne-resize;
+}
+.helper-resize-leftBottom{
+	position:absolute;
+
+	width:5px;
+	height:5px;
+	left:0px;
+	bottom:0px;
+	cursor: sw-resize;
+}
+.helper-resize-rightBottom{
+	position:absolute;
+
+	width:5px;
+	height:5px;
+	right:0px;
+	bottom:0px;
+	cursor: nw-resize;
+}
+.help-resize-wrap{
+	position:relative;
+}
