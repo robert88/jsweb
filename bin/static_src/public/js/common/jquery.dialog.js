@@ -44,7 +44,7 @@
 		var $close = get$("dl-close").html("×");
 		var $body = get$("dl-body");
 		var $footer = get$("dl-footer");
-		var $loading = get$("dl-load").html("<img src='dl-img/loading.gif'/>");
+		var $loading = get$("dl-load");
 		var $mask = get$("dl-mask");//创建一次 dl-mask全局
 
 		//dialog 避免id

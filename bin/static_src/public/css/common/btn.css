@@ -143,3 +143,8 @@
 	background: none;
 	color:#8FC31F;
 }
+.disabled{
+	background-color: #ccc;
+	border-color: #ccc;
+	color: #fff;
+}

@@ -7,8 +7,9 @@
 				   autocomplete="off"
 				   class="ipt"
 				   check-type="required,checkFile"
+				   data-focus="true"
 				   data-accept-file="js,css,html">
-			<div class="validErrMsg J-validErr-msg"></div>
+			<div class="validErrMsg J-valid-msg"></div>
 			<div class="validIcon J-validIcon"></div>
 		</div>
 
@@ -16,18 +17,18 @@
 	<fieldset class="ipt-label-block J-input-focus ">
 		<label class="ipt-label">文件存放路径</label>
 		<div class="ipt-inline ipt-radius J-validItem validItem">
-			<select class="ipt" check-type="required">
+			<select class="ipt" check-type="required" data-focus="true">
 				<option value=""></option>
 				<option value="0">/tool</option>
 				<option value="1">/tool/dialog</option>
 				<option value="">新建</option>
 			</select>
-			<div class="validErrMsg J-validErr-msg"></div>
+			<div class="validErrMsg J-valid-msg"></div>
 			<div class="validIcon J-validIcon"></div>
 		</div>
 
 	</fieldset>
 	<fieldset class="ipt-label-block J-input-focus">
-		<a class="J-submitBtn btn-danger" style="width: 100px">提交</a>
+		<a class="J-submitBtn btn-danger disabled" style="width: 100px">提交</a>
 	</fieldset>
 </form>

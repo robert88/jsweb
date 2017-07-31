@@ -81,7 +81,7 @@
 								}
 								var ret = true;
 								var type = value.slice(pointIndex);
-								$.each(acceptTypes,function (acceptType) {
+								$.each(acceptTypes,function (idx,acceptType) {
 									acceptType = acceptType.trim();
 									if(acceptType==type){
 										ret = false;

@@ -95,3 +95,8 @@
 .dl-tips-warn .dl-tips-text{
    color:#ffc600
 }
+.dl-load{
+    background: url(dl-img/loading.gif) no-repeat;
+    width: 16px;
+    height:16px;
+}

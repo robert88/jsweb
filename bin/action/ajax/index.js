@@ -5,5 +5,9 @@ exports = module.exports = {
 	},
 	"insertCode":function (request,response,next) {
 		api.insert(next,{name:"t_code"},request.params);
+	},
+	"/tool/handle/createFile":function (request,response,next) {
+		console.log(request);
+		next();
 	}
 };

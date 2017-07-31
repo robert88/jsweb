@@ -181,7 +181,7 @@
 			}
 			$btn.html(orgHtml).prop("disabled", false);
 
-		}
+		};
 		opts.complete = complete;
 
 		PAGE.ajax(opts)
@@ -280,8 +280,60 @@
 			$form.submit();
 		});
 
+		var $input = $form.find( "input" )
+			.add( $form.find( "textarea" ) )
+			.not( ".noCheck" )
+			.not(":disabled")
+			.filter( function(){
+				if( $( this ).attr( "check-type" ).indexOf("required")==-1 ){
+					return false;
+				}
+				return true;
+			});
+		var $select = $form.find( "select" )
+			.add( $form.find( "textarea" ) )
+			.not( ".noCheck" )
+			.not(":disabled")
+			.filter( function(){
+				if( $( this ).attr( "check-type" ).indexOf("required")==-1 ){
+					return false;
+				}
+				return true;
+			});
+
+		function checkBtn(){
+			var ret = true;
+			$input.each(function () {
+				if($(this).val()==""){
+					ret = false;
+					return false;
+				}
+			});
+			if(ret){
+				$select.each(function () {
+					if($(this).val()==""){
+						ret = false;
+						return false;
+					}
+				});
+			}
+			if(ret){
+				$form.find(".J-submitBtn").removeClass("disabled");
+			}else{
+				$form.find(".J-submitBtn").addClass("disabled");
+			}
+		}
+		//输入之后变亮
+		$form.off("keyup.checkBtn", $input).on("keyup.checkBtn",$input,function () {
+			checkBtn()
+		});
+
+		$form.off("change.checkBtn", $select).on("change.checkBtn",$select,function () {
+			checkBtn()
+		});
+
 		//对于提交按钮要求指定focus
-		$("body").off("keyup.submit").on("keyup.submit",function () {
+		$("body").off("keyup.submit").on("keyup.submit",function (e) {
 			if(e.key=="Enter"){
 				$(this).find(".J-submitBtn.J-submitFocus").trigger("click");
 			}
