@@ -61,7 +61,7 @@
 							validSuccess:function ($form) {
 								debugger
 								PAGE.ajax({
-									url:"tool/handle/createFile",
+									url:"/ajax/index/getCode",
 									success:function (ret) {
 										$.tips("suceess");
 									}

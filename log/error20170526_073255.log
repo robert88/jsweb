@@ -2934,3 +2934,55 @@
     at Error (native)
 [error][2017/07/31 23:02:03][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.js'
     at Error (native)
+[error][2017/08/27 07:29:00][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/08/27 07:29:00][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/08/27 07:29:00][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)
+[error][2017/08/27 08:03:53][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/08/27 08:03:56][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\pictureDoublePeak.css'
+    at Error (native)
+[error][2017/08/27 08:04:11][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/08/27 08:04:13][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\pictureDoublePeak.css'
+    at Error (native)
+[error][2017/08/27 14:27:37][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.css'
+    at Error (native)
+[error][2017/08/27 14:27:37][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.js'
+    at Error (native)
+[error][2017/08/27 14:27:55][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.css'
+    at Error (native)
+[error][2017/08/27 14:41:41][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.css'
+    at Error (native)
+[error][2017/08/27 14:41:41][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.js'
+    at Error (native)
+[error][2017/08/27 14:41:56][function handlerErr(err)]:Error: not find action or not support resource of mine type:undefined url:/index/getCode extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:109:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/08/27 14:43:14][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.css'
+    at Error (native)
+[error][2017/08/27 14:43:14][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.js'
+    at Error (native)
+[error][2017/08/27 16:07:49][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/08/27 16:07:50][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/06 07:36:18][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/06 07:36:19][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/06 07:36:19][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)
+[error][2017/09/06 07:36:51][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.css'
+    at Error (native)
+[error][2017/09/06 07:36:51][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.js'
+    at Error (native)
+[error][2017/09/06 07:40:27][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.css'
+    at Error (native)
+[error][2017/09/06 07:40:27][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.js'
+    at Error (native)
+[error][2017/09/06 07:43:11][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.css'
+    at Error (native)

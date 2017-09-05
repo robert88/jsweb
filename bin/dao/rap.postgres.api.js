@@ -1,3 +1,4 @@
+debugger
 var pg = require("pg");
 require("./rap.sql.js");
 
