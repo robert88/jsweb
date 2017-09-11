@@ -42,7 +42,7 @@ function responseData(ret,request, response,type) {
 	} else {
 		var absolutePath = (rap.rootPath + "/" + rap.staticPath + "/" + ret).toURI();
 		rap.log("请求结果为静态文件：", absolutePath);
-		var acceptEncoding = request.headers["accept-encoding"];
+		var acceptEncoding = request["accept-encoding"];
 		if (!acceptEncoding) {
 			acceptEncoding = "";
 		}

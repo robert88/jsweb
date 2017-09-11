@@ -2986,3 +2986,150 @@
     at Error (native)
 [error][2017/09/06 07:43:11][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.css'
     at Error (native)
+[error][2017/09/10 09:57:50][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/10 09:57:50][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/10 09:57:51][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)
+[error][2017/09/10 09:57:55][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\searchcode.css'
+    at Error (native)
+[error][2017/09/10 09:58:00][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\pictureDoublePeak.css'
+    at Error (native)
+[error][2017/09/10 10:00:32][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/10 10:00:32][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/10 10:00:32][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\web\pictureDoublePeak.css'
+    at Error (native)
+[error][2017/09/10 10:00:40][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.css'
+    at Error (native)
+[error][2017/09/10 10:00:40][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.js'
+    at Error (native)
+[error][2017/09/10 20:10:30][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/10 20:16:30][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.css'
+    at Error (native)
+[error][2017/09/10 20:21:09][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/10 20:21:09][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/10 20:24:37][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.css'
+    at Error (native)
+[error][2017/09/10 20:24:37][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.js'
+    at Error (native)
+[error][2017/09/10 20:24:38][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.js'
+    at Error (native)
+[error][2017/09/10 20:24:38][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.js'
+    at Error (native)
+[error][2017/09/10 20:24:39][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/10 20:24:39][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/10 20:24:48][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.css'
+    at Error (native)
+[error][2017/09/10 20:24:48][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.js'
+    at Error (native)
+[error][2017/09/11 07:25:57][function handlerErr(err)]:ReferenceError: rawHeaders is not defined
+    at Object.obj.headers (D:\newProject\jsweb\bin\rap.server.require.js:25:18)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:36:19)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/09/11 07:27:21][function handlerErr(err)]:TypeError: Cannot read property 'accept-encoding' of null
+    at responseData (D:\newProject\jsweb\bin\rap.server.response.js:45:39)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:95:4)
+    at D:\newProject\jsweb\bin\rap.server.init.js:96:5
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:78:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+[error][2017/09/11 07:30:51][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/11 07:30:51][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/11 07:49:28][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/11 07:49:29][function handlerErr(err)]:ReferenceError: obj is not defined
+    at paramsTypeConvert (D:\newProject\jsweb\bin\rap.server.require.js:98:12)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:82:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/09/11 07:49:30][function handlerErr(err)]:ReferenceError: obj is not defined
+    at paramsTypeConvert (D:\newProject\jsweb\bin\rap.server.require.js:98:12)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:82:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/09/11 07:49:31][function handlerErr(err)]:ReferenceError: obj is not defined
+    at paramsTypeConvert (D:\newProject\jsweb\bin\rap.server.require.js:98:12)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:82:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/09/11 07:49:38][function handlerErr(err)]:ReferenceError: obj is not defined
+    at paramsTypeConvert (D:\newProject\jsweb\bin\rap.server.require.js:98:12)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:82:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:54:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:45:4)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:543:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:105:23)
+[error][2017/09/11 07:50:15][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/11 07:50:15][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/11 07:51:04][function (err) ]:uncaughtException: Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\www.baidu.com'
+    at Error (native)
+[error][2017/09/11 07:51:59][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/11 07:51:59][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/11 07:57:32][function (err) ]:uncaughtException: Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\www.baidu.com'
+    at Error (native)
+[error][2017/09/12 06:29:02][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/12 06:29:02][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/12 06:31:31][function (err) ]:uncaughtException: Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\www.baidu.com'
+    at Error (native)
+[error][2017/09/12 06:42:13][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/12 06:42:14][function handlerErr(err)]:Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/12 06:55:57][function handlerErr(err,name)]:uncaughtException : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/12 07:00:04][function handlerErr(err,name)]:uncaughtException : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/12 07:00:10][function handlerErr(err,name)]:uncaughtException : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/12 07:23:02][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/12 07:23:02][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/12 07:28:10][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/12 07:28:10][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)

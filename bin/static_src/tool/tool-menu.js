@@ -61,6 +61,7 @@
 							validSuccess:function ($form) {
 								debugger
 								PAGE.ajax({
+									data:$form.serialize(),
 									url:"/ajax/index/getCode",
 									success:function (ret) {
 										$.tips("suceess");

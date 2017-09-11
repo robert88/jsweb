@@ -18,6 +18,8 @@ var domain = require('domain');
 var http = require("http");
 
 var requestCount = 0;
+//报错的时候要清除掉
+var responseCache = [];
 
 function requestRecord(){
 
@@ -34,11 +36,26 @@ if(process.env.DEBUG){
 		}
 	});
 }
-
+function clearNullAndFinished(filter){
+	var newArr = [];
+	for(var i=0;i<responseCache.length;i++){
+		if(responseCache[i] && responseCache[i].finished==false){
+			if(typeof filter=="function"){
+				filter(responseCache[i]);
+			}
+			newArr.push( responseCache[i] );
+		}
+	}
+	responseCache =  newArr;
+}
 /**
  * Create HTTP server.
  */
 var server = http.createServer(function(req, response) {
+
+	clearNullAndFinished();
+
+	responseCache.push(response);
 
 	var d = domain.create();
 
@@ -52,52 +69,100 @@ var server = http.createServer(function(req, response) {
 		rap.debounce(requestRecord,60000);
 
 		requestFilter(req,function(request){
-			handleResponse(request,response);
+			//当前的url是外部域名，且指定要代理
+
+			if(request.url.indexOf("http://") &&request.url.indexOf(request.host)==-1 && request.params.isProxy == true ){
+				if (request.method == "POST") {
+
+					if (request["Content-Type"] == "application/json") {
+						http.request({
+							method: "POST",
+							hostname: request.params.ip,
+							path: request.url,
+							port:request.params.port,
+							json: true,
+							headers: {
+								"content-type": request["Content-Type"]
+							},
+							body: JSON.stringify(request.params)
+						}, function (proxyRes) {
+
+						}).end()
+					} else {
+						http.request({
+							method: "POST",
+							hostname: request.params.ip,
+							path: request.url,
+							port:request.params.port,
+							headers: {
+								"content-type": request["Content-Type"]
+							},
+							form: request.params
+						}, function (proxyRes) {
+
+						}).end()
+					}
+
+				} else {
+					http.request(request.url, function (proxyRes) {
+
+					}).end()
+				}
+
+			}else{
+				handleResponse(request,response);
+			}
+
 		});
 
 
 		}catch (err){
-			handlerErr(err);
+			handlerErr(err,response,"trycatch")
 		}
 	});
 
 	//捕获大部分异常
 	d.on('error', function (err) {
-		handlerErr(err);
+		handlerErr(err,response,"domainErrorEvent")
 	});
 
-	//处理
-	function handlerErr(err){
 
-		rap.error(err.stack); // log the error
-
-		if(err.stack.indexOf("no such file or directory")!=-1){
-			response.writeHead(404);
-			response.end();
-		}else{
-			response.writeHead(500);
-			response.end(err.message);
-		}
-
-	}
 
 });
 
+//处理
+function handlerErr(err,response,name){
+
+	rap.error(name,":",err.stack); // log the error
+
+	if(err.stack.indexOf("no such file or directory")!=-1){
+		response.writeHead(404);
+		response.end();
+	}else{
+		response.writeHead(err.status||500);
+		response.end(err.message);
+	}
+
+}
 //捕获部分异常
 process.on('uncaughtException', function (err) {
 
-	rap.error("uncaughtException:",err.stack); // log the error
+	// rap.error("uncaughtException:",err.stack); // log the error
 
-	try {
-		var killTimer = setTimeout(function () {
-			process.exit(1);
-		}, 30000);
-		killTimer.unref();
+	clearNullAndFinished(function(response){
+		handlerErr(err,response,"uncaughtException");
+		response=null
+	});
+	//try {
+		//var killTimer = setTimeout(function () {
+		//	process.exit(1);
+		//}, 30000);
+		//killTimer.unref();
 
-		server.close();
-	} catch (e) {
-		rap.error('error when uncaughtException', e.stack);
-	}
+		//server.close();
+	//} catch (e) {
+	//	rap.error('error when uncaughtException', e.stack);
+	//}
 
 
 

@@ -1,0 +1,47 @@
+-------------GET请求-------------
+
+var request = require('request');
+request('http://www.baidu.com', function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+    console.log(body) // Show the HTML for the baidu homepage.
+  }
+})
+
+
+-----------POST application/json请求------------
+
+request({
+    url: url,
+    method: "POST",
+    json: true,
+    headers: {
+        "content-type": "application/json",
+    },
+    body: JSON.stringify(requestData)
+}, function(error, response, body) {
+    if (!error && response.statusCode == 200) {
+    }
+});
+
+-------------POST application/x-www-form-urlencoded 请求-----------
+
+request.post({url:'http://service.com/upload', form:{key:'value'}}, function(error, response, body) {
+    if (!error && response.statusCode == 200) {
+    }
+})
+
+-------------POST multipart/form-data 请求--------------
+
+var formData = {
+    // Pass a simple key-value pair
+    my_field: 'my_value',
+    // Pass data via Buffers
+    my_buffer: new Buffer([1, 2, 3]),
+    // Pass data via Streams
+    my_file: fs.createReadStream(__dirname + '/unicycle.jpg'),
+};
+request.post({url:'http://service.com/upload', formData: formData}, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+    }
+})
+如上所示，formData可以直接放key-value格式的数据，也可以放buffer，或者是通过流描述的文件。
