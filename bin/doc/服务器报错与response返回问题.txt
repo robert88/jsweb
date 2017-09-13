@@ -1,0 +1,8 @@
+node是异步的，这样就会有个问题，就是程序出错如何不让它挂掉
+本架构思路：
+利用trycatch来获取同步错误
+利用domain来获取部分异步错误
+
+利用UnCaughtException 来获取异常
+前两个可以获取response,即单独返回
+但是最后一个获取不到，本思路采用缓存思路，把没有finished的response存储起来，如果有异常，全部异常返回

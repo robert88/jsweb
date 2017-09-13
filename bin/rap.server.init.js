@@ -40,8 +40,8 @@ function clearNullAndFinished(filter){
 	var newArr = [];
 	for(var i=0;i<responseCache.length;i++){
 		if(responseCache[i] && responseCache[i].finished==false){
-			if(typeof filter=="function"){
-				filter(responseCache[i]);
+			if(typeof filter=="function" &&filter(responseCache[i])===false){
+				continue;
 			}
 			newArr.push( responseCache[i] );
 		}
@@ -71,7 +71,7 @@ var server = http.createServer(function(req, response) {
 		requestFilter(req,function(request){
 			//当前的url是外部域名，且指定要代理
 
-			if(request.url.indexOf("http://") &&request.url.indexOf(request.host)==-1 && request.params.isProxy == true ){
+			if(request.url.indexOf("http://")!=-1 &&request.url.indexOf(request.host)==-1 && request.params.isProxy == true ){
 				if (request.method == "POST") {
 
 					if (request["Content-Type"] == "application/json") {
@@ -148,10 +148,11 @@ function handlerErr(err,response,name){
 process.on('uncaughtException', function (err) {
 
 	// rap.error("uncaughtException:",err.stack); // log the error
-
+	err.status = 505;
 	clearNullAndFinished(function(response){
 		handlerErr(err,response,"uncaughtException");
-		response=null
+		response=null;
+		return false;
 	});
 	//try {
 		//var killTimer = setTimeout(function () {

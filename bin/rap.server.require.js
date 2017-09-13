@@ -22,7 +22,7 @@ exports = module.exports = function (req,callback) {
 		},
 		headers:function(set){
 			var headers = {};
-			for(var i=0;i<set.rawHeaders;i+=2){
+			for(var i=0;i<set.rawHeaders.length;i+=2){
 				headers[set.rawHeaders[i]] = set.rawHeaders[i+1];
 			}
 			return headers;
