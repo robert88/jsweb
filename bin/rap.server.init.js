@@ -70,48 +70,7 @@ var server = http.createServer(function(req, response) {
 
 		requestFilter(req,function(request){
 			//当前的url是外部域名，且指定要代理
-
-			if(request.url.indexOf("http://")!=-1 &&request.url.indexOf(request.host)==-1 && request.params.isProxy == true ){
-				if (request.method == "POST") {
-
-					if (request["Content-Type"] == "application/json") {
-						http.request({
-							method: "POST",
-							hostname: request.params.ip,
-							path: request.url,
-							port:request.params.port,
-							json: true,
-							headers: {
-								"content-type": request["Content-Type"]
-							},
-							body: JSON.stringify(request.params)
-						}, function (proxyRes) {
-
-						}).end()
-					} else {
-						http.request({
-							method: "POST",
-							hostname: request.params.ip,
-							path: request.url,
-							port:request.params.port,
-							headers: {
-								"content-type": request["Content-Type"]
-							},
-							form: request.params
-						}, function (proxyRes) {
-
-						}).end()
-					}
-
-				} else {
-					http.request(request.url, function (proxyRes) {
-
-					}).end()
-				}
-
-			}else{
-				handleResponse(request,response);
-			}
+			handleResponse(request,response);
 
 		});
 
@@ -132,12 +91,14 @@ var server = http.createServer(function(req, response) {
 
 //处理
 function handlerErr(err,response,name){
-
+	if(typeof err =="string"){
+		err = {message:err};
+	}
 	rap.error(name,":",err.stack); // log the error
 
-	if(err.stack.indexOf("no such file or directory")!=-1){
+	if(err.stack&&err.stack.indexOf("no such file or directory")!=-1){
 		response.writeHead(404);
-		response.end();
+		response.end(err.message);
 	}else{
 		response.writeHead(err.status||500);
 		response.end(err.message);

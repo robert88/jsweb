@@ -3194,3 +3194,171 @@
     at endReadableNT (_stream_readable.js:973:12)
     at _combinedTickCallback (internal/process/next_tick.js:74:11)
     at process._tickDomainCallback (internal/process/next_tick.js:122:9)
+[error][2017/09/14 21:05:16][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/14 21:05:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/14 21:05:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)
+[error][2017/09/14 21:05:24][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.css'
+    at Error (native)
+[error][2017/09/14 21:05:24][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.js'
+    at Error (native)
+[error][2017/09/14 21:09:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/14 21:09:21][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/14 21:14:11][function handlerErr(err,response,name)]:uncaughtException : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\www.baidu.com'
+    at Error (native)
+[error][2017/09/14 21:28:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/14 21:28:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/14 21:30:50][function handlerErr(err,response,name)]:uncaughtException : ReferenceError: http is not defined
+    at Object.module.exports./proxy (D:\newProject\jsweb\bin\action\index.js:24:6)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:73:4
+    at IncomingMessage.<anonymous> (D:\newProject\jsweb\bin\rap.server.require.js:70:4)
+    at emitNone (events.js:86:13)
+    at IncomingMessage.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:973:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:122:9)
+[error][2017/09/14 21:32:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/14 21:32:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/14 21:42:51][function handlerErr(err,response,name)]:trycatch : Error: Unable to determine the domain name
+    at new ClientRequest (_http_client.js:25:13)
+    at Object.exports.request (http.js:31:10)
+    at Object.module.exports./proxy (D:\newProject\jsweb\bin\action\index.js:39:10)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:73:4
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:84:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:71:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:62:4)
+    at emitTwo (events.js:106:13)
+[error][2017/09/14 21:43:12][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/14 21:43:12][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/14 21:43:32][function handlerErr(err,response,name)]:trycatch : Error: Unable to determine the domain name
+    at new ClientRequest (_http_client.js:25:13)
+    at Object.exports.request (http.js:31:10)
+    at Object.module.exports./proxy (D:\newProject\jsweb\bin\action\index.js:39:10)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:73:4
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:84:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:71:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:62:4)
+    at emitTwo (events.js:106:13)
+[error][2017/09/14 21:45:27][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/14 21:45:27][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/15 07:23:23][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/15 07:23:24][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/15 07:24:11][function handlerErr(err,response,name)]:trycatch : Error: "value" required in setHeader("content-type", value)
+    at ClientRequest.OutgoingMessage.setHeader (_http_outgoing.js:344:11)
+    at new ClientRequest (_http_client.js:85:14)
+    at Object.exports.request (http.js:31:10)
+    at Object.module.exports./proxy (D:\newProject\jsweb\bin\action\index.js:32:9)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:73:4
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:84:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:71:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:62:4)
+[error][2017/09/15 07:28:37][function handlerErr(err,response,name)]:trycatch : Error: "value" required in setHeader("content-type", value)
+    at ClientRequest.OutgoingMessage.setHeader (_http_outgoing.js:344:11)
+    at new ClientRequest (_http_client.js:85:14)
+    at Object.exports.request (http.js:31:10)
+    at Object.module.exports./proxy (D:\newProject\jsweb\bin\action\index.js:32:9)
+    at module.exports (D:\newProject\jsweb\bin\rap.server.response.js:89:26)
+    at D:\newProject\jsweb\bin\rap.server.init.js:73:4
+    at module.exports (D:\newProject\jsweb\bin\rap.server.require.js:84:3)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:71:3)
+    at Domain.run (domain.js:221:14)
+    at Server.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:62:4)
+[error][2017/09/15 07:31:30][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/15 07:31:31][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/15 07:32:00][function handlerErr(err,response,name)]:domainErrorEvent : 
+[error][2017/09/15 07:32:00][function handlerErr(err,response,name)]:domainErrorEvent : TypeError: Cannot read property 'indexOf' of undefined
+    at handlerErr (D:\newProject\jsweb\bin\rap.server.init.js:97:14)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:85:3)
+    at emitOne (events.js:96:13)
+    at Domain.emit (events.js:188:7)
+    at Domain.errorHandler [as _errorHandler] (domain.js:113:21)
+    at process._fatalException (bootstrap_node.js:251:33)
+[error][2017/09/15 07:32:00][function handlerErr(err,response,name)]:domainErrorEvent : 
+[error][2017/09/15 07:32:00][function handlerErr(err,response,name)]:domainErrorEvent : TypeError: Cannot read property 'indexOf' of undefined
+    at handlerErr (D:\newProject\jsweb\bin\rap.server.init.js:97:14)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:85:3)
+    at emitOne (events.js:96:13)
+    at Domain.emit (events.js:188:7)
+    at Domain.errorHandler [as _errorHandler] (domain.js:113:21)
+    at process._fatalException (bootstrap_node.js:251:33)
+[error][2017/09/15 07:38:53][function handlerErr(err,response,name)]:domainErrorEvent : 
+[error][2017/09/15 07:38:53][function handlerErr(err,response,name)]:domainErrorEvent : TypeError: Cannot read property 'indexOf' of undefined
+    at handlerErr (D:\newProject\jsweb\bin\rap.server.init.js:97:14)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:85:3)
+    at emitOne (events.js:96:13)
+    at Domain.emit (events.js:188:7)
+    at Domain.errorHandler [as _errorHandler] (domain.js:113:21)
+    at process._fatalException (bootstrap_node.js:251:33)
+[error][2017/09/15 07:38:53][function handlerErr(err,response,name)]:domainErrorEvent : 
+[error][2017/09/15 07:38:53][function handlerErr(err,response,name)]:domainErrorEvent : TypeError: Cannot read property 'indexOf' of undefined
+    at handlerErr (D:\newProject\jsweb\bin\rap.server.init.js:97:14)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:85:3)
+    at emitOne (events.js:96:13)
+    at Domain.emit (events.js:188:7)
+    at Domain.errorHandler [as _errorHandler] (domain.js:113:21)
+    at process._fatalException (bootstrap_node.js:251:33)
+[error][2017/09/15 07:41:52][function handlerErr(err,response,name)]:domainErrorEvent : Error: response timeout
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:87:11)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/09/15 07:45:52][function handlerErr(err,response,name)]:domainErrorEvent : 
+[error][2017/09/15 07:45:52][function handlerErr(err,response,name)]:domainErrorEvent : TypeError: Cannot read property 'indexOf' of undefined
+    at handlerErr (D:\newProject\jsweb\bin\rap.server.init.js:97:14)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:85:3)
+    at emitOne (events.js:96:13)
+    at Domain.emit (events.js:188:7)
+    at Domain.errorHandler [as _errorHandler] (domain.js:113:21)
+    at process._fatalException (bootstrap_node.js:251:33)
+[error][2017/09/15 07:45:53][function handlerErr(err,response,name)]:domainErrorEvent : 
+[error][2017/09/15 07:45:53][function handlerErr(err,response,name)]:domainErrorEvent : TypeError: Cannot read property 'indexOf' of undefined
+    at handlerErr (D:\newProject\jsweb\bin\rap.server.init.js:97:14)
+    at Domain.<anonymous> (D:\newProject\jsweb\bin\rap.server.init.js:85:3)
+    at emitOne (events.js:96:13)
+    at Domain.emit (events.js:188:7)
+    at Domain.errorHandler [as _errorHandler] (domain.js:113:21)
+    at process._fatalException (bootstrap_node.js:251:33)
+[error][2017/09/15 07:45:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: response timeout
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:87:11)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/09/15 07:47:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/15 07:47:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/15 07:49:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: Parse Error
+    at Error (native)
+    at Socket.socketOnData (_http_client.js:361:20)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:188:7)
+    at readableAddChunk (_stream_readable.js:177:18)
+    at Socket.Readable.push (_stream_readable.js:135:10)
+    at TCP.onread (net.js:542:20)
+[error][2017/09/15 07:49:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: socket hang up
+    at createHangUpError (_http_client.js:252:15)
+    at Socket.socketCloseListener (_http_client.js:284:23)
+    at emitOne (events.js:101:20)
+    at Socket.emit (events.js:188:7)
+    at TCP._handle.close [as _onclose] (net.js:492:12)
