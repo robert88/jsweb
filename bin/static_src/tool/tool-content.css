@@ -6,7 +6,7 @@
 }
 .edit-page{
 	margin:0 auto;
-	min-width: 1024px;
-	max-width: 1336px;
-	height:700px;
+	/*1336*768*/
+	max-width: 1221px;
+	height: 619px;
 }

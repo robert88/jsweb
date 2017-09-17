@@ -11,7 +11,7 @@
 	function resizePage(){
 		var winH = $(window).height();
 		if(winH!=perH){
-			$pageWrap.height(winH-$pageWrap.offset().top);
+			$pageWrap.height(winH-$pageWrap.offset().top-10);
 			perH = winH;
 		}
 	}

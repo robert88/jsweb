@@ -92,7 +92,7 @@ var server = http.createServer(function(req, response) {
 //处理
 function handlerErr(err,response,name){
 	if(typeof err =="string"){
-		err = {message:err};
+		err = {message:err,stack:err};
 	}
 	rap.error(name,":",err.stack); // log the error
 

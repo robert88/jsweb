@@ -73,6 +73,7 @@
 					s.src =action.replace(".html",".js");
 
 					$body.append(s);
+
 				}
 
 			});

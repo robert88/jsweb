@@ -49,7 +49,7 @@ exports = module.exports = {
 			}).end()
 
 		}else{
-			throw "can not find proxy url!"
+			throw new Error("can not find proxy url!");
 		}
 	}
 };

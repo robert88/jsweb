@@ -61,7 +61,7 @@ exports = module.exports = function (req,callback) {
 		 * 区别就是url.parse的arguments[1]为true：
 		 * ...也能达到‘querystring库’的解析效果，而且不使用querystring
 		 */
-		req.params = url.parse(req.url, true).query;
+		req.params = url.parse(req.originURL, true).query;
 
 		paramsTypeConvert(req.params);
 
