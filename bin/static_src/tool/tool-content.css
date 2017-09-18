@@ -5,8 +5,10 @@
 	overflow: auto;
 }
 .edit-page{
-	margin:0 auto;
 	/*1336*768*/
-	max-width: 1221px;
+	width: 1221px;
 	height: 619px;
+}
+.edit-page.contentscale{
+transform-origin:left top;
 }
