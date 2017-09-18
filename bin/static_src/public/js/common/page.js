@@ -13,7 +13,15 @@
 
 	/*对于局部需要使用定时器的时候，不要直接使用window.setTimeout*/
 	PAGE.timer = [];
+	//等比
+	PAGE.getResize=function(max, min, cur, maxCur, minCur) {
+		return (cur - min) * (maxCur - minCur) / (max - min) + minCur;
+	}
 
+  	//获取范围
+	PAGE.getRagen=function(val, max, min) {
+		return (val <= min) ? min : ((val <= max) ? val : max);
+	}
 	function remove(index){
 		if(~index){
 			PAGE.timer.splice(index,1)
