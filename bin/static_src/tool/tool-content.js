@@ -1,5 +1,6 @@
 ;(function () {
-	var $pageWrap = $(".edit-wrap");
+	var $zoomWrap = $(".edit-wrap");//scale外框
+	var $zoomTarget = $zoomWrap.find(".edit-page")//scale对象
 	var timer;
 	PAGE.on("resize",window,function () {
 		PAGE.clearTimeout(timer);
@@ -11,9 +12,25 @@
 	function resizePage(){
 		var winH = $(window).height();
 		if(winH!=perH){
-			$pageWrap.height(winH-$pageWrap.offset().top-10);
+			$zoomWrap.height(winH-$zoomWrap.offset().top-10);
+			resizeContent();
 			perH = winH;
 		}
 	}
 	resizePage();
+	function makePositive(d){
+		return d>0?d:0
+	}
+	function getResizeSize(value,realvalue,max,min){
+		value = PAGE.getRagen();
+		return Math.floor(value/realvalue*100);
+	}
+	var perWrapw,perWraph;
+	function resizeContent(){
+		var w = $zoomWrap.width();
+		var h = $zoomWrap.height();
+		if( perWrapw != w || h != perWraph){
+			
+		}
+	}
 }());
