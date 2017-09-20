@@ -3555,3 +3555,9 @@
     at Error (native)
 [error][2017/09/18 07:28:47][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\tool\dialog\createFile.js'
     at Error (native)
+[error][2017/09/21 06:46:41][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/21 06:46:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/21 06:46:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)
