@@ -1684,3 +1684,4 @@
 [info][2017/09/21 06:46:40][function (exports, require, module, __filename, __dirname) ]:action map {"/ajax/index/getCode":"[object Function]","/ajax/index/insertCode":"[object Function]","/tool/handle/createFile":"[object Function]","/":"/index.html","/proxy":"[object Function]"}
 [info][2017/09/21 06:46:40][function (exports, require, module, __filename, __dirname) ]:静态文件路径为 /static_src D:/newProject/jsweb/bin/static_src
 [info][2017/09/21 06:46:40][function (exports, require, module, __filename, __dirname) ]:服务器启动在3000端口上,启动消耗 2851 ms
+[info][2017/09/23 07:06:44][function (callback, hours, name) ]:[intervalByHour]  下一次启动将在 0.9 小时后
