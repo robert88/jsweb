@@ -1,0 +1,226 @@
+[error][2017/09/26 13:36:45][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 13:36:45][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 13:36:45][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)
+[error][2017/09/26 13:52:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 13:52:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 13:57:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 13:57:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 13:58:52][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 13:58:52][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 13:59:43][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 13:59:43][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:01:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:01:27][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:02:29][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:02:29][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:03:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:03:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:04:08][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:04:08][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:04:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:04:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:12:19][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:12:19][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:13:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:13:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:13:19][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:13:19][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:22:49][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 19:22:49][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:00:07][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:00:07][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:00:30][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:00:30][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:01:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:01:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:23:41][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)
+[error][2017/09/26 20:48:09][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:48:09][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:55:30][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:55:30][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:55:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:55:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:56:31][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:56:31][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:56:31][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)
+[error][2017/09/26 20:58:10][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:58:10][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:58:10][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\favicon.ico'
+    at Error (native)
+[error][2017/09/26 20:58:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/26 20:58:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\static_src\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/27 07:46:49][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\jquery.dialog.js'
+    at Error (native)
+[error][2017/09/27 07:46:49][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\require.js'
+    at Error (native)
+[error][2017/09/27 07:46:49][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\css\common\base.css'
+    at Error (native)
+[error][2017/09/27 07:46:49][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\jquery-1.12.4.js'
+    at Error (native)
+[error][2017/09/27 07:46:49][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\rap.util.prototype.js'
+    at Error (native)
+[error][2017/09/27 07:46:49][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\main.js'
+    at Error (native)
+[error][2017/09/27 07:46:49][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/27 07:46:50][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\jquery.carousel.v1.0.1.js'
+    at Error (native)
+[error][2017/09/27 07:46:50][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\page.js'
+    at Error (native)
+[error][2017/09/27 07:46:50][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\jquery.dialog.js'
+    at Error (native)
+[error][2017/09/27 07:46:50][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\rap.util.prototype.js'
+    at Error (native)
+[error][2017/09/27 07:46:50][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\main.js'
+    at Error (native)
+[error][2017/09/27 07:46:50][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/27 07:46:50][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\require.js'
+    at Error (native)
+[error][2017/09/27 07:46:50][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\jquery.carousel.v1.0.1.js'
+    at Error (native)
+[error][2017/09/27 07:46:50][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\page.js'
+    at Error (native)
+[error][2017/09/27 07:47:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\css\common\base.css'
+    at Error (native)
+[error][2017/09/27 07:48:35][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\jquery.dialog.js'
+    at Error (native)
+[error][2017/09/27 07:48:35][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/27 07:48:35][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\jquery.dialog.js'
+    at Error (native)
+[error][2017/09/27 07:48:36][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/27 07:51:02][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\jquery.dialog.js'
+    at Error (native)
+[error][2017/09/27 07:51:03][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/27 07:51:03][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\jquery.dialog.js'
+    at Error (native)
+[error][2017/09/27 07:51:03][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/27 07:51:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\jquery.dialog.js'
+    at Error (native)
+[error][2017/09/27 07:51:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/27 07:51:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\jquery.dialog.js'
+    at Error (native)
+[error][2017/09/27 07:51:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/27 07:53:30][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\jquery.dialog.js'
+    at Error (native)
+[error][2017/09/27 07:53:30][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/27 07:53:31][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\jquery.dialog.js'
+    at Error (native)
+[error][2017/09/27 07:53:31][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/27 07:54:13][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\jquery.dialog.js'
+    at Error (native)
+[error][2017/09/27 07:54:13][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/27 07:54:13][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\jquery.dialog.js'
+    at Error (native)
+[error][2017/09/27 07:54:13][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/27 07:57:23][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/27 07:57:24][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\common\base.js'
+    at Error (native)
+[error][2017/09/27 07:59:06][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\!web\login.html'
+    at Error (native)
+[error][2017/09/27 07:59:06][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\html\web404.html'
+    at Error (native)
+[error][2017/09/27 08:00:06][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web\login.css'
+    at Error (native)
+[error][2017/09/27 08:01:35][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web\login.css'
+    at Error (native)
+[error][2017/09/27 08:02:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web\login.css'
+    at Error (native)
+[error][2017/09/27 08:04:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web\login.css'
+    at Error (native)
+[error][2017/09/27 12:35:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\favicon.ico'
+    at Error (native)
+[error][2017/09/27 13:42:35][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\setREM.js'
+    at Error (native)
+[error][2017/09/27 13:42:35][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\setREM.js'
+    at Error (native)
+[error][2017/09/27 13:43:41][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\setREM.js'
+    at Error (native)
+[error][2017/09/27 13:43:41][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\setREM.js'
+    at Error (native)
+[error][2017/09/27 13:45:13][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\setREM.js'
+    at Error (native)
+[error][2017/09/27 13:45:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\setREM.js'
+    at Error (native)
+[error][2017/09/27 13:45:30][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\setREM.js'
+    at Error (native)
+[error][2017/09/27 13:45:30][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\setREM.js'
+    at Error (native)
+[error][2017/09/27 13:47:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\css\form.css'
+    at Error (native)
+[error][2017/09/27 13:47:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\setREM.js'
+    at Error (native)
+[error][2017/09/27 13:47:16][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\setREM.js'
+    at Error (native)
+[error][2017/09/27 13:47:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\css\form.css'
+    at Error (native)
+[error][2017/09/27 13:47:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\setREM.js'
+    at Error (native)
+[error][2017/09/27 13:47:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\js\lib\setREM.js'
+    at Error (native)
+[error][2017/09/27 22:40:43][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/public/images/ extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:116:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/09/28 06:07:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\checkbox.png'
+    at Error (native)

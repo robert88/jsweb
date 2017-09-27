@@ -12,12 +12,23 @@ require("./dao/rap.sql.cache.js");
 
 var requestFilter = require("./rap.server.require.js");
 var handleResponse = require("./rap.server.response.js");
+var wake = require("./rap.filesystem.js");
 
 var domain = require('domain');
 
 var http = require("http");
 
 var requestCount = 0;
+var processConfigURL = rap.rootPath.replace("/bin","") + "/log/config.json";
+console.log(processConfigURL)
+var processConfig
+if(wake.isExist(processConfigURL)){
+	 processConfig = wake.readData(processConfigURL).trim();
+}else{
+	processConfig = "";
+	wake.writeData(processConfigURL,"");
+}
+
 //报错的时候要清除掉
 var responseCache = [];
 
@@ -25,16 +36,32 @@ function requestRecord(){
 
 
 }
+if(processConfig){
+	processConfig = JSON.parse(processConfig);
+	childProcess.exec('start "%windir%\\system32\\cmd.exe" '+"taskkill /pid "+processConfig.pid+" -t -f",function (err,stdout) {
 
-if(process.env.DEBUG){
-
-	childProcess.exec('start "%windir%\\system32\\cmd.exe" node-inspector --web-port=8081',function (err,stdout) {
 		if(err){
 			rap.error(err);
 		}else {
-			rap.log("run debugger",stdout);
+			console.log("task kill process exit!");
 		}
 	});
+
+}
+
+if(process.env.DEBUG){
+
+	var debugerProcess = childProcess.exec('start "%windir%\\system32\\cmd.exe" node-inspector --web-port=8081',function (err,stdout) {
+
+		if(err){
+			rap.error(err);
+		}else {
+			console.log("debuger process exit!");
+		}
+		wake.writeData(processConfigURL,JSON.stringify({pid:debugerProcess.pid}));
+	});
+
+
 }
 function clearNullAndFinished(filter){
 	var newArr = [];
@@ -132,6 +159,14 @@ process.on('uncaughtException', function (err) {
 
 server.listen(3000);
 if(process.env.DEBUG){
+
+	childProcess.exec('start C:\\"Program Files (x86)"\\Google\\Chrome\\Application\\chrome.exe http://127.0.0.1:8081/?port=5858',function (err,stdout) {
+		if(err){
+			rap.error(err);
+		}else {
+			rap.log("chrome debugger run 8081");
+		}
+	});
 	childProcess.exec('start C:\\"Program Files (x86)"\\Google\\Chrome\\Application\\chrome.exe http://localhost:3000',function (err,stdout) {
 		if(err){
 			rap.error(err);
@@ -139,6 +174,7 @@ if(process.env.DEBUG){
 			rap.log("chrome run 3000");
 		}
 	});
+
 }
 var endTime = new Date();
 

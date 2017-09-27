@@ -4,7 +4,7 @@ var zip = require("./rap.server.debug.zip.js");
 var pt = require("path");
 
 var defaultSettings = {
-	logPath: "D:/newProject/jsweb/log/",//日志存储的本地路径
+	logPath: rap.rootPath.replace("/bin","")+"/log/",//日志存储的本地路径//"D:/newProject/jsweb/log/";
 	initLogStr: "[init][rap.server.debug]", //启动打印开头
 	dateFormat: {
 		message: "yy/MM/dd hh:mm:ss", //消息中的时间格式

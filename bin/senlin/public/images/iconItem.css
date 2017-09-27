@@ -1,0 +1,120 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-bakbtn {
+  background-image: url(iconItem.png);
+  background-position: 0px 0px;
+  width: 119px;
+  height: 46px;
+}
+.icon-baofu {
+  background-image: url(iconItem.png);
+  background-position: -119px -180px;
+  width: 48px;
+  height: 48px;
+}
+.icon-btnbg {
+  background-image: url(iconItem.png);
+  background-position: -129px 0px;
+  width: 159px;
+  height: 30px;
+}
+.icon-cangjingge2 {
+  background-image: url(iconItem.png);
+  background-position: 0px -56px;
+  width: 72px;
+  height: 53px;
+}
+.icon-chongzibtn {
+  background-image: url(iconItem.png);
+  background-position: -60px -119px;
+  width: 91px;
+  height: 26px;
+}
+.icon-fenduo {
+  background-image: url(iconItem.png);
+  background-position: -56px -240px;
+  width: 44px;
+  height: 44px;
+}
+.icon-haoyou {
+  background-image: url(iconItem.png);
+  background-position: 0px -119px;
+  width: 50px;
+  height: 51px;
+}
+.icon-jianghukuaibao {
+  background-image: url(iconItem.png);
+  background-position: -177px -180px;
+  width: 50px;
+  height: 43px;
+}
+.icon-jiayuan {
+  background-image: url(iconItem.png);
+  background-position: 0px -180px;
+  width: 50px;
+  height: 50px;
+}
+.icon-loginout {
+  background-image: url(iconItem.png);
+  background-position: -162px -240px;
+  width: 37px;
+  height: 41px;
+}
+.icon-registerbtn {
+  background-image: url(iconItem.png);
+  background-position: -82px -56px;
+  width: 106px;
+  height: 33px;
+}
+.icon-sexfimale {
+  background-image: url(iconItem.png);
+  background-position: -60px -180px;
+  width: 49px;
+  height: 49px;
+}
+.icon-sexmale {
+  background-image: url(iconItem.png);
+  background-position: -237px -180px;
+  width: 47px;
+  height: 43px;
+}
+.icon-system {
+  background-image: url(iconItem.png);
+  background-position: 0px -240px;
+  width: 46px;
+  height: 45px;
+}
+.icon-turnleft {
+  background-image: url(iconItem.png);
+  background-position: -245px -56px;
+  width: 36px;
+  height: 17px;
+}
+.icon-turnright {
+  background-image: url(iconItem.png);
+  background-position: -198px -56px;
+  width: 37px;
+  height: 17px;
+}
+.icon-video {
+  background-image: url(iconItem.png);
+  background-position: -110px -240px;
+  width: 42px;
+  height: 41px;
+}

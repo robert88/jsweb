@@ -1,4 +1,6 @@
-var wakePromise = require("./rap.filesystem.promise.js");
+var wakePromise = require("./rap.filesystem.promise.js");//异步
+
+var wake = require("./rap.filesystem.js");//同步
 
 var actionMap = require("./rap.server.response.action.js");
 
@@ -41,6 +43,11 @@ function responseData(ret,request, response,type) {
 		//如果返回的是文件
 	} else {
 		var absolutePath = (rap.rootPath + "/" + rap.staticPath + "/" + ret).toURI();
+		var commonPath = (rap.rootPath + "/" + rap.commonPath + "/" + ret).toURI();
+		//如果不存在就去commonpath中寻找
+		if( !wake.isExist(absolutePath) ){
+			absolutePath = commonPath;
+		}
 		rap.log("请求结果为静态文件：", absolutePath);
 		var acceptEncoding = request.headers["accept-encoding"];
 		if (!acceptEncoding) {

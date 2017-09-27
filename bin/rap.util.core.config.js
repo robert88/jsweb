@@ -8,26 +8,36 @@ process.env.DEBUG =true;
 global.rap = {};
 rap.debug_module = true;
 rap.requestStack = [];//过滤request
-rap.rootPath="D:/newProject/jsweb/bin";
-
-if(process.env.DEBUG){
-	rap.staticPath="/static_src";//debugger静态资源路径
-}else{
-	rap.staticPath="/static";//静态资源路径
-}
+rap.rootPath= __dirname.replace(/\\/g,"/"); //"D:/newProject/jsweb/bin";
 
 rap.connectionString = "postgres://postgres:'ym@20150904'@localhost/postgres";
-rap.sqlFile={path :"D:/newProject/jsweb/bin/dao/sql"};
+rap.sqlFile={path :rap.rootPath+"/dao/sql"};
 rap.sqldebug = true;
 
+// rap.staticPath="/static_src";//debugger静态资源路径
+// rap.perTool={
+// 	spaIndex:"/static_src/index.html",
+// 	normalIndex :"/static_src/indexStatic.html",
+// 	html:"/static_src/web",
+// 	publicFile:"/static_src/public",
+// 	buildRegExp:{exe:/\/static_src\//,str:"/static/"}
+// }
+
+
+rap.staticPath="/senlin";//debugger静态资源路径
+rap.perTool={
+	spaIndex:"/senlin/index.html",
+	normalIndex :"/senling/indexStatic.html",
+	html:"/senlin/web",
+	publicFile:"/senlin/public",
+	buildRegExp:{exe:/\/static_src\//,str:"/static/"}
+};
+
+rap.commonPath="/common";//公共静态资源
 rap.actionPath="/action";//ajax请求路径或者是拦截url
 rap.deflate = false;//deflate gzip压缩
-rap.perTool={
-	spaIndex:"/static_src/index.html",
-	normalIndex :"/static_src/indexStatic.html",
-	html:"/static_src/web",
-	publicFile:"/static_src/public",
-	buildRegExp:{exe:/\/static_src\//,str:"/static/"}
+if(!process.env.DEBUG){
+	rap.staticPath="/static";//静态资源路径
 }
 require('./rap.util.prototype.js');
 require('./rap.util.tool.js');

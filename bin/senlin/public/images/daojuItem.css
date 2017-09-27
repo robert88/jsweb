@@ -1,0 +1,126 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-daoju1 {
+  background-image: url(daojuItem.png);
+  background-position: -148px -191px;
+  width: 35px;
+  height: 29px;
+}
+.icon-daoju2 {
+  background-image: url(daojuItem.png);
+  background-position: -94px -305px;
+  width: 33px;
+  height: 30px;
+}
+.icon-daoju3 {
+  background-image: url(daojuItem.png);
+  background-position: -103px -191px;
+  width: 35px;
+  height: 31px;
+}
+.icon-daoju4 {
+  background-image: url(daojuItem.png);
+  background-position: -319px -232px;
+  width: 35px;
+  height: 32px;
+}
+.icon-daoju5 {
+  background-image: url(daojuItem.png);
+  background-position: -225px -232px;
+  width: 37px;
+  height: 38px;
+}
+.icon-daoju6 {
+  background-image: url(daojuItem.png);
+  background-position: -272px -232px;
+  width: 37px;
+  height: 38px;
+}
+.icon-daoju7 {
+  background-image: url(daojuItem.png);
+  background-position: 0px -305px;
+  width: 38px;
+  height: 35px;
+}
+.icon-jineng {
+  background-image: url(daojuItem.png);
+  background-position: 0px -129px;
+  width: 93px;
+  height: 93px;
+}
+.icon-qiankundaiKuang {
+  background-image: url(daojuItem.png);
+  background-position: -161px -232px;
+  width: 54px;
+  height: 54px;
+}
+.icon-shizi {
+  background-image: url(daojuItem.png);
+  background-position: 0px 0px;
+  width: 177px;
+  height: 119px;
+}
+.icon-shu {
+  background-image: url(daojuItem.png);
+  background-position: -187px 0px;
+  width: 167px;
+  height: 116px;
+}
+.icon-worldtop {
+  background-image: url(daojuItem.png);
+  background-position: -48px -305px;
+  width: 36px;
+  height: 34px;
+}
+.icon-yuanbao {
+  background-image: url(daojuItem.png);
+  background-position: -193px -191px;
+  width: 30px;
+  height: 20px;
+}
+.icon-yuanbao1000 {
+  background-image: url(daojuItem.png);
+  background-position: 0px -232px;
+  width: 72px;
+  height: 63px;
+}
+.icon-yuanbao2 {
+  background-image: url(daojuItem.png);
+  background-position: -233px -191px;
+  width: 30px;
+  height: 16px;
+}
+.icon-yuanbao50 {
+  background-image: url(daojuItem.png);
+  background-position: -256px -129px;
+  width: 62px;
+  height: 48px;
+}
+.icon-yuanbao500 {
+  background-image: url(daojuItem.png);
+  background-position: -82px -232px;
+  width: 69px;
+  height: 55px;
+}
+.icon-yuanbaotitle {
+  background-image: url(daojuItem.png);
+  background-position: -103px -129px;
+  width: 143px;
+  height: 52px;
+}

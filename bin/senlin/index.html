@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>森林秘境</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta content="telephone=no" name="format-detection">
+
+    <!--start mergeCss:main.min-->
+    <link rel="stylesheet" type="text/css" href="public/css/common/base.css">
+    <link rel="stylesheet" type="text/css" href="public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="public/css/main-color.css">
+    <link rel="stylesheet" type="text/css" href="public/css/form.css">
+    <link rel="stylesheet" type="text/css" href="public/css/jquery.dialog.css">
+    <!--end mergeCss-->
+
+
+    <!--start mergeJs:lib.min-->
+    <script src="public/js/lib/jquery-1.12.4.js"></script>
+    <script src="public/js/common/jquery.dialog.js"></script>
+    <script src="public/js/common/jquery.base.plugin.js"></script>
+    <script src="public/js/lib/rap.util.prototype.js"></script>
+    <script src="public/js/common.js"></script>
+    <!--end mergeJs-->
+</head>
+
+<body>
+
+
+    <!--s:主题部分-->
+    <div id="pageCss"></div>
+    <div id="page"></div>
+    <div id="pageJs"></div>
+    <!--e:主题部分-->
+
+
+
+</body>
+
+<script src="public/js/common/main.js"></script>
+<script src="public/js/common/require.js"></script>
+<script src="public/js/common/jquery.carousel.v1.0.1.js"></script>
+<script type="text/javascript">
+    ;(function() {
+        window.PAGE = {};
+        window.PAGE.HOME = "#web/home.html";
+        window.PAGE.ERROR404 = "#html/web404";
+        window.PAGE.MENU={};
+        window.PAGE.MENU.DEFAULT="";
+        window.PAGE.destroy = [];
+        window.PAGE.STATICDEBUG = true;//JSdebug
+        window.PAGE.DEBUG = true;//ajax debug
+        window.PAGE.language = {en:{}};
+        window.PAGE.languagePath = "/lang_";
+        window.PAGE.curLanguage = "en";
+    })();
+</script>
+<script src="public/js/common/page.js"></script>
+<script src="public/js/common/setREM.js"></script>
+</html>

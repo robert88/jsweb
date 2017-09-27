@@ -1,0 +1,90 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-canjingge {
+  background-image: url(textItem.png);
+  background-position: 0px 0px;
+  width: 380px;
+  height: 67px;
+}
+.icon-chongzi {
+  background-image: url(textItem.png);
+  background-position: -390px 0px;
+  width: 94px;
+  height: 52px;
+}
+.icon-jianghu {
+  background-image: url(textItem.png);
+  background-position: -180px -206px;
+  width: 179px;
+  height: 49px;
+}
+.icon-lingsou {
+  background-image: url(textItem.png);
+  background-position: 0px -206px;
+  width: 170px;
+  height: 54px;
+}
+.icon-qiankundai {
+  background-image: url(textItem.png);
+  background-position: -153px -270px;
+  width: 136px;
+  height: 53px;
+}
+.icon-register {
+  background-image: url(textItem.png);
+  background-position: 0px -143px;
+  width: 178px;
+  height: 53px;
+}
+.icon-set {
+  background-image: url(textItem.png);
+  background-position: -390px -62px;
+  width: 92px;
+  height: 53px;
+}
+.icon-tishi {
+  background-image: url(textItem.png);
+  background-position: -390px -125px;
+  width: 91px;
+  height: 52px;
+}
+.icon-userinfo {
+  background-image: url(textItem.png);
+  background-position: -188px -143px;
+  width: 170px;
+  height: 53px;
+}
+.icon-worldSortText {
+  background-image: url(textItem.png);
+  background-position: -191px -77px;
+  width: 174px;
+  height: 55px;
+}
+.icon-wulin {
+  background-image: url(textItem.png);
+  background-position: 0px -77px;
+  width: 181px;
+  height: 56px;
+}
+.icon-yaoqianshu {
+  background-image: url(textItem.png);
+  background-position: 0px -270px;
+  width: 143px;
+  height: 53px;
+}
