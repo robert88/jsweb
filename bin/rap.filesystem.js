@@ -1,6 +1,5 @@
 var fs = require('fs');
 var pt = require('path');
-var debug = require("../bin/rap.server.debug.js");
 // var images = require("images");
 /*
  获取目前下的文件名称
@@ -263,7 +262,6 @@ var copyDir=function(srcDir, workdir,callback){
 
 	 for(var i=0;files&&i<files.length;i++){
 	 	var tempSrc = files[i].replace(srcDir,"")
-		 debug.info(files[i]);
 	 	var tempWork = (workdir+"/"+tempSrc).replace(/\/+/g,"/")
 		copyFile(files[i],tempWork)
 	 }

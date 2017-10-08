@@ -36,18 +36,18 @@ function requestRecord(){
 
 
 }
-if(processConfig){
-	processConfig = JSON.parse(processConfig);
-	childProcess.exec('start "%windir%\\system32\\cmd.exe" '+"taskkill /pid "+processConfig.pid+" -t -f",function (err,stdout) {
-
-		if(err){
-			rap.error(err);
-		}else {
-			console.log("task kill process exit!");
-		}
-	});
-
-}
+// if(processConfig){
+// 	processConfig = JSON.parse(processConfig);
+// 	childProcess.exec('start "%windir%\\system32\\cmd.exe" '+"taskkill /pid "+processConfig.pid+" -t -f",function (err,stdout) {
+//
+// 		if(err){
+// 			rap.error(err);
+// 		}else {
+// 			console.log("task kill process exit!");
+// 		}
+// 	});
+//
+// }
 
 if(process.env.DEBUG){
 
@@ -97,6 +97,7 @@ var server = http.createServer(function(req, response) {
 
 		requestFilter(req,function(request){
 			//当前的url是外部域名，且指定要代理
+			
 			handleResponse(request,response);
 
 		});
@@ -182,3 +183,11 @@ rap.info("静态文件路径为",rap.staticPath,rap.rootPath+rap.staticPath);
 
 rap.info("服务器启动在3000端口上,启动消耗",endTime-startTime,"ms");
 
+// var server = http.createServer(function(req, response) {
+// 	response.writeHead(200,{
+// 		"X-Powered-By":"robert-rap-server",
+// 		"Content-Type":"text/plain",
+// 		"Set-Cookie":["a=2","b=2"]
+// 	})
+// 	response.end("helloword")
+// }).listen(3001)

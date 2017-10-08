@@ -1,6 +1,9 @@
+body{
+	background-position: center 0;
+	background-size: auto 100%;
+}
 .main-body{
 	position:absolute;
-	border:1px solid red;
 	top:25%;
 	right:0;
 	left:0;
@@ -12,4 +15,13 @@
 }
 .form-block{
 	padding-top: 10rem;
+}
+.ipt{
+	background-color:transparent;
+	font-size: 0.875rem;
+	border:1px solid #0d82d1;
+	color:#fff;
+}
+.ipt:focus{
+	border:1px solid #72eafe;
 }

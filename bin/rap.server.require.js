@@ -29,7 +29,8 @@ exports = module.exports = function (req,callback) {
 			req[i] = obj[i](req);
 		}
 	}
-
+	//存放cookie
+	req.cookie = []
 
 	if (req.method== 'POST') {
 		rap.log("post");

@@ -1,51 +1,190 @@
-.ad-content .carousel-wrap{
+header{
 	position:absolute;
-	z-index: -1;
+	top:0;
+	left:0;
+	padding-left:168px;
+	height:150px;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 1;
 }
-.ad-content{
-	height: 180px;
+header .user-pic  .person{
+	background-position: -959px -537px;
+	width: 184px;
+	height: 160px;
+	margin: -20px 0 0 -43px;
 }
-.recommend-content{
-	position:relative;
-	padding-left:240px;
-}
-.recommend-left-content{
-	width:240px;
+
+header .user-pic{
 	position:absolute;
-	top:0px;
-	left:0px;
+	left:0;
+	width: 125px;
+	height: 150px;
+	border-radius: 50%;
+	margin: 20px 0 0 43px;
+}
+header .user-pic.female{
+	background-position: -1153px -537px;
+
+}
+header .user-pic.male{
+	background-position: -1223px -262px;
+}
+header .header-wrap{
+	position: relative;
+	height:100%;
+}
+header .header-wrap .header-top,
+header .header-wrap .header-bottom{
+	height:50%;
 }
 
-.recommend-portal{
-
+header .header-wrap .header-top .content{
+	background-position: 0px 0px;
+	width: 327px;
+	height: 71px;
 }
 
-.category-header{
-	background:#2e343e;
-	padding:10px;
+header .header-wrap .header-top .coin{
+	background-position: -90px -336px;
+	width: 30px;
+	height: 20px;
+	margin: 31px 10px 10px 13px;
 }
-.category-header .search-bar{
-	background: #1a2228;
-	display: inline-block;
-	padding:10px;
-	border-radius: 5px;
+header .header-wrap .header-top .yuanbao{
+	background-position: -187px -184px;
+	width: 30px;
+	height: 16px;
+	margin: 31px 10px 10px 13px;
 }
-.category-header-item{
-	float: left;
-	width:300px;
-	height: 40px;
-	line-height: 40px;
-	border-left:1px solid #fff;
-	padding-left:10px;
+header .header-wrap .header-bottom .charge{
+	background-position: -60px -119px;
+	width: 91px;
+	height: 26px;
+	margin: 35px 0 0 20px;
 }
-.category-header-item:first-child{
-	border-left:none;
+header .header-wrap .header-bottom .notice{
+	background-position: -177px -180px;
+	width: 50px;
+	height: 43px;
+	margin: 20px 0 0 20px;
 }
-.category-group>li>img{
-	height:200px;
-	width:100%;
+header .header-wrap .header-bottom .hardword{
+	background-position: -56px -240px;
+	width: 44px;
+	height: 44px;
+	margin: 20px 0 0 20px;
 }
-.recommend-group>li>img{
-	height:200px;
-	width:100%;
+header .header-wrap .header-bottom .setting{
+	background-position: 0px -240px;
+	width: 46px;
+	height: 45px;
+	margin: 20px 0 0 20px;
+}
+
+footer{
+	position:absolute;
+	bottom:0;
+	left:0;
+	height:55px;
+	overflow: hidden;
+	width: 100%;
+}
+footer .home{
+	background-position: 0px -180px;
+	width: 50px;
+	height: 50px;
+}
+footer .friend{
+	background-position: 0px -119px;
+	width: 50px;
+	height: 51px;
+}
+footer .skills{
+	background-position: -187px -84px;
+	width: 64px;
+	height: 54px;
+}
+footer .package{
+	background-position: -119px -180px;
+	width: 48px;
+	height: 48px;
+}
+footer .goldHouse{
+	background-position: 0px -56px;
+	width: 72px;
+	height: 53px;
+}
+body,html{
+	height:100%;
+	overflow: hidden;
+}
+.main-body{
+	position: absolute;
+	transform-origin:left top;
+	left:0;
+	top:0;
+	width:1500px;
+	height:1500px;
+	background-image: url(../public/images/mijing.jpg);
+	background-repeat: no-repeat;
+}
+.main-body .treeItem{
+	position:absolute;
+}
+.main-body .light{
+	position:absolute;
+	left: 590px;
+	top: 611px;
+	background-position: -959px 0px;
+	width: 436px;
+	height: 252px;
+}
+.main-body .treeItem .fengyin{
+	position:absolute;
+	background-position: -959px -262px;
+	width: 254px;
+	height: 265px;
+}
+.main-body .treeItem .huafei1{
+	position:absolute;
+	background-position: 0px 0px;
+	width: 286px;
+	height: 221px;
+}
+.main-body .treeItem .huafei2{
+	position:absolute;
+	background-position: -10px -236px;
+	width: 286px;
+	height: 221px;
+}
+.main-body .treeItem .huafei3{
+	position:absolute;
+	background-position: -308px 9px;
+	width: 286px;
+	height: 221px;
+}
+.main-body .treeItem .huafei4{
+	position:absolute;
+	background-position: -291px -232px;
+	width: 286px;
+	height: 221px;
+}
+.main-body .zhuzhi1,.main-body .zhuzhi2{
+	position:absolute;
+	background-position: -10px -482px;
+	width: 84px;
+	height: 188px;
+}
+.main-body .zhuzhi3{
+	position:absolute;
+	background-position: -150px -530px;
+	width: 84px;
+	height: 141px;
+}
+.main-body .zhuzhi4,.main-body .zhuzhi5{
+	position:absolute;
+	background-position: -278px -482px;
+	width: 84px;
+	height: 188px;
 }

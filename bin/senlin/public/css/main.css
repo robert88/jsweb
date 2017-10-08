@@ -23,6 +23,9 @@
 .fs32{
 	font-size: 2rem;
 }
+.letter-space8{
+	letter-spacing: 0.625rem;
+}
 body{
 	font-size: 1.125rem;
 }
@@ -176,9 +179,4 @@ margin-left:0.625rem;
 	display: inline-block; width: 100px;
 	white-space: nowrap;
 	text-align: left;
-}
-.bg-banquetfiy{
-	background-image: url("./images/banquetfiy.png");
-	width: 120px;
-	height: 270px;
 }

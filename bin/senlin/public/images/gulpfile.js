@@ -41,7 +41,7 @@ for (var i = 0; i < list.length; i++) {
 		var spriteData = gulp.src(list[i]).pipe(spritesmith({
 			imgName: listName[i] + '.png',
 			cssName: listName[i] + '.css',
-			cssFormat:"css",
+
 			padding:10
 		}));
 		return spriteData.pipe(gulp.dest('./'));

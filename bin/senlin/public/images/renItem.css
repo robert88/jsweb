@@ -16,21 +16,57 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
-.icon-boy {
+.icon-long {
+  background-image: url(renItem.png);
+  background-position: -959px -262px;
+  width: 254px;
+  height: 265px;
+}
+.icon-一级化肥 {
   background-image: url(renItem.png);
   background-position: 0px 0px;
-  width: 124px;
-  height: 148px;
+  width: 471px;
+  height: 401px;
 }
-.icon-gril {
+.icon-三级化肥 {
   background-image: url(renItem.png);
-  background-position: -134px 0px;
-  width: 102px;
-  height: 112px;
+  background-position: -481px 0px;
+  width: 468px;
+  height: 384px;
 }
-.icon-userkuang {
+.icon-二级化肥 {
   background-image: url(renItem.png);
-  background-position: -246px 0px;
-  width: 102px;
-  height: 112px;
+  background-position: 0px -411px;
+  width: 476px;
+  height: 376px;
+}
+.icon-头像边框 {
+  background-image: url(renItem.png);
+  background-position: -959px -537px;
+  width: 184px;
+  height: 160px;
+}
+.icon-女性 {
+  background-image: url(renItem.png);
+  background-position: -1153px -537px;
+  width: 125px;
+  height: 137px;
+}
+.icon-树干 {
+  background-image: url(renItem.png);
+  background-position: -486px -411px;
+  width: 420px;
+  height: 371px;
+}
+.icon-灯光 {
+  background-image: url(renItem.png);
+  background-position: -959px 0px;
+  width: 436px;
+  height: 252px;
+}
+.icon-男性 {
+  background-image: url(renItem.png);
+  background-position: -1223px -262px;
+  width: 125px;
+  height: 150px;
 }

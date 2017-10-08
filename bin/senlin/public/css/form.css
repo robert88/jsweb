@@ -175,9 +175,26 @@ background: #1f2229;
 	display: block;
 }
 .form-checkbox{
-	background:url(../images/checkbox.png) no-repeat;
-	background-position: 0px 0px;
+	display: inline-block;
+	background:url(../images/iconItem.png) no-repeat;
+	background-position: -193px -119px;
+	width: 22px;
+	height: 21px;
 }
-.form-checkbox{
-	background:url(../images/checkbox.png) no-repeat;
+.form-checkbox.checked{
+	background-position: -161px -119px;
+}
+.form-checkbox input{
+	display: none;
+}
+.ipt-register{
+	background-image: url(../images/btnbg.png);
+	background-position: 0px -196px;
+	background-size:291px 384px;
+	width: 161px;
+	height: 34px;
+	background-position: 0px -12.25rem;
+	background-size: 181% 24rem;
+	width: 100%;
+	height: 2.125rem;
 }

@@ -27,10 +27,15 @@ function responseData(ret,request, response,type) {
 	var zipType = rap.deflate ? "deflate" : "gzip";//response.headers['Content-Encoding'] undefined
 
 	type = type|| "text/html";
+
+	if(request.cookie.length){
+		type = "text/plain";
+	}
+
 	var headerOption={
 		"X-Powered-By":"robert-rap-server",
 		"Content-Type":type,
-		"X-Powered-By":"rap_robert"
+		"Set-Cookie":request.cookie
 	}
 	var zip = zlibMap[zipType]();
 

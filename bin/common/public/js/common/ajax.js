@@ -10,7 +10,7 @@
 
 	function defaultError(text, tipsType) {
 
-		$.tips($.i18n(text), tipsType, 3000);
+		$.tips(text, tipsType, 3000);
 
 	}
 
@@ -38,10 +38,10 @@
 		actionMap[action].time--;
 	}
 
-	function errorHander(ret, type, error, errorCallBack) {
+	function errorHander(ret, type, error, errorCallBack,codeMap) {
 		var text = ret;
 
-		var tipsType = "warning";
+		var tipsType = "error";
 
 		//系统错误提示
 		if (type == "sysError") {
@@ -50,9 +50,14 @@
 
 
 		if (typeof ret == "object" && ret != null) {
-			text = $.i18n(ret.code || ret.message || "");
+			if(codeMap){
+				text = codeMap[ret.code]||"unknown"
+			}else{
+				text = ret.code || ret.message || "";
+			}
+
 		} else {
-			text = $.i18n(text);
+			text = text;
 		}
 
 		if (type == "dataError" && text == "200") {
@@ -112,12 +117,12 @@
 			}
 
 			//state为true的时候表示请求成功
-			if (ret && ret.state) {
+			if (ret && ret.code==1) {
 				if (typeof success == "function") {
 					success(ret.data, ret, "success");
 				}
 			} else {
-				errorHander(ret, "dataError", error, errorCallBack)
+				errorHander(ret, "dataError", error, errorCallBack,ajaxOption.msg)
 			}
 
 		}
@@ -140,7 +145,7 @@
 				code: XMLHttpRequest.status,
 				message: $text.text()
 			}
-			errorHander(msg, "sysError", error, errorCallBack)
+			errorHander(msg, "sysError", error, errorCallBack,ajaxOption.msg)
 		}
 
 		//ajax不会转json
@@ -166,10 +171,10 @@
 		//按钮类型是input
 		if ($btn.data("type") == "input") {
 			orgHtml = $btn.val();
-			$btn.val($.i18n("i18n.sys.submitting"));
+			$btn.val("...");
 		} else {
 			orgHtml = $btn.html();
-			$btn.html($.i18n("i18n.sys.submitting"));
+			$btn.html("...");
 		}
 
 		var optsComplete = opts.complete;
@@ -259,7 +264,7 @@
 
 				$parents.addClass("validErr");
 
-				$parents.find(".J-valid-msg").html($.i18n(msg));
+				$parents.find(".J-valid-msg").html(msg);
 				$parents.find(".J-validIcon").html('<i class="icon-error"></i>');
 
 				if (typeof opts.validError == "function") {
@@ -285,20 +290,21 @@
 			.not( ".noCheck" )
 			.not(":disabled")
 			.filter( function(){
-				if( $( this ).attr( "check-type" ).indexOf("required")==-1 ){
-					return false;
+				var checkType = $( this ).attr( "check-type" )
+				if(checkType || (checkType && checkType.indexOf("required")==-1 )){
+					return true;
 				}
-				return true;
+				return false;
 			});
 		var $select = $form.find( "select" )
-			.add( $form.find( "textarea" ) )
 			.not( ".noCheck" )
 			.not(":disabled")
 			.filter( function(){
-				if( $( this ).attr( "check-type" ).indexOf("required")==-1 ){
-					return false;
+				var checkType = $( this ).attr( "check-type" )
+				if(checkType || (checkType && checkType.indexOf("required")==-1 )){
+					return true;
 				}
-				return true;
+				return false;
 			});
 
 		function checkBtn(){
@@ -307,6 +313,12 @@
 				if($(this).val()==""){
 					ret = false;
 					return false;
+				}
+				if($(this).attr("type")=="radio"){
+					if( $(this).parents(".J-label-radio-group").find(".checked").length==0 ){
+						ret = false;
+						return false;
+					}
 				}
 			});
 			if(ret){
@@ -331,7 +343,7 @@
 		$form.off("change.checkBtn", $select).on("change.checkBtn",$select,function () {
 			checkBtn()
 		});
-
+		checkBtn();
 		//对于提交按钮要求指定focus
 		$("body").off("keyup.submit").on("keyup.submit",function (e) {
 			if(e.key=="Enter"){

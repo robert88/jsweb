@@ -1,19 +1,17 @@
 body,html{
+	width:100%;
 	height:100%;
 	position:relative;
 }
 body{
 	background-image: url(../images/mijing.jpg);
 	background-repeat: no-repeat;
-	background-position: center 0;
-	background-size: auto 100%;
 }
 .text-gradient {
 	display: inline-block;
 	position:relative;
 	color: #fff088;
 	font-weight: 700;
-	font-family: '微软雅黑';
 	background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(255, 240, 136, 1)), to(rgba(255, 164, 0, 1)));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -29,4 +27,43 @@ body{
 	text-shadow: 1px 1px 0px #7d5059, -1px 0px 0px rgba(125, 80, 89, 0.1);
 	z-index: -1;
 	width: 100%;
+}
+.text-gradient-info {
+	display: inline-block;
+	position:relative;
+	color: #85d1ea;
+	font-weight: 700;
+	background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(251, 253, 254, 1)), to(rgba(126, 206, 233, 1)));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: none !important;
+}
+.text-gradient-info:after {
+	content: attr(data-text);
+	position: absolute;
+	left:0;
+	top:0;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 1px 1px 0px #65758b, -1px 0px 0px rgba(101, 80, 89, 0.1);
+	z-index: -1;
+	width: 100%;
+}
+.bg-daoju{
+	background-image: url(../images/daojuItem.png);
+	display: inline-block;
+	vertical-align: middle;
+}
+.bg-renwu{
+	background-image: url(../images/renItem.png);
+	display: inline-block;
+}
+.bg-icon{
+	background-image: url(../images/iconItem.png);
+	display: inline-block;
+}
+.bg-kuang{
+	background-size: 100% 384px;
+	background-image: url(../images/btnbg.png);
+	display: inline-block;
 }

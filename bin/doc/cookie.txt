@@ -1,0 +1,5 @@
+node 写cookie的时候，
+res.writeHead(200,{'Set-Cookie':"ttt=1","Content-Type":"text/plain"})
+必须"Content-Type":"text/plain"其他不行
+
+写多个cookie时必须是数组的方式，而且如果是ajax时候必须写path=/

@@ -1,54 +1,61 @@
 <div class="wrap main-body">
-		<form class="form-block" data-allcheck="true">
+		<form class="form-block " id="loginForm">
 			<fieldset class="ipt-label-block  J-input-focus ">
-				<label class="ipt-label text-gradient" data-text="账号">账号</label>
+				<label class="ipt-label "><span class=" text-gradient" data-text="账号">账号</span></label>
 				<div class="ipt-inline ipt-radius J-validItem validItem">
-					<input name="name" type="text" tabindex="1"
-						   placeholder="请输入标题"
+					<input name="mobile" type="text" tabindex="1"
 						   autocomplete="off"
+						   placeholder="请输入标题"
 						   class="ipt"
-						   check-type="required,checkFile"
-						   data-focus="true"
-						   data-accept-file="js,css,html">
-					<div class="validErrMsg J-valid-msg"></div>
-					<div class="validIcon J-validIcon"></div>
+						   check-type="required,mobile"
+						   data-mobile-msg="请填写正确的手机号!"
+						   data-focus="true">
+					<!--<div class="validErrMsg J-valid-msg"></div>-->
+					<!--<div class="validIcon J-validIcon"></div>-->
 				</div>
 			</fieldset>
 			<fieldset class="ipt-label-block J-input-focus ">
-				<label class="ipt-label text-gradient" data-text="密码">密码</label>
+				<label class="ipt-label "><span class=" text-gradient" data-text="密码">密码</span></label>
 				<div class="ipt-inline ipt-radius J-validItem validItem">
-					<input name="name" type="text" tabindex="1"
-						   placeholder="请输入密码"
+					<input name="remember" type="hidden" value="0"/>
+					<input name="password" type="password" tabindex="1"
 						   autocomplete="off"
+						   placeholder="请输入密码"
 						   class="ipt"
-						   check-type="required,checkFile"
-						   data-focus="true"
-						   data-accept-file="js,css,html">
-					<div class="validErrMsg J-valid-msg"></div>
-					<div class="validIcon J-validIcon"></div>
+						   check-type="required password"
+						   data-focus="true">
 				</div>
 			</fieldset>
 
-			<fieldset class="ipt-label-block J-input-focus m20 J-validItem validItem">
-				<div class="ipt-inline">
-					<label class="ipt-label text-gradient" data-text="记住密码">记住密码</label>
-					<div class="ipt-inline ipt-radius J-form-checkbox form-checkbox" >
-						<input type="checkbox" value="">
+			<fieldset class=" J-input-focus pt20" style="margin:1rem 13% 0 13%">
+				<div class="ipt-inline" style="width: 45%">
+					<div class="ipt-radius J-label-box form-checkbox vm rememberPassWord" >
+						<input type="checkbox " name="remember_password" value="">
 					</div>
+					<label class="text-gradient vm fs14" data-text="记住账号">记住账号</label>
 				</div>
-				<div class="ipt-inline">
-					<label class="ipt-label text-gradient" data-text="记住账号">记住账号</label>
-					<div class="ipt-inline ipt-radius J-validItem validItem">
-						<input type="checkbox" value="">
+				<div class="ipt-inline" style="width: 45%">
+					<div class="ipt-radius J-label-box form-checkbox vm rememberAccount">
+						<input type="checkbox" value="" name="remember_account">
 					</div>
+					<label class="text-gradient vm fs14" data-text="记住账号">记住账号</label>
 				</div>
-				<div class="validErrMsg J-valid-msg"></div>
-				<div class="validIcon J-validIcon"></div>
 			</fieldset>
 
-			<fieldset class="ipt-label-block J-input-focus">
-				<a class="J-submitBtn btn-danger disabled" style="width: 100px">登陆</a>
-				<a class="J-submitBtn btn-danger disabled" style="width: 100px">注册</a>
+			<fieldset class="pt20" style="margin:1rem 0 0 13%">
+				<div class="ipt-inline" style="width: 45%">
+					<a class="btn-link" href="#/web/register.html"><label class="text-gradient vm letter-space8" data-text="注册">注册</label></a>
+				</div>
+				<div class="ipt-inline" style="width: 45%">
+					<a class="J-submitBtn btn-link disabled">
+						<label class="text-gradient vm letter-space8" data-text="登陆">登陆</label>
+					</a>
+				</div>
+			</fieldset>
+			<fieldset class="pt20 tr" style="margin:1rem 13% 0 13%" >
+				<a class="btn-link tl">
+					<label class="text-gradient vm fs14" data-text="找回密码">找回密码</label>
+				</a>
 			</fieldset>
 		</form>
 </div>

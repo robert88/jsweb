@@ -293,9 +293,13 @@
 
 				value = $.trim( $target.html().replace( /\n|\t/g, "" ) );
 			//必须在父类设置
-			}else if( $target.length && ( $target.attr( "type" ) == "checkbox" || $target.attr( "type" ) == "radio" ) ){
+			}else if( $target.length && ( $target.attr( "type" ) == "checkbox" ) ){
 
 				value = $target.find("input:checked").prop( "checked" )?"1":"";
+
+			}else if( $target.length && ($target.attr( "type" ) == "radio" ) ){
+				//如果有checked表示有选择
+				value = $target.parents(".J-label-radio-group").find(".checked").length
 
 			}else{
 

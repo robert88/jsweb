@@ -15,8 +15,12 @@ $(function () {
 			$body.css("background-size","auto 100%");
 		}
 	}
+
+	
 	$win.off("resize.bodybackgroundsize").on("resize.bodybackgroundsize",function(){
 		changeBodyBackground()
 	});
 	changeBodyBackground();
+
+	
 });

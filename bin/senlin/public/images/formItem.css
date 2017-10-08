@@ -16,63 +16,70 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
-.icon-baybtn {
+.icon-10tabActive {
+  background-image: url(formItem.png);
+  background-position: -307px 0px;
+  width: 90px;
+  height: 28px;
+}
+.icon-11worldSort {
+  background-image: url(formItem.png);
+  background-position: 0px -160px;
+  width: 286px;
+  height: 26px;
+}
+.icon-1baybtn {
   background-image: url(formItem.png);
   background-position: -171px -196px;
   width: 90px;
   height: 28px;
 }
-.icon-checkbox {
+.icon-2checkbox {
   background-image: url(formItem.png);
-  background-position: -271px -196px;
+  background-position: -339px -76px;
   width: 22px;
   height: 21px;
 }
-.icon-checkboxchecked {
+.icon-3checkboxchecked {
   background-image: url(formItem.png);
-  background-position: -200px -240px;
+  background-position: -307px -76px;
   width: 22px;
   height: 21px;
 }
-.icon-jieshaokuang {
+.icon-4jieshaokuang {
   background-image: url(formItem.png);
   background-position: 0px -68px;
   width: 287px;
   height: 36px;
 }
-.icon-jieshaokuang2 {
+.icon-5jieshaokuang2 {
   background-image: url(formItem.png);
   background-position: 0px -114px;
   width: 287px;
   height: 36px;
 }
-.icon-qiankundaiList {
+.icon-6logininput {
+  background-image: url(formItem.png);
+  background-position: 0px -240px;
+  width: 183px;
+  height: 20px;
+}
+.icon-7qiankundaiList {
   background-image: url(formItem.png);
   background-position: 0px 0px;
   width: 297px;
   height: 58px;
 }
-.icon-registerInputbg {
+.icon-8registerInputbg {
   background-image: url(formItem.png);
   background-position: 0px -196px;
+
   width: 161px;
   height: 34px;
 }
-.icon-tab {
+.icon-9tab {
   background-image: url(formItem.png);
-  background-position: 0px -240px;
+  background-position: -307px -38px;
   width: 90px;
   height: 28px;
-}
-.icon-tabActive {
-  background-image: url(formItem.png);
-  background-position: -100px -240px;
-  width: 90px;
-  height: 28px;
-}
-.icon-worldSort {
-  background-image: url(formItem.png);
-  background-position: 0px -160px;
-  width: 286px;
-  height: 26px;
 }

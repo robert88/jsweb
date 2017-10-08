@@ -60,7 +60,7 @@ a.a-wrap{
 }
 
 .col .col1, .col .col2, .col .col3, .col .col4, .col .col5, .col .col6, .col .col7, .col .col8, .col .col9, .col .col10, .col .col11, .col .col12,
-.col .col20, .col .col40, .col .col60,.col .col80
+.col .col01,.col .col02,.col .col03, .col .col04, .col .col05,.col .col06,.col .col07,.col .col08,.col .col09,.col .col010
  {
 	float: left;
 	display: inline-block;
@@ -75,9 +75,7 @@ a.a-wrap{
 .col .col2 {
 	width: 16.66%
 }
-.col .col20 {
-	width: 20%
-}
+
 .col .col3 {
 	width: 25%
 }
@@ -85,9 +83,7 @@ a.a-wrap{
 .col .col4 {
 	width: 33.33%
 }
-.col .col40 {
-	width: 40%
-}
+
 .col .col5 {
 	width: 41.67%
 }
@@ -99,9 +95,7 @@ a.a-wrap{
 .col .col7 {
 	width: 58.33%
 }
-.col .col60 {
-	width: 60%
-}
+
 
 .col .col8 {
 	width: 66.66%
@@ -110,15 +104,39 @@ a.a-wrap{
 .col .col9 {
 	width: 75%
 }
-.col .col80 {
-	width: 80%
-}
 .col .col10 {
 	width: 83.33%
 }
 
 .col .col11 {
 	width: 91.66%
+}
+.col .col01 {
+	width: 10%
+}
+.col .col02 {
+	width: 20%
+}
+.col .col03 {
+	width: 30%
+}
+.col .col04 {
+	width: 40%
+}
+.col .col05 {
+	width: 50%
+}
+.col .col06 {
+	width: 60%
+}
+.col .col07 {
+	width: 70%
+}
+.col .col08 {
+	width: 80%
+}
+.col .col09 {
+	width: 90%
 }
 
 /*响应布局 宽度*/
