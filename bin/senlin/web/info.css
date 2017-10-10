@@ -55,3 +55,10 @@ color:#fff;
 	margin-top:-10px;
 	background-position:0px -77px;
 }
+.main-body .backBtn{
+	background-image: url(../public/images/iconItem.png);
+	background-position: 0px 0px;
+	display: inline-block;
+	width: 119px;
+	height: 46px;
+}

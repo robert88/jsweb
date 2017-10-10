@@ -1,0 +1,83 @@
+.goldhouse-title{
+	background-position: 0px 0px;
+	width: 380px;
+	height: 67px;
+	margin: -12px 0 0 -22px;
+}
+.goldHouse .huafei1,
+.goldHouse .huafei2,
+.goldHouse .huafei3,
+.goldHouse .huafei4,
+.goldHouse .shengmiye,
+.goldHouse .tulongdao,
+.goldHouse .jiaohuaji{
+	width: 40px;
+	height: 38px;
+	margin: 11px 0 0 10px;
+}
+.goldHouse .huafei1{
+	background-position: -45px -336px;
+
+}
+.goldHouse .huafei2{
+	background-position: 0px -377px;
+}
+.goldHouse .huafei3{
+	background-position: 0px -336px;
+}
+.goldHouse .huafei4{
+	background-position: -289px -272px;
+}
+.goldHouse .shengmiye{
+	margin-top: 6px;
+	background-position: -337px -286px;
+}
+.goldHouse .tulongdao{
+	margin-top: 6px;
+	background-position: -290px -81px;
+}
+.goldHouse .jiaohuaji{
+	background-position: -241px -272px;
+}
+.goldHouse .list-bg{
+	background-position: -0px -380px;
+	width: 275px;
+	height: 108px;
+	margin-top: -2px;
+	text-align: left;
+	padding-left: 63px;
+	position: relative;
+}
+.goldHouse .list-img{
+	position: absolute;
+	left: 8px;
+	top: 50%;
+	margin-top: -27px;
+	background-position: -177px -272px;
+	width: 54px;
+	height: 54px;
+}
+.goldHouse .list-content{
+
+}
+.goldHouse .list-title{
+	padding: 5px 10px 0px;
+}
+.goldHouse .list-text{
+color:#fff;
+	padding:5px;
+}
+.goldHouse .list-btn{
+	margin-top:-3px;
+}
+.goldHouse .list-btn>a{
+	height: 30px;
+	margin-right: 21px;
+	text-align: center;
+	background-image: url(../../public/images/btnbg.png);
+	background-repeat: no-repeat;
+	background-position: 0 -308px;
+	position: relative;
+	display: inline-block;
+	width: 92px;
+}

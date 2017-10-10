@@ -1,6 +1,8 @@
 body{
-	 background-position: center 0;
-	 background-size: auto 100%;
+	background-position: center 0;
+	background-size: auto 100%;
+	background-image: url(../public/images/mijing.jpg);
+	background-repeat: no-repeat;
 }
 .main-body{
 	position:absolute;
@@ -15,7 +17,6 @@ body{
 	height:30.875rem;
 }
 .register-title{
-	background-image: url(../public/images/textItem.png);
 	background-position: 0px -143px;
 	width: 178px;
 	height: 53px;

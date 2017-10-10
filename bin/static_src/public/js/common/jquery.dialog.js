@@ -183,7 +183,9 @@
 			for(var i=0; i<opts.button.length;i++){
 
 				var $btn = $("<a class='btn btn-primary btn-m dl-bottom'>"+opts.button[i].text+"</a>");
-
+				if(opts.button[i].className){
+					$btn.addClass(opts.button[i].className);
+				}
 				renderStyle($btn,(opts.button[i].buttonStyle||""));
 				
 				opts.button[i].btn = $btn;

@@ -2,10 +2,7 @@ body,html{
 	width:100%;
 	height:100%;
 	position:relative;
-}
-body{
-	background-image: url(../images/mijing.jpg);
-	background-repeat: no-repeat;
+	color: #fff;
 }
 .text-gradient {
 	display: inline-block;
@@ -38,6 +35,30 @@ body{
 	-webkit-text-fill-color: transparent;
 	text-shadow: none !important;
 }
+.text-border{
+	color:#326a9a;
+	text-shadow: 1px 1px 0px #fff;
+	display: inline-block;
+	position:relative;
+}
+.text-border:after {
+	content: attr(data-text);
+	position: absolute;
+	left:0px;
+	top:0px;
+	color:#326a9a;
+	text-shadow: 1px 1px 0px #fff;
+	width: 100%;
+}
+.text-border:before {
+	content: attr(data-text);
+	position: absolute;
+	left:-1px;
+	top:-1px;
+	color:#fff;
+	/*z-index: -1;*/
+	width: 100%;
+}
 .text-gradient-info:after {
 	content: attr(data-text);
 	position: absolute;
@@ -63,7 +84,104 @@ body{
 	display: inline-block;
 }
 .bg-kuang{
-	background-size: 100% 384px;
+	background-size: 100% 484px;
 	background-image: url(../images/btnbg.png);
 	display: inline-block;
+}
+.bg-title{
+	background-image: url(../images/textItem.png);
+	display: inline-block;
+}
+.loading span {
+	display: inline-block;
+	vertical-align: middle;
+	width: .6em;
+	height: .6em;
+	margin: .19em;
+	background: #007DB6;
+	border-radius: .6em;
+	-webkit-animation: loading 1s infinite alternate;
+	animation: loading 1s infinite alternate;
+}
+
+/*
+ * Dots Colors
+ * Smarter targeting vs nth-of-type?
+ */
+.loadingMask{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 9998;
+	background: #c1c1c1;
+}
+.loading{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -80px;
+	margin-top: -14px;
+	z-index: 9999;
+}
+.loading span:nth-of-type(2) {
+	background: #008FB2;
+	-webkit-animation-delay: 0.2s;
+	animation-delay: 0.2s;
+}
+.loading span:nth-of-type(3) {
+	background: #009B9E;
+	-webkit-animation-delay: 0.4s;
+	animation-delay: 0.4s;
+}
+.loading span:nth-of-type(4) {
+	background: #00A77D;
+	-webkit-animation-delay: 0.6s;
+	animation-delay: 0.6s;
+}
+.loading span:nth-of-type(5) {
+	background: #00B247;
+	-webkit-animation-delay: 0.8s;
+	animation-delay: 0.8s;
+}
+.loading span:nth-of-type(6) {
+	background: #5AB027;
+	-webkit-animation-delay: 1.0s;
+	animation-delay: 1.0s;
+}
+.loading span:nth-of-type(7) {
+	background: #A0B61E;
+	-webkit-animation-delay: 1.2s;
+	animation-delay: 1.2s;
+}
+
+/*
+ * Animation keyframes
+ * Use transition opacity instead of keyframes?
+ */
+@-webkit-keyframes loading {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes loading {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+#settingDialog{
+	background-size: 100% 11.875rem;
+	min-height: 11.875rem;
+}
+#settingDialog .backBtn,#chargeDialog .backBtn{
+	transform: scale(1.3);
+}
+#chargeDialog{
+	background-size: 100% 14.875rem;
+	min-height: 14.875rem;
 }

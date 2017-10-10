@@ -15,22 +15,26 @@
     <link rel="stylesheet" type="text/css" href="public/css/main-color.css">
     <link rel="stylesheet" type="text/css" href="public/css/form.css">
     <link rel="stylesheet" type="text/css" href="public/css/btn.css">
+    <link rel="stylesheet" type="text/css" href="public/css/tab.css">
     <link rel="stylesheet" type="text/css" href="public/css/jquery.dialog.css">
     <!--end mergeCss-->
 
-
-    <!--start mergeJs:lib.min-->
     <script src="public/js/lib/jquery-1.12.4.js"></script>
-    <script src="public/js/lib/jquery.cookie.js"></script>
-    <script src="public/js/common/jquery.dialog.js"></script>
-    <script src="public/js/common/jquery.base.plugin.js"></script>
-    <script src="public/js/lib/rap.util.prototype.js"></script>
-    <script src="public/js/common/valiForm.js"></script>
-    <!--end mergeJs-->
+
 </head>
 
 <body>
 
+    <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="loadingMask"></div>
 
     <!--s:主题部分-->
     <div id="pageCss"></div>
@@ -41,6 +45,41 @@
 
 
 </body>
+<script>
+    ;(function () {
+        var pageImageArr = ["mijing.jpg", "renItem.png" ];
+       // var pageImageAfterLoad = ["btnbg.png", "daojuItem.png", "iconItem.png","gold.png","loginBg.png", "tipbg.png", "throwMoney.png", "kuang.png", "registerbg.png"];
+        for(var i=0;i<pageImageArr.length;i++){
+            loadPageImage("public/images/"+pageImageArr[i]);
+        }
+
+        function loadPageImage(url) {
+            var img = new Image;
+            img.onerror = img.onload = function () {
+                if( checkLoadComplete() ){
+                    $(".loadingMask").hide();
+                    $(".loading").hide();
+                }
+            }
+            img.src= url;
+        }
+        var loadCount = 0;
+        function checkLoadComplete(){
+            loadCount++;
+            if(loadCount==pageImageArr.length){
+                return true;
+            }
+        }
+
+    })();
+</script>
+<!--start mergeJs:lib.min-->
+<script src="public/js/lib/jquery.cookie.js"></script>
+<script src="public/js/common/jquery.dialog.js"></script>
+<script src="public/js/common/jquery.base.plugin.js"></script>
+<script src="public/js/lib/rap.util.prototype.js"></script>
+<script src="public/js/common/valiForm.js"></script>
+<!--end mergeJs-->
 
 <script src="public/js/common/main.js"></script>
 <script src="public/js/common/require.js"></script>

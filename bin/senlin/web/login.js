@@ -1,7 +1,13 @@
 require("./public/js/common.js");
 ;(function () {
-	$("body").find(".J-submitBtn").removeClass("J-submitFocus");
+
 	var $form = $("#loginForm");
+
+	//焦点聚集到表单
+	$("body").find(".J-submitBtn").removeClass("J-submitFocus");
+	$form.find(".J-submitBtn").addClass("J-submitFocus");
+
+	//记住密码
 	var cookiePassword = $.cookie("login_password");
 	var cookieName = $.cookie("login_username");
 	var $mobile = $form.find("input[name='mobile']");
@@ -9,7 +15,7 @@ require("./public/js/common.js");
 	var $remenber = $form.find("input[name='remember']");
 	var $rememberAccountCheckbox =  $form.find(".rememberAccount");
 	var $rememberPassWordCheckbox =  $form.find(".r98ememberPassWord");
-	var cookiePasswordTemp = "test12345678";
+	var cookiePasswordTemp = "test12345678";//临时的值
 	if(cookiePassword && cookieName){
 		$mobile.val(cookieName);
 		//设置test1234567可以跳过校验和加密
@@ -20,8 +26,10 @@ require("./public/js/common.js");
 		$mobile.val(cookieName);
 		$rememberAccountCheckbox.click();
 	}
-	$form.find(".J-submitBtn").addClass("J-submitFocus");
-	var validForm = PAGE.validForm({
+
+
+	//表单校验
+	PAGE.validForm({
 		validSuccess:function ($form) {
 			//记住密码
 			if(cookiePassword && $password.val() == cookiePasswordTemp){
@@ -58,18 +66,5 @@ require("./public/js/common.js");
 		form:$form
 	});
 
-	/*自定义校验方法*/
-	var validRule = validForm("getRule");
-	validRule["password"] = {
-		check:function(value, $obj) {
 
-			//传递了比较值
-			var validLenth = /^(\d|[a-z]){6,12}$/i.test(value);
-			var validNum = /[0-9]/.test(value);
-			var validLetter = /[a-zA-Z]/.test(value);
-			return ! (validNum&&validLetter && validLenth) ;
-		},
-		defaultMsg:"请填写6-12位同时包含字符和数字的密码"
-
-	}
 })();

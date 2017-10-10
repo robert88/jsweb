@@ -1,0 +1,20 @@
+.settingContent-title{
+	background-position: -390px -62px;
+	width: 92px;
+	height: 53px;
+	display: block;
+	margin: 0px auto 10px;
+}
+.settingContent .videoSetting.on{
+	background-position: -110px -240px;
+	width: 42px;
+	height: 41px;
+}
+.settingContent .videoSetting.off{
+	background-position: -214px -240px;
+}
+.settingContent .loginout{
+	background-position: -162px -240px;
+	width: 37px;
+	height: 41px;
+}

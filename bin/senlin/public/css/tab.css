@@ -1,0 +1,22 @@
+.tab-wrap .tab-head {
+	height: 30px;
+	text-align: center;
+}
+.tab-wrap .tab-head .tab-head-item {
+	background-image: url(../images/btnbg.png);
+	background-repeat:  no-repeat;
+	background-position: 0 -350px;
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	width: 90px;
+}
+.tab-wrap .tab-head .tab-head-item.active {
+	background-position: 0 -270px;
+}
+.tab-wrap .tab-body .tab-body-item {
+	display: none
+}
+.tab-wrap .tab-body .tab-body-item.active {
+	display: block
+}
