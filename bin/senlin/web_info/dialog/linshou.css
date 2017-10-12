@@ -1,0 +1,25 @@
+.linshouContent-title{
+	background-position: 0px -206px;
+	width: 170px;
+	height: 54px;
+	display: block;
+	margin: 5px auto;
+}
+.linshouContent .jiaohuaji{
+	background-position: -241px -272px;
+	width: 40px;
+	height: 38px;
+	margin: 11px 0 0 8px;
+}
+.linshouContent .list-img{
+	position: absolute;
+	top: 50%;
+	background-position: -177px -272px;
+	width: 54px;
+	height: 54px;
+}
+.linshouContent .list-img .text-gradient{
+	position: absolute;
+	left: 54px;
+	width: 59px;
+}

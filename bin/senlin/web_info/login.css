@@ -1,0 +1,29 @@
+body{
+	background-position: center 0;
+	background-size: auto 100%;
+	background-image: url(../public/images/mijing.jpg);
+	background-repeat: no-repeat;
+}
+.main-body{
+	position:absolute;
+	top:25%;
+	right:0;
+	left:0;
+	bottom:10%;
+	background-image: url(../public/images/loginbg.png);
+	background-repeat: no-repeat;
+	background-position: center 0;
+	background-size: 100% 18.625rem;
+}
+.form-block{
+	padding-top: 10rem;
+}
+.ipt{
+	background-color:transparent;
+	font-size: 0.875rem;
+	border:1px solid #0d82d1;
+	color:#fff;
+}
+.ipt:focus{
+	border:1px solid #72eafe;
+}

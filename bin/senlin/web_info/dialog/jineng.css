@@ -1,0 +1,72 @@
+body{
+color:#fff;
+	font-family: "Adobe 宋体 Std L","宋体";
+	background:#000;
+}
+.jinengContent-title{
+	background-position: 0px -77px;
+	width: 181px;
+	height: 56px;
+	display: block;
+	margin: 5px auto;
+}
+
+.jinengContent dt{
+	background-position: 0px -68px;
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	font-size: 30px;
+}
+.jinengContent dd>.title{
+	background-position: 0px -114px;
+	width: 100%;
+	height: 31px;
+	line-height: 31px;
+	font-size: 20px;
+}
+.jinengContent dd>p{
+	padding:0 5px;
+	margin-top:5px ;
+}
+.jinengContent .bg-daoju{
+	width: 40px;
+	height: 38px;
+	margin-left:10px;
+	margin-right:10px;
+}
+.jinengContent .huafei1{
+	background-position: -45px -336px;
+}
+.jinengContent .huafei2{
+	background-position: 0px -377px;
+}
+.jinengContent .huafei3{
+	background-position: 0px -336px;
+}
+.jinengContent .huafei4{
+	background-position: -289px -272px;
+}
+.jinengContent .shengmiye{
+	margin-top:-5px;
+	background-position: -337px -286px;
+}
+.jinengContent .tulongdao{
+	margin-top:-5px;
+	background-position: -290px -81px;
+}
+.jinengContent .jiaohuaji{
+	background-position: -241px -272px;
+}
+.jinengContent .lingshou{
+	width: 60px;
+	margin-top:-10px;
+	background-position:0px -77px;
+}
+.jinengContent .backBtn{
+	background-image: url(../../public/images/iconItem.png);
+	background-position: 0px 0px;
+	display: inline-block;
+	width: 119px;
+	height: 46px;
+}

@@ -1,0 +1,30 @@
+.yaoqianshuContent-title{
+	background-position: 0px -270px;
+	width: 143px;
+	height: 53px;
+	display: block;
+	margin: 0px auto 5px;
+}
+.yaoqianshuContent .jiaohuaji{
+	background-position: -241px -272px;
+	width: 40px;
+	height: 38px;
+	margin: 11px 0 0 8px;
+}
+.yaoqianshuContent .list-img{
+	position: absolute;
+	top: 50%;
+	background-position: -177px -272px;
+	width: 54px;
+	height: 54px;
+}
+.yaoqianshuContent .list-img .text-gradient{
+	position: absolute;
+	left: 54px;
+	width: 59px;
+}
+.yaoqianshuContent .yaoqianshu{
+	background-position: 0px -210px;
+	width: 167px;
+	height: 116px;
+}

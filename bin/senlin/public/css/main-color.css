@@ -176,12 +176,19 @@ body,html{
 }
 #settingDialog{
 	background-size: 100% 11.875rem;
-	min-height: 11.875rem;
+	height:11.875rem;
 }
 #settingDialog .backBtn,#chargeDialog .backBtn{
 	transform: scale(1.3);
 }
 #chargeDialog{
 	background-size: 100% 14.875rem;
-	min-height: 14.875rem;
+	height:14.875rem;
+}
+.scrollContent{
+	height: 24rem;
+	overflow: auto;
+}
+.scrollContent::-webkit-scrollbar {
+	display: none;
 }
