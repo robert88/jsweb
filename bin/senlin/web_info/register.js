@@ -4,7 +4,7 @@ require("./public/js/common.js");
 	var $captcha = $form.find(".J-captcha");
 	$captcha.click(changeImage);
 	function changeImage(){
-		$captcha[0].src = "/api/captcha?type=register&ver="+ (new Date().getTime());
+		$captcha[0].src = "http://forest-api.17youxi.me/api/captcha?type=register&ver="+ (new Date().getTime());
 	}
 	changeImage();
 
@@ -47,11 +47,17 @@ require("./public/js/common.js");
 		if($this.data("lock") || $this.data("lock-text")){
 			return ;
 		}
+		var mobile = $form.find("input[name='mobile']").val();
+		if(!/^\d{5,}$/.test($.trim(mobile))){
+			$.tips("请填写正确的手机号","error");
+			return ;
+		}
 		$this.data("lock",true).data("lock-text",true);
 		var $text =$this.find(".text-gradient");
 
 		var originText = $text.data("text");
 		$text.data("text",60).html(60);
+
 		PAGE.ajax({type:"post",
 			msg:{
 				"1" :"发送成功",
@@ -60,7 +66,7 @@ require("./public/js/common.js");
 				"4": "用户已注册",
 				"5": "发送失败"
 			},
-			url:"/api/user/sms?type=register",
+			url:"/api/user/sms?type=register&mobile="+mobile,
 			success:function () {
 			timoutCount($text,60,function(){
 				$.tips("发送成功","success")

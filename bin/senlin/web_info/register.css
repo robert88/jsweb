@@ -17,6 +17,7 @@ body{
 	height:30.875rem;
 }
 .register-title{
+	display: block;
 	background-position: 0px -143px;
 	width: 178px;
 	height: 53px;
