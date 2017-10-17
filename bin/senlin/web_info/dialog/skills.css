@@ -7,10 +7,18 @@ color:#fff;
 	background-position: 0px -77px;
 	width: 181px;
 	height: 56px;
-	display: block;
-	margin: 5px auto;
+	top:-6px;
+	position:absolute;
+	left:50%;
+	margin-left:-90.5px;
+}
+.jinengContent{
+	position:relative;
 }
 
+.jinengContent .pt50{
+	padding-top:50px;
+}
 .jinengContent dt{
 	background-position: 0px -68px;
 	width: 100%;
