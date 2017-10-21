@@ -9,7 +9,7 @@ header{
 	z-index: 1;
 }
 header .user-pic  .person{
-	background-position: -585px -277px;
+	background-position: -0px 0px;
 	width: 138px;
 	height: 160px;
 	margin: -20px 0 0 -10px;
@@ -24,10 +24,10 @@ header .user-pic{
 	margin: 0px 0 0 10px;
 }
 header .user-pic.female{
-	background-position: -725px -287px;
+	background-position: -140px -12px
 }
 header .user-pic.male{
-	background-position: -897px -281px;
+	background-position: -252px -18px
 }
 header .header-wrap{
 	position: relative;
@@ -39,22 +39,23 @@ header .header-wrap .header-bottom{
 }
 
 header .header-wrap .header-top .content{
-	background-position: 0px 0px;
-	width: 327px;
-	height: 71px;
+	background-position: 0px -10px;
+	width: 241px;
+	height: 43px;
+	margin: 30px 0 0;
 }
 
 header .header-wrap .header-top .coin{
 	background-position: -90px -336px;
 	width: 30px;
 	height: 20px;
-	margin: 20px 10px 10px 5px;
+	margin: 10px 10px 10px 5px;
 }
 header .header-wrap .header-top .yuanbao{
 	background-position: -187px -184px;
 	width: 30px;
 	height: 16px;
-	margin: 22px 10px 10px 5px;
+	margin: 12px 10px 10px 5px;
 }
 header .header-wrap .header-bottom .charge{
 	background-position: -60px -119px;
@@ -86,7 +87,7 @@ footer{
 	bottom:0;
 	left:0;
 	height:55px;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	width: 100%;
 }
 footer .home{
@@ -139,35 +140,61 @@ body,html{
 	/*width: 436px;*/
 	/*height: 252px;*/
 /*}*/
+.main-body .treeItem .fertilizer1,
+.main-body .treeItem .fertilizer2,
+.main-body .treeItem .fertilizer3,
+.main-body .treeItem .fertilizer4
+{
+	width: 259px;
+	height: 193px;
+}
+
 .main-body .treeItem .fengyin{
 	position:absolute;
-	background-position: -585px -7px;
-	width: 254px;
-	height: 265px;
+	background-position: -534px -7px;
+	width: 198px;
+	height: 210px;
+	left: 36px;
+	top: -14px;
 }
-.main-body .treeItem .huafei1{
+.main-body .treeItem .trunk{
 	position:absolute;
-	background-position: 0px 0px;
-	width: 286px;
-	height: 221px;
+	background-position: 2px 3px;
+
 }
-.main-body .treeItem .huafei2{
+.main-body .treeItem .fertilizer1{
 	position:absolute;
-	background-position: -10px -236px;
-	width: 286px;
-	height: 221px;
+	background-position: -501px -219px;
+	left: -10px;
+	top: -14px;
+	width: 289px;
+	height: 203px;
 }
-.main-body .treeItem .huafei3{
-	position:absolute;
-	background-position: -308px 9px;
-	width: 286px;
-	height: 221px;
+.main-body .treeItem .bg-daoju-hand{
+	position: absolute;
+	left: 50%;
+	margin: -22px 0 0 -23px;
+	top: 50%;
 }
-.main-body .treeItem .huafei4{
+.main-body .treeItem .fertilizer2{
 	position:absolute;
+	background-position: 11px 0px;
+}
+.main-body .treeItem .fertilizer3{
+	position:absolute;
+	background-position: 0px -206px;
+}
+.main-body .treeItem .fertilizer4{
+	position:absolute;
+	background-position: -257px 9px;
+}
+.main-body .treeItem .trunk{
+	position: absolute;
 	background-position: -291px -232px;
-	width: 286px;
-	height: 221px;
+	width: 183px;
+	height: 164px;
+	left: 45px;
+	top: 24px;
 }
 .main-body .zhuzhi1,.main-body .zhuzhi2{
 	position:absolute;
@@ -210,4 +237,28 @@ body,html{
 	header .header-wrap .header-bottom .setting{
 		margin: 0px 0 0 0px;
 	}
+}
+.popToPop{
+	animation: popPop 1s infinite;
+	display: inline-block;
+}
+.popToPop:hover{
+	animation:none;
+}
+@keyframes popPop {
+	0% {
+		transform: translate(0px, 0px);
+	}
+	50% {
+		transform: translate(0px, -10px);
+	}
+	100% {
+		transform: translate(0px, 0px);
+	}
+}
+.bg-banquetfiy{
+	position:fixed;
+	left:50%;
+	top: 270px;
+	margin-left:-60px;
 }

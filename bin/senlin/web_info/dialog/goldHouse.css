@@ -1,13 +1,17 @@
-.goldhouse-title{
-	background-position: 0px 0px;
-	width: 380px;
-	height: 67px;
-	margin: -12px 0 0 -22px;
+
+.goldHouse{
+	position:relative;
 }
-.goldHouse .huafei1,
-.goldHouse .huafei2,
-.goldHouse .huafei3,
-.goldHouse .huafei4,
+.goldHouse .bg-title-house{
+	top: -17px;
+	position:absolute;
+	left:50%;
+	margin-left:-190px;
+}
+.goldHouse .Fertilizer1,
+.goldHouse .Fertilizer2,
+.goldHouse .Fertilizer3,
+.goldHouse .Fertilizer4,
 .goldHouse .shengmiye,
 .goldHouse .tulongdao,
 .goldHouse .jiaohuaji{
@@ -15,17 +19,17 @@
 	height: 38px;
 	margin: 11px 0 0 10px;
 }
-.goldHouse .huafei1{
+.goldHouse .Fertilizer1{
 	background-position: -45px -336px;
 
 }
-.goldHouse .huafei2{
+.goldHouse .Fertilizer2{
 	background-position: 0px -377px;
 }
-.goldHouse .huafei3{
+.goldHouse .Fertilizer3{
 	background-position: 0px -336px;
 }
-.goldHouse .huafei4{
+.goldHouse .Fertilizer4{
 	background-position: -289px -272px;
 }
 .goldHouse .shengmiye{

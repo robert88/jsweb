@@ -1,5 +1,7 @@
 .tab-wrap .tab-head {
 	height: 30px;
+	line-height: 28px;
+	padding-top:52px;
 	text-align: center;
 }
 .tab-wrap .tab-head .tab-head-item {

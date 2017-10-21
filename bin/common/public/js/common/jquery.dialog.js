@@ -19,6 +19,7 @@
 		animateType:"fadeTop",
 		closeStyle:"",
 		headerStyle:"",
+		// dialogClass:"",为dialog添加样式
 		zindex:1000,
 		frameType:"dialog",
 		frame:null,
@@ -70,9 +71,10 @@
 
 					var s = document.createElement("script");
 
-					s.src =action.replace(".html",".js");
-
 					$body.append(s);
+
+					//应该在append之后赋值
+					s.src =action.replace(".html",".js");
 
 				}
 
@@ -141,6 +143,9 @@
 		}
 
 		//--dl-dialog 样式------------------
+		if(opts.dialogClass){
+			$dialog.addClass(opts.dialogClass);
+		}
 		renderStyle($dialog,"position:fixed;" + dialogIndex + (opts.dialogStyle||"") );
 
 		//--dl-body 样式------------------
@@ -174,7 +179,7 @@
 				$dialog.append($close);
 			}
 		}
-        console.log( $close)
+        //console.log( $close)
 		//--dl-footer 样式-------------------
 		if(opts.button && opts.button.length){
 
@@ -206,13 +211,13 @@
 
 	//dialog执行，添加功能
 	function runDialog($dialog, opts){
-		var close = function() {
-			$.dialog.close($dialog);
+		var close = function(e) {
+			$.dialog.close($dialog,e);
 		};
 		//公用mask必须每次都重新绑定或者去绑定
 		if(opts.maskClose&&opts.$mask){
-			opts.$mask.bind("click",function(){
-				close();
+			opts.$mask.bind("click",function(e){
+				close(e);
 			});
 		}
 		if(opts.changeSize&&$.fn.changeSize){
@@ -224,11 +229,11 @@
 				;(function(idx){
 					opts.button[idx].btn.click(function(e){
 						if(typeof opts.button[idx].click=="function"){
-							if(opts.button[idx].click(e)===false){
+							if(opts.button[idx].click(e,$dialog)===false){
 								return;
 							}
 						}
-						close();
+						close(e);
 					})
 				})(i);
 			}
@@ -331,11 +336,11 @@
 			}, time);
 		},
 		//删除一个触发
-		closeOnebefore:function(idx){
+		closeOnebefore:function(idx,e){
 			//外部定义closebefore
 			if(this.dlOpts[idx] && typeof this.dlOpts[idx].closeBefore == "function"){
 				//返回flase不关闭 this指向当前参数
-				return this.dlOpts[idx].closeBefore($(this.dlOpts[idx].frame));
+				return this.dlOpts[idx].closeBefore($(this.dlOpts[idx].frame),e);
 			}
 
 		},
@@ -352,16 +357,16 @@
 
 		},
 		//始终会触发
-		before:function(){
+		before:function(e){
 
 			if(typeof this.closebefore == "function"){
-				return this.closebefore();
+				return this.closebefore(e);
 			}
 		},
 		//始终会触发
-		after:function(){
+		after:function(e){
 			if(typeof this.closeCallBack == "function"){
-				this.closeCallBack();
+				this.closeCallBack(e);
 			}
 			$(".err-tips").remove();
 
@@ -379,10 +384,10 @@
 		detory:[],
 
 		//type ==all 时只要idx在其中就可以删除，否则匹配到type类型就删除 type="all,dialog,alert,tips,confirm"
-		delDl:function(type, idx){
+		delDl:function(type, idx,e){
 
 				if( ( idx > -1 && idx < this.dlOpts.length ) && ( this.dlOpts[idx].frameType == type || type == "all" ) ){
-					if(this.closeOnebefore(idx)===false){
+					if(this.closeOnebefore(idx,e)===false){
 						return false;
 					}
 					var $mask = this.dlOpts[idx].$mask;
@@ -404,18 +409,18 @@
 				return false;
 		},
 
-		close: function($dialog) {
-
-			destroyDialog($.dialog);
+		close: function($dialog,e) {
 
 			//返回flase不关闭
-			if(this.before()===false){
+			if(this.before(e)===false){
 				return ;
 			}
 
-			this.delDl( "all", this.getOptsIndex($dialog) );
+			destroyDialog($.dialog);
 
-			this.after();
+			this.delDl( "all", this.getOptsIndex($dialog),e );
+
+			this.after(e);
 		},
 
 		closeAll: function(type) {

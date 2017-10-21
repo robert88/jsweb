@@ -49,16 +49,17 @@ function requestRecord(){
 //
 // }
 
-if(process.env.DEBUG){
+process.env.DEBUG =0;
 
+if(process.env.DEBUG*1){
 	var debugerProcess = childProcess.exec('start "%windir%\\system32\\cmd.exe" node-inspector --web-port=8081',function (err,stdout) {
 
-		if(err){
-			rap.error(err);
-		}else {
-			console.log("debuger process exit!");
-		}
-		wake.writeData(processConfigURL,JSON.stringify({pid:debugerProcess.pid}));
+		// if(err){
+		// 	rap.error(err);
+		// }else {
+		// 	console.log("debuger process exit!");
+		// }
+		// wake.writeData(processConfigURL,JSON.stringify({pid:debugerProcess.pid}));
 	});
 
 
@@ -159,7 +160,7 @@ process.on('uncaughtException', function (err) {
 });
 
 server.listen(3000);
-if(process.env.DEBUG){
+if(process.env.DEBUG*1){
 
 	childProcess.exec('start C:\\"Program Files (x86)"\\Google\\Chrome\\Application\\chrome.exe http://127.0.0.1:8081/?port=5858',function (err,stdout) {
 		if(err){
@@ -168,15 +169,16 @@ if(process.env.DEBUG){
 			rap.log("chrome debugger run 8081");
 		}
 	});
-	childProcess.exec('start C:\\"Program Files (x86)"\\Google\\Chrome\\Application\\chrome.exe http://localhost:3000',function (err,stdout) {
-		if(err){
-			rap.error(err);
-		}else {
-			rap.log("chrome run 3000");
-		}
-	});
+
 
 }
+childProcess.exec('start C:\\"Program Files (x86)"\\Google\\Chrome\\Application\\chrome.exe http://localhost:3000',function (err,stdout) {
+	if(err){
+		rap.error(err);
+	}else {
+		rap.log("chrome run 3000");
+	}
+});
 var endTime = new Date();
 
 rap.info("静态文件路径为",rap.staticPath,rap.rootPath+rap.staticPath);

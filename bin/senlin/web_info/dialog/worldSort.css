@@ -1,9 +1,14 @@
-.worldSortContent-title{
+.worldSortContent .bg-title-world{
 	background-position: -191px -77px;
 	width: 174px;
 	height: 55px;
-	display: block;
-	margin: 5px auto;
+	top:-5px;
+	position:absolute;
+	left:50%;
+	margin-left:-87px;
+}
+.worldSortContent{
+	position:relative;
 }
 .worldSortContent .sortInfo{
 	color:#fff;
@@ -11,8 +16,8 @@
 .worldSortContent .sortInfo>li{
 	background-position: 4px -160px;
 	width: 326px;
-	height: 29px;
-	line-height: 29px;
+	height: 26px;
+	line-height: 26px;
 }
 .worldSortContent .sortInfo>li:first-child{
 margin-top: 10px;

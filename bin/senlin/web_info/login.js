@@ -51,6 +51,13 @@ require("./public/js/common.js");
 				url:"/api/user/login",
 				success:function (ret) {
 					$.tips("登录成功","success");
+					if(ret&&ret.data){
+						ret = ret.data;
+						//已经完成了引导
+						if(ret&& ret.status==1){
+							$.cookie("forest_guide",true);
+						}
+					}
 					window.location.hash="#web_info/home.html"
 				},complete:function () {
 					if(cookiePassword){

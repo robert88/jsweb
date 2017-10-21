@@ -70,10 +70,25 @@ body,html{
 	z-index: -1;
 	width: 100%;
 }
+.bg-banquetfiy{
+	background-image: url(../images/banquetfiy.png);
+	background-position: 0px 0px;
+	width: 120px;
+	height: 270px;
+}
 .bg-daoju{
 	background-image: url(../images/daojuItem.png);
 	display: inline-block;
 	vertical-align: middle;
+}
+.bg-daoju-hand{
+	background-position: -337px -178px;
+	width: 47px;
+	height: 44px;
+}
+.bg-daoju-hand:hover{
+	background-position: -337px -138px;
+	animation:none;
 }
 .bg-renwu{
 	background-image: url(../images/renItem.png);
@@ -91,6 +106,65 @@ body,html{
 .bg-title{
 	background-image: url(../images/textItem.png);
 	display: inline-block;
+}
+.bg-user{
+	background-image: url(../images/user.png);
+	display: inline-block;
+}
+.bg-title-confirm{
+	background-position: -390px -125px;
+	width: 91px;
+	height: 52px;
+}
+.bg-title-charge{
+	background-position: -390px 0px;
+	width: 94px;
+	height: 52px;
+}
+.bg-title-friend{
+	background-position: -295px -262px;
+	width: 183px;
+	height: 59px;
+}
+.bg-title-house{
+	background-position: 0px 0px;
+	width: 380px;
+	height: 67px;
+}
+.bg-title-linshou{
+	background-position: 0px -206px;
+	width: 170px;
+	height: 54px;
+}
+.bg-title-notice{
+	background-position: -180px -206px;
+	width: 179px;
+	height: 49px;
+}
+.bg-title-package{
+	background-position: -153px -270px;
+	width: 136px;
+	height: 53px;
+}
+.bg-title-setting{
+	background-position: -390px -62px;
+	width: 92px;
+	height: 53px;
+}
+.bg-title-skills{
+	background-position: 0px -77px;
+	width: 181px;
+	height: 56px;
+}
+.bg-title-world{
+	background-position: -191px -77px;
+	width: 174px;
+	height: 55px;
+}
+.bg-title-shu{
+	background-position: 0px -270px;
+	width: 143px;
+	height: 53px;
 }
 .loading span {
 	display: inline-block;
@@ -174,21 +248,54 @@ body,html{
 		opacity: 1;
 	}
 }
-#settingDialog{
-	background-size: 100% 11.875rem;
-	height:11.875rem;
+.dl-dialog.smallDialog{
+	background-image: url("../images/tipbg.png");
+	background-size: 100% 12.0625rem;
+	height:12.0625rem;
+	color:#9e5959;
 }
-#settingDialog .backBtn,#chargeDialog .backBtn{
+.dl-dialog.smallDialog .backBtn{
 	transform: scale(1.3);
 }
-#chargeDialog{
-	background-size: 100% 14.875rem;
-	height:14.875rem;
-}
 .scrollContent{
-	height: 24rem;
+	height: 22.9375rem;
 	overflow: auto;
 }
 .scrollContent::-webkit-scrollbar {
 	display: none;
+}
+.animate-flow {
+	animation: note-anim 1s 0.5s infinite ease;
+	animation-fill-mode: forwards;
+	-webkit-animation: note-anim 1s 0.5s infinite ease;
+	-webkit-animation-fill-mode: forwards;
+}
+@keyframes note-anim
+{
+	0% {
+		opacity: 0;
+		-webkit-transform: translateZ(0px) scale(1,1);
+		transform:translateZ(0px) scale(1,1);
+
+	}
+	100% {
+		opacity: 1;
+		transform:rotateX(30deg);
+		perspective:170px
+	}
+}
+
+@-webkit-keyframes note-anim /* Safari and Chrome */
+{
+	0% {
+		opacity: 0;
+		-webkit-transform: translateZ(0px) scale(1,1);
+		transform:translateZ(0px) scale(1,1);
+
+	}
+	100% {
+		opacity: 1;
+		transform:rotateX(30deg);
+		perspective:170px
+	}
 }

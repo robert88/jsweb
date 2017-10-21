@@ -1,13 +1,8 @@
 ;(function () {
 	var $content = $(".goldHouse");
-	$content.find(".tab-head-item").each(function () {
-		var handle = $(this).data("handle");
-		if(handle){
-			this[handle] = function ($bodyItem,$this) {
-				alert(0)
-			}
-		}
-
-	});
+	var $dialog = $content.parents(".dl-dialog");
+	$content.on("click",".list-btn",function (e) {
+		$.dialog.close($dialog,e);
+	})
 
 })();

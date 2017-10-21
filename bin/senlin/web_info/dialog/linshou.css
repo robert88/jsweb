@@ -1,9 +1,11 @@
-.linshouContent-title{
-	background-position: 0px -206px;
-	width: 170px;
-	height: 54px;
-	display: block;
-	margin: 5px auto;
+.linshouContent .bg-title-linshou{
+	top:-4px;
+	position:absolute;
+	left:50%;
+	margin-left:-85px;
+}
+.linshouContent{
+	position:relative;
 }
 .linshouContent .jiaohuaji{
 	background-position: -241px -272px;

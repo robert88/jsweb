@@ -1,9 +1,14 @@
-.yaoqianshuContent-title{
-	background-position: 0px -270px;
-	width: 143px;
-	height: 53px;
-	display: block;
-	margin: 0px auto 5px;
+.yaoqianshuContent .bg-title-shu{
+	top: -27px;
+	position:absolute;
+	left:50%;
+	margin-left:-71.5px;
+}
+.yaoqianshuContent{
+	position:relative;
+}
+.yaoqianshuInfo{
+	padding-top: 33px;
 }
 .yaoqianshuContent .jiaohuaji{
 	background-position: -241px -272px;
@@ -21,7 +26,7 @@
 .yaoqianshuContent .list-img .text-gradient{
 	position: absolute;
 	left: 54px;
-	width: 59px;
+	width: 2.8125rem
 }
 .yaoqianshuContent .yaoqianshu{
 	background-position: 0px -210px;

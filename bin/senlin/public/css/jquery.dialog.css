@@ -116,3 +116,10 @@
     width: 16px;
     height:16px;
 }
+
+.dl-dialog .bg-title-confirm{
+    top:-4px;
+    position:absolute;
+    left:50%;
+    margin-left:-45px;
+}

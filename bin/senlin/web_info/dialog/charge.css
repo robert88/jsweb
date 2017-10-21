@@ -1,9 +1,14 @@
-.chargeContent-title{
-	background-position: -390px 0px;
-	width: 94px;
-	height: 52px;
-	display: block;
-	margin: 5px auto;
+.chargeContent{
+	position:relative;
+}
+.chargeContent input{
+	color:#000
+}
+.chargeContent .bg-title-charge{
+	top:-44px;
+	position:absolute;
+	left:50%;
+	margin-left:-47px;
 }
 .chargeContent .chargeInfo>li{
 	background: url(../../public/images/kuang.png) no-repeat center top;
