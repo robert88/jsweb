@@ -2,7 +2,7 @@
 var wake = require("../rap.filesystem.js");
 require("../rap.util.prototype.js")
 
-var files = wake.findFile("../senlin/public/images/daojuItem","png")
+var files = wake.findFile("../senlin/public/images/propsItem","png")
 console.log(files)
 var count =0;
 files.forEach(function(val){

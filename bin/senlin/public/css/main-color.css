@@ -76,17 +76,17 @@ body,html{
 	width: 120px;
 	height: 270px;
 }
-.bg-daoju{
-	background-image: url(../images/daojuItem.png);
+.bg-props{
+	background-image: url(../images/propsItem.png);
 	display: inline-block;
 	vertical-align: middle;
 }
-.bg-daoju-hand{
+.bg-props-hand{
 	background-position: -337px -178px;
 	width: 47px;
 	height: 44px;
 }
-.bg-daoju-hand:hover{
+.bg-props-hand:hover{
 	background-position: -337px -138px;
 	animation:none;
 }
@@ -141,7 +141,7 @@ body,html{
 	width: 179px;
 	height: 49px;
 }
-.bg-title-package{
+.bg-title-pocket{
 	background-position: -153px -270px;
 	width: 136px;
 	height: 53px;

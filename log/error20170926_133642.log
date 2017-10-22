@@ -374,7 +374,7 @@
     at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:99:11)
     at tryOnTimeout (timers.js:224:11)
     at Timer.listOnTimeout (timers.js:198:5)
-[error][2017/10/03 18:05:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web\daojuItem.png'
+[error][2017/10/03 18:05:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web\propsItem.png'
     at Error (native)
 [error][2017/10/05 19:39:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\favicon.ico'
     at Error (native)
@@ -2632,3 +2632,99 @@
     at Error (native)
 [error][2017/10/21 13:58:28][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\dialog\skills.js'
     at Error (native)
+[error][2017/10/21 15:38:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\dialog\skills.js'
+    at Error (native)
+[error][2017/10/21 16:44:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\dialog\skills.js'
+    at Error (native)
+[error][2017/10/21 16:46:33][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\dialog\skills.js'
+    at Error (native)
+[error][2017/10/21 16:49:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\dialog\skills.js'
+    at Error (native)
+[error][2017/10/21 16:53:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\dialog\skills.js'
+    at Error (native)
+[error][2017/10/21 16:55:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\dialog\skills.js'
+    at Error (native)
+[error][2017/10/21 16:56:07][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/game/pocket extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/10/21 16:56:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\dialog\skills.js'
+    at Error (native)
+[error][2017/10/21 16:56:43][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/game/pocket extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/10/21 16:57:16][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\dialog\skills.js'
+    at Error (native)
+[error][2017/10/21 16:58:32][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\dialog\skills.js'
+    at Error (native)
+[error][2017/10/21 17:00:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\dialog\skills.js'
+    at Error (native)
+[error][2017/10/21 17:02:16][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/undefined extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/10/21 17:08:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\dialog\skills.js'
+    at Error (native)
+[error][2017/10/21 17:08:37][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/undefined extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/10/21 17:10:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\dialog\skills.js'
+    at Error (native)
+[error][2017/10/21 17:11:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/undefined extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/10/21 17:12:35][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\dialog\skills.js'
+    at Error (native)
+[error][2017/10/22 08:57:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/undefined extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/10/22 10:27:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\uploads\config\2017\10\0799331bac1f0ea0df28ac7f6d1aed67.png'
+    at Error (native)
+[error][2017/10/22 10:27:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\uploads\config\2017\10\f3edee32eea6825103330ec66419c22b.png'
+    at Error (native)
+[error][2017/10/22 10:27:41][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\uploads\config\2017\10\e9ea6adc9421b5be006dcf2f7618d46c.png'
+    at Error (native)
+[error][2017/10/22 10:27:41][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\uploads\config\2017\10\0f08f7c19cf0cbdf6e8e583971b2bd38.png'
+    at Error (native)
+[error][2017/10/22 10:27:41][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\uploads\config\2017\10\e59f2c2ac32baa0c938f7b69a168050a.png'
+    at Error (native)
+[error][2017/10/22 10:27:41][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\uploads\config\2017\10\a92e5211be679e61811b316803120828.png'
+    at Error (native)
+[error][2017/10/22 10:27:41][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\uploads\config\2017\10\a5233f101d359cb53c8d5561cca1ed60.png'
+    at Error (native)
+[error][2017/10/22 11:11:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/undefined extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/10/22 11:11:30][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/undefined extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/10/22 11:12:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/undefined extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/10/22 11:58:23][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/pay extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/10/22 11:58:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/pay extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/10/22 12:51:41][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\homeInfo.js'
+    at Error (native)
+[error][2017/10/22 13:00:21][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\homeInfo.js'
+    at Error (native)
+[error][2017/10/22 13:00:56][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/undefined extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/10/22 13:03:35][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/undefined extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)

@@ -71,6 +71,8 @@
 
 					var s = document.createElement("script");
 
+					s.type="text/javascript";
+
 					$body.append(s);
 
 					//应该在append之后赋值
@@ -295,7 +297,7 @@
 				opts = {type:type,time:time,closeAfter:callback}
 			}
 
-            opts = $.extend(true,{type:"warn",time:3000,zindex:1000,frameType:"tips",maskClose:true},opts);
+            opts = $.extend(true,{type:"warn",time:3000,zindex:2000,frameType:"tips",maskClose:true},opts);
 
 			if(opts.reload===true){
 				opts.reload = function(){window.location.reload();}
@@ -314,16 +316,16 @@
 
 		var newDestroy = [];
 
-		for(var i=0;i<obj.detory.length;i++){
-			if(typeof obj.detory[i]=="function"){
+		for(var i=0;i<obj.destroy.length;i++){
+			if(typeof obj.destroy[i]=="function"){
 				//注意顺序，相同的destroy是不会被执行的
-				if(  newDestroy.indexOf(obj.detory[i])==-1 && obj.detory[i]()!=true){
-					newDestroy.push(obj.detory[i])
+				if(  newDestroy.indexOf(obj.destroy[i])==-1 && obj.destroy[i]()!=true){
+					newDestroy.push(obj.destroy[i])
 				}
 			}
 		}
 
-		obj.detory = newDestroy;
+		obj.destroy = newDestroy;
 	}
 
 	//dialog默认全局属性和方法
@@ -381,24 +383,30 @@
 			return -1;
 		},
 		/*全部统一处理*/
-		detory:[],
+		destroy:[],
 
 		//type ==all 时只要idx在其中就可以删除，否则匹配到type类型就删除 type="all,dialog,alert,tips,confirm"
 		delDl:function(type, idx,e){
 
 				if( ( idx > -1 && idx < this.dlOpts.length ) && ( this.dlOpts[idx].frameType == type || type == "all" ) ){
+					//参数上关闭
 					if(this.closeOnebefore(idx,e)===false){
 						return false;
 					}
-					var $mask = this.dlOpts[idx].$mask;
-					if($mask&&$mask.length){
-						$mask.remove();
-					}
+
 					/*dom 删除时调用*/
 					var $self = $(this.dlOpts[idx].frame);
 
-					if(typeof $self[0].detory == "function" ){
-						$(this.dlOpts[idx].frame)[0].detory();
+					//dom上的关闭
+					if(typeof $self[0].destroy == "function" ){
+						if($(this.dlOpts[idx].frame)[0].destroy()===false){
+							return false;
+						}
+					}
+
+					var $mask = this.dlOpts[idx].$mask;
+					if($mask&&$mask.length){
+						$mask.remove();
 					}
 
 					$(this.dlOpts[idx].frame).remove();

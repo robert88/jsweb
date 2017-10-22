@@ -17,8 +17,84 @@ exports = module.exports = {
 		}
 		next(ret)
 	},
+	"/api/game/skill":function (request,response,next) {
+		var str = "/api/game/skill";
+		exports[str].count = (exports[str].count||0);
+		var count = ++exports[str].count;
+		count = exports[str].count =1;
+		var data = [
+			{
+				"id": 1,
+				"title": "三级化肥",
+				"icon": "/public/images/propsItem/010daoju1.png",
+				"introduce": "施三级化肥，成熟时，最高可收50元宝，25枚金币，每个阶段仅限施肥一次。",
+				"type": 0
+			},
+			{
+				"id": 2,
+				"title": "二级化肥",
+				"icon": "/public/images/propsItem/011daoju2.png",
+				"introduce": "施二级化肥，成熟时，最高可收100元宝，50枚金币，每个阶段仅限施肥一次。",
+				"type": 0
+			},
+			{
+				"id": 3,
+				"title": "一级化肥",
+				"icon": "/public/images/propsItem/012daoju3.png",
+				"introduce": "施一级化肥，成熟时，最高可收300元宝，150枚金币，每个阶段仅限施肥一次。",
+				"type": 0
+			},
+			{
+				"id": 4,
+				"title": "特级化肥",
+				"icon": "/public/images/propsItem/013daoju4.png",
+				"introduce": "施特级化肥，成熟时，最高可收500元宝，250枚金币，每个阶段仅限施肥一次。",
+				"type": 0
+			},
+			{
+				"id": 5,
+				"title": "生命液",
+				"icon": "/public/images/propsItem/014daoju5.png",
+				"introduce": "摇钱树被收取三次后，须为它浇一壶生命液，才能继续生产收益哟！否则，将无法称作。",
+				"type": 1
+			},
+			{
+				"id": 6,
+				"title": "屠龙刀",
+				"icon": "/public/images/propsItem/015daoju6.png",
+				"introduce": "被龙形封印所罩住的摇钱树须使用屠龙刀将其封印破除，才能让其产生收益。",
+				"type": 1
+			},
+			{
+				"id": 7,
+				"title": "叫花鸡",
+				"icon": "/public/images/propsItem/016daoju7.png",
+				"introduce": "每只鸡可保持灵兽5小时的体力及增加1个点的成长值。",
+				"type": 2
+			}
+		]
+		next( {code:count,data:data});
+	},
 	"/api/user/guide":function (request,response,next) {
 		var str = "/api/user/guide";
+		exports[str].count = (exports[str].count||0);
+		var count = ++exports[str].count;
+		if(count>4){
+			count = exports[str].count =1;
+		}
+		next( {code:count});
+	},
+	"/api/trees/life":function (request,response,next) {
+		var str = "/api/trees/life";
+		exports[str].count = (exports[str].count||0);
+		var count = ++exports[str].count;
+		if(count>4){
+			count = exports[str].count =1;
+		}
+		next( {code:count});
+	},
+	"/api/pay":function (request,response,next) {
+		var str = "/api/trees/life";
 		exports[str].count = (exports[str].count||0);
 		var count = ++exports[str].count;
 		if(count>4){
@@ -30,15 +106,13 @@ exports = module.exports = {
 		var str = "/api/game";
 		exports[str].count = (exports[str].count==null?-1:exports[str].count);
 		var count = ++exports[str].count;
-		if(count>5){
-			count = exports[str].count =1;
-		}
+		count = exports[str].count =1;
 		var data = [
 			[
 				{
 					"id": 1,
 					"title": "三级化肥",
-					"icon": "/uploads/config/2017/10/0799331bac1f0ea0df28ac7f6d1aed67.png",
+					"icon": "/public/images/propsItem/010daoju1.png",
 					"price": 50,
 					"unit": "元宝",
 					"introduce": "施三级化肥，成熟时，最高可收50元宝，25枚金币，每个阶段仅限施肥一次。",
@@ -48,7 +122,7 @@ exports = module.exports = {
 				{
 					"id": 2,
 					"title": "二级化肥",
-					"icon": "/uploads/config/2017/10/f3edee32eea6825103330ec66419c22b.png",
+					"icon": "/public/images/propsItem/011daoju2.png",
 					"price": 100,
 					"unit": "元宝",
 					"introduce": "施二级化肥，成熟时，最高可收100元宝，50枚金币，每个阶段仅限施肥一次。",
@@ -58,7 +132,7 @@ exports = module.exports = {
 				{
 					"id": 3,
 					"title": "一级化肥",
-					"icon": "/uploads/config/2017/10/0f08f7c19cf0cbdf6e8e583971b2bd38.png",
+					"icon": "/public/images/propsItem/012daoju3.png",
 					"price": 300,
 					"unit": "元宝",
 					"introduce": "施一级化肥，成熟时，最高可收300元宝，150枚金币，每个阶段仅限施肥一次。",
@@ -68,7 +142,7 @@ exports = module.exports = {
 				{
 					"id": 4,
 					"title": "特级化肥",
-					"icon": "/uploads/config/2017/10/e59f2c2ac32baa0c938f7b69a168050a.png",
+					"icon": "/public/images/propsItem/013daoju4.png",
 					"price": 500,
 					"unit": "元宝",
 					"introduce": "施特级化肥，成熟时，最高可收500元宝，250枚金币，每个阶段仅限施肥一次。",
@@ -80,7 +154,7 @@ exports = module.exports = {
 				{
 					"id": 5,
 					"title": "生命液",
-					"icon": "/uploads/config/2017/10/e9ea6adc9421b5be006dcf2f7618d46c.png",
+					"icon": "/public/images/propsItem/014daoju5.png",
 					"price": 50,
 					"unit": "元宝",
 					"introduce": "摇钱树被收取三次后，须为它浇一壶生命液，才能继续生产收益哟！否则，将无法称作。",
@@ -90,7 +164,7 @@ exports = module.exports = {
 				{
 					"id": 6,
 					"title": "屠龙刀",
-					"icon": "/uploads/config/2017/10/a92e5211be679e61811b316803120828.png",
+					"icon": "/public/images/propsItem/015daoju6.png",
 					"price": 50,
 					"unit": "元宝",
 					"introduce": "被龙形封印所罩住的摇钱树须使用屠龙刀将其封印破除，才能让其产生收益。",
@@ -102,7 +176,7 @@ exports = module.exports = {
 				{
 					"id": 7,
 					"title": "叫花鸡",
-					"icon": "/uploads/config/2017/10/a5233f101d359cb53c8d5561cca1ed60.png",
+					"icon": "/public/images/propsItem/016daoju7.png",
 					"price": 50,
 					"unit": "元宝",
 					"introduce": "每只鸡可保持灵兽5小时的体力及增加1个点的成长值。",
@@ -113,55 +187,59 @@ exports = module.exports = {
 		]
 		next( {code:count,data:data});
 	},
-	" /api/game/pocket":function (request,response,next) {
+	"/api/game/pocket":function (request,response,next) {
 		var str = "/api/game/pocket";
-		exports[str].count = (exports[str].count==null?-1:exports[str].count);
+		exports[str].count = (exports[str].count||0);
 		var count = ++exports[str].count;
-		if(count>5){
-			count = exports[str].count =1;
-		}
+		count = exports[str].count =1;
 		var data = [
 			[
 				{
 					"id": 1,
 					"title": "三级化肥",
-					"icon": "/uploads/config/2017/10/0799331bac1f0ea0df28ac7f6d1aed67.png",
+					"icon": "/public/images/propsItem/010daoju1.png",
 					"introduce": "施三级化肥，成熟时，最高可收50元宝，25枚金币，每个阶段仅限施肥一次。",
+					"number":1,
 					"type": 0
 				},
 				{
 					"id": 2,
 					"title": "二级化肥",
-					"icon": "/uploads/config/2017/10/f3edee32eea6825103330ec66419c22b.png",
+					"icon": "/public/images/propsItem/011daoju2.png",
 					"introduce": "施二级化肥，成熟时，最高可收100元宝，50枚金币，每个阶段仅限施肥一次。",
+					"number":1,
 					"type": 0
 				},
 				{
 					"id": 3,
 					"title": "一级化肥",
-					"icon": "/uploads/config/2017/10/0f08f7c19cf0cbdf6e8e583971b2bd38.png",
+					"icon": "/public/images/propsItem/012daoju3.png",
 					"introduce": "施一级化肥，成熟时，最高可收300元宝，150枚金币，每个阶段仅限施肥一次。",
+					"number":1,
 					"type": 0
 				},
 				{
 					"id": 4,
 					"title": "特级化肥",
-					"icon": "/uploads/config/2017/10/e59f2c2ac32baa0c938f7b69a168050a.png",
+					"icon": "/public/images/propsItem/013daoju4.png",
 					"introduce": "施特级化肥，成熟时，最高可收500元宝，250枚金币，每个阶段仅限施肥一次。",
+					"number":1,
 					"type": 0
 				},
 				{
 					"id": 5,
 					"title": "生命液",
-					"icon": "/uploads/config/2017/10/e9ea6adc9421b5be006dcf2f7618d46c.png",
+					"icon": "/public/images/propsItem/014daoju5.png",
 					"introduce": "摇钱树被收取三次后，须为它浇一壶生命液，才能继续生产收益哟！否则，将无法称作。",
+					"number":10,
 					"type": 1
 				},
 				{
 					"id": 6,
 					"title": "屠龙刀",
-					"icon": "/uploads/config/2017/10/a92e5211be679e61811b316803120828.png",
+					"icon": "/public/images/propsItem/015daoju6.png",
 					"introduce": "被龙形封印所罩住的摇钱树须使用屠龙刀将其封印破除，才能让其产生收益。",
+					"number":12,
 					"type": 1
 				}
 			],
@@ -169,8 +247,9 @@ exports = module.exports = {
 				{
 					"id": 7,
 					"title": "叫花鸡",
-					"icon": "/uploads/config/2017/10/a5233f101d359cb53c8d5561cca1ed60.png",
+					"icon": "/public/images/propsItem/016daoju7.png",
 					"introduce": "每只鸡可保持灵兽5小时的体力及增加1个点的成长值。",
+					"number":12,
 					"type": 2
 				}
 			]
@@ -184,7 +263,13 @@ exports = module.exports = {
 		if(count>5){
 			count = exports[str].count =1;
 		}
-		next( {code:count,data:{muckTime:new Date().getTime()}});
+		next( {code:count,data:{
+			"serial": "2",
+				"status": "1",
+				"apply_type": "1",// 特殊化肥1
+				"apply_at": "2017-10-15 18:13:45",
+				"countdown": 7*24*60*60
+		}});
 	},
 "/api/reward":function (request,response,next) {
 	var str = "/api/reward";
@@ -208,9 +293,7 @@ exports = module.exports = {
 		var str = "/api/trees";
 		exports[str].count = (exports[str].count||0);
 		var count = ++exports[str].count;
-		if(count>2){
-			count = exports[str].count =1;
-		}
+		count = exports[str].count =1;
 		var data =  [
 				{
 					"serial": "1", // 摇钱树编号1-10

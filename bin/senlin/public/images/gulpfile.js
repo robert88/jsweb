@@ -12,7 +12,7 @@ var list = [
 	"./animateItem/gold/*.png",
 	"./animateItem/throwMoney/*.png",
 
-	"./daojuItem/*.png",
+	"./propsItem/*.png",
 	"./formItem/*.png",
 	"./iconItem/*.png",
 	"./renItem/*.png",
@@ -28,7 +28,7 @@ var listName = [
 	"gold",
 	"throwMoney",
 
-	"daojuItem",
+	"propsItem",
 	"formItem",
 	"iconItem",
 	"renItem",

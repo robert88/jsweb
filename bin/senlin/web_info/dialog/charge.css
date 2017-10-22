@@ -30,3 +30,7 @@
 	width: 72px;
 	height: 63px;
 }
+.chargeContent input:focus, .chargeContent  textarea:focus,.chargeContent  button:focus, .chargeContent select:focus {
+	outline: 0;
+	border: 1px solid #ff8801;
+}
