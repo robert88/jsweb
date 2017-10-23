@@ -12,7 +12,7 @@
 	var $header = $("header");
 	var $userPic = $header.find(".user-pic");
 	var $coin = $header.find(".coin-text");
-	var $yuanbao = $header.find(".yuanbao-text");
+	var $gold = $header.find(".gold-text");
 	var $charge = $header.find(".charge");
 	var $footer = $("footer");
 	var $pocket = $footer.find(".pocket");
@@ -231,7 +231,7 @@
 	/*
 	 * 循环播放
 	 * */
-	function cricle(count,timeObj,audio){
+	function cricle(count,timeObj,audio,callback){
 
 
 		if (timeObj.lock) {
@@ -256,11 +256,10 @@
 			if (typeof callback == "function") {
 				callback();
 			}
-			console.log("id"+id+"isback")
 			return;
 		}
 
-		setTimeout(cricle,timeObj.time,count,timeObj,audio);
+		setTimeout(cricle,timeObj.time,count,timeObj,audio,callback);
 	}
 	/*
 	 * type播放的声音类型，i表示全局存储的audio索引，count播放的次数，callback播放完毕
@@ -292,7 +291,7 @@
 			audio.init = true;
 		}
 
-		setTimeout(cricle,timeObj.time,count,timeObj,audio);
+		setTimeout(cricle,timeObj.time,count,timeObj,audio,callback);
 	}
 
 	/*
@@ -333,11 +332,11 @@
 		var forest_coin = $.cookie("forest_coin");
 
 		$coin.html(forest_coin || 0);
-		$yuanbao.html(forest_gold || 0);
+		$gold.html(forest_gold || 0);
 		if (forest_sex == 0) {
-			$userPic.removeClass("female").addClass("male")
+			$userPic.removeClass("bg-user-female").addClass("bg-user-male")
 		} else {
-			$userPic.removeClass("male").addClass("female")
+			$userPic.removeClass("bg-user-male").addClass("bg-user-female")
 		}
 	}
 	/*
@@ -621,7 +620,7 @@
 		}
 	}
 	/*
-	* 接口没写完,收获
+	* 收获
 	* */
 	function handleReward($tree) {
 
@@ -631,12 +630,22 @@
 			PAGE.ajax({
 				type: "get",
 				msg: {
-					"1": "恭喜丰收",
-					"2": "当前的树还未成熟！"
+				"0" :"登录token验证失败",
+						"1" :"收获成功",
+						"2": "摇钱树编号错误",
+						"3": "摇钱树不存在",
+						"4" :"摇钱树还未成熟",
+						"5": "摇钱树非收获时期"
 				},
-				url: "/api/reward?serial=" + treeInfo.serial,
+				url: "/api/trees/collect?serial=" + treeInfo.serial+"&token="+token,
 				success: function (ret) {
-					$.tips("恭喜一轮的丰收！是否继续施肥！", "success");
+					var forest_gold = $.cookie("forest_gold");
+					var forest_coin = $.cookie("forest_coin");
+					var coin = ret.coin||0;
+					var gold = ret.gold ||0;
+					$coin.html((forest_coin*1+coin*1) || 0);
+					$gold.html((forest_gold*1 + gold*1) || 0);
+					$.tips("恭喜收获"+coin+"金币和"+gold+"元宝！", "success");
 					playRewardCoin(treeInfo.apply_type, 10, function () {
 						$tree.data("lock", false);
 						$tree.html('<div class="trunk bg-renwu"></div>');

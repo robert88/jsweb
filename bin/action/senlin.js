@@ -93,6 +93,17 @@ exports = module.exports = {
 		}
 		next( {code:count});
 	},
+	"/api/trees/life":function (request,response,next) {
+		var str = "/api/trees/life";
+		exports[str].count = (exports[str].count||0);
+		var count = ++exports[str].count;
+		count = exports[str].count =1;
+		next( {code:count,data:{
+			"coin": 35,
+			"gold": 100
+		}});
+	},
+
 	"/api/pay":function (request,response,next) {
 		var str = "/api/trees/life";
 		exports[str].count = (exports[str].count||0);
@@ -187,6 +198,49 @@ exports = module.exports = {
 		]
 		next( {code:count,data:data});
 	},
+	"/api/homeland":function (request,response,next) {
+		var str = "/api/homeland";
+		exports[str].count = (exports[str].count||0);
+		var count = ++exports[str].count;
+		count = exports[str].count =1;
+		data = {
+				"user_id": 2, // 用户ID
+				"mobile": "15201103719", // 用户昵称，默认手机号
+				"sex": 1, // 性别，用于显示头像
+				"referrer": "18234030578", // 推荐人
+				"gold": "500.00", // 元宝数量
+				"coin": "500.00", // 金币金额
+			}
+
+		next( {code:count,data:data});
+	},
+	"/api/user/forget":function (request,response,next) {
+		var str = "/api/user/forget";
+		exports[str].count = (exports[str].count||0);
+		var count = ++exports[str].count;
+		count = exports[str].count =1;
+		data = {
+			"token": "S0M1OWgwaFNmc3dHRWN3ejVmYWFiQT09"
+		}
+		next( {code:count,data:data});
+	},
+	"/api/user/reset":function (request,response,next) {
+		var str = "/api/user/reset";
+		exports[str].count = (exports[str].count||0);
+		var count = ++exports[str].count;
+		if(count>4){
+			count = exports[str].count =1;
+		}
+		next( {code:count});
+	},
+	"/api/upload":function (request,response,next) {
+		var str = "/api/upload";
+		exports[str].count = (exports[str].count||0);
+		var count = ++exports[str].count;
+		count = exports[str].count =1;
+		next( {code:count,data:{path:"/load/1.png"}});
+	},
+
 	"/api/game/pocket":function (request,response,next) {
 		var str = "/api/game/pocket";
 		exports[str].count = (exports[str].count||0);

@@ -1,0 +1,59 @@
+<div class="main-home-body">
+	<header class="wrap bg-yellow tc fs20">
+		<a onclick="history.back(-1)"><i class="bg-props-arrow bg-props" ></i></a><span>提现账号管理</span>
+	</header>
+	<div class="wrap J-body main-body">
+		<form class="form-block pt20" id="step01">
+			<fieldset class="ipt-label-block  J-input-focus mt20">
+				<label class="ipt-label ">开户姓名：</label>
+				<div class="ipt-inline ipt-radius J-validItem validItem">
+					<input name="mobile" type="text" tabindex="1"
+						   placeholder="请填写真实姓名"
+						   class="ipt"
+						   check-type="required"
+						   data-required-msg="请填写正确的手机号!"
+						   data-focus="true">
+				</div>
+			</fieldset>
+			<fieldset class="ipt-label-block J-input-focus mt20" >
+				<label class="ipt-label ">收款银行：</label>
+
+				<div class="ipt-inline ipt-radius J-validItem validItem">
+					<select name="" id=""></select>
+					<input name="code" type="text" tabindex="1"
+						   placeholder="请填写身份证号码"
+						   class="ipt"
+						   check-type="required cardid"
+						   data-idcard-msg="请填写身份证号码!"
+						   data-focus="true">
+				</div>
+
+			</fieldset>
+			<fieldset class="ipt-label-block J-input-focus mt20" >
+				<label class="ipt-label ">收款账号：</label>
+
+				<div class="ipt-inline ipt-radius J-validItem validItem">
+					<input name="code" type="text" tabindex="1"
+						   placeholder="请填写身份证号码"
+						   class="ipt"
+						   check-type="required cardid"
+						   data-idcard-msg="请填写身份证号码!"
+						   data-focus="true">
+				</div>
+
+			</fieldset>
+			<fieldset class=" mt20 pt20 tc" >
+				<a class="J-submitBtn btn-yellow disabled">
+					确认提交
+				</a>
+			</fieldset>
+		</form>
+		<!--提现账户提交成功-->
+		<div class="info-tips bd-radius-5 p20 m20 lh40" style="color:#ff3300;background: #ffc">
+			<p>温馨提示：</p>
+			<p>1.绑定的收款账户开户人需与实名认证姓名一致！</p>
+			<p>2.请仔细确认您的账号是否填写正确。</p>
+			<p>3.收款账户不能重复绑定，且一周只能修改一次</p>
+		</div>
+	</div>
+</div>

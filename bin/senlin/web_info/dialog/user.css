@@ -1,0 +1,17 @@
+.userContent .bg-title-user{
+	top: -54px;
+	position:absolute;
+	left:50%;
+	margin-left:-71.5px;
+}
+.userContent{
+	position:relative;
+}
+.userContent .bg-user-mask{
+	margin: -20px 0 0 -10px;
+}
+.userContent .list-block{
+	width: 54px;
+	height: 54px;
+
+}

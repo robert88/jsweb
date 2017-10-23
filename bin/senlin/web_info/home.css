@@ -8,26 +8,15 @@ header{
 	box-sizing: border-box;
 	z-index: 1;
 }
-header .user-pic  .person{
-	background-position: -0px 0px;
-	width: 138px;
-	height: 160px;
+header .user-pic  .bg-user-mask{
 	margin: -20px 0 0 -10px;
 }
 
 header .user-pic{
 	position: absolute;
 	left: 0;
-	width: 125px;
-	height: 150px;
 	border-radius: 50%;
 	margin: 0px 0 0 10px;
-}
-header .user-pic.female{
-	background-position: -140px -12px
-}
-header .user-pic.male{
-	background-position: -252px -18px
 }
 header .header-wrap{
 	position: relative;
@@ -45,16 +34,10 @@ header .header-wrap .header-top .content{
 	margin: 30px 0 0;
 }
 
-header .header-wrap .header-top .coin{
-	background-position: -90px -336px;
-	width: 30px;
-	height: 20px;
+header .header-wrap .header-top .bg-props-coin{
 	margin: 10px 10px 10px 5px;
 }
-header .header-wrap .header-top .yuanbao{
-	background-position: -187px -184px;
-	width: 30px;
-	height: 16px;
+header .header-wrap .header-top .bg-props-gold{
 	margin: 12px 10px 10px 5px;
 }
 header .header-wrap .header-bottom .charge{

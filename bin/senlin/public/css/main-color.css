@@ -90,6 +90,41 @@ body,html{
 	background-position: -337px -138px;
 	animation:none;
 }
+.bg-props-gold{
+	background-position: -187px -184px;
+	width: 30px;
+	height: 16px;
+}
+.bg-props-coin{
+	background-position: -90px -336px;
+	width: 30px;
+	height: 20px;
+}
+.bg-props-arrow{
+	background-position: -53px -383px;
+	width: 10px;
+	height: 20px;
+}
+.bg-props-arrow:hover{
+	background-position: -63px -383px;
+	width: 10px;
+	height: 20px;
+}
+.bg-props-realnameAuth{
+	background-position: -63px -85px;
+	width: 30px;
+	height: 25px;
+}
+.bg-props-withdrawal{
+	background-position: -103px -85px;
+	width: 34px;
+	height: 25px;
+}
+.bg-props-uploadBg{
+	background-position: -2px -132px;
+	width: 76px;
+	height: 63px;
+}
 .bg-renwu{
 	background-image: url(../images/renItem.png);
 	display: inline-block;
@@ -103,12 +138,31 @@ body,html{
 	background-image: url(../images/btnbg.png);
 	display: inline-block;
 }
-.bg-title{
-	background-image: url(../images/textItem.png);
-	display: inline-block;
+.bg-yellow{
+	background: rgb(255, 204, 51);
+	color:#fff;
 }
 .bg-user{
 	background-image: url(../images/user.png);
+	display: inline-block;
+}
+.bg-user-male{
+	background-position: -254px 0px;
+	width: 115px;
+	height: 127px
+}
+.bg-user-female{
+	background-position: -148px -9px;
+	width: 107px;
+	height: 115px;
+}
+.bg-user-mask{
+	background-position: -0px 0px;
+	width: 138px;
+	height: 160px;
+}
+.bg-title{
+	background-image: url(../images/textItem.png);
 	display: inline-block;
 }
 .bg-title-confirm{
@@ -166,6 +220,12 @@ body,html{
 	width: 143px;
 	height: 53px;
 }
+.bg-title-user{
+	background-position: -188px -143px;
+	width: 170px;
+	height: 53px;
+}
+
 .loading span {
 	display: inline-block;
 	vertical-align: middle;
@@ -298,4 +358,35 @@ body,html{
 		transform:rotateX(30deg);
 		perspective:170px
 	}
+}
+/*家园公共部分*/
+.main-home-body header{
+	height:60px;
+	line-height: 60px;
+}
+.main-home-body header>a{
+	float:left;
+	margin-left: 20px;
+}
+.main-home-body .main-body .ipt-label-block{
+	height: 2.5625rem;
+	line-height: 2.5625rem;
+	padding-right:140px;
+}
+.main-home-body .main-body .ipt{
+	height: 2.5rem;
+	line-height: 2.5rem;
+}
+.main-home-body .main-body input:focus,
+.main-home-body .main-body textarea:focus,
+.main-home-body .main-body button:focus,
+.main-home-body .main-body select:focus{
+	border-color:rgb(255, 204, 51)
+}
+.main-home-body .main-body{
+	color:#000;
+}
+
+.main-home-body .t-gray{
+	color:#444;
 }

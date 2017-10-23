@@ -1,18 +1,6 @@
-header{
-	height: 2.125rem;
-	line-height: 2.125rem;
-	position:relative;
+.dl-tips{
+	background: rgba(255, 204, 51,0.8);
 }
-header .back{
-	position:absolute;
-	left:10px;
-	height:100%;
-	top:0;
-}
-body{
-color:rgb(0, 0, 0)
-}
-.bg-yellow{
-	background: rgb(255, 204, 51);
-	color:#fff;
+.dl-tips-success .dl-tips-text{
+	color:#000;
 }

@@ -27,6 +27,14 @@
 	display: inline-block;
 	width: 92px;
 }
+.btn-yellow{
+	background: rgb(255, 204, 51);
+	color:#fff;
+	padding:0rem 1.2rem;
+	display: inline-block;
+	height: 2.5625rem;
+	line-height: 2.5625rem;
+}
 .btn-tab{
 	height: 30px;
 	line-height: 30px;

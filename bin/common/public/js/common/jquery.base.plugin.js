@@ -33,13 +33,7 @@
 	/*国际化可以待参数*/
     if(!$.i18n){
         $.i18n=function(code){
-            var param;
-            if(arguments.length>0){
-                param = Array.prototype.slice.call(arguments,1);
-            }
-        	var lan = window.PAGE.language[window.PAGE.curLanguage];
-        	var convertLan ="".tpl.apply( (lan&&lan[code]||code),param);
-            return convertLan
+            return code;
         }
     }
 

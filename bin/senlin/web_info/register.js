@@ -62,7 +62,10 @@ require("./public/js/common.js");
 		$this.data("lock",true).data("lock-text",true);
 		var $text =$this.find(".text-gradient");
 
-		var originText = $text.data("text");
+		if(!$text.data("origin-text")){
+			$text.data("origin-text",$text.html());
+		}
+		var originText = $text.data("origin-text");
 		$text.data("text",60).html(60);
 
 		PAGE.ajax({type:"post",

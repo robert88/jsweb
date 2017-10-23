@@ -34,37 +34,37 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 36px;
   height: 34px;
 }
-.icon-004yuanbao {
+.icon-004gold {
   background-image: url(propsItem.png);
   background-position: -90px -336px;
   width: 30px;
   height: 20px;
 }
-.icon-005yuanbao1000 {
+.icon-005gold1000 {
   background-image: url(propsItem.png);
   background-position: -337px 0px;
   width: 72px;
   height: 63px;
 }
-.icon-006yuanbao2 {
+.icon-006gold2 {
   background-image: url(propsItem.png);
   background-position: -187px -184px;
   width: 30px;
   height: 16px;
 }
-.icon-007yuanbao50 {
+.icon-007gold50 {
   background-image: url(propsItem.png);
   background-position: -337px -228px;
   width: 62px;
   height: 48px;
 }
-.icon-008yuanbao500 {
+.icon-008gold500 {
   background-image: url(propsItem.png);
   background-position: -337px -73px;
   width: 69px;
   height: 55px;
 }
-.icon-009yuanbaotitle {
+.icon-009goldtitle {
   background-image: url(propsItem.png);
   background-position: -177px -210px;
   width: 143px;

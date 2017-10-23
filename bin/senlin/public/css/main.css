@@ -143,6 +143,12 @@ margin-left:0.625rem;
 .pt50{
 	padding-top:3.125rem;
 }
+.lh40{
+	line-height: 2.5rem;
+}
+.lh25{
+	line-height: 1.5625rem;
+}
 .wrap{
 	max-width: 640px;
 	min-width: 300px;

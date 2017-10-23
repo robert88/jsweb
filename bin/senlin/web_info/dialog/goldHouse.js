@@ -5,7 +5,7 @@
 	var number = 1;
 	var forest_gold = $.cookie("forest_gold");
 	var $header = $("header");
-	var $yuanbao = $header.find(".yuanbao-text");
+	var $gold = $header.find(".gold-text");
 	var $tabBody = $dialog.find(".tab-body-item");
 	var $hotItem = $tabBody.eq(0);
 	var $propsItem = $tabBody.eq(1);
@@ -65,7 +65,7 @@
 				}
 				$.dialog.close($dialog);
 				forest_gold = forest_gold-number*price;
-				$yuanbao.html(forest_gold || 0);
+				$gold.html(forest_gold || 0);
 				$.cookie("forest_gold",forest_gold);
 			}
 		});
