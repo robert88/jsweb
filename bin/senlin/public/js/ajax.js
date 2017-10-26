@@ -94,9 +94,9 @@
 		
 		try{
 			document.domain = "17youxi.me";
-			var apiDomain = "http://forest-api.17youxi.me";
+			var apiDomain = "forest.17youxi.me/sf/";
 			if(ajaxOption.url.indexOf("http://")==-1){
-				ajaxOption.url= apiDomain+ajaxOption.url
+				ajaxOption.url= "http://" + (apiDomain+ajaxOption.url).toURI()
 			}
 		}catch (e){
 			console.error(e);

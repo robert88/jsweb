@@ -10,6 +10,10 @@
 	var $hotItem = $tabBody.eq(0);
 	var $propsItem = $tabBody.eq(1);
 	var $linshouItem = $tabBody.eq(2);
+	if (!token) {
+		window.location.hash="#/web_info/login.html";
+		return;
+	}
 	/*
 	* 数据模型
 	* */

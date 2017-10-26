@@ -12,7 +12,11 @@
 	var $headerUserPic = $header.find(".user-pic");
 	var $headerUserCoin = $header.find(".coin-text");
 	var $headerUserGold = $header.find(".gold-text");
-	
+	var token = $.cookie("login_token");
+	if (!token) {
+		window.location.hash="#/web_info/login.html";
+		return;
+	}
 
 	/*
 	 *加载数据

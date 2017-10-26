@@ -19,6 +19,10 @@
 	var $goldHouse = $footer.find(".goldHouse");
 	var $skills = $footer.find(".skills").parents(".J-dialog");
 
+	if (!token) {
+		hash="#web_info/login";
+	}
+
 	function initDrag() {
 		$(document).off("mousedown.dragbg touchstart.dragbg").on("mousedown.dragbg touchstart.dragbg", function (e) {
 			if ($(e.target).parents(".dl-dialog").length) {

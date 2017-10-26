@@ -22,5 +22,7 @@ $(function () {
 	});
 	changeBodyBackground();
 
-	
+	PAGE.destroy.push(function () {
+		$win.off("resize.bodybackgroundsize");
+	})
 });

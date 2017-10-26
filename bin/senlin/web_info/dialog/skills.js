@@ -5,7 +5,11 @@
 	var $propsItem = $dialog.find(".propsInfo");
 	var $linshouItem = $dialog.find(".linshouInfo");
 	var loaded = false;
-
+	var token = $.cookie("login_token");
+	if (!token) {
+		window.location.hash="#/web_info/login.html";
+		return;
+	}
 	//html模板
 	function getHtmlTempl(obj) {
 		return  ['<li class="mt10">',

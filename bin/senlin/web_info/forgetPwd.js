@@ -78,7 +78,8 @@ require("./public/js/common.js");
 				"4": "用户已注册",
 				"5": "发送失败"
 			},
-			url:"/api/user/sms?type=forget&mobile="+mobile,
+			data:{type:"register",mobile:mobile},
+			url:"/api/user/sms",
 			success:function () {
 				timoutCount($text,60,function(){
 					$.tips("发送成功","success")

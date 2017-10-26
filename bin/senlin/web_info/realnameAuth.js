@@ -35,7 +35,7 @@ $(function(){
 		}
 		// "image/png"&&file.type!=="image/jpeg"
 		PAGE.ajax({
-			url: "api/upload",
+			url: "/api/homeland/upload",
 			type:"post",
 			data: {
 				fileData : imgData,

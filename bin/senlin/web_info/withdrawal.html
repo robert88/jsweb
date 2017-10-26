@@ -3,29 +3,36 @@
 		<a onclick="history.back(-1)"><i class="bg-props-arrow bg-props" ></i></a><span>提现账号管理</span>
 	</header>
 	<div class="wrap J-body main-body">
-		<form class="form-block pt20" id="step01">
+		<form class="form-block pt20" id="withdrawalForm">
 			<fieldset class="ipt-label-block  J-input-focus mt20">
 				<label class="ipt-label ">开户姓名：</label>
 				<div class="ipt-inline ipt-radius J-validItem validItem">
-					<input name="mobile" type="text" tabindex="1"
-						   placeholder="请填写真实姓名"
+					<input name="account" type="text" tabindex="1"
+						   placeholder="请填写真实开户姓名"
 						   class="ipt"
 						   check-type="required"
-						   data-required-msg="请填写正确的手机号!"
+						   data-required-msg="请填写真实开户姓名!"
 						   data-focus="true">
 				</div>
 			</fieldset>
 			<fieldset class="ipt-label-block J-input-focus mt20" >
 				<label class="ipt-label ">收款银行：</label>
-
 				<div class="ipt-inline ipt-radius J-validItem validItem">
-					<select name="" id=""></select>
-					<input name="code" type="text" tabindex="1"
-						   placeholder="请填写身份证号码"
-						   class="ipt"
-						   check-type="required cardid"
-						   data-idcard-msg="请填写身份证号码!"
-						   data-focus="true">
+					<select name="bank_id" class="ipt"
+							check-type="required"
+							data-idcard-msg="请选择开户行!">
+						<option value="">请选择</option>
+						<option value="1">中国农业银行</option>
+						<option value="2">中国银行</option>
+						<option value="3">中国建设银行</option>
+						<option value="4">中国工商银行</option>
+						<option value="5">交通银行</option>
+						<option value="6">中国邮政储蓄银行</option>
+						<option value="7">招商银行</option>
+						<option value="8">兴业银行</option>
+						<option value="9">民生银行</option>
+						<option value="10">平安银行</option>
+					</select>
 				</div>
 
 			</fieldset>
@@ -33,11 +40,11 @@
 				<label class="ipt-label ">收款账号：</label>
 
 				<div class="ipt-inline ipt-radius J-validItem validItem">
-					<input name="code" type="text" tabindex="1"
-						   placeholder="请填写身份证号码"
+					<input name="card" type="text" tabindex="1"
+						   placeholder="收款银行卡号"
 						   class="ipt"
 						   check-type="required cardid"
-						   data-idcard-msg="请填写身份证号码!"
+						   data-idcard-msg="银行卡格式不正确!"
 						   data-focus="true">
 				</div>
 

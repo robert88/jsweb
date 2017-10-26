@@ -189,10 +189,7 @@
 		home = home==false?"":this.HOME
 
 		 hash = hash||window.location.hash.trim();
-		var login_uid = $.cookie("login_uid");
-		if (!login_uid) {
-			hash="#web_info/login";
-		}
+
 		hash = hash ? hash : home;
 
 		return hash;

@@ -3,6 +3,11 @@
 	var forest_gold = $.cookie("forest_gold");
 	var $header = $("header");
 	var $gold = $header.find(".gold-text");
+	var token = $.cookie("login_token");
+	if (!token) {
+		window.location.hash="#/web_info/login.html";
+		return;
+	}
 	$dialog.on("click",".J-okBtn",function (e) {
 		var value = $dialog.find("input").val();
 		if (value < 100) {

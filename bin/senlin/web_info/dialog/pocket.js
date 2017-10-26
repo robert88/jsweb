@@ -1,4 +1,9 @@
 ;(function () {
+	var token = $.cookie("login_token");
+	if (!token) {
+		window.location.hash="#/web_info/login.html";
+		return;
+	}
 	var $dialog = 	$(".pocketContent").parents(".dl-dialog");
 	var $tabBody = $dialog.find(".tab-body-item");
 	var $propsItem = $tabBody.eq(0);
