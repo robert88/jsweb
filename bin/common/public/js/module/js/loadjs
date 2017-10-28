@@ -1,0 +1,64 @@
+var pathmap = {};
+function loadjs(paths,callback,loadFileType){
+var $moudlejs = $("#pageModuleJs");
+if($moudlejs.length==0){
+$("#page").append("<div id='pageModuleJs' />");
+$moudlejs = $("#pageModuleJs");
+}
+paths = toArray(paths);
+var loadstackHandle = [];
+for(var i=0;i<paths.length;i++){
+  if(!pathmap[paths[i]]){
+  pathmap[paths[i]] = {status:"ready"};
+  }
+  loadstackHandle.push({src:paths[i]});
+}
+var len = loadstackHandle.length;
+if(len){loadstackHandle[len-1].callback=callback;}//最后一个js带上callback
+appendjs（loadstackHandle,$moudlejs,loadFileType);
+}
+function appendjs(loadstackHandle,$moudlejs,loadFileType){
+ if(loadstackHanlde.length==0){
+  return;
+ }
+ var handle = loadstackHandle.shift();
+ if(pathmap[path]).status=="ready"){
+  pathmap[path].status="loadding";
+  var loadFileDom;
+  if(loadFileType=="link"){
+    loadFileDom = document.createElement("link");
+  }else{
+     loadFileDom = document.createElement("script");
+  }
+  $moudlejs.append(loadFileDom);
+  loadFileDom.onerror=function(){
+    console.error(path+" load fail!");
+    pathmap[path].status="loaded";
+  }
+  loadFileDom.onload=loadFileDom.onreadystatechange =function(){
+    pathmap[path].status="loaded";
+  }
+  if(loadFileType=="link"){
+  loadFileDom.type="text/css";
+  loadFileDom.rel = "stylesheet";
+  loadFileDom.href = path
+  }else{
+  loadFileDom.type="text/javascript";
+   loadFileDom.src = path
+  }
+ }
+  waitload(path,handle,loadstackHanle,$moudlejs,loadFileType)
+}
+function waitload(path,handle,loadstackHanle,$moudlejs,loadFileType){
+  if(pathmap[path].status=="loaded"){
+    if(typeof handle.callback=="function"){
+      handle.callback();
+    }
+     appendjs(loadstackHandle,$moudlejs,loadFileType)
+  }else{
+    setTimeout(function(){
+      waiteload(path,handle,loadstackHanle,$moudlejs,loadFileType);
+    },50)
+  }
+ 
+}
