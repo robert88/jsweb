@@ -1,0 +1,33 @@
+(function browserDetect(){
+//浏览器侦测
+var browserDetect = function(){
+var userAgent = window.navigator && navigator.userAgent || "";
+var platform = window.navigator && navigator.platform || "";
+var ua = {};
+//是否ie
+  if(~userAgent.indexOf('MSIE')){
+  ua.isIE = true;
+    if(~userAgent.indexOf('MSIE 8.0')){
+      ua.browserName = "Internet Explorer 8";
+    }else if(~userAgent.indexOf('MSIE 7.0')){
+    ua.browserName = "Internet Explorer 7";
+    }else if(~userAgent.indexOf('MSIE 6.0')){
+    ua.browserName = "Internet Explorer 6";
+    }
+    //插件未启用
+    if(~userAgent.indexOf('chromeframe')){
+    ua.isChormeframeDisabled = true;
+    }
+  }
+  //插件生效
+  if(~userAgent.indexOf('Chrome/29.0.1547')){
+    ua.isChormeframeDisabled = false;
+  }
+  if(platform=="Win64"){
+  ua.bit = 64
+  }else if(platform=="Win32"){
+  ua.bit=32
+  }
+  return ua;
+}
+})
