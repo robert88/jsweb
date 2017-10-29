@@ -1,13 +1,14 @@
 ;(function () {
 	PAGE.data = PAGE.data || {};
 	PAGE.data.audio = PAGE.data.audio || "open";
-	var $body = $(".J-body");
-	var dx, dy, dflag, ex, ey, dw, dh;
+	var $body = $("#J-body");
+	var dflag, ex, ey,downMatrix;
 	/*缩小*/
 	var audios = {};
-	var currZoom = 1;//最小的状态显示
+	var currZoom = 100;//最小的状态显示
+	var zoomCenter = {x:0,y:0};
+	var zoomtouch={}
 	var perDr;
-	var scaleTimer = 0;
 	var token = $.cookie("login_token");
 	var $header = $("header");
 	var $userPic = $header.find(".user-pic");
@@ -24,8 +25,15 @@
 	}
 
 	function initDrag() {
-		$(document).off("mousedown.dragbg touchstart.dragbg").on("mousedown.dragbg touchstart.dragbg", function (e) {
-			if ($(e.target).parents(".dl-dialog").length) {
+		//居中
+		var pcenter = {x:($(window).width()-$body.width())/2,y:($(window).height()-$body.height())/2};
+		$body.css("transform","translate("+pcenter.x+"px,"+pcenter.y+"px)");
+
+		$body.off("mousedown.dragbg touchstart.dragbg").on("mousedown.dragbg touchstart.dragbg", function (e) {
+			if (e.type === "touchstart") {
+				e = e.originalEvent.touches[0];
+			}
+			if ($(e.target).hasClass("dl-dialog")||$(e.target).parents(".dl-dialog").length) {
 				return;
 			}
 			var $treeItem;
@@ -37,57 +45,57 @@
 			if ($treeItem.length && ($.cookie("forest_guide") || (!$.cookie("forest_guide") && $treeItem.data("guide")) )) {
 				return;
 			}
-			if (e.type === "touchstart") {
-				e = e.originalEvent.touches[0];
-			}
+
 			dflag = true;
-			dx = $body.css("left").toFloat();
-			dy = $body.css("top").toFloat();
+
+			downMatrix = getTransform($body);
 			ex = e.pageX;
 			ey = e.pageY;
-			dw = $(window).width() - 1500 * currZoom / 100;
-			dh = $(window).height() - 1500 * currZoom / 100;
-			//手机端需要处理缩放不能屏蔽掉默认事件
-			if (e.type !== "touchstart") {
-				return false;
-			}
+
+			$(document).on("selectstart",function () {return false;});
+			zoomtouch.start=null;
+			return false;
 		}).off("mousemove.dragbg touchmove.dragbg").on("mousemove.dragbg touchmove.dragbg", function (e) {
+
 			if (dflag) {
 				if (e.type === "touchmove") {
 					var touches = e.originalEvent.touches;
 					e = e.originalEvent.touches[0];
 					if (touches.length > 1) {
-						//每隔5次触发一次缩放
-						if (scaleTimer == 0) {
-							scaleZoom(e, touches[1]);
+						if(!zoomtouch.start){
+							perDr=null;
+							zoomtouch.start = [{x:touches[0].pageX,y:touches[0].pageY},{x:touches[1].pageX,y:touches[1].pageY}];
+						}else{
+							zoomtouch.move = [{x:touches[0].pageX,y:touches[0].pageY},{x:touches[1].pageX,y:touches[1].pageY}];
+							scaleZoom(zoomtouch);
 						}
-						scaleTimer++;
-						if (scaleTimer > 4) {
-							scaleTimer = 0
-						}
-						return;
+						return false;
 					}
 				}
+				var dx = downMatrix.translateX;
+				var dy = downMatrix.translateY;
 				var tx = e.pageX - ex + dx;
 				var ty = e.pageY - ey + dy;
+				var translate = limitTranslate(tx,ty);
+				var matrix = "translate("+translate.x + "px,"+translate.y+"px) scale("+downMatrix.scaleX+","+downMatrix.scaleY+")"
+				$body.css("transform",matrix);
 
-				tx = tx < dw ? dw : tx;
-				ty = ty < dh ? dh : ty;
-				tx = tx > 0 ? 0 : tx;
-				ty = ty > 0 ? 0 : ty;
-				$body.css("left", tx + "px");
-				$body.css("top", ty + "px");
 			}
-		}).off("mouseup.dragbg touchup.dragbg").on("mouseup.dragbg touchup.dragbg", function (e) {
+			return false;
+		});
+
+		$(document).off("touchend.dragbg mouseup.dragbg ").on("touchend.dragbg mouseup.dragbg ", function (e) {
 			perDr = null;
 			dflag = false;
+			$(document).off("selectstart")
+			zoomtouch.start=null;
+			// $("#tips").html(" up");
 			//电脑端滚轮缩放
 		}).off("mousewheel.dragbg").on("mousewheel.dragbg", function (evt) {
 			if ($(evt.target).parents(".dl-dialog").length) {
 				return;
 			}
 			var wheelDelta = evt.wheelDelta || evt.detail;
-
 			//jquery bug； zepto没这个问题
 			if (!wheelDelta && evt.originalEvent) {
 				evt = evt.originalEvent;
@@ -95,14 +103,13 @@
 			}
 			//没有滚动条
 			if (wheelDelta < 0 || wheelDelta == 3) {
-				reduceImage();
-
+				reduceImage(evt);
 			} else if (wheelDelta > 0 || wheelDelta == -3) {
-				zoomImage();
+				zoomImage(evt);
 			}
+			return false;
 
-			// return false;
-		}).off("click.dragbg", ".J-dialog").on("click.dragbg", ".J-dialog", function (evt) {
+		}).off("click.dragbg touchstart.dragbg", ".J-dialog").on("click.dragbg touchstart.dragbg", ".J-dialog", function (evt) {
 			var $this = $(this);
 			//用户指引,且没有指引过
 			if (!$.cookie("forest_guide") && !$this.data("guide") || $this.data("lock")) {
@@ -132,8 +139,9 @@
 		});
 
 		$(window).off("resize.dragbg").on("resize.dragbg", function (evt) {
-			zoomBody()
+			scaleBody({x:$(window).width()/2,y:$(window).height()/2},currZoom)
 		});
+
 		/*spa方式切页面时候需要清除全局事件和变量*/
 		PAGE.destroy.push(function () {
 			$(document).off("mousedown.dragbg touchstart.dragbg")
@@ -141,12 +149,141 @@
 				.off("mouseup.dragbg touchup.dragbg")
 				.off("mousewheel.dragbg")
 				.off("WeixinJSBridgeReady")
-				.off("click.dragbg", ".J-dialog");
+				.off("click.dragbg touchstart.dragbg", ".J-dialog");
 			$(window).off("resize.dragbg");
 		});
 	}
 
 
+
+	//缩放---------------------------------------------------------------------------
+	/*手机端缩放*/
+	function limitTranslate(tx,ty){
+		var dw = $(window).width() - $body.width() * currZoom / 100;
+		var dh = $(window).height() - $body.height() * currZoom / 100;
+		tx = tx < dw ? dw : tx;
+		ty = ty < dh ? dh : ty;
+		tx = tx > 0 ? 0 : tx;
+		ty = ty > 0 ? 0 : ty;
+		return {x:tx,y:ty}
+	}
+	function getDistance(pos1, pos2) {
+		var x = pos2.x - pos1.x,
+			y = pos2.y - pos1.y;
+		return Math.sqrt((x * x) + (y * y));
+	}
+
+	function converIn(s){
+		var matrix =getTransform($body);
+		var p0 ={
+			x:matrix.translateX,
+			y:matrix.translateY
+		}
+		return {
+			x:(s.x*matrix.scaleX-p0.x),
+			y:(s.y*matrix.scaleX-p0.y)
+		}
+	}
+	function scaleBody(s,scale){
+		scale = getZoom(scale);
+		var p = converIn(s);
+		if(scale==currZoom){
+			return;
+		}
+		var matrix =getTransform($body);
+		var p0 ={
+			x:matrix.translateX,
+			y:matrix.translateY
+		}
+		var p1 = {
+			x:p0.x-p.x,
+			y:p0.y-p.y
+		}
+		var matrixStr = "translate("+(p1.x) + "px,"+(p1.y)+"px) scale("+scale/100+","+scale/100+")";
+
+		$body.css("transform",matrixStr);
+
+		currZoom = scale;
+
+		var translate = limitTranslate(p0.x-p1.x,p0.y-p1.y);
+
+		matrixStr = "translate("+(translate.x) + "px,"+(translate.y)+"px) scale("+scale/100+","+scale/100+")";
+
+		$body.css("transform",matrixStr);
+
+	}
+
+	function getZoom(zoom){
+		var zoomx = $(window).width() / $body.width()* 100;
+		var zoomy = $(window).height() / $body.height() * 100;
+		var minZoom = Math.max(zoomx, zoomy);
+		var maxZoom = Math.max(minZoom, 100);
+
+		if (zoom < minZoom) {
+			zoom = minZoom;
+		}
+		if (zoom > maxZoom) {
+			zoom = maxZoom;
+		}
+		return zoom;
+	}
+
+	function scaleZoom(zoomtouch) {
+		var perPoint = getDistance(zoomtouch.start[0],zoomtouch.start[1]);
+		var curPoint = getDistance(zoomtouch.move[0],zoomtouch.move[1]);
+		var dr = Math.floor(curPoint/perPoint*100);
+		if(perDr&&perDr!=dr){
+			var e = zoomtouch.start[0];
+			var e2 = zoomtouch.start[1];
+			var s = {x:e.x+(e2.x-e.x)/2,y:e.y+(e2.y-e.y)/2};
+
+			// drawDot(zoomCenter.x,zoomCenter.y,dr);
+
+			var zoom = currZoom;
+			if(dr>perScale){
+				zoom+=3
+			}else{
+				zoom-=3
+			}
+			scaleBody(s,zoom);
+
+		}
+		perDr =dr;
+	}
+
+	/*放大*/
+	function zoomImage(e) {
+		var zoom = currZoom;
+		var s = {x:e.pageX,y:e.pageY};
+		zoom++;
+		scaleBody(s,zoom)
+	}
+
+	/*缩小*/
+	function reduceImage(e) {
+		var zoom = currZoom;
+		var s = {x:e.pageX,y:e.pageY};
+		zoom--;
+		scaleBody(s,zoom)
+	}
+
+
+	// var c = $("#test")[0];
+	// var cxt = c.getContext("2d");
+	// c.width=$body.width();
+	// c.height= $body.height();
+	// function drawDot(x,y,text) {
+	//
+	// 	cxt.fillStyle="#FF0000";
+	// 	cxt.beginPath();
+	// 	cxt.font="30px Verdana";
+	// 	// cxt.arc(x,y,15,0,Math.PI*2,true);
+	// 	cxt.fillText(text,x,y);
+	// 	cxt.closePath();
+	// 	cxt.fill();
+	// }
+
+	//播放声音---------------------------------------------------------------------------
 	/*倒计时*/
 	function counter(targetEle, count, callback) {
 
@@ -165,73 +302,6 @@
 		clearTimeout(targetEle.timer);
 		targetEle.timer = setTimeout(counter, 1000, targetEle, count, callback);
 	}
-
-	//缩放---------------------------------------------------------------------------
-	/*手机端缩放*/
-	function scaleZoom(e1, e2) {
-		var dex1 = e1.pageX;
-		var dey1 = e1.pageY;
-		var dex2 = e2.pageX;
-		var dey2 = e2.pageY;
-		var dr = Math.sqrt((dex1 - dex2) * (dex1 - dex2) + (dey1 - dey2) * (dey1 - dey2));
-		//$.tips(dr)
-		if (perDr) {
-			if (dr - perDr > 0) {
-				zoomImage();
-			} else {
-				reduceImage();
-			}
-			perDr = dr;
-		}
-
-		if (perDr == null) {
-			perDr = dr;
-		}
-
-	}
-
-	/*缩放是根据当前窗口的大小来缩放*/
-	function zoomBody() {
-		var offsetX = $body.css("left").toFloat(0);
-		var offsetY = $body.css("top").toFloat(0);
-		var zoomx = $(window).width() / (1500) * 100;
-		var zoomy = $(window).height() / (1500) * 100;
-		var minZoom = Math.max(zoomx, zoomy);
-		var maxZoom = Math.max(minZoom, 100);
-		if (currZoom < minZoom) {
-			currZoom = minZoom;
-		}
-		if (currZoom > maxZoom) {
-			currZoom = maxZoom;
-		}
-		if (currZoom > 100) {
-			offsetX = 0;
-			offsetY = 0;
-		} else {
-			offsetX = offsetX * currZoom / 100;
-			offsetY = offsetY * currZoom / 100;
-		}
-		$body.css({
-			"transform": "scale(" + currZoom / 100 + "," + currZoom / 100 + ")",
-			left: offsetX,
-			top: offsetY
-		});
-	}
-
-	/*放大*/
-	function zoomImage() {
-		currZoom++;
-		zoomBody()
-	}
-
-	/*缩小*/
-	function reduceImage() {
-		currZoom--;
-		zoomBody()
-	}
-
-
-	//播放声音---------------------------------------------------------------------------
 	/*
 	 * 循环播放
 	 * */
@@ -248,6 +318,7 @@
 		//设置音效是打开的。
 		if (PAGE.data.audio == "open") {
 			if (audio.paused) {
+				audio.load();
 				audio.play();
 			}
 		} else {
@@ -291,7 +362,6 @@
 
 		if (!audio.init && audio.src!=src) {
 			audio.src = src;
-			audio.load();
 			audio.init = true;
 		}
 
@@ -350,7 +420,7 @@
 		var $tree;
 		for (var i = 1; i < 11; i++) {
 			$tree = $("#tree" + i.toString().fill("000"));
-			$tree.html('<div class="trunk bg-renwu"></div></div><div class="seal bg-renwu"></div>');
+			$tree.html('<div class="bg-renwu-trunk bg-renwu"></div></div><div class="bg-renwu-seal bg-renwu"></div>');
 		}
 	}
 	/*
@@ -358,13 +428,13 @@
 	 * */
 	function updateTreeStatus($tree, treeInfo) {
 		if (treeInfo.apply_type == 1) {
-			$tree.html('<div class="fertilizer4 bg-renwu"><div class=" bg-props bg-props-hand animate-flow"></div></div>');
+			$tree.html('<div class="bg-renwu-fertilizer4 bg-renwu"><div class=" bg-props bg-props-hand animate-flow"></div></div>');
 		} else if (treeInfo.apply_type == 2) {
-			$tree.html('<div class="fertilizer3 bg-renwu"><div class=" bg-props bg-props-hand animate-flow"></div></div>');
+			$tree.html('<div class="bg-renwu-fertilizer3 bg-renwu"><div class=" bg-props bg-props-hand animate-flow"></div></div>');
 		} else if (treeInfo.apply_type == 3) {
-			$tree.html('<div class="fertilizer2 bg-renwu"><div class=" bg-props bg-props-hand animate-flow"></div></div>');
+			$tree.html('<div class="bg-renwu-fertilizer2 bg-renwu"><div class=" bg-props bg-props-hand animate-flow"></div></div>');
 		} else if (treeInfo.apply_type == 4) {
-			$tree.html('<div class="fertilizer1 bg-renwu"><div class=" bg-props bg-props-hand animate-flow"></div></div>');
+			$tree.html('<div class="bg-renwu-fertilizer1 bg-renwu"><div class=" bg-props bg-props-hand animate-flow"></div></div>');
 		}
 	}
 	/*
@@ -383,14 +453,14 @@
 							// 0未破除封印，1已破除，2已收获，3 需浇生命液进行激活
 							switch (treeInfo.status) {
 								case "0":
-									$tree.html('<div class="trunk bg-renwu"></div><div class="seal bg-renwu"></div>');
+									$tree.html('<div class="bg-renwu-trunk bg-renwu"></div><div class="bg-renwu-seal bg-renwu"></div>');
 									break;
 								case "1":
 									//已经成熟了
 									if (treeInfo.countdown <= 0) {
 										updateTreeStatus($tree, treeInfo);
 									} else {
-										$tree.html('<div class="trunk bg-renwu"></div>');
+										$tree.html('<div class="bg-renwu-trunk bg-renwu"></div>');
 										counter($tree[0], treeInfo.countdown, function (targetEle, count) {
 											if (count <= 0) {
 												updateTreeStatus($(targetEle), $(targetEle).data("treeinfo"));
@@ -400,7 +470,7 @@
 									break;
 								case "2":
 								case "3":
-									$tree.html('<div class="trunk bg-renwu"></div>');
+									$tree.html('<div class="bg-renwu-trunk bg-renwu"></div>');
 									break;
 							}
 						}
@@ -599,7 +669,27 @@
 		}
 
 		setTimeout(playRewardAnimate, 200, $ani, count);
-
+	}
+	function getTransform($target){
+		var matrix = $target.css("transform");
+		if(matrix && typeof matrix=="string" && matrix!="none"){
+			matrix=matrix.split(/[^0-9\.\-]/g);
+			var newArr=[]
+			$.each(matrix,function (idx,val) {
+				if(val){newArr.push(val);}
+			})
+			matrix = newArr;
+		}else if(typeof matrix!="object"){
+			matrix=[0,0,0,0,0,0];
+		}
+		return {
+			scaleX: matrix[0]*1,
+			scaleY: matrix[3]*1,
+			translateX:matrix[4]*1,
+			translateY: matrix[5]*1,
+			rotateX: matrix[1]*1,
+			rotateY: matrix[2]*1
+		}
 	}
 	/*
 	 * 收获语音及触发动画
@@ -652,7 +742,7 @@
 					$.tips("恭喜收获"+coin+"金币和"+gold+"元宝！", "success");
 					playRewardCoin(treeInfo.apply_type, 10, function () {
 						$tree.data("lock", false);
-						$tree.html('<div class="trunk bg-renwu"></div>');
+						$tree.html('<div class="bg-renwu-trunk bg-renwu"></div>');
 					});
 				},errorCallBack:function () {
 					$tree.data("lock", false);
@@ -664,13 +754,13 @@
 	 * 点击摇钱树
 	 * */
 	function initTreeEvent() {
-		$body.on("click", ".treeItem", function () {
+		$body.on("click touchstart", ".treeItem", function () {
 			var $this = $(this);
 			if (PAGE.guide.needGuide && !$this.data("guide") || $this.data("lock")) {
 				return;
 			}
-			var $seal = $this.find(".seal");
-			var $trunk = $this.find(".trunk");
+			var $seal = $this.find(".bg-renwu-seal");
+			var $trunk = $this.find(".bg-renwu-trunk");
 			if ($seal.length) {
 				handleBreakseal($this,$seal);
 			} else if ($trunk.length) {
@@ -687,6 +777,7 @@
 	 * 新用户指导
 	 * */
 	function initGuide() {
+
 		PAGE.guide = {};
 		PAGE.guide.handler = [];
 		//触发下一个步骤
@@ -699,6 +790,7 @@
 			}
 		};
 		if (!$.cookie("forest_guide")) {
+
 			PAGE.guide.needGuide = true;
 			//step1
 			PAGE.guide.handler.push({func:guideSkills,name:"skills"});
@@ -767,7 +859,7 @@
 	initTree();
 	initTreeEvent();
 	initDrag();
-	zoomBody();
+	scaleBody({x:$(window).width()/2,y:$(window).height()/2},10);
 	initGuide();
 
 

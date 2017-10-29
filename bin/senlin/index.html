@@ -6,9 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8">
     <meta name="apple-mobile-web-app-capable" content="no">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta content="telephone=no" name="format-detection">
-
+    <!--1、WebApp全屏模式：-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <!--注意：viewport 后面加上 minimal-ui 在safri 体现效果-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--2、隐藏状态栏/设置状态栏颜色：-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!--3、safri 添加到主屏界面的显示标题：-->
+    <meta name="apple-mobile-web-app-title" content="森林秘境">
+    <!--4、忽略自动识别数字为电话号码：-->
+    <meta content="telephone=no" name="format-detection" />
+    <!--5、忽略自动识别邮箱账号：-->
+    <meta content="email=no" name="format-detection" />
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- 是针对一些老的不识别viewport的浏览器，列如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
     <!--start mergeCss:main.min-->
     <link rel="stylesheet" type="text/css" href="public/css/common/base.css">
     <link rel="stylesheet" type="text/css" href="public/css/main.css">
@@ -18,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/tab.css">
     <link rel="stylesheet" type="text/css" href="public/css/jquery.dialog.css">
     <!--end mergeCss-->
-
+    <script src="public/js/lib/touch.js"></script>
     <script src="public/js/lib/jquery-1.12.4.js"></script>
 
 </head>

@@ -78,12 +78,15 @@
 				return false
 			}
 			var totalHeight = $body.height();
-			var top = $scrollBody.scrollTop() + 3;
+			var top = $scrollBody.scrollTop() + 5;
 			var height = $scrollBody.height();
 			if (totalHeight - height < top) {
 				PAGE.guide.next();
 				return;
 			}
+			alert(totalHeight)
+			alert(top)
+			alert(totalHeight - height - top)
 			$.tips("您还没查看完");
 			return false;
 		};

@@ -277,13 +277,13 @@
 		PAGE.handlerInclude(innerHtml,function (innerHtml,subConfigs) {
 			//优先加载css
 			if(config.params.css) {
-				$pageCss.html('<link rel="stylesheet" type="text/css" href="{0}.css?v={1}">'.tpl(config.action, config.params.css));
+				$pageCss.html('<link rel="stylesheet" type="text/css" href="{0}.css">'.tpl(config.action, config.params.css));
 			} else {
 				$pageCss.html("");
 			}
 			$.each(subConfigs,function (idx,val) {
 				if(val.params.css) {
-					$pageCss.append('<link rel="stylesheet" type="text/css" href="{0}.css?v={1}">'.tpl(val.action, val.params.css));
+					$pageCss.append('<link rel="stylesheet" type="text/css" href="{0}.css">'.tpl(val.action, val.params.css));
 				}
 			});
 			//添加内容
@@ -295,7 +295,7 @@
 				if(config.params.js) {
 					var s = document.createElement("script");
 					$pageJs.html(s);
-					s.src = "{0}.js?v={1}".tpl(config.action, config.params.js);
+					s.src = "{0}.js".tpl(config.action, config.params.js);
 				}else{
 					$pageJs.html("");
 				}
@@ -303,7 +303,7 @@
 					if(val.params.js) {
 						var subJs = document.createElement("script");
 						$pageJs.append(subJs);
-						subJs.src = "{0}.js?v={1}".tpl(val.action, val.params.js);
+						subJs.src = "{0}.js".tpl(val.action, val.params.js);
 					}
 				});
 				$("#pageDsync").trigger("pagecontentloaded");

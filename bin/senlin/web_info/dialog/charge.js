@@ -17,17 +17,23 @@
 			PAGE.ajax({
 				type: "get",
 				msg: {
+					"0":"登录token验证失败",
 					"1": "充值成功",
-					"2": "充值发生错误"
+					"2": "支付请求超时"
 				},
-				url: "/api/charge?value=" + value,
-				success: function () {
-					$.tips("充值成功", "success");
-					$.dialog.close($dialog,e);
+				url: "/api/pay/gold?number=" + value+"&token="+token,
+				success: function (ret) {
 
-					forest_gold = forest_gold*1 + value*1;
-					$.cookie("forest_gold",forest_gold);
-					$gold.html(forest_gold);
+					if(ret&&ret.qrcode){
+						var img = new Image();
+						img.src = ret.qrcode;
+						$.dialog($("<div/>").append(img),{close: false, dialogStyle:"height: auto;background: none;"})
+					}
+
+					$.dialog.close($dialog,e);
+					// forest_gold = forest_gold*1 + value*1;
+					// $.cookie("forest_gold",forest_gold);
+					// $gold.html(forest_gold);
 
 					if(PAGE.guide.needGuide && PAGE.guide.step=="charge"){
 						PAGE.guide.next();

@@ -37,10 +37,7 @@ $(function(){
 		PAGE.ajax({
 			url: "/api/homeland/upload",
 			type:"post",
-			data: {
-				fileData : imgData,
-				fileType : file.type
-			},
+			data: imgData,
 			success: function(data) {
 
 				if(data.path) {

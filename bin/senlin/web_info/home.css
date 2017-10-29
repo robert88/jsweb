@@ -104,11 +104,15 @@ body,html{
 }
 .main-body{
 	position: absolute;
-	transform-origin:left top;
-	left:0;
+	transform-origin: 0px 0px;
+	webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translate(0px, 0px) translateZ(0);
 	top:0;
-	width:1500px;
-	height:1500px;
+	width: 1228px;
+	height: 1228px;
 	background-image: url(../public/images/mijing.jpg);
 	background-repeat: no-repeat;
 }
@@ -123,79 +127,39 @@ body,html{
 	/*width: 436px;*/
 	/*height: 252px;*/
 /*}*/
-.main-body .treeItem .fertilizer1,
-.main-body .treeItem .fertilizer2,
-.main-body .treeItem .fertilizer3,
-.main-body .treeItem .fertilizer4
+.bg-renwu-fertilizer1,
+.bg-renwu-fertilizer2,
+.bg-renwu-fertilizer3,
+.bg-renwu-fertilizer4,
+.bg-renwu-seal,
+.bg-renwu-trunk,
+.bg-renwu-zhuzhi1,
+.bg-renwu-zhuzhi2,
+.bg-renwu-zhuzhi3,
+.bg-renwu-zhuzhi4,
+.bg-renwu-zhuzhi5
 {
-	width: 259px;
-	height: 193px;
+	position:absolute;
 }
 
-.main-body .treeItem .seal{
-	position:absolute;
-	background-position: -534px -7px;
-	width: 198px;
-	height: 210px;
-	left: 36px;
-	top: -14px;
+.bg-renwu-seal{
+	left: 57px;
+	top: 23px;
 }
-.main-body .treeItem .trunk{
-	position:absolute;
-	background-position: 2px 3px;
 
-}
-.main-body .treeItem .fertilizer1{
-	position:absolute;
-	background-position: -501px -219px;
+.bg-renwu-fertilizer1{
 	left: -10px;
 	top: -14px;
-	width: 289px;
-	height: 203px;
+}
+.bg-renwu-trunk{
+	left: 45px;
+	top: 24px;
 }
 .main-body .treeItem .bg-props-hand{
 	position: absolute;
 	left: 50%;
 	margin: -22px 0 0 -23px;
 	top: 50%;
-}
-.main-body .treeItem .fertilizer2{
-	position:absolute;
-	background-position: 11px 0px;
-}
-.main-body .treeItem .fertilizer3{
-	position:absolute;
-	background-position: 0px -206px;
-}
-.main-body .treeItem .fertilizer4{
-	position:absolute;
-	background-position: -257px 9px;
-}
-.main-body .treeItem .trunk{
-	position: absolute;
-	background-position: -291px -232px;
-	width: 183px;
-	height: 164px;
-	left: 45px;
-	top: 24px;
-}
-.main-body .zhuzhi1,.main-body .zhuzhi2{
-	position:absolute;
-	background-position: -830px -82px;
-	width: 84px;
-	height: 188px;
-}
-.main-body .zhuzhi3{
-	position:absolute;
-	background-position: -926px -127px;
-	width: 84px;
-	height: 141px;
-}
-.main-body .zhuzhi4,.main-body .zhuzhi5{
-	position:absolute;
-	background-position: -1020px -82px;
-	width: 84px;
-	height: 188px;
 }
 @media screen and (max-width: 470px)  {
 	header{
@@ -222,21 +186,41 @@ body,html{
 	}
 }
 .popToPop{
-	animation: popPop 1s infinite;
+	animation: popPop 1s 0.5s infinite ease;
+	animation-fill-mode: forwards;
+	-webkit-animation: popPop 1s 0.5s infinite ease;
+	-webkit-animation-fill-mode: forwards;
 	display: inline-block;
 }
 .popToPop:hover{
 	animation:none;
 }
 @keyframes popPop {
+	 0% {
+		 transform: translate(0px, 0px);
+		 -webkit-transform: translate(0px, 0px);
+	 }
+	 50% {
+		 transform: translate(0px, -10px);
+		 -webkit-transform: translate(0px, -10px);
+	 }
+	 100% {
+		 transform: translate(0px, 0px);
+		 -webkit-transform: translate(0px, 0px);
+	 }
+ }
+@-webkit-keyframes popPop {
 	0% {
 		transform: translate(0px, 0px);
+		-webkit-transform: translate(0px, 0px);
 	}
 	50% {
 		transform: translate(0px, -10px);
+		-webkit-transform: translate(0px, -10px);
 	}
 	100% {
 		transform: translate(0px, 0px);
+		-webkit-transform: translate(0px, 0px);
 	}
 }
 .bg-banquetfiy{

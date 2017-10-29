@@ -78,7 +78,7 @@ require("./public/js/common.js");
 				"4": "用户已注册",
 				"5": "发送失败"
 			},
-			data:{type:"register",mobile:mobile},
+			data:{type:"forget",mobile:mobile},
 			url:"/api/user/sms",
 			success:function () {
 				timoutCount($text,60,function(){

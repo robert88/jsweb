@@ -5,40 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feda3866-345d-4f42-8077-f06ffb61c655" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/public/js/selectFile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/web_info/homeInfo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/web_info/withdrawal.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/web_info/withdrawal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/web_info/withdrawal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/web_info/withdrawalInfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/public/images/propsItem.png" afterPath="$PROJECT_DIR$/bin/senlin/public/images/propsItem.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/common/public/js/lib/drag.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/common/public/js/lib/jquery.ui.core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/common/public/js/lib/jquery.ui.draggable.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/common/public/js/lib/jquery.ui.mouse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/common/public/js/lib/jquery.ui.widget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/common/public/js/lib/touch.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/public/images/mijing.jpg" afterPath="$PROJECT_DIR$/bin/senlin/public/images/mijing.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/public/images/renItem.png" afterPath="$PROJECT_DIR$/bin/senlin/public/images/renItem.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/action/senlin.js" afterPath="$PROJECT_DIR$/bin/action/senlin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/common/public/js/common/jquery.base.plugin.js" afterPath="$PROJECT_DIR$/bin/common/public/js/common/jquery.base.plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/public/css/btn.css" afterPath="$PROJECT_DIR$/bin/senlin/public/css/btn.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/common/public/css/common/base.css" afterPath="$PROJECT_DIR$/bin/common/public/css/common/base.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/index.html" afterPath="$PROJECT_DIR$/bin/senlin/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/public/css/main-color.css" afterPath="$PROJECT_DIR$/bin/senlin/public/css/main-color.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/public/css/main.css" afterPath="$PROJECT_DIR$/bin/senlin/public/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/public/images/propsItem.css" afterPath="$PROJECT_DIR$/bin/senlin/public/images/propsItem.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/charge.css" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/charge.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/charge.html" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/charge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/public/js/page.js" afterPath="$PROJECT_DIR$/bin/senlin/public/js/page.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/charge.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/charge.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/goldHouse.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/goldHouse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.css" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.html" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/goldHouse.css" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/goldHouse.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/skills.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/skills.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/home.css" afterPath="$PROJECT_DIR$/bin/senlin/web_info/home.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/home.html" afterPath="$PROJECT_DIR$/bin/senlin/web_info/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/home.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/homeInfo.css" afterPath="$PROJECT_DIR$/bin/senlin/web_info/homeInfo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/homeInfo.html" afterPath="$PROJECT_DIR$/bin/senlin/web_info/homeInfo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/login.html" afterPath="$PROJECT_DIR$/bin/senlin/web_info/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/register.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/register.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/login.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/error20170926_133642.log" afterPath="$PROJECT_DIR$/log/error20170926_133642.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/info20170926_133642.log" afterPath="$PROJECT_DIR$/log/info20170926_133642.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/log20170926_133642.log" afterPath="$PROJECT_DIR$/log/log20170926_133642.log" />
@@ -71,81 +61,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="home.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="646" column="62" selection-start-line="646" selection-start-column="62" selection-end-line="646" selection-end-column="62" />
+            <state relative-caret-position="350">
+              <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="77" />
               <folding>
-                <marker date="1508776572158" expanded="true" signature="7232:7268" placeholder="..." />
+                <marker date="1509266513594" expanded="true" signature="9359:9395" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="realnameAuth.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.html">
+      <file leaf-file-name="goldHouse.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/goldHouse.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="41" column="56" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="56" />
-              <folding>
-                <element signature="n#style#0;n#fieldset#2;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#fieldset#2;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#fieldset#3;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#fieldset#3;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#fieldset#4;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forgetPwd.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2240">
-              <caret line="112" column="41" selection-start-line="112" selection-start-column="41" selection-end-line="112" selection-end-column="41" />
-              <folding>
-                <marker date="1508685393725" expanded="true" signature="3026:3043" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="realnameAuth.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
-              <folding>
-                <marker date="1508775550820" expanded="true" signature="1614:1631" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="realnameAuth.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+            <state relative-caret-position="146">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="70" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="withdrawal.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/withdrawal.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="94" selection-start-line="2" selection-start-column="94" selection-end-line="2" selection-end-column="94" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="withdrawal.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/withdrawal.js">
+      <file leaf-file-name="goldHouse.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/goldHouse.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -154,23 +93,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="withdrawalInfo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/withdrawalInfo.html">
+      <file leaf-file-name="linshou.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/linshou.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homeInfo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/homeInfo.js">
+      <file leaf-file-name="charge.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/charge.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="380">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="34" column="72" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="11" column="45" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/static_src/tool/home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homeInfo.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/homeInfo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -179,8 +156,8 @@
       <file leaf-file-name="senlin.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/action/senlin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
+            <state relative-caret-position="390">
+              <caret line="448" column="19" selection-start-line="448" selection-start-column="13" selection-end-line="448" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -208,41 +185,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/setting.js" />
-        <option value="$PROJECT_DIR$/bin/senlin/public/images/daojuItem.css" />
-        <option value="$PROJECT_DIR$/bin/senlin/public/images/gulpfile.js" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/linshou.html" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/yaoqianshu.html" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/info.css" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/info.html" />
-        <option value="$PROJECT_DIR$/bin/tool/rap.rename.js" />
-        <option value="$PROJECT_DIR$/log/error20170926_133642.log" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/skills.html" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/pocket.html" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/skills.css" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/goldHouse.html" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/goldHouse.css" />
         <option value="$PROJECT_DIR$/bin/common/public/js/common/jquery.dialog.js" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/skills.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/pocket.css" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/pocket.js" />
         <option value="$PROJECT_DIR$/bin/senlin/public/images/propsItem.css" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/charge.css" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/charge.js" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/goldHouse.js" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/home.html" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/charge.html" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.css" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/home.css" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.html" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/forgetPassWord.html" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/login.html" />
         <option value="$PROJECT_DIR$/bin/senlin/public/css/btn.css" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/register.js" />
         <option value="$PROJECT_DIR$/bin/common/public/js/common/jquery.base.plugin.js" />
-        <option value="$PROJECT_DIR$/bin/senlin/index.html" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.js" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/homeInfo.js" />
         <option value="$PROJECT_DIR$/bin/senlin/public/css/main.css" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.css" />
@@ -250,15 +206,36 @@
         <option value="$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.html" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/withdrawalInfo.htm" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/homeInfo.html" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/withdrawal.html" />
-        <option value="$PROJECT_DIR$/bin/senlin/public/css/main-color.css" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.html" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/withdrawalInfo.html" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/withdrawal.js" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.css" />
-        <option value="$PROJECT_DIR$/bin/action/senlin.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/goldHouse.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/pocket.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/setting.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/public/js/common.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/public/js/page.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.html" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/withdrawalInfo.css" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/withdrawalInfo.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/withdrawalInfo.html" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/withdrawal.html" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/withdrawal.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/public/js/ajax.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/register.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/goldHouse.css" />
+        <option value="$PROJECT_DIR$/bin/common/public/css/common/base.css" />
+        <option value="$PROJECT_DIR$/bin/senlin/public/css/main-color.css" />
+        <option value="$PROJECT_DIR$/bin/common/public/js/lib/drag.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/skills.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/index.html" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/home.css" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/home.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/home.html" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.js" />
+        <option value="$PROJECT_DIR$/bin/action/senlin.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/charge.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/login.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/login.html" />
       </list>
     </option>
   </component>
@@ -305,7 +282,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -392,28 +370,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static_src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="tool" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -441,6 +397,70 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dialog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static_src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static_src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="module" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -497,32 +517,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static_src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -606,11 +600,89 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="web_info" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dialog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="senlin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="senlin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="senlin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -688,7 +760,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -714,11 +786,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -742,8 +836,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -762,19 +855,19 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\newProject\jsweb\bin\common\public\js\lib" />
+      <recent name="D:\newProject\jsweb\bin\senlin\web_info" />
+      <recent name="D:\newProject\jsweb\bin\senlin\public\js" />
+      <recent name="D:\newProject\jsweb\bin\senlin\web_info\dialog" />
+      <recent name="D:\newProject\jsweb\bin\senlin\public\audio" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\newProject\jsweb\bin\senlin\public\css" />
       <recent name="D:\newProject\jsweb\bin\static_src\public\js\common" />
       <recent name="D:\newProject\jsweb\bin\static_src\public\images\tool" />
       <recent name="D:\newProject\jsweb\bin\static_src\tool" />
       <recent name="D:\newProject\jsweb\bin\static_src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\newProject\jsweb\bin\senlin\web_info" />
-      <recent name="D:\newProject\jsweb\bin\senlin\public\js" />
-      <recent name="D:\newProject\jsweb\bin\senlin\web_info\dialog" />
-      <recent name="D:\newProject\jsweb\bin\senlin\public\audio" />
-      <recent name="D:\newProject\jsweb\bin\senlin\web\dialog" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.rap.server.init.js">
@@ -1297,12 +1390,14 @@
       <workItem from="1508278224802" duration="10520000" />
       <workItem from="1508369043700" duration="17344000" />
       <workItem from="1508549619135" duration="8963000" />
-      <workItem from="1508559627715" duration="87801000" />
+      <workItem from="1508559627715" duration="89537000" />
+      <workItem from="1508937884705" duration="434000" />
+      <workItem from="1508938875790" duration="69755000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1009486000" />
+    <option name="totallyTimeSpent" value="1081411000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1315,7 +1410,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286052" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1324,13 +1419,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08445946" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.032657657" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14414415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15202703" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="37" y="208" width="1864" height="507" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.046774194" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30405405" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973205" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1342,6 +1436,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30405405" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1409,81 +1504,41 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/pocket.html">
+    <entry file="file://$PROJECT_DIR$/bin/common/public/css/common/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+        <state relative-caret-position="520">
+          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/pocket.css">
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/skills.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-600">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/public/css/main-color.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/common/public/js/common/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/common/public/js/common/keyupMap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/user.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="116" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/static_src/tool/dialog/createFile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1060">
-          <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/css/btn.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="91" column="48" selection-start-line="91" selection-start-column="48" selection-end-line="91" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/css/jquery.dialog.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1020">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1491,45 +1546,110 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/common/public/js/common/jquery.base.plugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/common/public/js/common/jquery.dialog.js">
+    <entry file="file://$PROJECT_DIR$/bin/common/public/js/common/jquery.carousel.v1.0.1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-277">
-          <caret line="257" column="21" selection-start-line="257" selection-start-column="17" selection-end-line="257" selection-end-column="21" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/common/public/js/common/jquery.changeSize.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/common/public/js/common/jquery.changeSize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2174">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/common/public/js/lib/jquery-1.12.4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1508645755452" expanded="true" signature="3161:3192" placeholder="..." />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/images/renItem.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/bin/common/public/js/lib/jquery.ui.core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/images/kuang.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/bin/common/public/js/lib/jquery.ui.draggable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/images/gold.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/bin/common/public/js/lib/jquery-1.7.2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/images/btnbg.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/bin/common/public/js/lib/jquery.ui.widget.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/images/fundMoney.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/bin/common/public/js/lib/drag.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/friendSort.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/charge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/skills.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1460">
+          <caret line="73" column="58" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/senlin/public/images/mijing.jpg">
@@ -1537,48 +1657,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/images/loginBg.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/images/linshou.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/images/registerbg.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/images/propsItem.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/images/iconItem.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="83" selection-start-line="11" selection-start-column="83" selection-end-line="11" selection-end-column="115" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/worldSort.html">
+    <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/common/page.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1586,106 +1665,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/goldHouse.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1300">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="70" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.css">
+    <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/common/ajax.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="1" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/home.css">
+    <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/common/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2280">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/images/propsItem.css">
+    <entry file="file://$PROJECT_DIR$/bin/static_src/tool/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-385">
-          <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/homeInfo.css">
+    <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/common/ajaxPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.html">
+    <entry file="file://$PROJECT_DIR$/bin/senlin/indexStatic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/common/jquery.changeSize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2142">
+          <caret line="126" column="21" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/static_src/tool/tool-menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1558">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/static_src/tool/tool-content.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/common/keyupMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/common/setREM.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
-          <caret line="16" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="64" selection-end-column="6" />
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/common/public/js/common/valiForm.js">
+    <entry file="file://$PROJECT_DIR$/bin/static_src/tool/tool-content.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="97" column="22" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="22" />
+        <state relative-caret-position="340">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="22" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/common/public/css/common/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="299" column="0" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="163" column="5" selection-start-line="163" selection-start-column="4" selection-end-line="163" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="94" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/homeInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="21" column="69" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#1;n#ul#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/css/main-color.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="125" column="17" selection-start-line="125" selection-start-column="17" selection-end-line="125" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/withdrawal.css">
+    <entry file="file://$PROJECT_DIR$/bin/static_src/tool/tool-content.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1693,23 +1763,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/js/selectFile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="71" column="19" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/withdrawal.js">
+    <entry file="file://$PROJECT_DIR$/bin/common/public/js/lib/touch.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1717,90 +1771,168 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/withdrawal.html">
+    <entry file="file://$PROJECT_DIR$/bin/common/public/js/lib/touch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="94" selection-start-line="2" selection-start-column="94" selection-end-line="2" selection-end-column="94" />
+        <state relative-caret-position="210">
+          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="94" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.js">
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2240">
-          <caret line="112" column="41" selection-start-line="112" selection-start-column="41" selection-end-line="112" selection-end-column="41" />
+        <state relative-caret-position="300">
+          <caret line="39" column="83" selection-start-line="39" selection-start-column="83" selection-end-line="39" selection-end-column="83" />
           <folding>
-            <marker date="1508685393725" expanded="true" signature="3026:3043" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/withdrawalInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#10;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#11;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#12;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#13;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/homeInfo.js">
+    <entry file="file://$PROJECT_DIR$/bin/senlin/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="180">
+          <caret line="9" column="109" selection-start-line="9" selection-start-column="109" selection-end-line="9" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+        <state relative-caret-position="300">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
           <folding>
-            <marker date="1508775550820" expanded="true" signature="1614:1631" placeholder="..." />
+            <marker date="1509266663585" expanded="true" signature="1576:1593" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.html">
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/home.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="41" column="56" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="56" />
+        <state relative-caret-position="186">
+          <caret line="111" column="35" selection-start-line="111" selection-start-column="35" selection-end-line="111" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/common/public/js/common/jquery.dialog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1289">
+          <caret line="584" column="115" selection-start-line="584" selection-start-column="12" selection-end-line="584" selection-end-column="115" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
           <folding>
-            <element signature="n#style#0;n#fieldset#2;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#fieldset#2;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#fieldset#3;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#fieldset#3;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#fieldset#4;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1509249279127" expanded="true" signature="3038:3055" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.css">
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/goldHouse.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        <state relative-caret-position="146">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="70" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/goldHouse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/linshou.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/action/senlin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
+        <state relative-caret-position="390">
+          <caret line="448" column="19" selection-start-line="448" selection-start-column="13" selection-end-line="448" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/static_src/tool/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/homeInfo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="646" column="62" selection-start-line="646" selection-start-column="62" selection-end-line="646" selection-end-column="62" />
+        <state relative-caret-position="350">
+          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="77" />
           <folding>
-            <marker date="1508776572158" expanded="true" signature="7232:7268" placeholder="..." />
+            <marker date="1509266513594" expanded="true" signature="9359:9395" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/charge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="34" column="72" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
