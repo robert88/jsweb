@@ -11,7 +11,7 @@
 	var $propsItem = $tabBody.eq(1);
 	var $linshouItem = $tabBody.eq(2);
 	if (!token) {
-		window.location.hash="#/web_info/login.html";
+		PAGE.setUrl("#/web_info/login.html");
 		return;
 	}
 	/*

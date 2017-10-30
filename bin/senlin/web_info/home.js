@@ -1,4 +1,5 @@
-;(function () {
+$(document).on("imageReady",function () {
+
 	PAGE.data = PAGE.data || {};
 	PAGE.data.audio = PAGE.data.audio || "open";
 	var $body = $("#J-body");
@@ -31,7 +32,11 @@
 
 		$body.off("mousedown.dragbg touchstart.dragbg").on("mousedown.dragbg touchstart.dragbg", function (e) {
 			if (e.type === "touchstart") {
+				var touches = e.originalEvent.touches;
 				e = e.originalEvent.touches[0];
+				if (touches.length > 1) {
+					$body.data("movelock",true);
+				}
 			}
 			if ($(e.target).hasClass("dl-dialog")||$(e.target).parents(".dl-dialog").length) {
 				return;
@@ -90,6 +95,7 @@
 			$(document).off("selectstart")
 			zoomtouch.start=null;
 			// $("#tips").html(" up");
+			$body.data("movelock",false);
 			//电脑端滚轮缩放
 		}).off("mousewheel.dragbg").on("mousewheel.dragbg", function (evt) {
 			if ($(evt.target).parents(".dl-dialog").length) {
@@ -112,10 +118,15 @@
 		}).off("click.dragbg touchstart.dragbg", ".J-dialog").on("click.dragbg touchstart.dragbg", ".J-dialog", function (evt) {
 			var $this = $(this);
 			//用户指引,且没有指引过
-			if (!$.cookie("forest_guide") && !$this.data("guide") || $this.data("lock")) {
+			// if (!$.cookie("forest_guide") && !$this.data("guide") || $this.data("lock")) {
+			// 	return;
+			// }
+			//防止重复弹出
+			if($body.data("dialog") || $body.data("movelock")){
 				return;
 			}
-
+			$.dialog.closeAll();
+			$body.data("dialog",true);
 			var url = $this.data("url");
 			var dialogId = $this.data("id");
 			var dialogClass = $this.data("class");
@@ -126,7 +137,9 @@
 					dialogClass: dialogClass,
 					id: (dialogId ? dialogId : ""),
 					maskClose: false,
-					closeBefore: $this[0].closeBefore,
+					closeAfter: function () {
+						$body.data("dialog",false);
+					},
 					close: false, button: [{text: "", className: "backBtn"}],
 					ready: function ($dialog) {
 						$(".loading").hide();
@@ -159,6 +172,7 @@
 	//缩放---------------------------------------------------------------------------
 	/*手机端缩放*/
 	function limitTranslate(tx,ty){
+
 		var dw = $(window).width() - $body.width() * currZoom / 100;
 		var dh = $(window).height() - $body.height() * currZoom / 100;
 		tx = tx < dw ? dw : tx;
@@ -180,45 +194,33 @@
 			y:matrix.translateY
 		}
 		return {
-			x:(s.x*matrix.scaleX-p0.x),
-			y:(s.y*matrix.scaleX-p0.y)
+			x:(s.x-p0.x)/matrix.scaleX,
+			y:(s.y-p0.y)/matrix.scaleX
 		}
 	}
 	function scaleBody(s,scale){
 		scale = getZoom(scale);
-		var p = converIn(s);
+
 		if(scale==currZoom){
 			return;
 		}
-		var matrix =getTransform($body);
-		var p0 ={
-			x:matrix.translateX,
-			y:matrix.translateY
-		}
-		var p1 = {
-			x:p0.x-p.x,
-			y:p0.y-p.y
-		}
-		var matrixStr = "translate("+(p1.x) + "px,"+(p1.y)+"px) scale("+scale/100+","+scale/100+")";
-
+		var p = converIn(s);
+		// alert(p.x+" " +scale)
+		var translate = {x:s.x - p.x*scale/100,y:s.y - p.y*scale/100}
+		//以中心点缩放
+		translate = limitTranslate(translate.x,translate.y);
+		var matrixStr = "translate("+(translate.x) + "px,"+(translate.y)+"px) scale("+scale/100+","+scale/100+")";
 		$body.css("transform",matrixStr);
-
 		currZoom = scale;
-
-		var translate = limitTranslate(p0.x-p1.x,p0.y-p1.y);
-
-		matrixStr = "translate("+(translate.x) + "px,"+(translate.y)+"px) scale("+scale/100+","+scale/100+")";
-
-		$body.css("transform",matrixStr);
-
 	}
 
 	function getZoom(zoom){
 		var zoomx = $(window).width() / $body.width()* 100;
 		var zoomy = $(window).height() / $body.height() * 100;
+
 		var minZoom = Math.max(zoomx, zoomy);
 		var maxZoom = Math.max(minZoom, 100);
-
+		// alert($(window).width()+"  "+$body.width()+" "+minZoom+" " +maxZoom )
 		if (zoom < minZoom) {
 			zoom = minZoom;
 		}
@@ -236,11 +238,9 @@
 			var e = zoomtouch.start[0];
 			var e2 = zoomtouch.start[1];
 			var s = {x:e.x+(e2.x-e.x)/2,y:e.y+(e2.y-e.y)/2};
-
-			// drawDot(zoomCenter.x,zoomCenter.y,dr);
-
 			var zoom = currZoom;
-			if(dr>perScale){
+			$("#tips").html(s.x+" "+s.y+" "+zoom+" "+dr+"perdr"+perDr);
+			if(dr>perDr){
 				zoom+=3
 			}else{
 				zoom-=3
@@ -378,6 +378,9 @@
 				dialogClass: "smallDialog",
 				maskClose: false,
 				close: false,
+				closeAfter:function () {
+					$body.data("dialog",false);
+				},
 				footerStyle: "bottom: 15px;",
 				button: [
 					{
@@ -397,7 +400,7 @@
 	 * */
 	function showUserInfo() {
 		if (!token) {
-			window.location.hash="#/web_info/login";
+			PAGE.setUrl("#/web_info/login.html");
 			return;
 		}
 
@@ -441,52 +444,53 @@
 	 * 显示摇钱树
 	 * */
 	function initTree() {
-			PAGE.ajax({
-				type: "get",
-				url: "/api/trees?token=" + token,
-				success: function (data) {
-					if (data&&data.length) {
-						for (var i = 0; i < data.length; i++) {
-							var treeInfo = data[i];
-							var $tree = $("#tree" + treeInfo.serial.toString().fill("000")).data("treeinfo", treeInfo);
+		PAGE.ajax({
+			type: "get",
+			url: "/api/trees?token=" + token,
+			success: function (data) {
+				if (data&&data.length) {
+					for (var i = 0; i < data.length; i++) {
+						var treeInfo = data[i];
+						var $tree = $("#tree" + treeInfo.serial.toString().fill("000")).data("treeinfo", treeInfo);
 
-							// 0未破除封印，1已破除，2已收获，3 需浇生命液进行激活
-							switch (treeInfo.status) {
-								case "0":
-									$tree.html('<div class="bg-renwu-trunk bg-renwu"></div><div class="bg-renwu-seal bg-renwu"></div>');
-									break;
-								case "1":
-									//已经成熟了
-									if (treeInfo.countdown <= 0) {
-										updateTreeStatus($tree, treeInfo);
-									} else {
-										$tree.html('<div class="bg-renwu-trunk bg-renwu"></div>');
-										counter($tree[0], treeInfo.countdown, function (targetEle, count) {
-											if (count <= 0) {
-												updateTreeStatus($(targetEle), $(targetEle).data("treeinfo"));
-											}
-										});
-									}
-									break;
-								case "2":
-								case "3":
+						// 0未破除封印，1已破除，2已收获，3 需浇生命液进行激活
+						switch (treeInfo.status) {
+							case "0":
+								$tree.html('<div class="bg-renwu-trunk bg-renwu"></div><div class="bg-renwu-seal bg-renwu"></div>');
+								break;
+							case "1":
+								//已经成熟了
+								if (treeInfo.countdown <= 0) {
+									updateTreeStatus($tree, treeInfo);
+								} else {
 									$tree.html('<div class="bg-renwu-trunk bg-renwu"></div>');
-									break;
-							}
+									counter($tree[0], treeInfo.countdown, function (targetEle, count) {
+										if (count <= 0) {
+											updateTreeStatus($(targetEle), $(targetEle).data("treeinfo"));
+										}
+									});
+								}
+								break;
+							case "2":
+							case "3":
+								$tree.html('<div class="bg-renwu-trunk bg-renwu"></div>');
+								break;
 						}
-					}else{
-						initAllTree();
 					}
-				},
-				error: function () {
+				}else{
 					initAllTree();
 				}
-			})
+			},
+			error: function () {
+				initAllTree();
+			}
+		})
 	}
 	/*
 	 * 处理封印,不能用data("treeinfo")
 	 * */
 	function handleBreakseal($treeItem,$seal) {
+
 		var treeId = $treeItem.attr("id");
 		var serial = parseInt(treeId.replace("tree",""),10);
 		PAGE.data.confirm("是否破除封印？",function (e, $dialog) {
@@ -508,6 +512,7 @@
 						PAGE.guide.next();
 					}
 				},complete:function () {
+					$body.data("dialog",false);
 					$.dialog.close($dialog);
 				}
 			});
@@ -569,12 +574,15 @@
 				$.dialog.close($dialog);
 				$treeItem.data("treeinfo",ret);
 				counter($treeItem, ret.countdown);
+			},
+			complete:function () {
+				$body.data("dialog",false);
 			}
 		});
 	};
 	/*
-	* 浇灌生命药水
-	* */
+	 * 浇灌生命药水
+	 * */
 	function applyLife() {
 		PAGE.ajax({
 			type: "post",
@@ -589,12 +597,15 @@
 			url: "/api/trees/life?serial=" + treeInfo.serial+ "&token=" + token + "&property_id=" + pid,
 			success: function () {
 				$.tips("成功浇生命液", "success");
-			},errorCallBack:function (text, type, tipsType, ret) {
+			},
+			errorCallBack:function (text, type, tipsType, ret) {
 				if(ret.code==-1){
 					PAGE.data.confirm("您的包裹里没有生命液，为您跳转到藏经阁。",function (e, $dialog) {
 						$goldHouse.data("guide",true).click();
 					});
 				}
+			},complete:function () {
+				$body.data("dialog",false);
 			}
 		});
 	}
@@ -623,6 +634,7 @@
 				$(ele).html(count);
 				playAudio("clock", 0, 1, {time: 50});
 			});
+			$body.data("dialog",false);
 			return
 		}
 
@@ -645,8 +657,8 @@
 		});
 	}
 	/*
-	*收获动画
-	**/
+	 *收获动画
+	 **/
 	function playRewardAnimate($ani, count) {
 		var arr = ["0", "-130px 0px", "-260px 0px", " -390px 0px", "-520px 0px", "0px -280px", "-130px -280px", "-260px -280px", "-390px -280px", "-520px -280px", "-1000px -1000px"]
 		if (!$ani) {
@@ -714,22 +726,25 @@
 		}
 	}
 	/*
-	* 收获
-	* */
+	 * 收获
+	 * */
 	function handleReward($tree) {
-
+		if($tree.data("lock")){
+			$body.data("dialog",false);
+			return;
+		}
 		if ($tree.find(".bg-props-hand")) {
 			$tree.data("lock", true);
 			var treeInfo = $tree.data("treeinfo");
 			PAGE.ajax({
 				type: "get",
 				msg: {
-				"0" :"登录token验证失败",
-						"1" :"收获成功",
-						"2": "摇钱树编号错误",
-						"3": "摇钱树不存在",
-						"4" :"摇钱树还未成熟",
-						"5": "摇钱树非收获时期"
+					"0" :"登录token验证失败",
+					"1" :"收获成功",
+					"2": "摇钱树编号错误",
+					"3": "摇钱树不存在",
+					"4" :"摇钱树还未成熟",
+					"5": "摇钱树非收获时期"
 				},
 				url: "/api/trees/collect?serial=" + treeInfo.serial+"&token="+token,
 				success: function (ret) {
@@ -746,8 +761,12 @@
 					});
 				},errorCallBack:function () {
 					$tree.data("lock", false);
+				},complete:function () {
+					$body.data("dialog",false);
 				}
 			});
+		}else{
+			$body.data("dialog",false);
 		}
 	}
 	/*
@@ -756,9 +775,15 @@
 	function initTreeEvent() {
 		$body.on("click touchstart", ".treeItem", function () {
 			var $this = $(this);
-			if (PAGE.guide.needGuide && !$this.data("guide") || $this.data("lock")) {
-				return;
+			// if (PAGE.guide.needGuide && !$this.data("guide") || $this.data("lock")) {
+			// 	return;
+			// }
+
+			if($body.data("dialog")|| $body.data("movelock")){
+				return
 			}
+			$body.data("dialog",true)
+			$.dialog.closeAll();
 			var $seal = $this.find(".bg-renwu-seal");
 			var $trunk = $this.find(".bg-renwu-trunk");
 			if ($seal.length) {
@@ -768,7 +793,7 @@
 			} else {
 				handleReward($this)
 			}
-	
+
 		});
 	}
 
@@ -777,7 +802,7 @@
 	 * 新用户指导
 	 * */
 	function initGuide() {
-
+		var step = $.cookie("guideStep");
 		PAGE.guide = {};
 		PAGE.guide.handler = [];
 		//触发下一个步骤
@@ -786,25 +811,36 @@
 			var handler = PAGE.guide.handler.shift();
 			if(handler){
 				PAGE.guide.step = handler.name;
+				$.cookie("guideStep",handler.name);
 				handler.func();
 			}
 		};
 		if (!$.cookie("forest_guide")) {
 
 			PAGE.guide.needGuide = true;
+			var stepArr = [{func:guideSkills,name:"skills"},
+				{func:guideCharge,name:"charge"},
+				{func:guideGoldHouse,name:"goldHouse"},
+				{func:guideTree,name:"breakSeal"},
+				{func:guideTree,name:"fertilizer"},
+				{func:guideEnd,name:"guideEnd"}
+			]
 			//step1
-			PAGE.guide.handler.push({func:guideSkills,name:"skills"});
-			//step2
-			PAGE.guide.handler.push({func:guideCharge,name:"charge"});
-			//step3
-			PAGE.guide.handler.push({func:guideGoldHouse,name:"goldHouse"});
-			//step4
-			PAGE.guide.handler.push({func:guideTree,name:"breakSeal"});
-			//step5
-			PAGE.guide.handler.push({func:guideTree,name:"fertilizer"});
-			//step6
-			PAGE.guide.handler.push({func:guideEnd,name:"guideEnd"});
+			var finded = false;
+			for(var i=0;i<stepArr.length;i++){
+				if(step){
+					if(step==stepArr[i].name){
+						finded = true;
+					}
+				}
+
+				if(finded || !step){
+					PAGE.guide.handler.push(stepArr[i]);
+				}
+			}
+
 			//执行step1
+			if(step)
 			PAGE.guide.next();
 		}
 
@@ -854,7 +890,7 @@
 	}
 
 	//初始化----------------------------------------------------------------------------------
-	
+
 	showUserInfo();
 	initTree();
 	initTreeEvent();
@@ -863,4 +899,8 @@
 	initGuide();
 
 
-})();
+});
+
+if(PAGE.imageLoaded){
+	$(document).trigger("imageReady")
+}

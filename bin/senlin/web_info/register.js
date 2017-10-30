@@ -48,7 +48,7 @@
 							$.cookie("forest_guide",true);
 						}
 					}
-					window.location.hash="#web_info/home?from=register"
+					PAGE.setUrl("#/web_info/home.html");
 				}
 			})
 		},

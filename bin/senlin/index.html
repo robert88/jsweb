@@ -72,8 +72,7 @@
 </body>
 <script>
     ;(function () {
-        var pageImageArr = ["mijing.jpg", "renItem.png" ];
-       // var pageImageAfterLoad = ["btnbg.png", "propsItem.png", "iconItem.png","gold.png","loginBg.png", "tipbg.png", "throwMoney.png", "kuang.png", "registerbg.png"];
+        var pageImageArr = ["mijing.jpg", "renItem.png","user.png","registerbg.png","tipbg.png" ];
         for(var i=0;i<pageImageArr.length;i++){
             loadPageImage("public/images/"+pageImageArr[i]);
         }
@@ -84,6 +83,8 @@
                 if( checkLoadComplete() ){
                     $(".loadingMask").hide();
                     $(".loading").hide();
+                    $(document).trigger("imageReady");
+                    PAGE.imageLoaded = true;
                 }
             }
             img.src= url;

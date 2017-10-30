@@ -1,7 +1,7 @@
 ;(function () {
 	var token = $.cookie("login_token");
 	if (!token) {
-		window.location.hash="#/web_info/login.html";
+		PAGE.setUrl("#/web_info/login.html");
 		return;
 	}
 	PAGE.data.audio = PAGE.data.audio||"open";
@@ -15,5 +15,19 @@
 			PAGE.data.audio = "open";
 			$(this).removeClass("off").addClass("on")
 		}
+	}).on('click',".loginout",function () {
+
+		PAGE.ajax({
+			type: 'post',
+			msg: {
+				"1": "成功",
+				"2": "系统繁忙！"
+			},
+			url: "/api/user/logout",
+			success:function () {
+				PAGE.setUrl("#/web_info/login.html");
+			}
+		});
+
 	})
 })();

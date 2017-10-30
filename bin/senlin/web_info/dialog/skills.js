@@ -7,7 +7,7 @@
 	var loaded = false;
 	var token = $.cookie("login_token");
 	if (!token) {
-		window.location.hash="#/web_info/login.html";
+		PAGE.setUrl("#/web_info/login.html");
 		return;
 	}
 	//html模板
@@ -84,9 +84,6 @@
 				PAGE.guide.next();
 				return;
 			}
-			alert(totalHeight)
-			alert(top)
-			alert(totalHeight - height - top)
 			$.tips("您还没查看完");
 			return false;
 		};

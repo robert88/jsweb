@@ -141,10 +141,16 @@ body,html{
 {
 	position:absolute;
 }
+.bg-renwu-fertilizer1{
+	top: -5px;
+}
+.bg-renwu-fertilizer3{
+	left: 5px;
+}
 
 .bg-renwu-seal{
-	left: 57px;
-	top: 23px;
+	left: 23px;
+	top: 7px;
 }
 
 .bg-renwu-fertilizer1{
@@ -152,8 +158,8 @@ body,html{
 	top: -14px;
 }
 .bg-renwu-trunk{
-	left: 45px;
-	top: 24px;
+	left: 17px;
+	top: -2px;
 }
 .main-body .treeItem .bg-props-hand{
 	position: absolute;

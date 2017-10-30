@@ -59,7 +59,7 @@ require("./public/js/common.js");
 							$.cookie("forest_guide",true);
 						}
 					}
-					window.location.hash="#web_info/home.html"
+					PAGE.setUrl("#/web_info/home.html");
 				},complete:function () {
 					if(cookiePassword){
 						$password.val(cookiePasswordTemp);

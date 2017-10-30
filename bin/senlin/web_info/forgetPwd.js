@@ -131,7 +131,7 @@ require("./public/js/common.js");
 					$.tips("<div class='pt10 pb10 pr20 lh30' style='line-height: 2rem'><h3 class='tc'>密码修改成功</h3>" +
 						"<p class='fs14'>3秒后返回登陆页面</p></div>", {
 						type: "success", time: 3000, closeAfter: function () {
-							window.location.hash = "#/web_info/login.html";
+							PAGE.setUrl("#/web_info/login.html");
 						}})
 				}
 			})

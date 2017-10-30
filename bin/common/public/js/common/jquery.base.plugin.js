@@ -2,7 +2,7 @@
 	
 	/*转化为数组*/
 	if(!$.toArray){
-		$.toArray=function(){
+		$.toArray=function(arr){
 			return Object.prototype.toString.call(arr)=="[object Array]"?arr:[arr];
 		}
 	}

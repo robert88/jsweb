@@ -5,7 +5,7 @@
 	var $gold = $header.find(".gold-text");
 	var token = $.cookie("login_token");
 	if (!token) {
-		window.location.hash="#/web_info/login.html";
+		PAGE.setUrl("#/web_info/login.html");
 		return;
 	}
 	$dialog.on("click",".J-okBtn",function (e) {
@@ -24,10 +24,12 @@
 				url: "/api/pay/gold?number=" + value+"&token="+token,
 				success: function (ret) {
 
-					if(ret&&ret.qrcode){
-						var img = new Image();
-						img.src = ret.qrcode;
-						$.dialog($("<div/>").append(img),{close: false, dialogStyle:"height: auto;background: none;"})
+					if(ret&&ret.url){
+						
+						window.location.href = ret.url;
+						// var img = new Image();
+						// img.src = ret.qrcode;
+						// $.dialog($("<div/>").append(img),{close: false, dialogStyle:"height: auto;background: none;"})
 					}
 
 					$.dialog.close($dialog,e);
