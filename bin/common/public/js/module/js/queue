@@ -1,0 +1,20 @@
+function handleQueue(queue){
+  if(queue.length && queue[0].status =="ready" && typeof queue[0].handler =="function"){
+    queue[0].status = "running";
+    try{
+     queue[0].handler(function(){
+      queue.shift();
+      handleQueue(queue);
+     })
+    }catch(e){
+     console.error("queue handler error!",e&&e.stack ||e);
+     queue.shift();
+     handleQueue(queue);
+    }
+  }
+}
+
+function addQueue(queue,handler){
+ queue.push({handler:handler,status:"ready"});
+ handleQueue(queue);
+}
