@@ -1,7 +1,7 @@
 $(document).on("imageReady",function () {
 
 	PAGE.data = PAGE.data || {};
-	PAGE.data.audio = PAGE.data.audio || "open";
+	PAGE.data.audio = $.cookie("audioVolum") || "open";
 	var globalTimer = {};
 	var $body = $("#J-body");
 	var dflag, ex, ey,downMatrix;
@@ -160,7 +160,6 @@ $(document).on("imageReady",function () {
 		PAGE.destroy.push(function () {
 			//先锁死计算器
 			globalTimer.lock = true;
-			PAGE.clearTimeout(globalTimer.timer);
 			$(document).off("mousedown.dragbg touchstart.dragbg")
 				.off("mousemove.dragbg touchmove.dragbg")
 				.off("mouseup.dragbg touchup.dragbg")
@@ -323,7 +322,13 @@ $(document).on("imageReady",function () {
 				audio.pause();
 			}
 		}
-		globalTimer.timer = PAGE.setTimeout(loop,1000,type,i,volume);
+		if(globalTimer.lock){
+			if (audio.pause) {
+				audio.pause();
+			}
+			return;
+		}
+		PAGE.setTimeout(loop,1000,type,i,volume);
 	}
 	/*
 	 * 循环播放

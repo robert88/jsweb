@@ -4,7 +4,7 @@
 	var $captcha = $form.find(".J-captcha");
 	$captcha.click(changeImage);
 	function changeImage(){
-		$captcha[0].src = "http://forest.17youxi.me/sf/api/captcha?type=register&ver="+ (new Date().getTime());
+		$captcha[0].src = "http://shnmkj.net.cn/sf/api/captcha?type=register&ver="+ (new Date().getTime());
 	}
 
 	changeImage();

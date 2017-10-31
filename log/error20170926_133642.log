@@ -4128,3 +4128,45 @@
     at Error (native)
 [error][2017/10/31 21:20:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\withdrawalCash.js'
     at Error (native)
+[error][2017/10/31 23:07:43][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\010daoju1.png'
+    at Error (native)
+[error][2017/10/31 23:07:43][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\011daoju2.png'
+    at Error (native)
+[error][2017/10/31 23:07:43][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\012daoju3.png'
+    at Error (native)
+[error][2017/10/31 23:07:43][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\013daoju4.png'
+    at Error (native)
+[error][2017/10/31 23:07:43][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\014daoju5.png'
+    at Error (native)
+[error][2017/10/31 23:07:43][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\016daoju7.png'
+    at Error (native)
+[error][2017/10/31 23:07:43][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\015daoju6.png'
+    at Error (native)
+[error][2017/10/31 23:07:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\010daoju1.png'
+    at Error (native)
+[error][2017/10/31 23:07:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\011daoju2.png'
+    at Error (native)
+[error][2017/10/31 23:07:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\012daoju3.png'
+    at Error (native)
+[error][2017/10/31 23:07:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\013daoju4.png'
+    at Error (native)
+[error][2017/10/31 23:07:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\014daoju5.png'
+    at Error (native)
+[error][2017/10/31 23:07:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\015daoju6.png'
+    at Error (native)
+[error][2017/10/31 23:07:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\016daoju7.png'
+    at Error (native)
+[error][2017/10/31 23:09:52][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/game/fanimal extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/10/31 23:52:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/log extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/10/31 23:52:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/game/fanimal extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/01 00:22:36][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\favicon.ico'
+    at Error (native)

@@ -439,6 +439,118 @@ exports = module.exports = {
 		next( {code:count,data:data});
 	},
 
+"/api/log/share":function (request,response,next) {
+	var str = "/api/log/share";
+	exports[str].count = (exports[str].count||0);
+	var count = ++exports[str].count;
+	if(count>2){
+		count = exports[str].count =1;
+	}
+	next( {code:count,data:{
+		"list": [
+			{
+				"id": 2,
+				"note": "Fenxiang内容222"
+			},
+			{
+				"id": 1,
+				"note": "操作内容"
+			}
+		],
+		"pages": 1
+	}})
+},
+"/api/log/operate":function (request,response,next) {
+	var str = "/api/log/operate";
+	exports[str].count = (exports[str].count||0);
+	var count = ++exports[str].count;
+	if(count>2){
+		count = exports[str].count =1;
+	}
+	next( {code:count,data:{
+		"list": [
+			{
+				"id": 2,
+				"note": "操作内容222"
+			},
+			{
+				"id": 1,
+				"note": "操作内容"
+			}
+		],
+		"pages": 1
+	}})
+},
+"/api/log/pay":function (request,response,next) {
+	var str = "/api/log/pay";
+	exports[str].count = (exports[str].count||0);
+	var count = ++exports[str].count;
+	if(count>2){
+		count = exports[str].count =1;
+	}
+	next( {code:count,data:{
+		"list": [
+			{
+				"id": 12,
+				"body": "账户充值",
+				"orderNo": "1509379058325399994"
+			},
+			{
+				"id": 11,
+				"body": "账户充值",
+				"orderNo": "1509379049794899994" // 订单号
+			},
+			{
+				"id": 10,
+				"body": "账户充值",
+				"orderNo": "1509379019421199994"
+			}
+		],
+		"pages": 4 // 页数
+	}})
+},
+"/api/log":function (request,response,next) {
+	var str = "/api/log";
+	exports[str].count = (exports[str].count||0);
+	var count = ++exports[str].count;
+	if(count>2){
+		count = exports[str].count =1;
+	}
+	next( {code:count,data:{
+		"list": [
+			{
+				"id": 1,
+				"title": "山东海化"
+			},
+			{
+				"id": 1,
+				"title": "山东海化"
+			},
+			{
+				"id": 1,
+				"title": "山东海化"
+			},
+			{
+				"id": 1,
+				"title": "山东海化"
+			},
+			{
+				"id": 1,
+				"title": "山东海化"
+			},
+			{
+				"id": 1,
+				"title": "山东海化"
+			},{
+				"id": 1,
+				"title": "山东海化"
+			}
+
+
+		],
+		"pages": 1
+	}})
+},
 "/api/game/fighter":function (request,response,next) {
 	var str = "/api/game/fighter";
 	exports[str].count = (exports[str].count||0);

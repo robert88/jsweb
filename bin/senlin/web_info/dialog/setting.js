@@ -4,15 +4,17 @@
 		PAGE.setUrl("#/web_info/login.html");
 		return;
 	}
-	PAGE.data.audio = PAGE.data.audio||"open";
+	PAGE.data.audio = $.cookie("audioVolum")||"open";
 	var $dialog = 	$(".settingContent").parents(".dl-dialog");
 	$dialog.on('click',".videoSetting",function () {
 
 		if(PAGE.data.audio=="open"){
 			PAGE.data.audio = "close";
+			$.cookie("audioVolum","close")
 			$(this).removeClass("on").addClass("off")
 		}else{
 			PAGE.data.audio = "open";
+			$.cookie("audioVolum","open")
 			$(this).removeClass("off").addClass("on")
 		}
 	}).on('click',".loginout",function () {

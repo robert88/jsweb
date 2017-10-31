@@ -5,22 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feda3866-345d-4f42-8077-f06ffb61c655" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/public/audio/bg.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/worldSort.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/log.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/log.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/log.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/notice.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/action/senlin.js" afterPath="$PROJECT_DIR$/bin/action/senlin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/index.html" afterPath="$PROJECT_DIR$/bin/senlin/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/public/css/main-color.css" afterPath="$PROJECT_DIR$/bin/senlin/public/css/main-color.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/friendSort.css" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/friendSort.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/friendSort.html" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/friendSort.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/friendSort.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/friendSort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/notice.css" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/notice.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/public/js/ajax.js" afterPath="$PROJECT_DIR$/bin/senlin/public/js/ajax.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/notice.html" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/notice.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/setting.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/setting.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.css" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.html" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/worldSort.css" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/worldSort.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/worldSort.html" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/worldSort.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/home.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/homeInfo.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/homeInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/register.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/register.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/error20170926_133642.log" afterPath="$PROJECT_DIR$/log/error20170926_133642.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/info20170926_133642.log" afterPath="$PROJECT_DIR$/log/info20170926_133642.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/log20170926_133642.log" afterPath="$PROJECT_DIR$/log/log20170926_133642.log" />
@@ -56,40 +54,20 @@
       <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="901" column="47" selection-start-line="901" selection-start-column="47" selection-end-line="901" selection-end-column="47" />
+            <state relative-caret-position="260">
+              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding>
-                <marker date="1509457360582" expanded="true" signature="10070:10106" placeholder="..." />
+                <marker date="1509466000823" expanded="true" signature="10101:10137" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="worldSort.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/worldSort.js">
+      <file leaf-file-name="notice.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/notice.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="friendSort.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/friendSort.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="friendSort.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/friendSort.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+            <state relative-caret-position="360">
+              <caret line="81" column="50" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -98,30 +76,51 @@
       <file leaf-file-name="friendSort.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/friendSort.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="18" column="35" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="35" />
+            <state relative-caret-position="140">
+              <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="worldSort.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/worldSort.html">
+      <file leaf-file-name="log.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/log.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/log.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/log.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="28" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="28" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/senlin/public/js/page.js">
+      <file leaf-file-name="notice.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/notice.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="19" />
+            <state relative-caret-position="529">
+              <caret line="92" column="28" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="38" />
               <folding>
-                <marker date="1509387668429" expanded="true" signature="8226:8244" placeholder="..." />
+                <marker date="1509466795432" expanded="true" signature="314:329" placeholder="..." />
+                <marker date="1509466795432" expanded="true" signature="785:800" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -130,30 +129,28 @@
       <file leaf-file-name="senlin.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/action/senlin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1287">
-              <caret line="453" column="21" selection-start-line="453" selection-start-column="17" selection-end-line="453" selection-end-column="21" />
+            <state relative-caret-position="535">
+              <caret line="460" column="7" selection-start-line="460" selection-start-column="7" selection-end-line="460" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/user.html">
+      <file leaf-file-name="ajax.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/senlin/public/js/ajax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="122">
+              <caret line="96" column="46" selection-start-line="96" selection-start-column="46" selection-end-line="96" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/user.css">
+      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/register.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state relative-caret-position="102">
+              <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -181,10 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/charge.html" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/forgetPassWord.html" />
-        <option value="$PROJECT_DIR$/bin/senlin/public/css/btn.css" />
-        <option value="$PROJECT_DIR$/bin/senlin/public/css/main.css" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.css" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/homeInfo.css" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.html" />
@@ -196,7 +189,6 @@
         <option value="$PROJECT_DIR$/bin/senlin/web_info/withdrawalInfo.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/withdrawalInfo.html" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/withdrawal.html" />
-        <option value="$PROJECT_DIR$/bin/senlin/public/js/ajax.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/goldHouse.css" />
         <option value="$PROJECT_DIR$/bin/common/public/css/common/base.css" />
         <option value="$PROJECT_DIR$/bin/senlin/public/css/main-color.css" />
@@ -206,32 +198,37 @@
         <option value="$PROJECT_DIR$/bin/common/public/js/module/js/loadjs.js" />
         <option value="$PROJECT_DIR$/bin/common/public/js/common/jquery.base.plugin.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.js" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/homeInfo.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/login.js" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/register.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/withdrawal.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/goldHouse.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/pocket.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/skills.js" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/home.html" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/homeInfo.html" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/login.html" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/register.html" />
         <option value="$PROJECT_DIR$/bin/senlin/public/js/page.js" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/setting.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/charge.js" />
         <option value="$PROJECT_DIR$/bin/senlin/index.html" />
-        <option value="$PROJECT_DIR$/bin/senlin/web_info/home.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/friendSort.css" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.html" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.css" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/friendSort.html" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/worldSort.html" />
-        <option value="$PROJECT_DIR$/bin/action/senlin.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/worldSort.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/friendSort.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/homeInfo.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/user.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/log.html" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/log.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/setting.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/home.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/notice.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/notice.html" />
+        <option value="$PROJECT_DIR$/bin/action/senlin.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/web_info/register.js" />
+        <option value="$PROJECT_DIR$/bin/senlin/public/js/ajax.js" />
       </list>
     </option>
   </component>
@@ -547,8 +544,8 @@
       <recent name="D:\newProject\jsweb\bin\static_src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\newProject\jsweb\bin\senlin\public\audio" />
       <recent name="D:\newProject\jsweb\bin\senlin\web_info\dialog" />
+      <recent name="D:\newProject\jsweb\bin\senlin\public\audio" />
       <recent name="D:\newProject\jsweb\bin\common\public\js\lib" />
       <recent name="D:\newProject\jsweb\bin\senlin\web_info" />
       <recent name="D:\newProject\jsweb\bin\senlin\public\js" />
@@ -1077,12 +1074,12 @@
       <workItem from="1508559627715" duration="89537000" />
       <workItem from="1508937884705" duration="434000" />
       <workItem from="1508938875790" duration="70792000" />
-      <workItem from="1509365256218" duration="34222000" />
+      <workItem from="1509365256218" duration="41133000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1116670000" />
+    <option name="totallyTimeSpent" value="1123581000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1104,13 +1101,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08445946" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16216215" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18806307" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15202703" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="37" y="208" width="1864" height="507" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.046774194" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6171171" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3006757" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973205" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1189,62 +1186,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/static_src/tool/tool-menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1558">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/static_src/tool/tool-content.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/common/keyupMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/static_src/public/js/common/setREM.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/static_src/tool/tool-content.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/static_src/tool/tool-content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/common/public/js/lib/touch.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/common/public/js/lib/touch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="94" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/realnameAuth.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1374,14 +1315,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/forgetPwd.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -1392,26 +1325,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/homeInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/common/public/js/common/page.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="249" column="11" selection-start-line="249" selection-start-column="11" selection-end-line="249" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1466,25 +1383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/setting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/homeInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="81" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#a#0;n#li#1;n#ul#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/pocket.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1501,38 +1399,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="36" column="75" selection-start-line="36" selection-start-column="75" selection-end-line="36" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-770">
-          <caret line="84" column="26" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="901" column="47" selection-start-line="901" selection-start-column="47" selection-end-line="901" selection-end-column="47" />
-          <folding>
-            <marker date="1509457360582" expanded="true" signature="10070:10106" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/user.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1553,36 +1425,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/friendSort.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/js/page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="19" />
-          <folding>
-            <marker date="1509387668429" expanded="true" signature="8226:8244" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/action/senlin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1287">
-          <caret line="453" column="21" selection-start-line="453" selection-start-column="17" selection-end-line="453" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/worldSort.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="28" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="84" column="26" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1595,10 +1449,161 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/homeInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/homeInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/public/js/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+          <folding>
+            <marker date="1509387668429" expanded="true" signature="8226:8244" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/friendSort.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+        <state relative-caret-position="336">
+          <caret line="27" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="84" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/charge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/notice.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/log.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="47" column="107" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/log.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <marker date="1509466000823" expanded="true" signature="10101:10137" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/friendSort.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/log.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/notice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="81" column="50" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/setting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/notice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="92" column="28" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="38" />
+          <folding>
+            <marker date="1509466795432" expanded="true" signature="314:329" placeholder="..." />
+            <marker date="1509466795432" expanded="true" signature="785:800" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/action/senlin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="460" column="7" selection-start-line="460" selection-start-column="7" selection-end-line="460" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/public/js/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="96" column="46" selection-start-line="96" selection-start-column="46" selection-end-line="96" selection-end-column="46" />
           <folding />
         </state>
       </provider>

@@ -14,6 +14,11 @@
 		PAGE.setUrl("#/web_info/login.html");
 		return;
 	}
+	function toFloat(val){
+		val = $.trim(val).replace(/,/g,"");
+		val = parseInt(val,10);
+		return val||0
+	}
 	/*
 	 *加载数据
 	 * */
@@ -37,11 +42,11 @@
 				$.cookie("forest_sex",forest_sex);
 
 				//财富
-				var forest_gold = ret.gold||0;
-				var forest_coin = ret.coin||0;
+				var forest_gold = toFloat(ret.gold);
+				var forest_coin = toFloat(ret.coin);
 
-				$userGold.html(forest_gold);
-				$userCoin.html(forest_coin);
+				$userGold.html(ret.gold);
+				$userCoin.html(ret.coin);
 				$.cookie("forest_gold",forest_gold);
 				$.cookie("forest_coin",forest_coin);
 

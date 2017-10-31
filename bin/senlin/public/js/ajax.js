@@ -93,8 +93,8 @@
 			errorCallBack = ajaxOption.errorCallBack;
 		
 		try{
-			document.domain = "17youxi.me";
-			var apiDomain = "forest.17youxi.me/sf/";
+			document.domain = "shnmkj.net.cn";
+			var apiDomain = "shnmkj.net.cn/sf/";
 			if(ajaxOption.url.indexOf("http://")==-1){
 				ajaxOption.url= "http://" + (apiDomain+ajaxOption.url).toURI()
 			}
