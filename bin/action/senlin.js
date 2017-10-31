@@ -439,6 +439,34 @@ exports = module.exports = {
 		next( {code:count,data:data});
 	},
 
+"/api/game/friend":function (request,response,next) {
+	var str = "/api/game/friend";
+	exports[str].count = (exports[str].count||0);
+	var count = ++exports[str].count;
+	if(count>2){
+		count = exports[str].count =1;
+	}
+	next( {code:count,data:{
+		"list": [
+			{
+				"name": "大鹏",
+				"treasure": "280",
+				"steal": 0
+			},
+			{
+				"name": "大鹏05787",
+				"treasure": "255",
+				"steal": 1 //1代表可以偷取，0代表不能偷取，偷取API见，Trees-API.md(好友偷取金币API)
+			},
+			{
+				"name": "他强任他强",
+				"treasure": "0",
+				"steal": 0
+			}
+		],
+			"pages": 2 // 为总页数
+	}})
+},
 "/api/user/logout":function (request,response,next) {
 	var str = "/api/user/logout";
 	exports[str].count = (exports[str].count||0);
