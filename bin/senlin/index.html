@@ -67,11 +67,64 @@
     <div id="pageJs"></div>
     <!--e:主题部分-->
 
-
-
 </body>
+<script type="text/javascript">
+    ;(function() {
+        window.PAGE = {};
+        window.PAGE.HOME = "#web_info/home.html";
+        window.PAGE.ERROR404 = "#html/web404";
+        window.PAGE.destroy = [];
+        window.PAGE.STATICDEBUG = true;//JSdebug
+        window.PAGE.DEBUG = true;//ajax debug
+        window.PAGE.data = {};
+    })();
+</script>
 <script>
     ;(function () {
+        /*全局加载音频*/
+        function loadAudio(status){
+            var g = PAGE.globalAudios = {
+                "coin":{src:"/public/audio/coin.mp3",buffer:localStorage.getItem("coinAudioBuffer"),status:"none",audios:[new Audio,new Audio,new Audio,new Audio]}
+                "clock":{src:"/public/audio/clock.mp3",buffer:localStorage.getItem("clockAudioBuffer"),status:"none",audios:[new Audio]}
+            }
+            var loadCount = 0;
+            function checkLoadComplete(){
+                loadCount++;
+                if(loadCount==2){
+                    return true;
+                }
+            }
+            for(var key in g){
+                if(!g[key].buffer){
+                 $.ajax({
+                 url:g[key].src,
+                     type:"arraybuffer",
+                     success:function(ret){
+                      var blob = new Blob([ret],{type:"audio/mpeg"});
+                         var reader = new FileReader();
+                         reader.readAsDataURL(blob);
+                         reader.onload=function(){
+                         var audioData = reader.result;
+                             g[key].buffer = audioData;
+                             localStorage.setItem(key+"AudioBuffer",audioData);
+                         }
+                     },
+                     complete:function(){
+                        if(checkLoadComplete()){
+                            status.audio = true;
+                            loadComplete();
+                        }
+                     }
+                 });
+                }else{
+                     if(checkLoadComplete()){
+                       status.audio = true;
+                       loadComplete();
+                    }
+                }
+            }
+        
+        }
         var pageImageArr = ["mijing.jpg", "renItem.png","user.png","registerbg.png","tipbg.png" ];
         for(var i=0;i<pageImageArr.length;i++){
             loadPageImage("public/images/"+pageImageArr[i]);
@@ -109,17 +162,6 @@
 
 <script src="public/js/common/main.js"></script>
 <script src="public/js/common/require.js"></script>
-<script type="text/javascript">
-    ;(function() {
-        window.PAGE = {};
-        window.PAGE.HOME = "#web_info/home.html";
-        window.PAGE.ERROR404 = "#html/web404";
-        window.PAGE.destroy = [];
-        window.PAGE.STATICDEBUG = true;//JSdebug
-        window.PAGE.DEBUG = true;//ajax debug
-        window.PAGE.data = {};
-    })();
-</script>
 <script src="public/js/page.js"></script>
 <script src="public/js/ajax.js"></script>
 <script src="public/js/common/ajaxPage.js"></script>
