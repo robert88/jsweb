@@ -19,15 +19,15 @@
 .friendSortContent .sortInfo>li:first-child{
 margin-top: 10px;
 }
-.friendSortContent .sortInfoContrl{
+.friendSortContent .sortInfoControl{
 color:#fff;
 }
-.friendSortContent .sortInfoContrl .prev {
+.friendSortContent .sortInfoControl .prev {
 	background-position: -245px -56px;
 	width: 36px;
 	height: 17px;
 }
-.friendSortContent .sortInfoContrl .next {
+.friendSortContent .sortInfoControl .next {
 	background-position: -198px -56px;
 	width: 37px;
 	height: 17px;

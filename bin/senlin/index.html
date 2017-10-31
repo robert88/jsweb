@@ -84,43 +84,42 @@
         /*全局加载音频*/
         function loadAudio(status){
             var g = PAGE.globalAudios = {
-                "coin":{src:"/public/audio/coin.mp3",buffer:localStorage.getItem("coinAudioBuffer"),status:"none",audios:[new Audio,new Audio,new Audio,new Audio]}
-                "clock":{src:"/public/audio/clock.mp3",buffer:localStorage.getItem("clockAudioBuffer"),status:"none",audios:[new Audio]}
-            }
+                "bg":{src:"/public/audio/bg.mp3",buffer:localStorage.getItem("bgAudioBuffer"),status:"none",audios:[]},
+                "coin":{src:"/public/audio/coin.mp3",buffer:localStorage.getItem("coinAudioBuffer"),status:"none",audios:[]},
+                "clock":{src:"/public/audio/clock.mp3",buffer:localStorage.getItem("clockAudioBuffer"),status:"none",audios:[]}
+            };
             var loadCount = 0;
             function checkLoadComplete(){
                 loadCount++;
                 if(loadCount==2){
-                    return true;
+                    status.audio = true;
+                    loadComplete();
                 }
+            }
+            function ajax(audioItem,type){
+                var oReq = new XMLHttpRequest();
+                oReq.open("GET", audioItem.src, true);
+                oReq.responseType = "arraybuffer";
+                oReq.onload = function() {
+                    var blob = new Blob([oReq.response],{type:"audio/mpeg"});
+                    var reader = new FileReader();
+                    reader.readAsDataURL(blob);
+                    reader.onload=function(){
+                        var audioData = reader.result;
+                        audioItem.buffer = audioData;
+                        localStorage.setItem(type+"AudioBuffer",audioData);
+                        checkLoadComplete()
+                    }
+                    reader.onerror=checkLoadComplete;
+                };
+                oReq.onerror=checkLoadComplete;
+                oReq.send();
             }
             for(var key in g){
                 if(!g[key].buffer){
-                 $.ajax({
-                 url:g[key].src,
-                     type:"arraybuffer",
-                     success:function(ret){
-                      var blob = new Blob([ret],{type:"audio/mpeg"});
-                         var reader = new FileReader();
-                         reader.readAsDataURL(blob);
-                         reader.onload=function(){
-                         var audioData = reader.result;
-                             g[key].buffer = audioData;
-                             localStorage.setItem(key+"AudioBuffer",audioData);
-                         }
-                     },
-                     complete:function(){
-                        if(checkLoadComplete()){
-                            status.audio = true;
-                            loadComplete();
-                        }
-                     }
-                 });
+                    ajax(g[key],key)
                 }else{
-                     if(checkLoadComplete()){
-                       status.audio = true;
-                       loadComplete();
-                    }
+                    checkLoadComplete()
                 }
             }
         
@@ -134,24 +133,20 @@
 
                 function loadPageImage(url) {
                     var img = new Image;
-                    img.onerror = img.onload = function () {
-                        if(checkLoadComplete()){
-                           status.image = true;
-                           loadComplete();
-                        }
-                    }
+                    img.onerror = img.onload = checkLoadComplete;
                     img.src= url;
                 }
                 var loadCount = 0;
                 function checkLoadComplete(){
                     loadCount++;
                     if(loadCount==pageImageArr.length){
-                        return true;
+                        status.image = true;
+                        loadComplete();
                     }
                 }
         }
        /*全部加载完成*/
-    var completeStaus = {image:false,audio:false}
+    var completeStaus = {image:false,audio:false};
         function loadComplete(){
             if(completeStaus.image&&completeStaus.audio){
                             $(".loadingMask").hide();
@@ -160,7 +155,8 @@
                             PAGE.imageLoaded = true;
             }
         }
-
+        loadAudio(completeStaus);
+        loadImage(completeStaus);
     })();
 </script>
 <!--start mergeJs:lib.min-->

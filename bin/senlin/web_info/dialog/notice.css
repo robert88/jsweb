@@ -22,15 +22,15 @@
 .noticeContent .sortInfo>li:first-child{
 margin-top: 10px;
 }
-.noticeContent .sortInfoContrl{
+.noticeContent .sortInfoControl{
 color:#fff;
 }
-.noticeContent .sortInfoContrl .prev {
+.noticeContent .sortInfoControl .prev {
 	background-position: -245px -56px;
 	width: 36px;
 	height: 17px;
 }
-.noticeContent .sortInfoContrl .next {
+.noticeContent .sortInfoControl .next {
 	background-position: -198px -56px;
 	width: 37px;
 	height: 17px;

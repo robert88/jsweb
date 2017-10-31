@@ -2,6 +2,7 @@ $(document).on("imageReady",function () {
 
 	PAGE.data = PAGE.data || {};
 	PAGE.data.audio = PAGE.data.audio || "open";
+	var globalTimer = {};
 	var $body = $("#J-body");
 	var dflag, ex, ey,downMatrix;
 	/*缩小*/
@@ -157,6 +158,9 @@ $(document).on("imageReady",function () {
 
 		/*spa方式切页面时候需要清除全局事件和变量*/
 		PAGE.destroy.push(function () {
+			//先锁死计算器
+			globalTimer.lock = true;
+			PAGE.clearTimeout(globalTimer.timer);
 			$(document).off("mousedown.dragbg touchstart.dragbg")
 				.off("mousemove.dragbg touchmove.dragbg")
 				.off("mouseup.dragbg touchup.dragbg")
@@ -300,7 +304,26 @@ $(document).on("imageReady",function () {
 			return;
 		}
 		clearTimeout(targetEle.timer);
-		targetEle.timer = setTimeout(counter, 1000, targetEle, count, callback);
+		targetEle.timer = PAGE.setTimeout(counter, 1000, targetEle, count, callback);
+	}
+	/*
+	 * 永久循环播放
+	 * */
+	function loop(type,i,volume){
+		var audio =getAudio(type,i);
+		//设置音效是打开的。
+		if (PAGE.data.audio == "open") {
+			if (audio.paused) {
+				audio.play();
+				audio.volume = (volume==null?1:volume);
+				audio.loop = true;
+			}
+		} else {
+			if (audio.pause) {
+				audio.pause();
+			}
+		}
+		globalTimer.timer = PAGE.setTimeout(loop,1000,type,i,volume);
 	}
 	/*
 	 * 循环播放
@@ -318,7 +341,6 @@ $(document).on("imageReady",function () {
 		//设置音效是打开的。
 		if (PAGE.data.audio == "open") {
 			if (audio.paused) {
-				audio.load();
 				audio.play();
 			}
 		} else {
@@ -334,38 +356,32 @@ $(document).on("imageReady",function () {
 			return;
 		}
 
-		setTimeout(cricle,timeObj.time,count,timeObj,audio,callback);
+		PAGE.setTimeout(cricle,timeObj.time,count,timeObj,audio,callback);
+	}
+	function getAudio(type,i) {
+		if(!PAGE.globalAudios[type]){
+			console.log("音频文件不存在");
+			return
+		}
+		var audioItem = PAGE.globalAudios[type];
+
+		if (!audioItem.audios[i]) {
+			audioItem.audios[i] = new Audio();
+		}
+		var audio = audioItem.audios[i];
+
+		if (!audio.init) {
+			audio.src = audioItem.buffer;
+			audio.init = true;
+		}
+		return audio;
 	}
 	/*
 	 * type播放的声音类型，i表示全局存储的audio索引，count播放的次数，callback播放完毕
 	 * */
 	function playAudio(type, i, count, timeObj, callback) {
-
-		var src = "";
-		switch (type) {
-			case "coin":
-				src = "/public/audio/coin.mp3";
-				break;
-			case "clock":
-				src = "/public/audio/clock.mp3"
-		}
-		if (!src) {
-			return;
-		}
-		if (!audios[type]) {
-			audios[type] = [];
-		}
-		if (!audios[type][i]) {
-			audios[type][i] = new Audio();
-		}
-		var audio = audios[type][i];
-
-		if (!audio.init && audio.src!=src) {
-			audio.src = src;
-			audio.init = true;
-		}
-
-		setTimeout(cricle,timeObj.time,count,timeObj,audio,callback);
+		var audio =getAudio(type,i);
+		PAGE.setTimeout(cricle,timeObj.time,count,timeObj,audio,callback);
 	}
 
 	/*
@@ -680,7 +696,7 @@ $(document).on("imageReady",function () {
 			}
 		}
 
-		setTimeout(playRewardAnimate, 200, $ani, count);
+		PAGE.setTimeout(playRewardAnimate, 200, $ani, count);
 	}
 	function getTransform($target){
 		var matrix = $target.css("transform");
@@ -897,7 +913,7 @@ $(document).on("imageReady",function () {
 	initDrag();
 	scaleBody({x:$(window).width()/2,y:$(window).height()/2},10);
 	initGuide();
-
+	loop("bg",0,0.5)
 
 });
 

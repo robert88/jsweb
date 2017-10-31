@@ -22,15 +22,15 @@
 .worldSortContent .sortInfo>li:first-child{
 margin-top: 10px;
 }
-.worldSortContent .sortInfoContrl{
+.worldSortContent .sortInfoControl{
 color:#fff;
 }
-.worldSortContent .sortInfoContrl .prev {
+.worldSortContent .sortInfoControl .prev {
 	background-position: -245px -56px;
 	width: 36px;
 	height: 17px;
 }
-.worldSortContent .sortInfoContrl .next {
+.worldSortContent .sortInfoControl .next {
 	background-position: -198px -56px;
 	width: 37px;
 	height: 17px;

@@ -439,6 +439,89 @@ exports = module.exports = {
 		next( {code:count,data:data});
 	},
 
+"/api/game/fighter":function (request,response,next) {
+	var str = "/api/game/fighter";
+	exports[str].count = (exports[str].count||0);
+	var count = ++exports[str].count;
+	if(count>2){
+		count = exports[str].count =1;
+	}
+	next( {code:count,data:{
+		"list": [
+			{
+				"name": "dfdfdf",
+				"treasure": "3223",
+				"rank": 1
+			},
+			{
+				"name": "dfdfdf",
+				"treasure": "3223",
+				"rank": 2
+			},
+			{
+				"name": "dfdfdf",
+				"treasure": "34",
+				"rank": 3
+			},
+			{
+				"name": "dfdfdf",
+				"treasure": "32",
+				"rank": 4
+			},
+			{
+				"name": "dfdfdf",
+				"treasure": "23",
+				"rank": 5
+			},
+			{
+				"name": "",
+				"treasure": "0",
+				"rank": 6
+			},
+			{
+				"name": "哈哈哈",
+				"treasure": "0",
+				"rank": 7
+			},
+			{
+				"name": "dfdfdf",
+				"treasure": "0",
+				"rank": 8
+			},
+			{
+				"name": "dfdfdf",
+				"treasure": "0",
+				"rank": 9
+			}
+		],
+		"ranking": 6 // 我的世界排名，1-100，-1代表未上榜
+	}})
+},
+	"/api/game/animal":function (request,response,next) {
+	var str = "/api/game/animal";
+	exports[str].count = (exports[str].count||0);
+	var count = ++exports[str].count;
+	if(count>2){
+		count = exports[str].count =1;
+	}
+	next( {code:count,data:{
+		"list": [
+			{
+				"nickname": "测试",
+				"grown": "22", //成长值
+				username:"dssdf",
+				"rank": 1
+			},
+			{
+				"nickname": "测试22",
+				"grown": "22",
+				username:"dssdf",
+				"rank": 2
+			}
+		],
+		"ranking": 1
+	}});
+	},
 "/api/game/friend":function (request,response,next) {
 	var str = "/api/game/friend";
 	exports[str].count = (exports[str].count||0);

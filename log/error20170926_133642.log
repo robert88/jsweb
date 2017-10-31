@@ -4118,3 +4118,13 @@
     at Timer.listOnTimeout (timers.js:198:5)
 [error][2017/10/31 02:21:12][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\html\web404.html'
     at Error (native)
+[error][2017/10/31 21:20:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\withdrawalCash.js'
+    at Error (native)
+[error][2017/10/31 21:20:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\withdrawalGold.js'
+    at Error (native)
+[error][2017/10/31 21:20:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\withdrawalGold.js'
+    at Error (native)
+[error][2017/10/31 21:20:51][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\withdrawalGold.js'
+    at Error (native)
+[error][2017/10/31 21:20:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\web_info\withdrawalCash.js'
+    at Error (native)
