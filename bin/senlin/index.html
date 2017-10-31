@@ -125,28 +125,39 @@
             }
         
         }
-        var pageImageArr = ["mijing.jpg", "renItem.png","user.png","registerbg.png","tipbg.png" ];
-        for(var i=0;i<pageImageArr.length;i++){
-            loadPageImage("public/images/"+pageImageArr[i]);
-        }
-
-        function loadPageImage(url) {
-            var img = new Image;
-            img.onerror = img.onload = function () {
-                if( checkLoadComplete() ){
-                    $(".loadingMask").hide();
-                    $(".loading").hide();
-                    $(document).trigger("imageReady");
-                    PAGE.imageLoaded = true;
+        /*load图片*/
+        function loadImage(status){
+             var pageImageArr = ["mijing.jpg", "renItem.png","user.png","registerbg.png","tipbg.png" ];
+                for(var i=0;i<pageImageArr.length;i++){
+                    loadPageImage("public/images/"+pageImageArr[i]);
                 }
-            }
-            img.src= url;
+
+                function loadPageImage(url) {
+                    var img = new Image;
+                    img.onerror = img.onload = function () {
+                        if(checkLoadComplete()){
+                           status.image = true;
+                           loadComplete();
+                        }
+                    }
+                    img.src= url;
+                }
+                var loadCount = 0;
+                function checkLoadComplete(){
+                    loadCount++;
+                    if(loadCount==pageImageArr.length){
+                        return true;
+                    }
+                }
         }
-        var loadCount = 0;
-        function checkLoadComplete(){
-            loadCount++;
-            if(loadCount==pageImageArr.length){
-                return true;
+       /*全部加载完成*/
+    var completeStaus = {image:false,audio:false}
+        function loadComplete(){
+            if(completeStaus.image&&completeStaus.audio){
+                            $(".loadingMask").hide();
+                            $(".loading").hide();
+                            $(document).trigger("imageReady");
+                            PAGE.imageLoaded = true;
             }
         }
 
