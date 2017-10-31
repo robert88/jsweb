@@ -1,0 +1,72 @@
+<div id="test">sdfkjdflsfdsf</div>
+<div id="canvas"></div>
+
+function drawText(stacks,width,height){
+  var canvas = $("#vanvas")[0];
+  var ctx = vanvas.getContext("2d");
+  canvas.width = width;
+  canvas.height =height;
+  ctx.beginPath();
+  ctx.font="20 Arial";
+  for(var i=0;i<stacks.length;i++){
+    var stack = stacks[i];
+    ctx[stack.name].apply(ctx.stack.arg);
+  }
+}
+function toFloat(x){
+  return parseFloat(x,10) || 0;
+}
+function init(){
+  var $t =  $("#test")
+  var test = $t[0];
+  var width = $t.width();
+  var height = $t.height();
+  var letterspace = toFloat($t.css("letter-spacing"));
+  var str = test.innerHTML;
+  var len = str.length;
+  var stacks = [];
+  $t.html("<textwrap>中</textwrap>国博爱的<textwrap>中</textwrap><textwrap style='display:block;'>中</textwrap><textwrap>&bsp;</textwrap>")
+  var $wrap = $("textwrap");
+  var p0 = getPos($wrap[0])
+  var p1 = getPos($wrap[1])
+  var p2 = getPos($wrap[2])
+  var p3 = getPos($wrap[3])
+  var lineheight = $wrap.css("line-height");
+  $t.html(str);
+  var spacenum=0;
+  var spacestr="";
+  if(w2){
+   spacenum = Math.floor(letterspace/w2);
+   for(var i=0;i<spacenum;i++){
+    spacestr +=" ";
+   }
+   if(lineheight=="normal"){
+    lineheight= p2.y-p3.y
+   }
+   if((p1.y-p0.y)%lineheight!=0){
+    console.log("lineheight error");
+   }
+   var lineheight =Math.floor((p1.y-p0.y)/lineheight);
+   if(heightitem==0){
+   stack.push({name:"fillText",arg:[str.replace(/(.)/g,"$1"+spacestr),p0.x,p0.y+p0.h]})
+   }else{
+    var itemnum = Math.floor(width/w0);
+    var substr;
+    for(var j=0;j<heightitem;j++){
+      substr = str.slice(j*itemnum,j*itemnum+itemnum);
+      stacks.push({name:"fillText",arg:[substr.replace(/(.)/g,"$1"+spacestr),p0.x,p0.y+lineheight*j+p0.h]})
+    }
+    if(j*itemnum<len){
+      substr = str.slice(j*itemnum,len);
+      stacks.push({name:"fillText",arg:[substr.replace(/(.)/g,"$1"+spacestr),p0.x,p0.y+lineheight*j+p0.h]})
+    }
+   }
+  }
+}
+function getPos(target){
+return {
+x:target.offsetLeft,
+y:target.offsetTop,
+h:target.offsetHeight,
+w:target.offsetWidth}
+}
