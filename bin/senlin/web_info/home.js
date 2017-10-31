@@ -861,7 +861,6 @@ $(document).on("imageReady",function () {
 			}
 
 			//执行step1
-			if(step)
 			PAGE.guide.next();
 		}
 
