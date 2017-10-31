@@ -408,6 +408,9 @@ body,html{
 	}
 }
 /*家园公共部分*/
+.main-home-body{
+font-size:1rem;
+}
 .main-home-body header{
 	height:60px;
 	line-height: 60px;
