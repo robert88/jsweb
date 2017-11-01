@@ -1,11 +1,19 @@
 ;(function () {
+
+	var $dialog = 	$(".settingContent").parents(".dl-dialog");
 	var token = $.cookie("login_token");
 	if (!token) {
 		PAGE.setUrl("#/web_info/login.html");
 		return;
 	}
+
 	PAGE.data.audio = $.cookie("audioVolum")||"open";
-	var $dialog = 	$(".settingContent").parents(".dl-dialog");
+
+	if(PAGE.data.audio=="open"){
+		$dialog.find(".videoSetting").removeClass("off").addClass("on")
+	}else{
+		$dialog.find(".videoSetting").removeClass("on").addClass("off")
+	}
 	$dialog.on('click',".videoSetting",function () {
 
 		if(PAGE.data.audio=="open"){

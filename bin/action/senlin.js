@@ -340,6 +340,22 @@ exports = module.exports = {
 				"countdown": 7*24*60*60
 		}});
 	},
+	"/api/homeland/withdraw":function (request,response,next) {
+		var str = "/api/homeland/withdraw";
+		exports[str].count = (exports[str].count==null?-1:exports[str].count);
+		var count = ++exports[str].count;
+		if(count>5){
+			count = exports[str].count =1;
+		}
+		next( {code:count,data:{
+			"serial": "2",
+			"status": "1",
+			"apply_type": "1",// 特殊化肥1
+			"apply_at": "2017-10-15 18:13:45",
+			"countdown": 7*24*60*60
+		}});
+	},
+
 "/api/reward":function (request,response,next) {
 	var str = "/api/reward";
 	exports[str].count =  (exports[str].count==null?-1:exports[str].count);

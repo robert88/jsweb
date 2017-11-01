@@ -419,19 +419,19 @@ font-size:1rem;
 	float:left;
 	margin-left: 20px;
 }
-.main-home-body .main-body .ipt-label-block{
+.main-home-body .ipt-label-block{
 	height: 2.5625rem;
 	line-height: 2.5625rem;
-	padding-right:140px;
+	padding: 0 10% 0 33%;
 }
-.main-home-body .main-body .ipt{
+.main-home-body .ipt{
 	height: 2.5rem;
 	line-height: 2.5rem;
 }
-.main-home-body .main-body input:focus,
-.main-home-body .main-body textarea:focus,
-.main-home-body .main-body button:focus,
-.main-home-body .main-body select:focus{
+.main-home-body input:focus,
+.main-home-body textarea:focus,
+.main-home-body button:focus,
+.main-home-body select:focus{
 	border-color:rgb(255, 204, 51)
 }
 .main-home-body .main-body{

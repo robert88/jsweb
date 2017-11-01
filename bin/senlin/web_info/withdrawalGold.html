@@ -8,8 +8,8 @@
 			<li class="col6">可提现元宝</li>
 		</ul>
 		<ul class="col mt20 ">
-			<li class="col6"><span class="userCoin"></span></li>
-			<li class="col6"><span class="userWithdrawalCoin"></span></li>
+			<li class="col6"><span class="userGold"></span></li>
+			<li class="col6"><span class="userWithdrawalGold"></span></li>
 		</ul>
 
 		<div class="mt20 bg-yellow J-withdrawal-btn">立即提现</div>
@@ -37,23 +37,23 @@
 			<li class="col4"></li>
 		</ul>
 	</div>
-	<div style="display: none">
+	<div style="display: none" id="withdrawlDialog">
 		<form class="form-block pt20" id="step01">
 			<fieldset class="ipt-label-block  J-input-focus mt20">
 				<label class="ipt-label ">当前可提现额为：</label>
 				<div class="ipt-inline ipt-radius J-validItem validItem">
-					100金币
+					<span class="userWithdrawalGold"></span>元宝
 				</div>
 			</fieldset>
 			<fieldset class="ipt-label-block J-input-focus mt20" >
 				<label class="ipt-label ">输入提现金额：</label>
 
 				<div class="ipt-inline ipt-radius J-validItem validItem">
-					<input name="code" type="text" tabindex="1"
+					<input name="sum" type="text" tabindex="1"
 						   placeholder="最低提现额100以上，且为整数"
 						   class="ipt"
-						   check-type="required cardid"
-						   data-idcard-msg="请填写身份证号码!"
+						   check-type="required number100"
+						   data-idcard-msg="请填写提现额!"
 						   data-focus="true">
 				</div>
 
@@ -62,7 +62,7 @@
 				<label class="ipt-label ">开户姓名：</label>
 
 				<div class="ipt-inline ipt-radius J-validItem validItem">
-					张三
+					<span class="userName"></span>
 				</div>
 
 			</fieldset>
@@ -70,8 +70,7 @@
 				<label class="ipt-label ">收款银行：</label>
 
 				<div class="ipt-inline ipt-radius J-validItem validItem">
-					<select name="bank_id" class="ipt"
-							check-type="required"
+					<select name="bank_id" class="ipt" check-type="required"
 							data-idcard-msg="请选择开户行!">
 						<option value="">请选择</option>
 						<option value="1">中国农业银行</option>
@@ -92,9 +91,7 @@
 				<label class="ipt-label ">收款账号：</label>
 
 				<div class="ipt-inline ipt-radius J-validItem validItem">
-					<select name="" id="">
-						<option value="">中国农业银行</option>
-					</select>
+					<input class="ipt">
 				</div>
 
 			</fieldset>
@@ -103,9 +100,9 @@
 
 				<div class="ipt-inline ipt-radius J-validItem validItem">
 					<input name="code" type="text" tabindex="1"
-						   placeholder="最低提现额100以上，且为整数"
+						   placeholder="输入提现密码"
 						   class="ipt"
-						   check-type="required cardid"
+						   check-type="required"
 						   data-idcard-msg="请填写身份证号码!"
 						   data-focus="true">
 				</div>
