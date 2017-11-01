@@ -347,17 +347,17 @@
 			//优先加载css
 			var cssFile=[],jsFile=[];
 			if(config.params.css) {
-				cssFile.push("{0}.css".tpl(config.action));
+				cssFile.push("{0}.css?v={1}".tpl(config.action,PAGE.version));
 			}
 			if(config.params.js) {
-				jsFile.push("{0}.js".tpl(config.action, config.params.js));
+				jsFile.push("{0}.js?v={1}".tpl(config.action, PAGE.version));
 			}
 			$.each(subConfigs,function (idx,val) {
 				if(val.params.css) {
-					cssFile.push("{0}.css".tpl(val.action, val.params.css));
+					cssFile.push("{0}?v={1}.css".tpl(val.action, PAGE.version));
 				}
 				if(val.params.js) {
-					jsFile.push("{0}.js".tpl(val.action, val.params.js));
+					jsFile.push("{0}?v={1}.js".tpl(val.action, PAGE.version));
 				}
 			});
 			//加载样式
@@ -478,7 +478,7 @@
 	 *监听hashchange事件切换页面，监听事件load事件
 	 * */
 	$(window).on("hashchange", function() {
-		hashChange();
+		window.location.reload();
 	});
 
 	/**

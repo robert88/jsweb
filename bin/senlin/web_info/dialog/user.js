@@ -20,7 +20,7 @@
 	var forest_gold =$.cookie("forest_gold")||0;
 	var forest_coin = $.cookie("forest_coin")||0;
 	var uid = $.cookie("login_uid")||"";
-	var username = $.cookie("login_username")||"";
+	var username = $.cookie("login_nickname")||"";
 
 	if (forest_sex == 0) {
 		$userPic.removeClass("bg-user-female").addClass("bg-user-male")

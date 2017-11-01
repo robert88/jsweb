@@ -77,17 +77,17 @@
 	/*
 	* 将二维数组转一维数组
 	* */
-	function toSampleArrary(ret){
-		var newArr=[];
-		for(var i=0;i<ret.length;i++){
-			if($.type(ret[i])=="array"){
-				newArr = newArr.concat(ret[i]);
-			}else{
-				newArr.push(ret[i]);
-			}
-		}
-		return newArr
-	}
+	// function toSampleArrary(ret){
+	// 	var newArr=[];
+	// 	for(var i=0;i<ret.length;i++){
+	// 		if($.type(ret[i])=="array"){
+	// 			newArr = newArr.concat(ret[i]);
+	// 		}else{
+	// 			newArr.push(ret[i]);
+	// 		}
+	// 	}
+	// 	return newArr
+	// }
 	/*
 	*加载数据
 	* */
@@ -98,27 +98,29 @@
 			"1": "成功",
 			"2": "没有数据！"
 		},
+		dataType:"json",
 		url: "/api/game",
 		success: function (ret) {
 			$hotItem.html("");
 			$propsItem.html("");
 			$linshouItem.html("");
-			if(ret&&ret.length){
-				ret = toSampleArrary(ret);
-				for(var i=0;i<ret.length;i++){
-					var data = ret[i];
-					if(data.title=="屠龙刀"){
-						data.className = "J-buy-tulongdao";
-					}
-					var html = getHtmlTempl(data);
-					if(data.type==0){
-						$hotItem.append(html);
-					}else if(data.type==1){
-						$propsItem.append(html);
-					}else{
-						$linshouItem.append(html)
-					}
+			if(ret){
+				if(ret.hot&&ret.hot.length){
+					initHtml(ret.hot,$hotItem);
+				}else{
+					$hotItem.html("无数据！");
 				}
+				if(ret.property&&ret.property.length){
+					initHtml(ret.property,$propsItem);
+				}else{
+					$propsItem.html("无数据！");
+				}
+				if(ret.food&&ret.food.length){
+					initHtml(ret.food,$linshouItem);
+				}else{
+					$linshouItem.html("无数据！");
+				}
+
 			}else{
 				$hotItem.html("无数据！");
 				$propsItem.html("无数据！");
@@ -126,15 +128,24 @@
 			}
 
 		},error:function () {
-			$hotItem.html("数据有误！");
-			$propsItem.html("数据有误！");
-			$linshouItem.html("数据有误！");
+			$hotItem.html("无数据！");
+			$propsItem.html("无数据！");
+			$linshouItem.html("无数据！");
 		},complete:function () {
 			$(".loading").hide();
 		}
 	});
 
-
+	function initHtml(arr,$content){
+		for(var i=0;i<arr.length;i++){
+			var data = arr[i];
+			if(data.title=="屠龙刀"){
+				data.className = "J-buy-tulongdao";
+			}
+			var html = getHtmlTempl(data);
+			$content.append(html);
+		}
+	}
 
 	/*
 	 *新手指引

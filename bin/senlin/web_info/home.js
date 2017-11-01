@@ -1,5 +1,5 @@
 $(document).on("imageReady",function () {
-
+	require("/public/js/module/nativeShare.js");
 	PAGE.data = PAGE.data || {};
 	PAGE.data.audio = $.cookie("audioVolum") || "open";
 	var globalTimer = {};
@@ -472,6 +472,15 @@ $(document).on("imageReady",function () {
 				if (data&&data.length) {
 					for (var i = 0; i < data.length; i++) {
 						var treeInfo = data[i];
+						//灵兽信息
+						if(treeInfo.serial==0){
+							if(treeInfo.status!=0){
+								$(".animalItem").removeClass("disabled");
+							}
+							$(".animalItem").data("info",treeInfo);
+							continue;
+						}
+
 						var $tree = $("#tree" + treeInfo.serial.toString().fill("000")).data("treeinfo", treeInfo);
 
 						// 0未破除封印，1已破除，2已收获，3 需浇生命液进行激活
@@ -775,7 +784,9 @@ $(document).on("imageReady",function () {
 					var gold = ret.gold ||0;
 					$coin.html((forest_coin*1+coin*1) || 0);
 					$gold.html((forest_gold*1 + gold*1) || 0);
-					$.tips("恭喜收获"+coin+"金币和"+gold+"元宝！", "success");
+					PAGE.data.confirm("亲爱的"+$.cookie("login_nickname")+"玩家，分享您的收益给好友，让他们为您赚钱更多的收益哟~~",function (e, $dialog) {
+						shareFriend();
+					});
 					playRewardCoin(treeInfo.apply_type, 10, function () {
 						$tree.data("lock", false);
 						$tree.html('<div class="bg-renwu-trunk bg-renwu"></div>');
@@ -790,10 +801,48 @@ $(document).on("imageReady",function () {
 			$body.data("dialog",false);
 		}
 	}
+
+	function initShare(){
+		$(".J-share-btn").click(function () {
+			$(".ls-container").css("overflow","hidden");
+			$(".J-share-contain").addClass("slideShow")
+			$(".mask").show()
+		})
+		$(".J-share-cancel").click(function () {
+			$(".mask").hide()
+			$(".ls-container").css("overflow","visible");
+			$(".J-share-contain").removeClass("slideShow")
+		})
+		new nativeShare("shareNode");
+	}
+	/*
+	* 分享到朋友圈
+	* */
+	function shareFriend(){
+		$(".J-share-btn").click();
+	}
 	/*
 	 * 点击摇钱树
 	 * */
 	function initTreeEvent() {
+		var animateTimer;
+		$body.on("click touchstart", ".animalItem", function () {
+			var $this = $(this);
+			if($body.data("dialog")|| $body.data("movelock")){
+				return
+			}
+			if($this.hasClass("disabled")){
+				$this.find(".tips").removeClass("hideToShowAni");
+				PAGE.clearTimeout(animateTimer);
+				animateTimer = PAGE.setTimeout(function () {
+					$this.find(".tips").addClass("hideToShowAni");
+				},10000)
+				return;
+			}
+			PAGE.data.confirm("主人~~我饿得口吐白沫了，快邀请好友获取食物吧!",function (e, $dialog) {
+				shareFriend();
+			});
+		});
 		$body.on("click touchstart", ".treeItem", function () {
 			var $this = $(this);
 			// if (PAGE.guide.needGuide && !$this.data("guide") || $this.data("lock")) {
@@ -908,16 +957,44 @@ $(document).on("imageReady",function () {
 			}
 		})
 	}
+	function updateUserStatus() {
+		PAGE.ajax({
+			data: {token: token},
+			type: 'get',
+			msg: {
+				"1": "更新成功",
+				"2": "校验码为空",
+				"3": "校验失败",
+				"4": "用户不存在"
+			},
+			url: "/api/user/treasure",
+			success: function (ret) {
+				if(ret){
+					$.cookie("forest_gold",$.trim(ret.gold)*1);
+					$.cookie("forest_coin",$.trim(ret.coin)*1);
+				}
+			},error:function (e) {
+				console.error(e);
+			},complete:function () {
+				showUserInfo();
+			}
+		});
+		$("header").on("updateUserInfo",showUserInfo);
+
+	}
+
 
 	//初始化----------------------------------------------------------------------------------
 
-	showUserInfo();
+
 	initTree();
 	initTreeEvent();
 	initDrag();
 	scaleBody({x:$(window).width()/2,y:$(window).height()/2},10);
 	initGuide();
-	loop("bg",0,0.5)
+	loop("bg",0,0.5);
+	updateUserStatus();
+	initShare();
 
 });
 

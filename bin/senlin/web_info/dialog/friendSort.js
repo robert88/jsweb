@@ -18,7 +18,7 @@
 		return  ['<div class="col3">{0}</div>',
 			'<div class="col3">{1}</div>',
 			'<div class="col3">{2}</div>',
-			'<div class="col3">{3}</div>'].join("").tpl(sort,obj.nickname,obj.name,obj.rank);
+			'<div class="col3">{3}</div>'].join("").tpl(sort,obj.nickname,obj.username,obj.rank);
 
 	}
 	function initSort($content,url,htmlTempl) {
@@ -44,7 +44,7 @@
 				success: function (ret) {
 					if(ret&&ret.list&&ret.list.length){
 						for(var i=0;i<ret.list.length;i++){
-							var sort = (i+(page-1)*pagesize);
+							var sort = (i+(page-1)*pagesize)+1;
 							$content.find(".sortInfo li").eq(i).html(htmlTempl(ret.list[i],sort));
 						}
 						totalpage = ret.pages;
@@ -78,7 +78,30 @@
 		});
 		getData();
 	}
+	$dialog.on("click",".bg-props-hand",function () {
+		
+		$(".loading").show();
+		PAGE.ajax({
+			type: "get",
+			msg: {
+				"0":"登录token验证失败",
+				"1": "请求成功",
+				"2":"暂无好友"
+			},
+			url: "/api/trees/steal"+"?token="+token,
+			success: function (ret) {
+				if(ret){
+					var number = ret.number*1;
+					var forest_coin = $.cookie("forest_coin")||0;
+					$.cookie("forest_coin",forest_coin+number);
+					$("header").trigger("updateUserInfo")
+				}
 
+			},complete:function () {
+				$(".loading").hide();
+			}
+		})
+	})
 	initSort($dialog.find(".J-firendSortList"),"/api/game/friend",getHtmlTempl);
 	initSort($dialog.find(".J-animalSortList"),"/api/game/fanimal",getHtmlTempl2);
 

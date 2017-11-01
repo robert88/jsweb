@@ -78,11 +78,12 @@
 
 		var defaultOption = {
 			type: "post", //post请求
+			cache:false,
 			error: defaultError, //默认处理函数
 			dataType: 'json', //json数据返回
 			timeout: 120000, //2分钟超时
-			$loadContain: null //是loading容器
-			// limitTime : 1 //请求限制不传表示不限制
+			$loadContain: null, //是loading容器
+			limitTime : 1 //请求限制不传表示不限制
 		};
 
 		var ajaxOption = $.extend({}, defaultOption, options);

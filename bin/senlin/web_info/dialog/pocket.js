@@ -41,6 +41,7 @@
 			"1": "成功",
 			"2": "没有数据！"
 		},
+		dataType:"json",
 		url: "/api/game/pocket",
 		success: function (ret) {
 			$propsItem.html("");
@@ -63,8 +64,8 @@
 			}
 
 		},error:function () {
-			$propsItem.html("数据有误！");
-			$linshouItem.html("数据有误！");
+			$propsItem.html("无数据！");
+			$linshouItem.html("无数据！");
 		},complete:function () {
 			$(".loading").hide();
 		}

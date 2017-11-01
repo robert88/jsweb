@@ -7,10 +7,9 @@
 	}
 	//html模板
 	function getHtmlTempl(obj,sort) {
-		return  ['<div class="col3">{0}</div>',
-			'<div class="col3">{1}</div>',
-			'<div class="col3">{2}</div>',
-			'<div class="col3">{3}</div>'].join("").tpl(sort,obj.name,obj.treasure||0,obj.rank);
+		return  ['<div class="col4">{0}</div>',
+			'<div class="col4">{1}</div>',
+			'<div class="col4">{2}</div>'].join("").tpl(obj.rank,obj.name,obj.treasure||0);
 
 	}
 	//灵兽html模板
@@ -43,7 +42,7 @@
 				success: function (ret) {
 					if(ret&&ret.list&&ret.list.length){
 						for(var i=0;i<ret.list.length;i++){
-							var sort = (i+(page-1)*pagesize);
+							var sort = (i+(page-1)*pagesize)+1;
 							$content.find(".sortInfo li").eq(i).html(htmlTempl(ret.list[i],sort));
 						}
 						//上榜
