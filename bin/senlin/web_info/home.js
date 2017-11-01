@@ -444,7 +444,7 @@ $(document).on("imageReady",function () {
 		var $tree;
 		for (var i = 1; i < 11; i++) {
 			$tree = $("#tree" + i.toString().fill("000"));
-			$tree.html('<div class="bg-renwu-trunk bg-renwu"></div></div><div class="bg-renwu-seal bg-renwu"></div>');
+			$tree.html('<div class="bg-renwu-trunk bg-renwu"></div><div class="bg-renwu-seal bg-renwu"></div>');
 		}
 	}
 	/*
@@ -459,6 +459,8 @@ $(document).on("imageReady",function () {
 			$tree.html('<div class="bg-renwu-fertilizer2 bg-renwu"><div class=" bg-props bg-props-hand animate-flow"></div></div>');
 		} else if (treeInfo.apply_type == 4) {
 			$tree.html('<div class="bg-renwu-fertilizer1 bg-renwu"><div class=" bg-props bg-props-hand animate-flow"></div></div>');
+		}else{
+			$tree.html('<div class="bg-renwu-trunk bg-renwu"></div></div>');
 		}
 	}
 	/*

@@ -20,7 +20,7 @@
 	function getHtmlTempl(obj) {
 		var btn = "";
 		//1才能购买
-		if(obj.type==1){
+		if(obj.buy==1){
 			btn = '<p class="list-btn tr" data-pid="{0}" data-price="{1}"><a class="text-border" data-text="购买">购买</a></p>'.tpl(obj.id,obj.price||0);
 		}
 		return  ['<div class="list-bg bg-kuang {6}">',
