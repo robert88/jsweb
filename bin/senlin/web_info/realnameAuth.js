@@ -53,7 +53,7 @@ $(function () {
 					img.src = imgData;
 				}
 			},complete:function () {
-				$(".loading").show();
+				$(".loading").hide();
 			}
 		});
 	}

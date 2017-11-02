@@ -10,7 +10,7 @@
 		return  ['<div class="col3">{0}</div>',
 			'<div class="col3">{1}</div>',
 			'<div class="col3">{2}</div>',
-			'<div class="col3">{3}</div>'].join("").tpl(sort,obj.name,obj.treasure||0,obj.steal==1?'<div class=" bg-props bg-props-hand animate-flow"></div>':"");
+			'<div class="col3" data-id="{3}">{4}</div>'].join("").tpl(sort,obj.name,obj.id,obj.treasure||0,obj.steal==1?'<div class=" bg-props bg-props-hand animate-flow" ></div>':"");
 
 	}
 	//灵兽html模板
@@ -79,7 +79,7 @@
 		getData();
 	}
 	$dialog.on("click",".bg-props-hand",function () {
-		
+		var id = $(this).parent().data("id");
 		$(".loading").show();
 		PAGE.ajax({
 			type: "get",
@@ -88,7 +88,7 @@
 				"1": "请求成功",
 				"2":"暂无好友"
 			},
-			url: "/api/trees/steal"+"?token="+token,
+			url: "/api/trees/steal"+"?token="+token+"&uid="+id,
 			success: function (ret) {
 				if(ret){
 					var number = ret.number*1;

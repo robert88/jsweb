@@ -16,7 +16,7 @@
 			'<p class="list-text fs12">{2}</p>',
 			'<p class="list-btn tr userBtn" data-pid="{3}" title="{4}"><a class="text-border" data-text="使用">使用</a></p>',
 			'</div>',
-			'</div>'].join("").tpl(obj.icon,obj.number||0,obj.introduce,obj.id);
+			'</div>'].join("").tpl(obj.icon,obj.remain||0,obj.introduce,obj.id);
 
 	}
 	/*
@@ -33,6 +33,16 @@
 		}
 		return newArr
 	}
+		function initHtml(arr,$content){
+		for(var i=0;i<arr.length;i++){
+			var data = arr[i];
+			if(data.title=="屠龙刀"){
+				data.className = "J-buy-tulongdao";
+			}
+			var html = getHtmlTempl(data);
+			$content.append(html);
+		}
+	}
 	//加载数据
 	$(".loading").show();
 	PAGE.ajax({
@@ -42,21 +52,36 @@
 			"2": "没有数据！"
 		},
 		dataType:"json",
-		url: "/api/game/pocket",
+		url: "/api/game/pocket?token="+token,
 		success: function (ret) {
 			$propsItem.html("");
 			$linshouItem.html("");
-			if(ret&&ret.length){
-				ret = toSampleArrary(ret);
-				for(var i=0;i<ret.length;i++){
-					var data = ret[i];
-					var html = getHtmlTempl(data);
-					if(data.type==0||data.type==1){
-						$propsItem.append(html);
+			if(ret){
+				if($.type(ret)=="array"){
+					ret = toSampleArrary(ret);
+					for(var i=0;i<ret.length;i++){
+						var data = ret[i];
+						var html = getHtmlTempl(data);
+						if(data.type==0||data.type==1){
+							$propsItem.append(html);
+						}else{
+							$linshouItem.append(html)
+						}
+					}
+				}else{
+
+					if(ret.property&&ret.property.length){
+						initHtml(ret.property,$propsItem);
 					}else{
-						$linshouItem.append(html)
+						$propsItem.html("无数据！");
+					}
+					if(ret.food&&ret.food.length){
+						initHtml(ret.food,$linshouItem);
+					}else{
+						$linshouItem.html("无数据！");
 					}
 				}
+				
 
 			}else{
 				$propsItem.html("无数据！");

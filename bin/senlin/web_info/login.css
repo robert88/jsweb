@@ -27,3 +27,11 @@ body{
 .ipt:focus{
 	border:1px solid #72eafe;
 }
+.login-btn.btn-link {
+    background-position: -8.125rem 0px;
+	}
+	@media screen and (max-width: 470px){
+.login-btn.btn-link {
+    background-position: -4.0625rem 0px;
+	}
+	}

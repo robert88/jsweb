@@ -302,7 +302,7 @@ $(document).on("imageReady",function () {
 		if (count == 0) {
 			return;
 		}
-		clearTimeout(targetEle.timer);
+		PAGE.clearTimeout(targetEle.timer);
 		targetEle.timer = PAGE.setTimeout(counter, 1000, targetEle, count, callback);
 	}
 	/*
@@ -478,6 +478,11 @@ $(document).on("imageReady",function () {
 						if(treeInfo.serial==0){
 							if(treeInfo.status!=0){
 								$(".animalItem").removeClass("disabled");
+								counter($(".animalItem")[0], treeInfo.hanger*1, function (targetEle, count) {
+										if (count <= 0) {
+											$(".animalItem").find(".tips").html('主人~~我饿得口吐白沫了，快邀请好友获取食物吧!');
+										}
+									});
 							}
 							$(".animalItem").data("info",treeInfo);
 							continue;
@@ -485,12 +490,12 @@ $(document).on("imageReady",function () {
 
 						var $tree = $("#tree" + treeInfo.serial.toString().fill("000")).data("treeinfo", treeInfo);
 
-						// 0未破除封印，1已破除，2已收获，3 需浇生命液进行激活
+						// 0未破除封印，1已破除，2未shifei,3已收获，4 需浇生命液进行激活
 						switch (treeInfo.status) {
 							case "0":
 								$tree.html('<div class="bg-renwu-trunk bg-renwu"></div><div class="bg-renwu-seal bg-renwu"></div>');
 								break;
-							case "1":
+							case "2":
 								//已经成熟了
 								if (treeInfo.countdown <= 0) {
 									updateTreeStatus($tree, treeInfo);
@@ -503,8 +508,9 @@ $(document).on("imageReady",function () {
 									});
 								}
 								break;
-							case "2":
+							case "1":
 							case "3":
+							case "4":
 								$tree.html('<div class="bg-renwu-trunk bg-renwu"></div>');
 								break;
 						}
@@ -529,7 +535,7 @@ $(document).on("imageReady",function () {
 			PAGE.ajax({
 				type: "get",
 				msg: {
-					"-1": "暂无破除封印道具",
+					"-1": "暂无破除封印道具,请到藏金阁购买！",
 					"0": "登录token验证失败",
 					"1": "破除成功",
 					"2": "摇钱树编号错误！",
@@ -585,7 +591,7 @@ $(document).on("imageReady",function () {
 		PAGE.ajax({
 			type: "post",
 			msg: {
-				"-1": "暂无该类型化肥",
+				"-1": "暂无该类型化肥,请到藏金阁购买！",
 				"0": "登录token验证失败",
 				"1": "施肥成功",
 				"2": "摇钱树编号错误",
@@ -604,8 +610,10 @@ $(document).on("imageReady",function () {
 					PAGE.guide.next();
 				}
 				$.dialog.close($dialog);
-				$treeItem.data("treeinfo",ret);
-				counter($treeItem, ret.countdown);
+				if(ret){
+					$treeItem.data("treeinfo",ret);
+					counter($treeItem, ret.countdown);
+				}
 			},
 			complete:function () {
 				$body.data("dialog",false);
@@ -619,7 +627,7 @@ $(document).on("imageReady",function () {
 		PAGE.ajax({
 			type: "post",
 			msg: {
-				"-1": "暂无生命液",
+				"-1": "暂无生命液,请到藏金阁购买！",
 				"0": "登录token验证失败",
 				"1": "成功浇生命液",
 				"2": "摇钱树编号错误",
@@ -786,7 +794,7 @@ $(document).on("imageReady",function () {
 					var gold = ret.gold ||0;
 					$coin.html((forest_coin*1+coin*1) || 0);
 					$gold.html((forest_gold*1 + gold*1) || 0);
-					PAGE.data.confirm("亲爱的"+$.cookie("login_nickname")+"玩家，分享您的收益给好友，让他们为您赚钱更多的收益哟~~",function (e, $dialog) {
+					PAGE.data.confirm("点击屏幕右上角“...”按钮，收藏本页面。并分享给好友，将会获得好友消费金额的5%奖励哟!",function (e, $dialog) {
 						shareFriend();
 					});
 					playRewardCoin(treeInfo.apply_type, 10, function () {
@@ -834,16 +842,17 @@ $(document).on("imageReady",function () {
 				return
 			}
 			if($this.hasClass("disabled")){
-				$this.find(".tips").removeClass("hideToShowAni");
-				PAGE.clearTimeout(animateTimer);
-				animateTimer = PAGE.setTimeout(function () {
-					$this.find(".tips").addClass("hideToShowAni");
-				},10000)
+				PAGE.data.confirm("点击屏幕右上角“...”按钮，收藏本页面。并分享给好友，将会获得好友消费金额的5%奖励哟!",function (e, $dialog) {
+						shareFriend();
+					});
 				return;
 			}
-			PAGE.data.confirm("主人~~我饿得口吐白沫了，快邀请好友获取食物吧!",function (e, $dialog) {
-				shareFriend();
-			});
+			if($this.data('info')&&$this.data('info').hanger<=0){
+				PAGE.data.confirm("主人~~我饿得口吐白沫了，快邀请好友获取食物吧!",function (e, $dialog) {
+					shareFriend();
+				});
+			}
+			
 		});
 		$body.on("click touchstart", ".treeItem", function () {
 			var $this = $(this);
@@ -921,7 +930,7 @@ $(document).on("imageReady",function () {
 	 *阅读游戏说明
 	 * */
 	function guideSkills() {
-		$skills.addClass("popToPop").data("guide", true);
+		$skills.click().addClass("popToPop").data("guide", true);
 	}
 
 	/*
