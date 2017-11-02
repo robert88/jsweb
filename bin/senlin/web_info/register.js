@@ -41,11 +41,14 @@
 				url:"/api/user/register",
 				success:function (ret) {
 					$.tips("注册成功","success");
+					$.cookie("guideStep",null);
 					if(ret&&ret.data){
 						ret = ret.data;
 						//已经完成了引导
 						if(ret&& ret.status==1){
 							$.cookie("forest_guide",true);
+						}else{
+							$.cookie("forest_guide",null);
 						}
 					}
 					PAGE.setUrl("#/web_info/home.html");

@@ -8,7 +8,7 @@
 	//综合
 	function logTempl(obj,sort) {
 		return  ['<div class="col02">{0}</div>',
-			'<div class="col08 tl"><a class="J-dialog" style="display: block;"  data-url="/web_info/dialog/log.html?id={1}">{2}</a></div>'].join("").tpl(sort,obj.id,obj.title);
+			'<div class="col08 tl"><a class="dialogInfo" style="display: block;"  data-id="{1}">{2}</a></div>'].join("").tpl(sort,obj.id,obj.title);
 
 	}
 	//充值记录		"id": 12,
@@ -20,7 +20,7 @@
 	//操作记录
 	function operatelogTempl(obj,sort) {
 		return  ['<div class="col02">{0}</div>',
-			'<div class="col08 tl"><a class="J-dialog" style="display: block;"  data-url="/web_info/dialog/log.html?id={1}">{2}</a></div>'].join("").tpl(sort,obj.id,obj.note);
+			'<div class="col08 tl" data-id="{1}">{2}'].join("").tpl(sort,obj.id,obj.note);
 
 	}
 	//分享记录
@@ -28,7 +28,7 @@
 
 	function initSort($content,url,htmlTempl) {
 		var page = 1;
-		var pagesize=10;
+		var pagesize=9;
 		var totalpage;
 		var perPage;
 		function getData(){
@@ -86,7 +86,33 @@
 		});
 		getData();
 	}
+$dialog.on("click",".dialogInfo",function () {
+	$(".loading").show();
+	var id = $(this).data("id");
+	PAGE.ajax({
+		type: "get",
+		msg: {
+			"0":"登录token验证失败",
+			"1": "请求成功",
+			"2":"暂无记录"
+		},
+		url: "/api/log/show?logid=" + id+"&token="+token,
+		success: function (ret) {
+			if(ret){
+				$.dialog("<div class='title' style='margin-top: 3.8125rem;text-align: center;'>{0}</div><div class='fs12 p10'>作者：{2}</div><div class='p10'>{1}</div>".tpl(ret.title,ret.content,ret.author),
+					{
+						width: 330,
+						mask:false,
+						maskClose: false,
+						close: false, button: [{text: "", className: "backBtn"}],
+					});
+			}
 
+		},complete:function () {
+			$(".loading").hide();
+		}
+	})
+})
 	initSort($dialog.find(".J-log"),"/api/log",logTempl);
 	initSort($dialog.find(".J-paylog"),"/api/log/pay",paylogTempl);
 	initSort($dialog.find(".J-operatelog"),"/api/log/operate",operatelogTempl);
