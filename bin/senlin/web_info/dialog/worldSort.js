@@ -22,7 +22,7 @@
 	}
 	function initSort($content,url,htmlTempl) {
 		var page = 1;
-		var pagesize=10;
+		var pagesize=9;
 		var totalpage;
 		var perPage;
 		function getData(){
