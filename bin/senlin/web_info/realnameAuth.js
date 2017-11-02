@@ -34,23 +34,26 @@ $(function () {
 			return;
 		}
 		// "image/png"&&file.type!=="image/jpeg"
+		$(".loading").show();
 		PAGE.ajax({
 			url: "/api/homeland/upload",
 			type: "post",
 			data: imgData,
 			success: function (data) {
 
-				if (data.path) {
+				if (data.url) {
 					//提供一个外部触发的工具
 					var img = new Image();
 
 					img.onload = function () {
 						$this.parent().find("img").remove();
 						$this.parent().append(img);
-						$filePathIpt.val(data.path).trigger("change");
+						$filePathIpt.val(data.url).trigger("change");
 					}
 					img.src = imgData;
 				}
+			},complete:function () {
+				$(".loading").show();
 			}
 		});
 	}
