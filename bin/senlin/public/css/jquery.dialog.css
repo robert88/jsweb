@@ -32,7 +32,7 @@
     background-position: 0px 0px;
     display: inline-block;
     width: 119px;
-    height: 46px;
+    height: 2.875rem;
 }
 .dl-mask {
     opacity: .2;
@@ -49,8 +49,8 @@
     color: #cb0101;
     font-weight: 700;
     height: 100%;
-    line-height: 45px;
-    font-size: 18px;
+    line-height: 2.8125rem;
+    font-size: 1.125rem;
 }
 
 .dl-tips {
@@ -72,13 +72,13 @@
     padding-left: 20px;
     border-bottom: 2px solid #d9d6d6;
     color: #000;
-    height: 30px;
-    line-height: 30px
+    height:1.875rem;
+    line-height: 1.875rem;
 }
 .dl-tips-img{
     display:inline-block;
-    width:28px;
-    height:28px;
+    width:1.75rem;
+    height:1.75rem;
     background-repeat: no-repeat;
     vertical-align: middle;
 }

@@ -10,7 +10,7 @@
 		return  ['<div class="col3">{0}</div>',
 			'<div class="col3">{1}</div>',
 			'<div class="col3">{2}</div>',
-			'<div class="col3" data-id="{3}">{4}</div>'].join("").tpl(sort,obj.name,obj.id,obj.treasure||0,obj.steal==1?'<div class=" bg-props bg-props-hand animate-flow" ></div>':"");
+			'<div class="col3" data-id="{3}">{4}</div>'].join("").tpl(sort,obj.name,obj.uid,obj.treasure||0,obj.steal==1?'<div class=" bg-props bg-props-hand animate-flow" ></div>':"");
 
 	}
 	//灵兽html模板
@@ -101,7 +101,7 @@
 				$(".loading").hide();
 			}
 		})
-	})
+	});
 	initSort($dialog.find(".J-firendSortList"),"/api/game/friend",getHtmlTempl);
 	initSort($dialog.find(".J-animalSortList"),"/api/game/fanimal",getHtmlTempl2);
 

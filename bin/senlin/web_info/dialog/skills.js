@@ -3,7 +3,6 @@
 	var $body = $dialog.find(".scrollBody");
 	var $scrollBody = $dialog.find(".scrollContent");
 	var $propsItem = $dialog.find(".propsInfo");
-	var $linshouItem = $dialog.find(".linshouInfo");
 	var loaded = false;
 	var token = $.cookie("login_token");
 	if (!token) {
@@ -46,15 +45,10 @@
 				ret = toSampleArrary(ret);
 				loaded = true;
 				$propsItem.html("");
-				$linshouItem.html("")
 				for(var i=0;i<ret.length;i++){
 					var data = ret[i];
 					var html = getHtmlTempl(data);
-					if(data.type==0||data.type==1){
-						$propsItem.append(html);
-					}else{
-						$linshouItem.append(html)
-					}
+					$propsItem.append(html);
 				}
 
 			}else{

@@ -72,7 +72,7 @@ fieldset {
 .ipt-prepend [class*=" icon-"]{
 	left: 7px;
 	top: 50%;
-	margin-top: -7px;
+	margin-top: -0.4375rem;
 }
 .ipt-prepend .ipt{
 	padding-left:30px;
@@ -87,7 +87,7 @@ fieldset {
 .ipt-append [class^="icon-"],
 .ipt-append [class*=" icon-"]{
 	top: 50%;
-	margin-top: -7px;
+	margin-top: -0.4375rem;
 	right: -37px;
 	width: 23px;
 }
@@ -103,7 +103,7 @@ fieldset {
 	position: absolute;
 	right:0px;
 	top: 0px;
-	height: 34px;
+	height: 2.125rem;
 	border-radius: 0 5px 5px 0;
 }
 .ipt-btn-append .ipt{
@@ -180,20 +180,20 @@ background: #1f2229;
 	background:url(../images/iconItem.png) no-repeat;
 	background-position: -193px -119px;
 	width: 22px;
-	height: 21px;
+	height: 1.3125rem;
 }
 .form-checkbox.checked{
-	background-position: -161px -119px;
+	background-position: -161px -7.4375rem;
 }
 .form-checkbox input{
 	display: none;
 }
 .ipt-register{
 	background-image: url(../images/btnbg.png);
-	background-position: 0px -196px;
-	background-size:291px 384px;
+	background-position: 0px -12.25rem;
+	background-size:291px 24rem;
 	width: 161px;
-	height: 34px;
+	height: 2.125rem;
 	background-position: 0px -12.25rem;
 	background-size: 181% 30rem;
 	width: 100%;

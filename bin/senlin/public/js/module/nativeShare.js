@@ -153,7 +153,7 @@ window.nativeShare = function (elementNode, config) {
         if (isqqBrowser || isucBrowser) {
             // this.html();
         } else {
-            document.getElementById(elementNode).innerHTML = ('<div style=" line-height: 4rem" class=" t-danger">点击屏幕右上角“...”按钮，收藏本页面。并分享给好友及朋友圈</div>');
+            document.getElementById(elementNode).innerHTML = ('<div style=" line-height: 2rem" class=" t-danger">点击屏幕右上角“...”按钮，收藏本页面。并分享给好友及朋友圈</div>');
         }
     };
 

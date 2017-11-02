@@ -1,20 +1,21 @@
 .tab-wrap .tab-head {
-	height: 30px;
-	line-height: 28px;
-	padding-top:52px;
+	height: 2.175rem;
+	line-height: 1.75rem;
+	padding-top:3.25rem;
 	text-align: center;
 }
 .tab-wrap .tab-head .tab-head-item {
 	background-image: url(../images/btnbg.png);
+	background-size: auto 30.25rem;
 	background-repeat:  no-repeat;
-	background-position: 0 -350px;
+	background-position: 0 -21.875rem;
 	position: relative;
 	display: inline-block;
-	height: 100%;
-	width: 90px;
+	height: 1.85rem;
+	width: 5.625rem;
 }
 .tab-wrap .tab-head .tab-head-item.active {
-	background-position: 0 -270px;
+	background-position: 0 -16.875rem;
 }
 .tab-wrap .tab-body .tab-body-item {
 	display: none

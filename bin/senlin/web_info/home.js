@@ -393,7 +393,7 @@ $(document).on("imageReady",function () {
 	 * 弹出窗confirm
 	 * */
 	PAGE.data.confirm = function (msg,confirm,cancel) {
-		return $.dialog("<div class='bg-title bg-title-confirm'></div><div style='text-align: center;margin-top: 58px;'>"+msg+"</div>",
+		return $.dialog("<div class='bg-title bg-title-confirm'></div><div style='text-align: center;margin-top:2.8125rem;'>"+msg+"</div>",
 			{
 				width: 330,
 				dialogClass: "smallDialog",
@@ -817,8 +817,17 @@ $(document).on("imageReady",function () {
 			$(".ls-container").css("overflow","hidden");
 			$(".J-share-contain").addClass("slideShow")
 			$(".mask").show()
-		})
-		$(".J-share-cancel").click(function () {
+		});
+		$("#copy").attr("data-clipboard-text",window.location.href);
+		var clipboard = new Clipboard($("#copy")[0]);
+		clipboard.on('success', function(e) {
+			e.clearSelection();
+			$.tips("地址复制成功！","success");
+		});
+		clipboard.on('error', function(e) {
+			$.tips("不支持本地复制，请点击屏幕右上角“...”按钮，收藏本页面。并分享给好友及朋友圈！")
+		});
+		$(".J-share-cancel").on("click",function () {
 			$(".mask").hide()
 			$(".ls-container").css("overflow","visible");
 			$(".J-share-contain").removeClass("slideShow")
@@ -836,8 +845,20 @@ $(document).on("imageReady",function () {
 	 * */
 	function initTreeEvent() {
 		var animateTimer;
+
 		$body.on("click touchstart", ".animalItem", function () {
 			var $this = $(this);
+			var count = $this.data("click-num")||0;
+			PAGE.setTimeout(function () {
+				$this.data("click-num",0);
+			},500);
+			count++;
+			$this.data("click-num",count);
+			if(count<2){
+				return;
+			}
+			$this.data("click-num",0);
+
 			if($body.data("dialog")|| $body.data("movelock")){
 				return
 			}
@@ -856,6 +877,17 @@ $(document).on("imageReady",function () {
 		});
 		$body.on("click touchstart", ".treeItem", function () {
 			var $this = $(this);
+			var count = $this.data("click-num")||0;
+			PAGE.setTimeout(function () {
+				$this.data("click-num",0);
+			},500);
+			count++;
+			$this.data("click-num",count);
+			if(count<2){
+				return;
+			}
+			$this.data("click-num",0);
+
 			// if (PAGE.guide.needGuide && !$this.data("guide") || $this.data("lock")) {
 			// 	return;
 			// }

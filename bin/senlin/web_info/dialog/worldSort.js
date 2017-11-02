@@ -9,7 +9,7 @@
 	function getHtmlTempl(obj,sort) {
 		return  ['<div class="col4">{0}</div>',
 			'<div class="col4">{1}</div>',
-			'<div class="col4">{2}</div>'].join("").tpl(obj.rank,obj.name,obj.treasure||0);
+			'<div class="col4" data-id="{3}">{4}</div>'].join("").tpl(sort,obj.name,obj.uid,obj.treasure||0,obj.steal==1?'<div class=" bg-props bg-props-hand animate-flow" ></div>':"");
 
 	}
 	//灵兽html模板
@@ -78,7 +78,30 @@
 		getData();
 
 	}
+	$dialog.on("click",".bg-props-hand",function () {
+		var id = $(this).parent().data("id");
+		$(".loading").show();
+		PAGE.ajax({
+			type: "get",
+			msg: {
+				"0":"登录token验证失败",
+				"1": "请求成功",
+				"2":"暂无好友"
+			},
+			url: "/api/trees/steal"+"?token="+token+"&uid="+id,
+			success: function (ret) {
+				if(ret){
+					var number = ret.number*1;
+					var forest_coin = $.cookie("forest_coin")||0;
+					$.cookie("forest_coin",forest_coin+number);
+					$("header").trigger("updateUserInfo")
+				}
 
+			},complete:function () {
+				$(".loading").hide();
+			}
+		})
+	});
 	initSort($dialog.find(".J-wordPersonSort"),"/api/game/fighter",getHtmlTempl);
 	initSort($dialog.find(".J-wordAnimalSort"),"/api/game/animal",getHtmlTempl2);
 

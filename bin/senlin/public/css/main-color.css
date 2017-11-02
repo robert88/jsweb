@@ -125,6 +125,11 @@ body,html{
 	width: 76px;
 	height: 63px;
 }
+.bg-props-animal{
+	background-position: 2px -77px;
+	width: 62px;
+	height: 38px;
+}
 .bg-renwu{
 	background-image: url(../images/renItem.png);
 	display: inline-block;

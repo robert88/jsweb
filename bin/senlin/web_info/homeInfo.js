@@ -52,7 +52,7 @@
 
 				//邀请码
 				$userInvite.html(ret.referrer);
-				$userName.html(ret.mobile);
+				$userName.html($.cookie("login_nickname"));
 				$userID.html(ret.user_id);
 				
 				//认证信息

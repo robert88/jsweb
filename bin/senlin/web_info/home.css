@@ -318,3 +318,7 @@ body,html{
 .share-img img{
 	height: 80%;
 }
+.animalItem .tips{
+	position:absolute;
+	font-size: 1rem;
+}
