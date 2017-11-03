@@ -101,8 +101,20 @@
 				$(".loading").hide();
 			}
 		})
+	}).on("click",".tab-head-item",function () {
+		var $this = $(this);
+		if(!$this.data("init")){
+			$this.data("init",true);
+			if($this.data("type")=="friend"){
+				initSort($dialog.find(".J-firendSortList"),"/api/game/friend",getHtmlTempl,1);
+			}else{
+				initSort($dialog.find(".J-animalSortList"),"/api/game/fanimal",getHtmlTempl2);
+			}
+		}
 	});
-	initSort($dialog.find(".J-firendSortList"),"/api/game/friend",getHtmlTempl,1);
-	initSort($dialog.find(".J-animalSortList"),"/api/game/fanimal",getHtmlTempl2);
+
+
+	$dialog.find(".tab-head-item").eq(0).click();
+	
 
 })();

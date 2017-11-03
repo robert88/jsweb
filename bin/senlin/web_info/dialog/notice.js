@@ -96,10 +96,10 @@ $dialog.on("click",".dialogInfo",function () {
 			"1": "请求成功",
 			"2":"暂无记录"
 		},
-		url: "/api/log/show?logid=" + id+"&token="+token,
+		url: "/api/log/show?log_id=" + id+"&token="+token,
 		success: function (ret) {
 			if(ret){
-				$.dialog("<div class='title' style='margin-top: 3.8125rem;text-align: center;'>{0}</div><div class='fs12 p10'>作者：{2}</div><div class='p10'>{1}</div>".tpl(ret.title,ret.content,ret.author),
+				$.dialog("<div class='scrollContent'><div class='title' style='margin-top: 3.8125rem;text-align: center;'>{0}</div><div class='fs12 pl10 pr10 pt20'>作者：{2}</div><div class='p10 fs14 lh25'>{1}</div></div>".tpl(ret.title,ret.content,ret.author),
 					{
 						width: 330,
 						mask:false,
@@ -112,10 +112,24 @@ $dialog.on("click",".dialogInfo",function () {
 			$(".loading").hide();
 		}
 	})
-})
-	initSort($dialog.find(".J-log"),"/api/log",logTempl);
-	initSort($dialog.find(".J-paylog"),"/api/log/pay",paylogTempl);
-	initSort($dialog.find(".J-operatelog"),"/api/log/operate",operatelogTempl);
-	initSort($dialog.find(".J-sharelog"),"/api/log/share",sharelogTempl);
+}).on("click",".tab-head-item",function () {
+	var $this = $(this);
+	if(!$this.data("init")){
+		$this.data("init",true);
+		if($this.data("type")=="log"){
+			initSort($dialog.find(".J-log"),"/api/log",logTempl);
+		}else if($this.data("type")=="pay"){
+			initSort($dialog.find(".J-paylog"),"/api/log/pay",paylogTempl);
+		}else if($this.data("type")=="operate"){
+			initSort($dialog.find(".J-operatelog"),"/api/log/operate",operatelogTempl);
+		}else{
+			initSort($dialog.find(".J-sharelog"),"/api/log/share",sharelogTempl);
+		}
+	}
+});
+	
+	$dialog.find(".tab-head-item").eq(0).click();
+	
+	
 
 })();

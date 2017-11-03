@@ -7,9 +7,10 @@
 	}
 	//html模板
 	function getHtmlTempl(obj,sort) {
-		return  ['<div class="col4">{0}</div>',
-			'<div class="col4">{1}</div>',
-			'<div class="col4" data-id="{3}">{4}</div>'].join("").tpl(sort,obj.name,obj.treasure,obj.uid,obj.steal==1?'<div class=" bg-props bg-props-hand animate-flow" ></div>':"");
+		return  ['<div class="col3">{0}</div>',
+			'<div class="col3">{1}</div>',
+			'<div class="col3">{2}</div>',
+			'<div class="col3" data-id="{3}">{4}</div>'].join("").tpl(sort,obj.name,obj.treasure,obj.uid,obj.steal==1?'<div class=" bg-props bg-props-hand animate-flow" ></div>':"");
 
 	}
 	//灵兽html模板
@@ -101,8 +102,22 @@
 				$(".loading").hide();
 			}
 		})
+	}).on("click",".tab-head-item",function () {
+		var $this = $(this);
+		if(!$this.data("init")){
+			$this.data("init",true);
+			if($this.data("type")=="friend"){
+				initSort($dialog.find(".J-wordPersonSort"),"/api/game/fighter",getHtmlTempl,1);
+			}else{
+				initSort($dialog.find(".J-wordAnimalSort"),"/api/game/animal",getHtmlTempl2);
+			}
+		}
 	});
-	initSort($dialog.find(".J-wordPersonSort"),"/api/game/fighter",getHtmlTempl,1);
-	initSort($dialog.find(".J-wordAnimalSort"),"/api/game/animal",getHtmlTempl2);
+
+
+	$dialog.find(".tab-head-item").eq(0).click();
+	
+	
+	
 
 })();
