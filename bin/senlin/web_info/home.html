@@ -46,7 +46,7 @@
 <footer>
 	<ul class="col tc">
 		<!--PAGE.setUrl('#/web_info/homeInfo.html')-->
-		<li class="col02"><a onclick="$.tips('即将开放。','info')"><div class="home bg-icon"></div></a></li>
+		<li class="col02"><a onclick="PAGE.setUrl('#/web_info/homeInfo.html')"><div class="home bg-icon"></div></a></li>
 		<li class="col02"><div class="friend bg-icon J-dialog"  data-url="/web_info/dialog/friendSort.html"></div></li>
 		<li class="col02"><a  class="J-dialog" data-id="dialogSkills"  data-url="/web_info/dialog/skills.html"><span class="skills bg-props"></span> </a></li>
 		<li class="col02"><div class="pocket bg-icon J-dialog" data-url="/web_info/dialog/pocket.html"></div></li>
@@ -59,23 +59,24 @@
 <div class="J-share-btn" style="display: none"></div>
 <div class="mask"></div>
 <article class="share-contain J-share-contain bg-white animate-ease ">
-	<div class="wrap" id="shareNode">
-		<p class="title tc ">
-			<span class="text">分享到</span>
-		</p>
-		<ul class="col tc t-gray mb20 mt20">
-			<li class="col3">
-				<a class="a-wrap nativeShare" data-app="weixin" >
-					<p class="share-img"><img src="/public/images/weixin.png" alt=""></p>
-					<p>微信好友</p>
-				</a>
-			</li>
-			<li class="col3">
-				<a class="a-wrap nativeShare" data-app="weixinFriend" >
-					<p  class="share-img"><img src="/public/images/pengyou.png"  alt=""></p>
-					<p>朋友圈</p>
-				</a>
-			</li>
+	<div class="wrap J-share-cancel" id="shareNode">
+		<img src="/public/images/share.png" alt="">
+		<!--<p class="title tc ">-->
+			<!--<span class="text">分享到</span>-->
+		<!--</p>-->
+		<!--<ul class="col tc t-gray mb20 mt20">-->
+			<!--<li class="col3">-->
+				<!--<a class="a-wrap nativeShare" data-app="weixin" >-->
+					<!--<p class="share-img"><img src="/public/images/weixin.png" alt=""></p>-->
+					<!--<p>微信好友</p>-->
+				<!--</a>-->
+			<!--</li>-->
+			<!--<li class="col3">-->
+				<!--<a class="a-wrap nativeShare" data-app="weixinFriend" >-->
+					<!--<p  class="share-img"><img src="/public/images/pengyou.png"  alt=""></p>-->
+					<!--<p>朋友圈</p>-->
+				<!--</a>-->
+			<!--</li>-->
 			<!--<li class="col3">-->
 				<!--<a class="a-wrap nativeShare" data-app="QZone" >-->
 					<!--<p class="share-img"><img src="/public/images/qzone.png" alt=""></p>-->
@@ -88,7 +89,7 @@
 					<!--<p>新浪微博</p>-->
 				<!--</a>-->
 			<!--</li>-->
-		</ul>
+		<!--</ul>-->
 	</div>
 	<div class="header tc t-white J-share-cancel"><button class="btn" id="copy" style="padding: 5px 20px;border:none;display: inline-block;background: rgba(27, 31, 62, 0.5);" data-clipboard-text="1">copy</button></div>
 </article>

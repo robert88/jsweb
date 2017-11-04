@@ -10,7 +10,7 @@
 		validSuccess:function ($form) {
 			PAGE.ajax({
 				data:$form.serialize()+"&token="+token,
-				type:'get',
+				type:'post',
 				msg:{
 					"0":"登录token验证失败",
 					"1":" 设置成功",
@@ -18,9 +18,10 @@
 					"3" :"开户姓名不能为空",
 					"4": "收款帐号不能为空"
 				},
-				url:"/api/homeland/realname",
+				url:"/api/homeland/bank",
 				success:function (ret) {
-					$.tips("设置成功！", "success")
+					$.tips("设置成功！", "success");
+					PAGE.setUrl('#/web_info/homeInfo.html')
 				}
 			})
 		},

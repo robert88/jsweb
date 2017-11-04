@@ -28,14 +28,10 @@
 
 		<ul class="col bg-yellow mt20 ">
 			<li class="col4">时间</li>
-			<li class="col4">支出</li>
-			<li class="col4">收入金额</li>
+			<li class="col4">收入/支出</li>
+			<li class="col4">金额</li>
 		</ul>
-		<ul class="col">
-			<li class="col4"></li>
-			<li class="col4"></li>
-			<li class="col4"></li>
-		</ul>
+		<ul class="col logInfo"></ul>
 	</div>
 	<div style="display: none" id="withdrawlDialog">
 		<form class="form-block pt20" id="step01">
@@ -49,9 +45,9 @@
 				<label class="ipt-label ">输入提现金额：</label>
 
 				<div class="ipt-inline ipt-radius J-validItem validItem">
-					<input name="sum" type="text" tabindex="1"
+					<input name="sum"  type="text" tabindex="1"
 						   placeholder="最低提现额100以上，且为整数"
-						   class="ipt"
+						   class="ipt sum"
 						   check-type="required number100"
 						   data-idcard-msg="请填写提现额!"
 						   data-focus="true">
@@ -70,20 +66,7 @@
 				<label class="ipt-label ">收款银行：</label>
 
 				<div class="ipt-inline ipt-radius J-validItem validItem">
-					<select name="bank_id" class="ipt" check-type="required"
-							data-idcard-msg="请选择开户行!">
-						<option value="">请选择</option>
-						<option value="1">中国农业银行</option>
-						<option value="2">中国银行</option>
-						<option value="3">中国建设银行</option>
-						<option value="4">中国工商银行</option>
-						<option value="5">交通银行</option>
-						<option value="6">中国邮政储蓄银行</option>
-						<option value="7">招商银行</option>
-						<option value="8">兴业银行</option>
-						<option value="9">民生银行</option>
-						<option value="10">平安银行</option>
-					</select>
+					<span class="bank_id"></span>
 				</div>
 
 			</fieldset>
@@ -91,7 +74,7 @@
 				<label class="ipt-label ">收款账号：</label>
 
 				<div class="ipt-inline ipt-radius J-validItem validItem">
-					<input class="ipt">
+					<span class="card"></span>
 				</div>
 
 			</fieldset>
@@ -99,7 +82,7 @@
 				<label class="ipt-label ">输入提现密码：</label>
 
 				<div class="ipt-inline ipt-radius J-validItem validItem">
-					<input name="code" type="text" tabindex="1"
+					<input name="password" type="password" tabindex="1"
 						   placeholder="输入提现密码"
 						   class="ipt"
 						   check-type="required"

@@ -66,18 +66,16 @@ $(function () {
 				type: 'post',
 				msg: {
 					"1": " 验证通过",
-					"2": "请填写密码",
-					"3": "两次密码不一致",
-					"4": "校验码为空",
-					"5": "校验失败",
-					"6": "用户不存在"
+					"2": "已实名认证",
+					"3": "真实姓名不能为空",
+					"4": "身份号码不能为空",
+					"5": "身份证照片不能为空",
 				},
 				url: "/api/homeland/realname",
 				success: function (ret) {
-					$.tips("<div class='pt10 pb10 pr20 lh30' style='line-height: 2rem'><h3 class='tc'>密码修改成功</h3>" +
-						"<p class='fs14'>3秒后返回登陆页面</p></div>", {
+					$.tips("验证通过", {
 						type: "success", time: 3000, closeAfter: function () {
-							PAGE.setUrl('#/web_info/login.html');
+							PAGE.setUrl('#/web_info/home_login.html');
 						}
 					})
 				}

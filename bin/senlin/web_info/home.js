@@ -818,21 +818,21 @@ $(document).on("imageReady",function () {
 			$(".J-share-contain").addClass("slideShow")
 			$(".mask").show()
 		});
-		$("#copy").attr("data-clipboard-text",window.location.href);
-		var clipboard = new Clipboard($("#copy")[0]);
-		clipboard.on('success', function(e) {
-			e.clearSelection();
-			$.tips("地址复制成功！","success");
-		});
-		clipboard.on('error', function(e) {
-			$.tips("不支持本地复制，请点击屏幕右上角“...”按钮，收藏本页面。并分享给好友及朋友圈！")
-		});
+		// $("#copy").attr("data-clipboard-text",window.location.href);
+		// var clipboard = new Clipboard($("#copy")[0]);
+		// clipboard.on('success', function(e) {
+		// 	e.clearSelection();
+		// 	$.tips("地址复制成功！","success");
+		// });
+		// clipboard.on('error', function(e) {
+		// 	$.tips("不支持本地复制，请点击屏幕右上角“...”按钮，收藏本页面。并分享给好友及朋友圈！")
+		// });
 		$(".J-share-cancel").on("click",function () {
 			$(".mask").hide()
 			$(".ls-container").css("overflow","visible");
 			$(".J-share-contain").removeClass("slideShow")
 		})
-		new nativeShare("shareNode");
+		// new nativeShare("shareNode");
 	}
 	/*
 	* 分享到朋友圈

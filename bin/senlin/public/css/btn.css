@@ -41,6 +41,7 @@
 	line-height:  1.875rem;
 	text-align: center;
 	background-image: url(../images/btnbg.png);
+	background-size: auto 30.25rem;
 	background-repeat: no-repeat;
 	background-position: 0 -21.875rem;
 	position: relative;

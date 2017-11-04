@@ -83,6 +83,7 @@
 			dataType: 'json', //json数据返回
 			timeout: 120000, //2分钟超时
 			$loadContain: null, //是loading容器
+			loading:false,
 			limitTime : 1 //请求限制不传表示不限制
 		};
 
@@ -143,6 +144,9 @@
 			if (typeof complete == "function") {
 				complete.apply(null, arguments);
 			}
+			if(options.loading){
+				$(".loading").hide();
+			}
 		}
 
 		ajaxOption.error = function (XMLHttpRequest, textStatus, errorThrown) {
@@ -164,6 +168,9 @@
 		}
 
 		//发送请求
+		if(options.loading){
+			$(".loading").show();
+		}
 		$.ajax(ajaxOption);
 	};
 	/*带btn*/

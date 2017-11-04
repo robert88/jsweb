@@ -115,8 +115,18 @@ body,html{
 	width: 30px;
 	height: 25px;
 }
+.bg-props-realnameAuth-active{
+	background-position: -148px -120px;
+	width: 30px;
+	height: 25px;
+}
 .bg-props-withdrawal{
 	background-position: -103px -85px;
+	width: 34px;
+	height: 25px;
+}
+.bg-props-withdrawal-active{
+	background-position: -103px -120px;
 	width: 34px;
 	height: 25px;
 }

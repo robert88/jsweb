@@ -10,7 +10,7 @@
 		return  ['<div class="col3">{0}</div>',
 			'<div class="col3">{1}</div>',
 			'<div class="col3">{2}</div>',
-			'<div class="col3" data-id="{3}">{4}</div>'].join("").tpl(sort,obj.name,obj.treasure,obj.uid,obj.steal==1?'<div class=" bg-props bg-props-hand animate-flow" ></div>':"");
+			'<div class="col3" data-id="{3}">{4}</div>'].join("").tpl(sort,obj.name,obj.treasure,obj.uid,obj.steal>=1?'<div class=" bg-props bg-props-hand animate-flow" ></div>':"");
 
 	}
 	//灵兽html模板
