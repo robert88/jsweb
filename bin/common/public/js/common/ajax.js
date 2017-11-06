@@ -81,8 +81,8 @@
 			error: defaultError, //默认处理函数
 			dataType: 'json', //json数据返回
 			timeout: 120000, //2分钟超时
-			$loadContain: null //是loading容器
-			// limitTime : 1 //请求限制不传表示不限制
+			$loadContain: null, //是loading容器
+			limitTime : 1 //默认同一个请求只能请求一次
 		};
 
 		var ajaxOption = $.extend({}, defaultOption, options);

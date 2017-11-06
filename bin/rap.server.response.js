@@ -47,12 +47,18 @@ function responseData(ret,request, response,type) {
 		response.end(JSON.stringify(ret));
 		//如果返回的是文件
 	} else {
-		var absolutePath = (rap.rootPath + "/" + rap.staticPath + "/" + ret).toURI();
-		var commonPath = (rap.rootPath + "/" + rap.commonPath + "/" + ret).toURI();
-		//如果不存在就去commonpath中寻找
-		if( !wake.isExist(absolutePath) ){
-			absolutePath = commonPath;
+		var staticPathArr =rap.staticPathArr;
+		var absolutePath = staticPathArr[0];
+		for(var i=0;i<staticPathArr.length;i++){
+			//如果不存在就去commonpath中寻找
+			var absolutePathTemp = (staticPathArr[i]+"/" + ret).toURI()
+			if( wake.isExist(absolutePathTemp)){
+				absolutePath = absolutePathTemp;
+				break;
+			}
+			console.log("not find"+absolutePathTemp.red);
 		}
+
 		rap.log("请求结果为静态文件：", absolutePath);
 		var acceptEncoding = request.headers["accept-encoding"];
 		if (!acceptEncoding) {

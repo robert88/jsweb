@@ -130,6 +130,17 @@
 <script src="public/js/common/base.js"></script>
 <script src="public/js/common/require.js"></script>
 <script src="public/js/common/jquery.carousel.v1.0.1.js"></script>
+<script src="public/js/module/clipboard.min.js"></script>
+<script>
+    var clipboard = new Clipboard('btn');
+    clipboard.on('success', function(e) {
+        e.clearSelection();
+//复制成功
+    });
+    clipboard.on('error', function(e) {
+//复制失败
+    });
+</script>
 <script type="text/javascript">
     ;(function() {
         window.PAGE = {};

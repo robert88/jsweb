@@ -67,7 +67,7 @@
 
 				if(window.PAGE.STATICDEBUG){
 
-					$body.prepend('<link rel="stylesheet" type="text/css" href="{0}">'.tpl(action.replace(".html",".css")) );
+					$body.prepend('<link rel="stylesheet" type="text/css" href="{0}">'.tpl(action.replace(".html",".css?ver="+PAGE.version)) );
 
 					var s = document.createElement("script");
 
@@ -76,7 +76,7 @@
 					$body.append(s);
 
 					//应该在append之后赋值
-					s.src =action.replace(".html",".js");
+					s.src =action.replace(".html",".js?ver="+PAGE.version);
 
 				}
 

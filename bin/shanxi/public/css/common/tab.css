@@ -1,0 +1,16 @@
+.tab-wrap .tab-head {
+	text-align: center;
+}
+.tab-wrap .tab-head .tab-head-item {
+	position: relative;
+	vertical-align: middle;
+	display: inline-block;
+	cursor: pointer;
+}
+.tab-wrap .tab-head .tab-head-item.active {}
+.tab-wrap .tab-body .tab-body-item {
+	display: none
+}
+.tab-wrap .tab-body .tab-body-item.active {
+	display: block
+}

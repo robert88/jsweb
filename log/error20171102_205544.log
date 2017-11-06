@@ -1,0 +1,1571 @@
+[error][2017/11/02 20:55:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\010daoju1.png'
+    at Error (native)
+[error][2017/11/02 20:55:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\011daoju2.png'
+    at Error (native)
+[error][2017/11/02 20:55:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\012daoju3.png'
+    at Error (native)
+[error][2017/11/02 20:55:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\013daoju4.png'
+    at Error (native)
+[error][2017/11/02 20:55:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\014daoju5.png'
+    at Error (native)
+[error][2017/11/02 20:55:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\015daoju6.png'
+    at Error (native)
+[error][2017/11/02 20:55:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\016daoju7.png'
+    at Error (native)
+[error][2017/11/02 20:56:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\010daoju1.png'
+    at Error (native)
+[error][2017/11/02 20:56:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\011daoju2.png'
+    at Error (native)
+[error][2017/11/02 20:56:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\012daoju3.png'
+    at Error (native)
+[error][2017/11/02 20:56:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\013daoju4.png'
+    at Error (native)
+[error][2017/11/02 20:56:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\014daoju5.png'
+    at Error (native)
+[error][2017/11/02 20:56:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\015daoju6.png'
+    at Error (native)
+[error][2017/11/02 20:56:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\016daoju7.png'
+    at Error (native)
+[error][2017/11/02 21:00:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\010daoju1.png'
+    at Error (native)
+[error][2017/11/02 21:00:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\011daoju2.png'
+    at Error (native)
+[error][2017/11/02 21:00:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\012daoju3.png'
+    at Error (native)
+[error][2017/11/02 21:00:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\013daoju4.png'
+    at Error (native)
+[error][2017/11/02 21:00:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\014daoju5.png'
+    at Error (native)
+[error][2017/11/02 21:00:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\015daoju6.png'
+    at Error (native)
+[error][2017/11/02 21:00:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\016daoju7.png'
+    at Error (native)
+[error][2017/11/02 21:03:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\010daoju1.png'
+    at Error (native)
+[error][2017/11/02 21:03:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\011daoju2.png'
+    at Error (native)
+[error][2017/11/02 21:03:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\012daoju3.png'
+    at Error (native)
+[error][2017/11/02 21:03:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\013daoju4.png'
+    at Error (native)
+[error][2017/11/02 21:03:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\014daoju5.png'
+    at Error (native)
+[error][2017/11/02 21:03:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\015daoju6.png'
+    at Error (native)
+[error][2017/11/02 21:03:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\016daoju7.png'
+    at Error (native)
+[error][2017/11/02 21:04:27][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\010daoju1.png'
+    at Error (native)
+[error][2017/11/02 21:04:27][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\011daoju2.png'
+    at Error (native)
+[error][2017/11/02 21:04:27][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\012daoju3.png'
+    at Error (native)
+[error][2017/11/02 21:04:27][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\013daoju4.png'
+    at Error (native)
+[error][2017/11/02 21:04:27][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\014daoju5.png'
+    at Error (native)
+[error][2017/11/02 21:04:27][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\015daoju6.png'
+    at Error (native)
+[error][2017/11/02 21:04:27][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\016daoju7.png'
+    at Error (native)
+[error][2017/11/02 21:06:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\010daoju1.png'
+    at Error (native)
+[error][2017/11/02 21:06:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\011daoju2.png'
+    at Error (native)
+[error][2017/11/02 21:06:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\012daoju3.png'
+    at Error (native)
+[error][2017/11/02 21:06:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\013daoju4.png'
+    at Error (native)
+[error][2017/11/02 21:06:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\014daoju5.png'
+    at Error (native)
+[error][2017/11/02 21:06:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\015daoju6.png'
+    at Error (native)
+[error][2017/11/02 21:06:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\016daoju7.png'
+    at Error (native)
+[error][2017/11/02 21:09:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\010daoju1.png'
+    at Error (native)
+[error][2017/11/02 21:09:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\011daoju2.png'
+    at Error (native)
+[error][2017/11/02 21:09:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\012daoju3.png'
+    at Error (native)
+[error][2017/11/02 21:09:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\013daoju4.png'
+    at Error (native)
+[error][2017/11/02 21:09:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\014daoju5.png'
+    at Error (native)
+[error][2017/11/02 21:09:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\015daoju6.png'
+    at Error (native)
+[error][2017/11/02 21:09:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\016daoju7.png'
+    at Error (native)
+[error][2017/11/02 21:56:08][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/game/fanimal extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/02 22:31:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/game/fanimal extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/02 22:37:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/game/fanimal extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/02 22:38:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/game/fanimal extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/02 22:43:51][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/game/fanimal extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/02 22:45:10][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/game/fanimal extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/02 22:46:28][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\010daoju1.png'
+    at Error (native)
+[error][2017/11/02 22:46:28][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\011daoju2.png'
+    at Error (native)
+[error][2017/11/02 22:46:28][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\012daoju3.png'
+    at Error (native)
+[error][2017/11/02 22:46:28][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\013daoju4.png'
+    at Error (native)
+[error][2017/11/02 22:46:28][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\014daoju5.png'
+    at Error (native)
+[error][2017/11/02 22:46:28][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\015daoju6.png'
+    at Error (native)
+[error][2017/11/02 22:46:28][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\public\images\propsItem\016daoju7.png'
+    at Error (native)
+[error][2017/11/02 22:46:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/game/fanimal extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/03 01:12:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/game/fanimal extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/04 00:17:08][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/homeland/coin extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/04 00:17:11][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/api/homeland/coin extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/04 01:18:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/%7B2%7D extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/04 01:18:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/imageur extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+    at listOnTimeoutNT (timers.js:242:26)
+    at _combinedTickCallback (internal/process/next_tick.js:71:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:122:9)
+[error][2017/11/04 01:18:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/%7B2%7D extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/04 01:18:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/imageur extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/04 01:20:37][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/%7B2%7D extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/04 01:20:37][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/imageur extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/04 01:20:50][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/%7B2%7D extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/04 01:20:50][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/imageur extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/04 01:21:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/imageur extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/04 01:21:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/%7B2%7D extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/04 01:22:10][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/imageurl extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/04 01:22:10][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/imageur extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/04 01:22:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/imageurl extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/04 01:22:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/imageur extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:121:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/05 13:46:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\index.html'
+    at Error (native)
+[error][2017/11/05 13:46:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\shanxi\favicon.ico'
+    at Error (native)
+[error][2017/11/05 13:49:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: ENOENT: no such file or directory, open 'D:\newProject\jsweb\bin\common\index.html'
+    at Error (native)
+[error][2017/11/05 15:00:32][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:00:32][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:00:32][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:00:32][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:00:32][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:00:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:00:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:00:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:00:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:00:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:00:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:00:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:00:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:00:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:00:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:02:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:02:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:02:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:02:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:02:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:03:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:03:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:03:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:03:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:03:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:06:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:06:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:06:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:06:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:06:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:08:11][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:08:11][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:08:11][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:09:49][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:09:49][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:09:49][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:10:08][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:10:08][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:10:08][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:14:23][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:14:23][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:14:23][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:19:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:19:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:19:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:19:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:19:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:19:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:19:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:19:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:19:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:19:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:19:18][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:19:18][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:19:18][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:19:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:19:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:19:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:21:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:21:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:21:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:24:56][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:24:56][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:24:56][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:28:24][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:28:24][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:28:24][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:31:56][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:31:56][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:31:56][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:46:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:46:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:46:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:53:00][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:53:00][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:53:00][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:54:24][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:54:24][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:54:24][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:55:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:55:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 15:55:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 16:00:51][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 16:00:51][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 16:00:51][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 16:00:51][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 16:01:37][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 16:01:37][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 16:01:37][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 16:04:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 16:04:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 16:04:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 17:52:47][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 17:53:11][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:00:31][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:00:31][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:00:31][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:07:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:07:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:07:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:07:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:09:06][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:09:06][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:09:06][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:09:06][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:09:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:09:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:09:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:09:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:10:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:10:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:10:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:10:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:10:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:10:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:10:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:10:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:11:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:11:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:11:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:11:35][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:12:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:12:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:12:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:12:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:12:21][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:12:22][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:12:22][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:12:22][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:12:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:12:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:12:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:12:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:13:16][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:13:16][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:13:16][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:13:16][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:14:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:14:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:14:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:14:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:18:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:18:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:18:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:18:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:22:23][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:22:23][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:22:23][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:22:23][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:22:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:22:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:22:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:22:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:27:18][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:27:18][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:27:18][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 18:27:18][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:52:31][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:52:31][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:52:31][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:52:31][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:56:18][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:56:18][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:56:18][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:56:18][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:56:18][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:57:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:57:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:57:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:57:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:57:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:57:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:57:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:57:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:58:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:58:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:58:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:58:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:58:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:58:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:58:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:58:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:59:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:59:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:59:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 19:59:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:00:06][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:00:06][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:00:06][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:00:06][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:01:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:01:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:01:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:01:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:02:13][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:02:13][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:02:13][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:02:13][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:03:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:03:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:03:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:03:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:04:50][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:04:51][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:04:51][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:04:51][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:04:51][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:10:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:10:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:10:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:10:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:10:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:11:13][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:11:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:11:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:11:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:11:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:11:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:12:27][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:12:28][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:12:28][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:12:28][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:12:28][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:16:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:16:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:16:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:16:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:19:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:19:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:19:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:19:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:20:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:20:47][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:20:47][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:20:47][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:24:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:24:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:24:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:24:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:24:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:26:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:26:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:26:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:26:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:26:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:27:10][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:27:10][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:27:10][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:27:10][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:27:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:27:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:27:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:27:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:27:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:27:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:27:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:27:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:27:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:27:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:28:03][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:28:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:31:47][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:31:47][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:31:47][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:31:47][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:32:16][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:32:16][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:32:16][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:32:16][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:40:09][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:40:09][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:40:09][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:40:09][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:41:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:41:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:41:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:41:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:41:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:42:03][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:42:03][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:42:03][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:42:03][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:48:23][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:48:36][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:48:52][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:48:52][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:48:52][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:48:52][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:51:12][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:51:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:51:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:51:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:51:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:51:49][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:51:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:51:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:51:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:51:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:52:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:52:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:52:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:52:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:52:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:52:35][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:52:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:52:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:52:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:52:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:53:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:53:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:53:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:53:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:53:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:53:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:53:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:53:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:54:06][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:54:07][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:54:07][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:54:07][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:58:29][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:58:29][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:58:29][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:58:29][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:59:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:59:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:59:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:59:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:59:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:59:18][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:59:18][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 20:59:18][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:01:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:01:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:01:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:01:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:02:00][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:02:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:02:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:02:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:08:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:08:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:08:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:08:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:08:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:08:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:08:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:08:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:37:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:37:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:37:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:37:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:38:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:38:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:38:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:38:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:39:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:39:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:39:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:39:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:41:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:41:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:41:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:41:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:54:52][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:54:52][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:54:52][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:54:52][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:56:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:56:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:56:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:56:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:56:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:56:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:56:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:56:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:59:35][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:59:35][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:59:35][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:59:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:59:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 21:59:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:01:03][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:01:03][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:01:03][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:04:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:04:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:04:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:10:37][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:10:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:10:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:10:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:11:00][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:11:00][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:11:29][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:11:29][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:11:29][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:11:50][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:11:51][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:11:51][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:12:08][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:12:08][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:12:08][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:13:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:13:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:13:06][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:13:56][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:13:56][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:13:56][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:15:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:15:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:15:42][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:18:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:18:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:18:40][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:23:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:23:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:23:21][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:25:19][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:25:19][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:25:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:28:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:28:56][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:28:56][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:30:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:30:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:30:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:42:21][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:42:21][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:42:21][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:44:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:44:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:44:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:45:33][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:45:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:45:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:46:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:46:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:46:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:50:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:50:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:50:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:52:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:52:35][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:52:35][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:53:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:53:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:53:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:53:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:53:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:53:54][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:56:07][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:56:08][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:56:08][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:58:56][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:58:56][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:58:56][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:59:12][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:59:12][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 22:59:12][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:06:09][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:06:09][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:06:09][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:06:09][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:06:09][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:06:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:06:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:06:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:06:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:06:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:08:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:08:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:08:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:10:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:10:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:10:57][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:11:00][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:11:00][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:11:00][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:11:11][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:11:11][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:12:19][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:13:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:13:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:14:16][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:14:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:14:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:14:33][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:14:33][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:20:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:20:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:20:03][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:21:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:21:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:21:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:21:16][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:21:19][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:21:22][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:21:22][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:21:56][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:22:00][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:22:00][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:22:02][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:22:02][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:23:02][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:23:02][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:23:03][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:23:06][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:23:07][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:23:07][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:23:10][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:02][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:02][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:02][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:07][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:07][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:07][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:08][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:08][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:08][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:17][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:36][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:36][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:36][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:37][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:37][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:37][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:30:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:31:43][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:31:43][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:31:43][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:32:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:32:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:32:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:32:30][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:32:30][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:32:30][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:34:44][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:34:44][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:34:44][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:34:44][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:35:16][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/public/images/title.pngpg extname:pngpg
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:127:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/05 23:35:19][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/public/images/title.pngp extname:pngp
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:127:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/05 23:37:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:37:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:37:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:37:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:40:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:40:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:40:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:40:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:40:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:40:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:41:00][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:42:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:42:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:42:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:42:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:44:05][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:44:07][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:44:09][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:44:24][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/public/images/title.jp extname:jp
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:127:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/05 23:44:24][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/public/images/title.j extname:j
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:127:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/05 23:44:24][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/public/images/title. extname:
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:127:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/05 23:44:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:44:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: not find action or not support resource of mine type:undefined url:/public/images/title.pn extname:pn
+    at Timeout._onTimeout (D:\newProject\jsweb\bin\rap.server.response.js:127:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[error][2017/11/05 23:47:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:47:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:47:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:47:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:55:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:55:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:55:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:55:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:56:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:56:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:56:01][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:56:02][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:56:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:56:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:56:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:56:15][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:57:29][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:57:29][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:57:29][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/05 23:57:29][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:04:19][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:04:19][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:04:19][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:04:19][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:05:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:05:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:05:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:05:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:05:04][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:05:11][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:05:12][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:05:12][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:05:12][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:06:32][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:06:32][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:06:32][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:06:32][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:07:24][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:07:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:07:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:07:25][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:07:32][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:07:32][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:07:32][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:07:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:07:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:07:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 00:07:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:34:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:34:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:34:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:34:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:36:27][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:36:27][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:36:27][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:36:27][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:36:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:36:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:36:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:36:59][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:38:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:38:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:38:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:38:26][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:38:45][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:38:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:38:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:38:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:38:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:40:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:40:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:40:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:40:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:43:11][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:43:12][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:43:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:43:58][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:45:55][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:47:32][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:48:13][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:50:24][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:50:28][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:51:51][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:52:07][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:55:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:55:53][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 07:57:12][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 08:00:03][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 08:00:39][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 08:00:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 08:01:48][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 08:02:32][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 08:03:14][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/06 09:15:46][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
