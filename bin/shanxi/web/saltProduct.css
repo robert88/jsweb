@@ -1,0 +1,40 @@
+@import url(/web/page.css);
+@import url(/web/leftNav.css);
+.container-body-text{
+	margin-top: 20px;
+	text-align: center;
+}
+.container-body-text li{
+    margin-top:20px;
+}
+.container-body-text li>a{
+    display:inline-block;
+    width:90%;
+    background: #efefef;
+
+}
+.container-body-text li>a img{
+    height: 164px;
+    padding: 10px;
+}
+.container-body .title{
+	line-height: 50px;
+	color:#333;
+	font-size:18px;
+	text-align: center;
+	font-weight: 700;
+}
+.container-body .btn-radius {
+	display: block;
+}
+
+.container-body-text .intro {
+
+background: #d4d4d4;
+
+color: #666;
+
+height: 40px;
+
+line-height: 40px;
+}

@@ -1,8 +1,5 @@
 @import url(/web/page.css);
-.bannar.swiper-container{
-	height: 337px;
-	width:100%;
-}
+@import url(/web/leftNav.css);
 .newList>li{
 	padding-left: 286px;
 	height: 205px;

@@ -1,0 +1,16 @@
+@import url(/web/page.css);
+@import url(/web/leftNav.css);
+.newList>li{
+	height: 141px;
+	margin-top: 20px;
+	position: relative;
+	border-bottom: 1px dotted #c1c1c1;
+}
+.newList>li .list-img{
+	position:absolute;
+	left: 0px;
+}
+.newList>li .title{
+	color:#333;
+	font-size:18px;
+}

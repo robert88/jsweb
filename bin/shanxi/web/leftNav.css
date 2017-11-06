@@ -76,10 +76,10 @@
 	color: #0046ad;
 	line-height: 45px;
 	background-color: white;
+	background: url(/public/images/crumbBg.jpg) right center no-repeat;
 }
 
 .container-body .btn-radius {
-	padding: 0 10px;
 	height: 30px;
 	color: #0046ad;
 	font-size: 14px;
@@ -91,4 +91,8 @@
 	-webkit-bordder-radius: 15px;
 	-o-user-select: 15px;
 	display: inline-block;
+}
+.bannar.swiper-container{
+	height: 337px;
+	width:100%;
 }

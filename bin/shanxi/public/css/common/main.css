@@ -815,7 +815,8 @@ nav li:before{
     bottom:5px;
     left:10%;
 }
-nav li:hover:before{
+nav li:hover:before,
+nav li.active:before{
 	display:block;
 }
 nav li.active{

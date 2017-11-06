@@ -1,0 +1,54 @@
+@import url(/web/page.css);
+@import url(/web/leftNav.css);
+.bannar.swiper-container{
+	height: 337px;
+	width:100%;
+}
+.multipleWrap{
+
+padding-left: 554px;
+}
+.multipleWrap-left-img{
+
+position: absolute;
+
+left: 0;
+
+top: -50px;
+
+z-index: 4;
+}
+.multipleWrap-right-title{
+
+padding-top: 70px;
+
+font-size: 30px;
+}
+.multipleWrap-right-info .info{
+	font-size: 30px;
+	font-weight: 400;
+	color:#666;
+}
+.multipleWrap-right-info li{
+
+}
+.multipleWrap-right-info li>div{
+
+position: relative;
+
+padding: 0px 0 50px 72px;
+
+margin-top: 20px;
+}
+.multipleWrap-right-info li>div>img{
+
+position: absolute;
+
+left: 0px;
+
+top: 0px;
+}
+.product-list .img{
+	height:190px;
+	overflow: hidden;
+}
