@@ -14,7 +14,8 @@
 		type: 'get',
 		msg: {
 			"0": "登录token验证失败",
-			"1": " 申请成功"
+			"1": " 申请成功",
+			"6":"体现密码错误"
 		},
 		url: "/api/homeland/gold?token=" + token,
 		success: function (ret) {
@@ -114,11 +115,18 @@
 			},
 			form: $form
 		});
+		$form.find(".sum").keyup(function () {
+			var $this = $(this);
+			var val = $this.val();
+			val = val.replace(/\S/g,"");
+			$this.val(val);
+		})
 		/*自定义校验方法*/
 		var validRule = validForm("getRule");
 		validRule["number100"] = {
 			check: function (validNum, $obj) {
-				return !(validNum % 100 == 0);
+				validNum = validNum*1;
+				return !(validNum >100);
 			},
 			defaultMsg: "最低提现额100以上，且为整数"
 

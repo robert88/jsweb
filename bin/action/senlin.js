@@ -34,28 +34,9 @@ exports = module.exports = {
 		}
 		next( {code:count});
 	},
-	"/api/trees/life":function (request,response,next) {
-		var str = "/api/trees/life";
-		exports[str].count = (exports[str].count||0);
-		var count = ++exports[str].count;
-		if(count>4){
-			count = exports[str].count =1;
-		}
-		next( {code:count});
-	},
-	"/api/trees/life":function (request,response,next) {
-		var str = "/api/trees/life";
-		exports[str].count = (exports[str].count||0);
-		var count = ++exports[str].count;
-		count = exports[str].count =1;
-		next( {code:count,data:{
-			"coin": 35,
-			"gold": 100
-		}});
-	},
 
 	"/api/pay":function (request,response,next) {
-		var str = "/api/trees/life";
+		var str = "/api/pay";
 		exports[str].count = (exports[str].count||0);
 		var count = ++exports[str].count;
 		if(count>4){
@@ -114,8 +95,8 @@ exports = module.exports = {
 
 	next( {code:count,data:data});
 },
-		"/api/homeland/coin":function (request,response,next) {
-	var str = "/api/homeland/coin";
+		"/api/homeland/coins":function (request,response,next) {
+	var str = "/api/homeland/coins";
 	exports[str].count = (exports[str].count||0);
 	var count = ++exports[str].count;
 	count = exports[str].count =1;
@@ -182,6 +163,16 @@ exports = module.exports = {
 		}
 		next( {code:count,data:data.data});
 	},
+	"/api/jssdk":function (request,response,next) {
+		var str = "/api/jssdk";
+		exports[str].count = (exports[str].count||0);
+		var count = ++exports[str].count;
+		count = exports[str].count =1;
+
+		var data ={"code":1,"msg":"\u83b7\u53d6\u6210\u529f","data":[{"appId":"wxf54428e4fc1c4c08","nonceStr":"yMWixTVYouZFRa8B","timestamp":1510066328,"url":"test","signature":"1dae074a425d1e8736b86ab151a4267dd668d5db","rawString":"jsapi_ticket=kgt8ON7yVITDhtdwci0qeTK8G7bP53jKOLfrWJ2uVoabZiW37n3a3UMhp3s_NwVnox5GzYfBm3IBBqHwz2PLGg\u0026noncestr=yMWixTVYouZFRa8B\u0026timestamp=1510066328\u0026url=test"}]}
+
+		next( {code:count,data:data.data});
+	},
 	"/api/user/forget":function (request,response,next) {
 		var str = "/api/user/forget";
 		exports[str].count = (exports[str].count||0);
@@ -202,13 +193,6 @@ exports = module.exports = {
 		next( {code:count});
 	},
 
-	"/api/trees/collect":function (request,response,next) {
-		var str = "/api/trees/collect";
-		exports[str].count = (exports[str].count||0);
-		var count = ++exports[str].count;
-		count = exports[str].count =1;
-		next( {code:count,data:{path:"/load/1.png"}});
-	},
 	"/api/homeland/bank":function (request,response,next) {
 		var str = "/api/homeland/bank";
 		exports[str].count = (exports[str].count||0);
@@ -293,21 +277,7 @@ exports = module.exports = {
 		]
 		next( {code:count,data:data});
 	},
-	"/api/trees/apply":function (request,response,next) {
-		var str = "/api/trees/apply";
-		exports[str].count = (exports[str].count==null?-1:exports[str].count);
-		var count = ++exports[str].count;
-		if(count>5){
-			count = exports[str].count =1;
-		}
-		next( {code:count,data:{
-			"serial": "2",
-				"status": "1",
-				"apply_type": "1",// 特殊化肥1
-				"apply_at": "2017-10-15 18:13:45",
-				"countdown": 7*24*60*60
-		}});
-	},
+
 	"/api/homeland/withdraw":function (request,response,next) {
 		var str = "/api/homeland/withdraw";
 		exports[str].count = (exports[str].count==null?-1:exports[str].count);
@@ -382,6 +352,7 @@ exports = module.exports = {
 	}
 	next( {code:count});
 },
+	//破除
 "/api/trees/relieve":function(request,response,next){
 	var str = "/api/trees/relieve";
 	exports[str].count = (exports[str].count||0);
@@ -389,18 +360,45 @@ exports = module.exports = {
 	if(count>2){
 		count = exports[str].count =1;
 	}
-	next( {code:count});
+
+	next( {code:count,data:{coin:10,gold:10,"serial":request.params.serial,"status":"1","apply_type":"1","apply_at":"2017-11-02 13:22:37","earings_at":"2017-11-09 13:22:37","countdown":10}});
 },
+	//树
 	"/api/trees":function(request,response,next){
 		var str = "/api/trees";
 		exports[str].count = (exports[str].count||0);
 		var count = ++exports[str].count;
 		count = exports[str].count =1;
-		var data =  {"code":1,"msg":"\u83b7\u53d6\u6210\u529f","data":[{"serial":"0","nickname":"robert.yin\u7684\u795e\u517d","level":1,"grown":"0","status":0,"hanger":0},{"serial":"1","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"2","status":"2","apply_type":"1","apply_at":"2017-11-02 13:22:37","earings_at":"2017-11-09 13:22:37","countdown":561621},{"serial":"3","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"4","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"5","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"6","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"7","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"8","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"9","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"10","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1}]}
+		var data =  {"code":1,"msg":"\u83b7\u53d6\u6210\u529f","data":[{"serial":"0","nickname":"robert.yin\u7684\u795e\u517d","level":1,"grown":"0","status":0,"hanger":0},{"serial":"1","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"2","status":"2","apply_type":"1","apply_at":"2017-11-02 13:22:37","earings_at":"2017-11-09 13:22:37","countdown":10},{"serial":"3","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"4","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"5","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"6","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"7","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"8","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"9","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"10","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1}]}
 		
 		next( {code:count,data:data.data});
 	},
-
+	//生命药水
+	"/api/trees/life":function (request,response,next) {
+		var str = "/api/trees/life";
+		exports[str].count = (exports[str].count||0);
+		var count = ++exports[str].count;
+		count = exports[str].count =1;
+		next( {code:count,data:{coin:10,gold:10,"serial":request.params.serial,"status":"1","apply_type":"1","apply_at":"2017-11-02 13:22:37","earings_at":"2017-11-09 13:22:37","countdown":10}});
+	},
+	//施肥
+	"/api/trees/apply":function (request,response,next) {
+		var str = "/api/trees/apply";
+		exports[str].count = (exports[str].count==null?-1:exports[str].count);
+		var count = ++exports[str].count;
+		if(count>5){
+			count = exports[str].count =1;
+		}
+		next( {code:count,data:{coin:10,gold:10,"serial":request.params.serial,"status":"2","apply_type":"1","apply_at":"2017-11-02 13:22:37","earings_at":"2017-11-09 13:22:37","countdown":10}});
+	},
+	//收获
+	"/api/trees/collect":function (request,response,next) {
+		var str = "/api/trees/collect";
+		exports[str].count = (exports[str].count||0);
+		var count = ++exports[str].count;
+		count = exports[str].count =1;
+		next( {code:count,data:{coin:10,gold:10,"serial":request.params.serial,"status":"4","apply_type":"1","apply_at":"2017-11-02 13:22:37","earings_at":"2017-11-09 13:22:37","countdown":10}});
+	},
 "/api/log/share":function (request,response,next) {
 	var str = "/api/log/share";
 	exports[str].count = (exports[str].count||0);

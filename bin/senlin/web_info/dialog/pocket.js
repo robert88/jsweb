@@ -101,6 +101,11 @@
 	$dialog.on("click",".userBtn",function () {
 		var $this = $(this);
 		PAGE.data.selectFertilizerId = $this.data("pid");
-		PAGE.data.applyFertilizer($dialog);
+		if(PAGE.data.applyStatus==4){
+			PAGE.data.applyLife($dialog);
+		}else{
+			PAGE.data.applyFertilizer($dialog);
+		}
+
 	});
 })();

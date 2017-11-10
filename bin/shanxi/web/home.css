@@ -333,3 +333,11 @@ height: 40px;
 
 	color: #0046ad;
 }
+.index-banner-video{
+	position:fixed;
+	width: 512px;
+	z-index: 11;
+	height: 294px;
+	right:0;
+	bottom:0;
+}

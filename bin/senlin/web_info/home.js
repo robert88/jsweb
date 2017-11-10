@@ -299,7 +299,7 @@ $(document).on("imageReady",function () {
 		if (typeof callback == "function") {
 			callback(targetEle, count);
 		}
-		if (count == 0) {
+		if (count <= 0) {
 			return;
 		}
 		PAGE.clearTimeout(targetEle.timer);
@@ -490,7 +490,7 @@ $(document).on("imageReady",function () {
 
 						var $tree = $("#tree" + treeInfo.serial.toString().fill("000")).data("treeinfo", treeInfo);
 
-						// 0未破除封印，1已破除，2未shifei,3已收获，4 需浇生命液进行激活
+						// 0未破除封印，1已破除未shifei，2已施肥未成熟,3已收获，4 需浇生命液进行激活
 						switch (treeInfo.status) {
 							case "0":
 								$tree.html('<div class="bg-renwu-trunk bg-renwu"></div><div class="bg-renwu-seal bg-renwu"></div>');
@@ -501,11 +501,7 @@ $(document).on("imageReady",function () {
 									updateTreeStatus($tree, treeInfo);
 								} else {
 									$tree.html('<div class="bg-renwu-trunk bg-renwu"></div>');
-									counter($tree[0], treeInfo.countdown, function (targetEle, count) {
-										if (count <= 0) {
-											updateTreeStatus($(targetEle), $(targetEle).data("treeinfo"));
-										}
-									});
+									updateTreeInfo($tree,treeInfo);
 								}
 								break;
 							case "1":
@@ -543,8 +539,11 @@ $(document).on("imageReady",function () {
 					"4": "摇钱树已破除封印！"
 				},
 				url: "/api/trees/relieve?serial=" + serial +"&token=" + token,
-				success: function () {
+				success: function (ret) {
 					$.tips("成功破除", "success");
+					if(ret){
+						updateTreeInfo($treeItem,ret)
+					}
 					$seal.remove();
 					if(PAGE.guide.needGuide && PAGE.guide.step=="breakSeal"){
 						PAGE.guide.next();
@@ -570,7 +569,7 @@ $(document).on("imageReady",function () {
 		var $treeItem = $("#tree" + serial.toString().fill("000"));
 		var treeInfo = $treeItem.data("treeinfo");
 
-		if(treeInfo.status==3 ){
+		if(treeInfo.status==4 ){
 			$.tips("该摇钱树需要浇灌生命药水！");
 			return;
 		}
@@ -605,14 +604,14 @@ $(document).on("imageReady",function () {
 				$.tips("施肥成功", "success");
 				PAGE.data.selectSerial = null;
 				PAGE.data.selectFertilizerId = null;
+				PAGE.data.applyStatus =null;
 				//新手指引
 				if(PAGE.guide.needGuide && PAGE.guide.step=="fertilizer"){
 					PAGE.guide.next();
 				}
 				$.dialog.close($dialog);
 				if(ret){
-					$treeItem.data("treeinfo",ret);
-					counter($treeItem, ret.countdown);
+					updateTreeInfo($treeItem,ret)
 				}
 			},
 			complete:function () {
@@ -620,10 +619,49 @@ $(document).on("imageReady",function () {
 			}
 		});
 	};
+
+	/*
+	 *更新树的状态
+	 * */
+	function updateTreeInfo($treeItem,ret){
+		if(!ret){
+			return;
+		}
+		$treeItem.data("treeinfo",ret);
+		if(ret.status==2 && ret.countdown>0){
+			counter($treeItem[0], ret.countdown, function (targetEle, count) {
+				if (count <= 0) {
+					updateTreeStatus($(targetEle), $(targetEle).data("treeinfo"));
+				}
+			});
+		}
+	}
+
 	/*
 	 * 浇灌生命药水
 	 * */
-	function applyLife() {
+	PAGE.data.applyLife = function ($dialog) {
+
+
+		var serial = PAGE.data.selectSerial;
+		var pid = PAGE.data.selectFertilizerId;
+
+		var $treeItem = $("#tree" + serial.toString().fill("000"));
+		var treeInfo = $treeItem.data("treeinfo");
+
+		if(serial==null){
+			$.dialog.close($dialog);
+			$.tips("请选择要施肥的摇钱树！");
+			return;
+		}
+		if (pid==null) {
+			$.dialog.close($dialog);
+			$pocket.data("guide", true);
+			$pocket.click();
+			//需要施加生命药水
+			$.tips("请选择生命药水！");
+			return;
+		}
 		PAGE.ajax({
 			type: "post",
 			msg: {
@@ -635,20 +673,19 @@ $(document).on("imageReady",function () {
 				"4": "摇钱树不需要生命液"
 			},
 			url: "/api/trees/life?serial=" + treeInfo.serial+ "&token=" + token + "&property_id=" + pid,
-			success: function () {
+			success: function (ret) {
 				$.tips("成功浇生命液", "success");
+				updateTreeInfo(ret);
+				PAGE.data.selectSerial = null;
+				PAGE.data.selectFertilizerId = null;
+				PAGE.data.applyStatus =null;
+				$.dialog.close($dialog);
 			},
-			errorCallBack:function (text, type, tipsType, ret) {
-				if(ret.code==-1){
-					PAGE.data.confirm("您的包裹里没有生命液，为您跳转到藏经阁。",function (e, $dialog) {
-						$goldHouse.data("guide",true).click();
-					});
-				}
-			},complete:function () {
+			complete:function () {
 				$body.data("dialog",false);
 			}
 		});
-	}
+	};
 	/*
 	 * 点击摇钱树树干,施肥，查看状态,serial只能用id中值
 	 * */
@@ -659,7 +696,7 @@ $(document).on("imageReady",function () {
 		var serial = parseInt(treeId.replace("tree",""),10);
 
 		//提示倒计时
-		if ($treeItem.data("counter")) {
+		if (treeInfo.status==2) {
 			var $dilaog = $.tips("摇钱树距离下一个阶段的成长还有<span class='counter'>" + $treeItem.data("counter") + "</span>", "warn", 5000);
 			counter($dilaog.find(".counter"), $treeItem.data("counter"), function (ele, count) {
 
@@ -678,17 +715,18 @@ $(document).on("imageReady",function () {
 			return
 		}
 
-		if(treeInfo&&treeInfo.status==3 ){
+		if(treeInfo&&treeInfo.status==4 ){
 			msg =  "摇钱树编号："+treeId.replace("tree","") + "需要浇灌生命药水！"
-		}else if(treeInfo&&treeInfo.status==2){
+		}else if(treeInfo&&treeInfo.status==3){
 			msg = "是否继续为编号：" + treeId.replace("tree","") + "的摇钱树施肥？"
 		}else{
 			msg = "是否为编号：" + treeId.replace("tree","") + "的摇钱树施肥？"
 		}
 		PAGE.data.confirm(msg,function (e, $dialog) {
 			PAGE.data.selectSerial = serial;
-			if(treeInfo&&treeInfo.status==3 ){
-				applyLife($dialog)
+			PAGE.data.applyStatus = treeInfo.status;
+			if(treeInfo&&treeInfo.status==4 ){
+				PAGE.data.applyLife($dialog)
 			}else{
 				PAGE.data.applyFertilizer($dialog);
 			}
@@ -702,7 +740,7 @@ $(document).on("imageReady",function () {
 	function playRewardAnimate($ani, count) {
 		var arr = ["0", "-130px 0px", "-260px 0px", " -390px 0px", "-520px 0px", "0px -280px", "-130px -280px", "-260px -280px", "-390px -280px", "-520px -280px", "-1000px -1000px"]
 		if (!$ani) {
-			$ani = $("<div class='bg-banquetfiy'></div>").appendTo("body");
+			$ani = $("<div class='bg-banquetfiy' style='z-index: 3000'></div>").appendTo("body");
 		}
 		if (typeof count == "undefined") {
 			count = 0;
@@ -788,19 +826,25 @@ $(document).on("imageReady",function () {
 				},
 				url: "/api/trees/collect?serial=" + treeInfo.serial+"&token="+token,
 				success: function (ret) {
-					var forest_gold = $.cookie("forest_gold");
-					var forest_coin = $.cookie("forest_coin");
-					var coin = ret.coin||0;
-					var gold = ret.gold ||0;
-					$coin.html((forest_coin*1+coin*1) || 0);
-					$gold.html((forest_gold*1 + gold*1) || 0);
-					PAGE.data.confirm("点击屏幕右上角“...”按钮，收藏本页面。并分享给好友，将会获得好友消费金额的5%奖励哟!",function (e, $dialog) {
-						shareFriend();
-					});
-					playRewardCoin(treeInfo.apply_type, 10, function () {
+					if(ret){
+						updateTreeInfo($tree,ret);
+						var forest_gold = $.cookie("forest_gold");
+						var forest_coin = $.cookie("forest_coin");
+						var coin = ret.coin||0;
+						var gold = ret.gold ||0;
+						$coin.html((forest_coin*1+coin*1) || 0);
+						$gold.html((forest_gold*1 + gold*1) || 0);
+						PAGE.data.confirm("点击屏幕右上角“...”按钮，收藏本页面。并分享给好友，将会获得好友消费金额的5%奖励哟!",function (e, $dialog) {
+							shareFriend();
+						});
+						playRewardCoin(treeInfo.apply_type, 3, function () {
+							$tree.data("lock", false);
+							$tree.html('<div class="bg-renwu-trunk bg-renwu"></div>');
+						});
+					}else{
 						$tree.data("lock", false);
-						$tree.html('<div class="bg-renwu-trunk bg-renwu"></div>');
-					});
+					}
+
 				},errorCallBack:function () {
 					$tree.data("lock", false);
 				},complete:function () {
@@ -815,7 +859,7 @@ $(document).on("imageReady",function () {
 	function initShare(){
 		$(".J-share-btn").click(function () {
 			$(".ls-container").css("overflow","hidden");
-			$(".J-share-contain").addClass("slideShow")
+			$(".J-share-contain").addClass("slideShow");
 			$(".mask").show()
 		});
 		// $("#copy").attr("data-clipboard-text",window.location.href);
@@ -838,8 +882,13 @@ $(document).on("imageReady",function () {
 	* 分享到朋友圈
 	* */
 	function shareFriend(){
-		$(".J-share-btn").click();
+		if(PAGE.wxShare ){
+			PAGE.wxShare();
+		}else{
+			$(".J-share-btn").click();
+		}
 	}
+	
 	/*
 	 * 点击摇钱树
 	 * */

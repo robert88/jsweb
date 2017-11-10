@@ -36,12 +36,12 @@
 				if(type==1 && ret){
 					$.dialog(("<div class='col'><div class='col4'>姓名：</div><div class='col8'>{0}</div></div>"+
 					"<div class='col'><div class='col4'>开户银行：</div><div class='col8'>{1}</div></div>"+
-					"<div class='col'><div class='col4'>银行卡号：</div><div class='col8'>{2}</div></div>").tpl(ret.account,ret.bank,ret.card),{width: 240, closeStyle: "background: rgba(255,255,255,0.9);"})
+					"<div class='col'><div class='col4'>银行卡号：</div><div class='col8'>{2}</div></div>").tpl(ret.account,ret.bank,ret.card),{width: 280, closeStyle: "background: rgba(255,255,255,0.9);"})
 				}else if(ret){
 					$.dialog(("<div class='col'><div class='col4'>姓名：</div><div class='col8'>{0}</div></div>"+
 						"<div class='col'><div class='col4'>身份证号：</div><div class='col8'>{1}</div></div>"+
 						"<div class='col'><div class='col4'>正面：</div><div class='col8'><img src='{2}' width='100' height='100'></div></div>"+
-						"<div class='col'><div class='col4'>反面：</div><div class='col8'><img src='{3}' width='100' height='100'></div></div>").tpl(ret.truename,ret.cardid,ret.font,ret.back),{width: 240, closeStyle: "background: rgba(255,255,255,0.9);"})
+						"<div class='col'><div class='col4'>反面：</div><div class='col8'><img src='{3}' width='100' height='100'></div></div>").tpl(ret.truename,ret.cardid,ret.font,ret.back),{width: 280, closeStyle: "background: rgba(255,255,255,0.9);"})
 				}
 			}
 		})

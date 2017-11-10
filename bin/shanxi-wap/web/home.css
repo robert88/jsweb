@@ -1,0 +1,52 @@
+.homebg{
+	background:url(../public/images/homebg.png) no-repeat center top;
+	height: 56.8rem;
+	background-size: 100% auto;
+	position:relative;
+}
+.homecontent{
+	position:absolute;
+	top:0;
+	left:12.5%;
+	right:12.5%;
+	padding-top:87.03125%;
+	z-index:5
+}
+.homecontent2{
+	position:absolute;
+	top:0;
+	left:23.4375%;
+	right:23.4375%;
+	padding-top:100%;
+	z-index:4
+}
+.homecontent3{
+	position:absolute;
+	top:0;
+	left:12.5%;
+	right:12.5%;
+	padding-top:112.8125%;
+	z-index:3
+}
+.homecontent4{
+	position:absolute;
+	top:0;
+	left:23.4375%;
+	right:23.4375%;
+	padding-top:125%;
+	z-index:2
+}
+.homecontent5{
+	position:absolute;
+	top:0;
+	left:37.5%;
+	right:37.5%;
+	padding-top:136.40625%;
+	z-index:1
+}
+.homefooter{
+	position:absolute;
+	width: 100%;
+	line-height: 65px;
+	bottom: 0;
+}
