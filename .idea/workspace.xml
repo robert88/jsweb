@@ -5,64 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feda3866-345d-4f42-8077-f06ffb61c655" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/images/back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/images/bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/images/bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/images/bg2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/images/homebg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/images/homeicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/images/kuang.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/images/location.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/images/tel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/common/public/js/common/base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/indexStatic.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/css/common/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/css/common/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/css/common/swiper.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/css/common/swiper.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/css/skin/main_color.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/common/base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/common/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/common/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/common/page.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/common/pagination.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/common/prototype.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/datePicker/datePicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/datePicker/datePicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/datePicker/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/lib/jquery-1.12.4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/lib/jquery-1.12.4.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/lib/swiper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/lib/swiper.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/module/base64.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/module/base64ToBlob.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/module/base64ToByte.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/module/md5.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/public/js/module/nativeShare.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/web/about.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/web/about.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/web/header.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/web/home.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/web/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/shanxi-wap/web/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/action/senlin.js" afterPath="$PROJECT_DIR$/bin/action/senlin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/rap.util.core.config.js" afterPath="$PROJECT_DIR$/bin/rap.util.core.config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/index.html" afterPath="$PROJECT_DIR$/bin/senlin/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/public/js/common/main.js" afterPath="$PROJECT_DIR$/bin/senlin/public/js/common/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/dialog/pocket.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/dialog/pocket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/home.html" afterPath="$PROJECT_DIR$/bin/senlin/web_info/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/home.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/homeInfo.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/homeInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/public/js/page.js" afterPath="$PROJECT_DIR$/bin/senlin/public/js/page.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/withdrawalCash.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/withdrawalCash.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senlin/web_info/withdrawalGold.js" afterPath="$PROJECT_DIR$/bin/senlin/web_info/withdrawalGold.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/shanxi/index.html" afterPath="$PROJECT_DIR$/bin/shanxi/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/shanxi/indexStatic.html" afterPath="$PROJECT_DIR$/bin/shanxi/indexStatic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/shanxi/public/js/common/main.js" afterPath="$PROJECT_DIR$/bin/shanxi/public/js/common/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/shanxi/web/home.css" afterPath="$PROJECT_DIR$/bin/shanxi/web/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/shanxi/web/home.html" afterPath="$PROJECT_DIR$/bin/shanxi/web/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/shanxi/web/home.js" afterPath="$PROJECT_DIR$/bin/shanxi/web/home.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/error20171102_205544.log" afterPath="$PROJECT_DIR$/log/error20171102_205544.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/info20171101_230523.log" afterPath="$PROJECT_DIR$/log/info20171101_230523.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/log20171101_230523.log" afterPath="$PROJECT_DIR$/log/log20171101_230523.log" />
@@ -95,11 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="home.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-220">
-              <caret line="642" column="4" selection-start-line="642" selection-start-column="4" selection-end-line="642" selection-end-column="4" />
+            <state relative-caret-position="-1000">
+              <caret line="698" column="27" selection-start-line="698" selection-start-column="21" selection-end-line="698" selection-end-column="27" />
               <folding>
                 <marker date="1510294060365" expanded="true" signature="10151:10191" placeholder="..." />
                 <marker date="1510294060365" expanded="true" signature="19218:19231" placeholder="..." />
@@ -128,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="senlin.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="senlin.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/action/senlin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="394" column="23" selection-start-line="394" selection-start-column="16" selection-end-line="394" selection-end-column="23" />
+            <state relative-caret-position="580">
+              <caret line="399" column="90" selection-start-line="399" selection-start-column="90" selection-end-line="399" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -228,9 +175,9 @@
         <option value="$PROJECT_DIR$/bin/shanxi-wap/public/css/common/main.css" />
         <option value="$PROJECT_DIR$/bin/rap.util.core.config.js" />
         <option value="$PROJECT_DIR$/bin/senlin/public/js/common/main.js" />
-        <option value="$PROJECT_DIR$/bin/action/senlin.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/dialog/pocket.js" />
         <option value="$PROJECT_DIR$/bin/senlin/web_info/home.js" />
+        <option value="$PROJECT_DIR$/bin/action/senlin.js" />
       </list>
     </option>
   </component>
@@ -247,8 +194,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-14" />
-    <option name="y" value="25" />
+    <option name="x" value="-8" />
+    <option name="y" value="10" />
     <option name="width" value="1777" />
     <option name="height" value="1028" />
   </component>
@@ -1400,12 +1347,12 @@
       <workItem from="1509858248128" duration="3132000" />
       <workItem from="1509864146220" duration="25706000" />
       <workItem from="1509930826403" duration="20403000" />
-      <workItem from="1510155147682" duration="11795000" />
+      <workItem from="1510155147682" duration="13663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1243797000" />
+    <option name="totallyTimeSpent" value="1245665000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1417,7 +1364,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-14" y="25" width="1777" height="1028" extended-state="0" />
+    <frame x="-8" y="10" width="1777" height="1028" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1857,22 +1804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/senlin/public/js/common/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3780">
-          <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/action/senlin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="394" column="23" selection-start-line="394" selection-start-column="16" selection-end-line="394" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/dialog/pocket.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="678">
@@ -1881,14 +1812,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/senlin/public/js/common/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3780">
+          <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/senlin/web_info/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="642" column="4" selection-start-line="642" selection-start-column="4" selection-end-line="642" selection-end-column="4" />
+        <state relative-caret-position="-1000">
+          <caret line="698" column="27" selection-start-line="698" selection-start-column="21" selection-end-line="698" selection-end-column="27" />
           <folding>
             <marker date="1510294060365" expanded="true" signature="10151:10191" placeholder="..." />
             <marker date="1510294060365" expanded="true" signature="19218:19231" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/action/senlin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="399" column="90" selection-start-line="399" selection-start-column="90" selection-end-line="399" selection-end-column="90" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -397,7 +397,7 @@ exports = module.exports = {
 		exports[str].count = (exports[str].count||0);
 		var count = ++exports[str].count;
 		count = exports[str].count =1;
-		next( {code:count,data:{coin:10,gold:10,"serial":request.params.serial,"status":"4","apply_type":"1","apply_at":"2017-11-02 13:22:37","earings_at":"2017-11-09 13:22:37","countdown":10}});
+		next( {code:count,data:{coin:10,gold:10,"serial":request.params.serial,"status":"3","apply_type":"1","apply_at":"2017-11-02 13:22:37","earings_at":"2017-11-09 13:22:37","countdown":10}});
 	},
 "/api/log/share":function (request,response,next) {
 	var str = "/api/log/share";

@@ -115,20 +115,14 @@
 			},
 			form: $form
 		});
-		$form.find(".sum").keyup(function () {
-			var $this = $(this);
-			var val = $this.val();
-			val = val.replace(/\S/g,"");
-			$this.val(val);
-		})
+	
 		/*自定义校验方法*/
 		var validRule = validForm("getRule");
 		validRule["number100"] = {
 			check: function (validNum, $obj) {
-				validNum = validNum*1;
-				return !(validNum >100);
+					return !(validNum&&(validNum % 100 == 0));
 			},
-			defaultMsg: "最低提现额100以上，且为整数"
+			defaultMsg: "最低提现额100以上，且为100整数倍"
 
 		}
 	}
