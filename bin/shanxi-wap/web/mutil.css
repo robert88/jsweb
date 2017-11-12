@@ -1,0 +1,19 @@
+.multipleWrap ul li{
+	background:url(/public/images/kuang.png) no-repeat;
+	background-size: 100% 100%;
+	margin-top: 1.5625rem;
+	height:4.0625rem;
+	line-height: 4.0625rem;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space:nowrap;
+
+}
+.multipleWrap ul{
+	padding: 1.25rem 5rem;
+	text-align: center;
+}
+.multipleWrap{
+	background:url(/public/images/bg2.jpg) no-repeat ;
+
+}

@@ -40,10 +40,10 @@ if(!process.env.DEBUG){
 	rap.staticPath="/static";//静态资源路径
 }
 rap.staticPathArr = [];
-// rap.staticPathArr.push((rap.rootPath + "/shanxi-wap" ));
+rap.staticPathArr.push((rap.rootPath + "/shanxi-wap" ));
 // rap.staticPathArr.push((rap.rootPath + "/shanxi" ));
-rap.staticPathArr.push((rap.rootPath + "/" + rap.staticPath ));
-rap.staticPathArr.push((rap.rootPath + "/" + rap.commonPath  ));
+// rap.staticPathArr.push((rap.rootPath + "/" + rap.staticPath ));
+// rap.staticPathArr.push((rap.rootPath + "/" + rap.commonPath  ));
 
 require('./rap.util.prototype.js');
 require('./rap.util.tool.js');

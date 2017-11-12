@@ -1,0 +1,22 @@
+.news .list>li{
+	position:relative;
+	padding-left: 7.12rem;
+}
+.time-wrap{
+	position:absolute;
+	width: 5.555555555555555rem;
+	left: 0px;
+	top: 0;
+	height: 5.555555555555555rem;
+	color:#1080cc;
+	border:1px solid #1080cc;
+	min-height:5.555555555555555rem;
+}
+.time-wrap h4{
+	font-size: 30px;
+	border-bottom:1px solid #1080cc;
+}
+.time-wrap h4{
+	font-size: 30px;
+	border-bottom:1px solid #1080cc;
+}

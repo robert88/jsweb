@@ -1,0 +1,16 @@
+.list li img{
+	height: 10rem;
+}
+.list li .text{
+	background:#d4d4d4;
+	line-height: 2.7777777777777777rem;
+}
+.list li .text-wrap{
+ overflow: hidden;
+ margin: 0 0.625rem;
+ background:#efefef;
+}
+.loadMore{
+	background:#d4d4d4;
+	line-height: 2.7777777777777777rem;
+}

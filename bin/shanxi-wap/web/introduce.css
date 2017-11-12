@@ -1,0 +1,66 @@
+.introduceWrap .bannar{
+	height:1.875rem;
+	background:url(/public/images/bg.jpg) no-repeat center top;
+	height: 12.222222222222221rem;
+}
+.introduceWrap .title{
+	text-align: center;
+	margin-top:1.25rem;
+	line-height: 3.75rem;
+	font-size: 1.3125rem;
+	color:#333;
+}
+.introduceWrap .title span{
+	position: relative;
+	display: inline-block;
+}
+.introduceWrap .title span:before{
+	width: 50%;
+	left: 25%;
+	position: absolute;
+	content: " ";
+	top: 100%;
+	border:1px solid #999;
+}
+.introduceWrap .content{
+	position: relative;
+	min-height: 13.75rem;
+}
+.introduceWrap .content .text{
+	padding-top: 0.9375rem;
+}
+.introduceWrap .content img{
+	width: 100%;
+}
+.introduceWrap .addr{
+	margin-top: 1.25rem;
+	padding: 1.25rem 0 0 5rem;
+	position: relative;
+	min-height: 4.375rem;
+}
+.introduceWrap .addr .text{
+	padding-top:0.625rem;
+}
+.introduceWrap .addr img{
+	position:absolute;
+	top: 0;
+	margin:0.625rem;
+	left: 0;
+	width: 3.75rem;
+}
+
+.list li img{
+	height: 10rem;
+	width: 100%;
+	display: block;
+}
+.list li .text{
+	text-align: center;
+	background: #d4d4d4;
+	line-height: 2.7777777777777777rem;
+}
+.list li .text-wrap{
+	overflow: hidden;
+	margin: 0 0.625rem;
+	background:#efefef;
+}

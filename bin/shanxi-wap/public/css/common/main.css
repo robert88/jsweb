@@ -24,7 +24,8 @@
 	font-size: 2rem;
 }
 body{
-	font-size: 1.125rem;
+	font-size: 1rem;
+	line-height: 1.5625rem;
 }
 h1,.H1,.rfs1{
 	font-size: 4.25rem;
@@ -72,7 +73,7 @@ h1,h2,h3,h4{
 	margin-bottom:0.625rem;
 }
 .ml10{
-margin-left:0.625rem;
+	margin-left:0.625rem;
 }
 .mr10{
 	margin-right:0.625rem;
@@ -82,6 +83,15 @@ margin-left:0.625rem;
 }
 .mt20{
 	margin-top:1.25rem;
+}
+.mt30{
+	margin-top:1.875rem;
+}
+.mt40{
+	margin-top: 2.5rem;
+}
+.mt50{
+	margin-top: 3.125rem
 }
 .ml20{
 	margin-left:1.25rem;
@@ -137,8 +147,29 @@ margin-left:0.625rem;
 .pr20{
 	padding-right:1.25rem;
 }
+.lh10{
+	line-height: 0.625rem;
+}
+.lh20{
+	line-height: 1.25rem;
+}
 .lh30{
-line-height: 1.875rem;
+	line-height: 1.875rem;
+}
+.lh35{
+	line-height: 2.1875rem;
+}
+.lh40{
+	line-height: 2.5rem;
+}
+.lh45{
+	line-height: 2.8125rem;
+}
+.lh50{
+	line-height: 3.125rem
+}
+.lh60{
+	line-height: 3.75rem;
 }
 .h30{
 	height: 1.875rem;
