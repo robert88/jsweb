@@ -1,35 +1,8 @@
 ;
 (function () {
 
-	function getNavClass(href) {
-		var map ={
-			"1home":"nav1",
-			"2list":"nav2",
-			"3article":"nav3",
-			"4back":"nav4",
-			"":"nav5",
-			"":"nav6",
-			"":"nav7",
-			"":"nav8",
-			"":"nav9",
-			"":"",
-			"":"",
-			"":"",
-		}
-		for(var i in map){
-            if( ~href.indexOf(i) ){
-            	return map[i];
-			}
-		}
-		return map["01home"]
-    }
 
-	function setNav(){
-		var current  = getNavClass(window.location.href);
-		$("html").addClass(current)
-	}
-    setNav();
-
+	/*tab*/
 	$(document).on("click",".tab-wrap>.tab-head>.tab-head-item",function(){
 
 		var $this = $(this);
@@ -73,18 +46,6 @@
 		return false;
 	});
 
-
-	$('.bannar-carousel .swiper-container').each(function () {
-		new Swiper($(this), {
-			autoplay:3000,
-			speed: 1000,
-			pagination: '.swiper-pagination',
-			paginationBulletRender: function (swiper, index, className) {
-				return '<span class="' + className + '"></span>';
-			},
-			paginationClickable:true
-		});
-	});
 
 
 

@@ -341,3 +341,15 @@ height: 40px;
 	right:0;
 	bottom:0;
 }
+.index-banner-video .close{
+	position:absolute;
+	right:0;
+	top:0;
+	color:#fff;
+	font-size:24px;
+	z-index: 10;
+}
+.index-banner-video .close:hover{
+	color:red;
+	cursor: pointer;
+}

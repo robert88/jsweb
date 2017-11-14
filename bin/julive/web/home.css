@@ -1,0 +1,28 @@
+.top-download{
+	margin: .9375rem;
+	background-color: #fff;
+	border-radius: .875rem;
+	padding: 1rem;
+	box-shadow: 0 5px 10px rgba(0,0,0,.15);
+	position: relative;
+}
+.top-download .download_logo{
+    padding-right:1rem;
+    width: 4.0625rem;
+    height: 4.0625rem;
+    float: left;
+}
+.top-download .download_logo img{
+    width:100%;
+}
+.top-download .download_desc
+{
+	float: left;
+	line-height: 2.03125rem;
+}
+.top-download .download_btn{
+	position: absolute;
+	right: 1rem;
+	margin-top: -0.5rem;
+	top: 50%;
+}

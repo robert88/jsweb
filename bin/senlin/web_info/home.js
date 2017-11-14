@@ -828,12 +828,12 @@ $(document).on("imageReady",function () {
 				success: function (ret) {
 					if(ret){
 						updateTreeInfo($tree,ret);
-						var forest_gold = $.cookie("forest_gold");
-						var forest_coin = $.cookie("forest_coin");
+						// var forest_gold = $.cookie("forest_gold");
+						// var forest_coin = $.cookie("forest_coin");
 						var coin = ret.coin||0;
 						var gold = ret.gold ||0;
-						$coin.html((forest_coin*1+coin*1) || 0);
-						$gold.html((forest_gold*1 + gold*1) || 0);
+						$coin.html(coin*1 || 0);
+						$gold.html(gold*1 || 0);
 						PAGE.data.confirm("点击屏幕右上角“...”按钮，收藏本页面。并分享给好友，将会获得好友消费金额的5%奖励哟!",function (e, $dialog) {
 							shareFriend();
 						});
