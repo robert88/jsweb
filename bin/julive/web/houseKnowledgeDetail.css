@@ -1,0 +1,10 @@
+.case-tips li{
+	float: left;
+	padding:3px 5px;
+	border-radius: 3px;
+	margin: 5px;
+	border:1px solid #e1e1e1;
+}
+.content img{
+	width: 100%;
+}

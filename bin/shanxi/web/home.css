@@ -46,7 +46,7 @@
 	height: 55px;
 	line-height: 55px;
 	margin-top: 34px;
-	border-bottom: 1px dashed #c1c1c1;
+	border-bottom: 1px dashed #e1e1e1;
 }
 
 .info-wrap-left .title-text p {
@@ -110,7 +110,7 @@
 	line-height: 50px;
 	height: 50px;
 	margin-top: 10px;
-	border-bottom: 1px dashed #c1c1c1;
+	border-bottom: 1px dashed #e1e1e1;
 }
 
 .info-wrap-right dd img {
@@ -183,7 +183,7 @@
 	overflow: hidden;
 	line-height: 40px;
 	margin: 0px 10px;
-	border-bottom: 1px solid #c1c1c1;
+	border-bottom: 1px solid #e1e1e1;
 }
 
 .list-title .cn {

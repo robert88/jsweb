@@ -18,7 +18,7 @@ h2,.H2 {
 }
 h3,.H3{
 	font-size: 1.125rem;
-	/*line-height:4.4rem;*/
+	/* line-height:4.4rem; */
 }
 h4,.H4 {
 	font-size:1rem;
@@ -26,7 +26,8 @@ h4,.H4 {
 }
 
 h1,h2,h3,h4{
-	font-weight: 600;
+	font-weight: 400;
+	color: #333;
 }
 
 /*font-size*/
@@ -129,7 +130,7 @@ h1,h2,h3,h4{
 .pr20{padding-right:1.25rem;}
 .pt20{padding-top:1.25rem;}
 .plr20{padding-right:1.25rem;padding-left:1.25rem}
-.ptb20{padding-bottom:11.25rem;padding-top:1.25rem}
+.ptb20{padding-bottom: 1.25rem;padding-top:1.25rem;}
 /*p30*/
 .p30{padding:1.875rem;}
 .pt30{padding-top:1.875rem;}
@@ -178,7 +179,8 @@ h1,h2,h3,h4{
 	max-width: 640px;
 	min-width: 300px;
 	width: 100%;
-	margin: 0 auto;
+	margin-right:auto;
+	margin-left:auto;
 }
 .btn{
 	padding: 2px 0.625rem;

@@ -1,5 +1,5 @@
 .tool-menu>ul{
-	border-bottom:1px solid #c1c1c1;
+	border-bottom:1px solid #e1e1e1;
 }
 .tool-menu>ul>li{
 	float: left;
@@ -15,7 +15,7 @@
 }
 .tool-menu>ul>li.hoverActive>dl{
 	display: block;
-	background:#c1c1c1;
+	background:#e1e1e1;
 	padding:10px 0;
 	color:#333;
 	width:100px;

@@ -369,9 +369,102 @@ exports = module.exports = {
 		exports[str].count = (exports[str].count||0);
 		var count = ++exports[str].count;
 		count = exports[str].count =1;
-		var data =  {"code":1,"msg":"\u83b7\u53d6\u6210\u529f","data":[{"serial":"0","nickname":"robert.yin\u7684\u795e\u517d","level":1,"grown":"0","status":0,"hanger":0},{"serial":"1","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"2","status":"2","apply_type":"1","apply_at":"2017-11-02 13:22:37","earings_at":"2017-11-09 13:22:37","countdown":10},{"serial":"3","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"4","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"5","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"6","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"7","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"8","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"9","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1},{"serial":"10","status":"0","apply_type":"0","apply_at":"2017-10-26 12:20:50","earings_at":"2017-10-26 12:20:50","countdown":-1}]}
+		var data = {
+			"code": 1,
+			"msg": "\u83b7\u53d6\u6210\u529f",
+			"data": [{
+				"serial": "0",
+				"nickname": "robert.yin\u7684\u795e\u517d",
+				"level": 1,
+				"grown": "0",
+				"status": 0,
+				"hanger": 0
+			}, {
+				"serial": "1",
+				"status": "0",
+				"apply_type": "0",
+				"apply_at": "2017-10-26 12:20:50",
+				"earings_at": "2017-10-26 12:20:50",
+				"countdown": -1
+			}, {
+				"serial": "2",
+				"status": "2",
+				"apply_type": "1",
+				"apply_at": "2017-11-02 13:22:37",
+				"earings_at": "2017-11-09 13:22:37",
+				"countdown": 10
+			}, {
+				"serial": "3",
+				"status": "2",
+				"daily": 1,
+				"residue": 10, //代表距下次收获63150s
+				"apply_type": "1",
+				"apply_at": "2017-11-02 13:22:37",
+				"earings_at": "2017-11-09 13:22:37",
+				"countdown": 63151
+			}, {
+				"serial": "4",
+				"status": "2",
+				"daily": 0,
+				"residue": 0, //代表距下次收获63150s
+				"apply_type": "1",
+				"apply_at": "2017-11-02 13:22:37",
+				"earings_at": "2017-11-09 13:22:37",
+				"countdown": 63151
+			}, {
+				"serial": "5",
+				"status": "0",
+				"apply_type": "0",
+				"apply_at": "2017-10-26 12:20:50",
+				"earings_at": "2017-10-26 12:20:50",
+				"countdown": -1
+			}, {
+				"serial": "6",
+				"status": "0",
+				"apply_type": "0",
+				"apply_at": "2017-10-26 12:20:50",
+				"earings_at": "2017-10-26 12:20:50",
+				"countdown": -1
+			}, {
+				"serial": "7",
+				"status": "0",
+				"apply_type": "0",
+				"apply_at": "2017-10-26 12:20:50",
+				"earings_at": "2017-10-26 12:20:50",
+				"countdown": -1
+			}, {
+				"serial": "8",
+				"status": "0",
+				"apply_type": "0",
+				"apply_at": "2017-10-26 12:20:50",
+				"earings_at": "2017-10-26 12:20:50",
+				"countdown": -1
+			}, {
+				"serial": "9",
+				"status": "0",
+				"apply_type": "0",
+				"apply_at": "2017-10-26 12:20:50",
+				"earings_at": "2017-10-26 12:20:50",
+				"countdown": -1
+			}, {
+				"serial": "10",
+				"status": "0",
+				"apply_type": "0",
+				"apply_at": "2017-10-26 12:20:50",
+				"earings_at": "2017-10-26 12:20:50",
+				"countdown": -1
+			}]
+		}
 		
 		next( {code:count,data:data.data});
+	},
+	"/api/trees/daily":function (request,response,next) {
+		var str = "/api/trees/daily";
+		exports[str].count = (exports[str].count||0);
+		var count = ++exports[str].count;
+		count = exports[str].count =1;
+
+		next( {code:count,data:{coin:10,gold:10,"daily": 1,"residue": 10,"serial":request.params.serial,"status":"2","apply_type":"1","apply_at":"2017-11-02 13:22:37","earings_at":"2017-11-09 13:22:37","countdown":10}});
 	},
 	//生命药水
 	"/api/trees/life":function (request,response,next) {

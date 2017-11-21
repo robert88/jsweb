@@ -289,12 +289,17 @@ $(document).on("imageReady",function () {
 	//播放声音---------------------------------------------------------------------------
 	/*倒计时*/
 	function counter(targetEle, count, callback) {
-
+		$(targetEle).data("counter", count);
+		counter2(targetEle, count, callback);
+	}
+	/*倒计时*/
+	function counter2(targetEle, count, callback) {
 		//配合targetEle.timer
 		if($("body").find(targetEle).length==0){
 			return;
 		}
-		$(targetEle).data("counter", count--);
+
+		count--
 
 		if (typeof callback == "function") {
 			callback(targetEle, count);
@@ -450,7 +455,7 @@ $(document).on("imageReady",function () {
 	/*
 	 * 显示施了对于化肥之后的成熟的摇钱树
 	 * */
-	function updateTreeStatus($tree, treeInfo) {
+	function updateTreeRewardStatus($tree, treeInfo) {
 		if (treeInfo.apply_type == 1) {
 			$tree.html('<div class="bg-renwu-fertilizer4 bg-renwu"><div class=" bg-props bg-props-hand animate-flow"></div></div>');
 		} else if (treeInfo.apply_type == 2) {
@@ -474,42 +479,7 @@ $(document).on("imageReady",function () {
 				if (data&&data.length) {
 					for (var i = 0; i < data.length; i++) {
 						var treeInfo = data[i];
-						//灵兽信息
-						if(treeInfo.serial==0){
-							if(treeInfo.status!=0){
-								$(".animalItem").removeClass("disabled");
-								counter($(".animalItem")[0], treeInfo.hanger*1, function (targetEle, count) {
-										if (count <= 0) {
-											$(".animalItem").find(".tips").html('主人~~我饿得口吐白沫了，快邀请好友获取食物吧!');
-										}
-									});
-							}
-							$(".animalItem").data("info",treeInfo);
-							continue;
-						}
-
-						var $tree = $("#tree" + treeInfo.serial.toString().fill("000")).data("treeinfo", treeInfo);
-
-						// 0未破除封印，1已破除未shifei，2已施肥未成熟,3已收获，4 需浇生命液进行激活
-						switch (treeInfo.status) {
-							case "0":
-								$tree.html('<div class="bg-renwu-trunk bg-renwu"></div><div class="bg-renwu-seal bg-renwu"></div>');
-								break;
-							case "2":
-								//已经成熟了
-								if (treeInfo.countdown <= 0) {
-									updateTreeStatus($tree, treeInfo);
-								} else {
-									$tree.html('<div class="bg-renwu-trunk bg-renwu"></div>');
-									updateTreeInfo($tree,treeInfo);
-								}
-								break;
-							case "1":
-							case "3":
-							case "4":
-								$tree.html('<div class="bg-renwu-trunk bg-renwu"></div>');
-								break;
-						}
+						initOneTree(treeInfo);
 					}
 				}else{
 					initAllTree();
@@ -519,6 +489,63 @@ $(document).on("imageReady",function () {
 				initAllTree();
 			}
 		})
+	}
+	/*初始化单个树*/
+	function initOneTree(treeInfo) {
+		//灵兽信息
+		if(treeInfo.serial==0){
+			if(treeInfo.status!=0){
+				$(".animalItem").removeClass("disabled");
+				counter($(".animalItem")[0], treeInfo.hanger*1, function (targetEle, count) {
+					if (count <= 0) {
+						$(".animalItem").find(".tips").html('主人~~我饿得口吐白沫了，快邀请好友获取食物吧!');
+					}
+				});
+			}
+			$(".animalItem").data("info",treeInfo);
+			return false
+		}
+
+		var $tree = $("#tree" + treeInfo.serial.toString().fill("000")).data("treeinfo", treeInfo);
+
+		// 0未破除封印，1已破除未shifei，2已施肥未成熟,3已收获，4 需浇生命液进行激活
+		switch (treeInfo.status) {
+			case "0":
+				$tree.html('<div class="bg-renwu-trunk bg-renwu"></div><div class="bg-renwu-seal bg-renwu"></div>');
+				break;
+			case "2":
+				//已经成熟了
+				if (treeInfo.countdown <= 0) {
+					updateTreeRewardStatus($tree, treeInfo);
+				} else {
+					if(treeInfo.daily==0&&treeInfo.residue<=0){
+						$tree.html('<div class="bg-renwu-trunk bg-renwu"><div class=" bg-props bg-props-hand animate-flow"></div></div>');
+					}else{
+						$tree.html('<div class="bg-renwu-trunk bg-renwu"></div>');
+					}
+
+					counter($tree[0], treeInfo.countdown, function (targetEle, count) {
+						if (count <= 0) {
+							updateTreeRewardStatus($(targetEle), $(targetEle).data("treeinfo"));
+						}
+					});
+
+					//更新树的收获状态
+					if(treeInfo.daily!=-1 && treeInfo.residue>0){
+						counter2($tree[0], treeInfo.residue, function (targetEle, count) {
+							if (count <= 0) {
+								$tree.html('<div class="bg-renwu-trunk bg-renwu"><div class=" bg-props bg-props-hand animate-flow"></div></div>');
+							}
+						});
+					}
+				}
+				break;
+			case "1":
+			case "3":
+			case "4":
+				$tree.html('<div class="bg-renwu-trunk bg-renwu"></div>');
+				break;
+		}
 	}
 	/*
 	 * 处理封印,不能用data("treeinfo")
@@ -627,15 +654,12 @@ $(document).on("imageReady",function () {
 		if(!ret){
 			return;
 		}
+		var oldRet = $treeItem.data("treeinfo");
+		ret = $.extend(oldRet,ret)
 		$treeItem.data("treeinfo",ret);
-		if(ret.status==2 && ret.countdown>0){
-			counter($treeItem[0], ret.countdown, function (targetEle, count) {
-				if (count <= 0) {
-					updateTreeStatus($(targetEle), $(targetEle).data("treeinfo"));
-				}
-			});
-		}
+		initOneTree(ret);
 	}
+
 
 	/*
 	 * 浇灌生命药水
@@ -689,15 +713,27 @@ $(document).on("imageReady",function () {
 	/*
 	 * 点击摇钱树树干,施肥，查看状态,serial只能用id中值
 	 * */
-	function handletrunk( $treeItem) {
+	function handleDaily(treeInfo,$treeItem){
+		var $dilaog
+		if((treeInfo.daily==0 || treeInfo.daily==1)&&treeInfo.residue>0){
 
-		var treeInfo = $treeItem.data("treeinfo");
-		var treeId = $treeItem.attr("id");
-		var serial = parseInt(treeId.replace("tree",""),10);
+			$dilaog = $.tips("摇钱树距离下一个阶段的收获还有<span class='counter'>" + $treeItem.data("counter") + "</span>", "warn", 5000);
+			counter($dilaog.find(".counter"), treeInfo.residue, function (ele, count) {
 
-		//提示倒计时
-		if (treeInfo.status==2) {
-			var $dilaog = $.tips("摇钱树距离下一个阶段的成长还有<span class='counter'>" + $treeItem.data("counter") + "</span>", "warn", 5000);
+				var day = Math.floor(count/24/60/60);
+				var hours = Math.floor((count - day*24*60*60)/60/60);
+				var minute = Math.floor((count - day*24*60*60-hours*60*60)/60);
+				if(count<60){
+					count = count + "秒";
+				}else{
+					count =(day>0&&(day+" 天 ")||" ") +  (hours>0&&(hours+" 时 ")||" ")  + (minute>0&&(minute+" 分 ")||" ");
+				}
+				$(ele).html(count);
+				playAudio("clock", 0, 1, {time: 50});
+			});
+			$body.data("dialog",false);
+		}else{
+			$dilaog = $.tips("摇钱树距离下一个阶段的成长还有<span class='counter'>" + $treeItem.data("counter") + "</span>", "warn", 5000);
 			counter($dilaog.find(".counter"), $treeItem.data("counter"), function (ele, count) {
 
 				var day = Math.floor(count/24/60/60);
@@ -712,6 +748,23 @@ $(document).on("imageReady",function () {
 				playAudio("clock", 0, 1, {time: 50});
 			});
 			$body.data("dialog",false);
+		}
+
+	}
+	/*
+	 * 点击摇钱树树干,施肥，查看状态,serial只能用id中值
+	 * */
+	function handletrunk( $treeItem) {
+
+		var treeInfo = $treeItem.data("treeinfo");
+		var treeId = $treeItem.attr("id");
+		var serial = parseInt(treeId.replace("tree",""),10);
+
+		//提示倒计时
+		if (treeInfo.status==2) {
+			//每天获取
+			handleDaily(treeInfo);
+
 			return
 		}
 
@@ -803,6 +856,56 @@ $(document).on("imageReady",function () {
 			playRewardAnimate();
 		}
 	}
+	/*
+	 * 收获
+	 * */
+	function handleDailyReward($tree) {
+		if($tree.data("lock")){
+			$body.data("dialog",false);
+			return;
+		}
+		if ($tree.find(".bg-props-hand")) {
+			$tree.data("lock", true);
+			var treeInfo = $tree.data("treeinfo");
+			PAGE.ajax({
+				type: "get",
+				msg: {
+					"0" :"登录token验证失败",
+					"1" :"收获成功",
+					"2": "摇钱树编号错误",
+					"3": "摇钱树不存在",
+					"4" :"每日金币已领完",
+					"5" :"摇钱树非收获时期",
+					"6" :"今天已收取金币",
+					"7": "施肥未满24小时"
+				},
+				url: "/api/trees/daily?serial=" + treeInfo.serial+"&token="+token,
+				success: function (ret) {
+					if(ret){
+						updateTreeInfo($tree,ret);
+						// var forest_gold = $.cookie("forest_gold");
+						// var forest_coin = $.cookie("forest_coin");
+						var coin = ret.coin||0;
+						var gold = ret.gold ||0;
+						$coin.html(coin*1 || 0);
+						$gold.html(gold*1 || 0);
+						PAGE.data.confirm("点击屏幕右上角“...”按钮，收藏本页面。并分享给好友，将会获得好友消费金额的5%奖励哟!",function (e, $dialog) {
+							shareFriend();
+						});
+						playRewardCoin(treeInfo.apply_type, 1);
+					}
+					
+					
+				},complete:function () {
+					$tree.data("lock", false);
+					$body.data("dialog",false);
+				}
+			});
+		}else{
+			$body.data("dialog",false);
+		}
+	}
+
 	/*
 	 * 收获
 	 * */
@@ -948,12 +1051,18 @@ $(document).on("imageReady",function () {
 			$.dialog.closeAll();
 			var $seal = $this.find(".bg-renwu-seal");
 			var $trunk = $this.find(".bg-renwu-trunk");
+			var $hand = $this.find(".bg-props-hand");
 			if ($seal.length) {
 				handleBreakseal($this,$seal);
 			} else if ($trunk.length) {
-				handletrunk( $this,$trunk);
+				//每日获取
+				if($hand.length){
+					handleDailyReward($this);
+				}else{
+					handletrunk( $this,$trunk);
+				}
 			} else {
-				handleReward($this)
+				handleReward($this);
 			}
 
 		});
@@ -982,9 +1091,9 @@ $(document).on("imageReady",function () {
 			PAGE.guide.needGuide = true;
 			var stepArr = [{func:guideSkills,name:"skills"},
 				{func:guideCharge,name:"charge"},
-				{func:guideGoldHouse,name:"goldHouse"},
-				{func:guideTree,name:"breakSeal"},
-				{func:guideTree,name:"fertilizer"},
+				// {func:guideGoldHouse,name:"goldHouse"},
+				// {func:guideTree,name:"breakSeal"},
+				// {func:guideTree,name:"fertilizer"},
 				{func:guideEnd,name:"guideEnd"}
 			]
 			//step1

@@ -419,7 +419,7 @@ em {
 	position: relative;
 	background: #e6e6e6;
 	margin-left: -1px;
-	border-left: 1px solid #c1c1c1;
+	border-left: 1px solid #e1e1e1;
 	display: inline-block;
 }
 .tab-wrap .tab-head .tab-head-item.active {
