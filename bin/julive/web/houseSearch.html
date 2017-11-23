@@ -1,69 +1,106 @@
 <include src="#/web/common/header.html"></include>
 
 <!--s:新房情况局-->
-<div class="mt20 wrap">
-	<div class="p20 bg-white  shadow-2">
-		<div class="case-dynamic">
-			<div class="dyn-left tc">
-				<i class="ico icon_linshen"></i>
-				<a href="http://m.julive.com/tops" >房产情报</a>
-			</div>
-			<div class="dyn-right scrollDiv">
-				<ul>
-					<li>
-						<div class="col title">
-							<div class="col8 mt10"><h3>限售到底什么时候才可开卖</h3></div>
-							<div class="col4 tr mt10 pr10 fs14 t-info"><span>09.26 08:24</span></div>
-						</div>
-						<p class="text t-muted fs14 t-overflow mt10 pr10">
-							昨天跟其他人沟通的时候，看到有些人对于取得不动产证满两年方可转让不是太理解。这里在已限售2年新房为例进行说明：
-							一般购买新房的用户，大约都是两年才能拿到现房，这时，你才可以申请房产证，等到你拿到房产证后，从这时开始，两年后才可以交易。所以意味着中间最少有4年的时间，你才可以出售房产的。房产证的下发一般周期也相对比较长，所以整个限售的时间，可能就会在4~5年之间。
-						</p>
-					</li>
-					<li>
-						<div class="col title">
-							<div class="col8 mt10"><h3>限售到底什么时候才可开卖</h3></div>
-							<div class="col4 tr mt10 pr10 fs14 t-info"><span>09.26 08:24</span></div>
-						</div>
-						<p class="text t-muted fs14 t-overflow mt10 pr10">
-							昨天跟其他人沟通的时候，看到有些人对于取得不动产证满两年方可转让不是太理解。这里在已限售2年新房为例进行说明：
-							一般购买新房的用户，大约都是两年才能拿到现房，这时，你才可以申请房产证，等到你拿到房产证后，从这时开始，两年后才可以交易。所以意味着中间最少有4年的时间，你才可以出售房产的。房产证的下发一般周期也相对比较长，所以整个限售的时间，可能就会在4~5年之间。
-						</p>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
+<include src="#/web/common/dynamicNews.html"></include>
 <!--E:新房情况局-->
 
 <!--s:人物-->
-<div class="mt20 wrap personList">
-	<a href="#/web/consultativeDetail.html">
-		<ul class="case-list">
-			<li class="img">
+<div class="mt20 wrap">
 
-				<img src="/public/images/user.jpg" alt="五和万科长阳天地">
-			</li>
-			<li class="info">
-				<div class="relative">
-					<h3 class="inline-block">孙立军</h3>
-					<div class="lb-area inline-block">
-						<span class="lb lb1">理性</span><span class="lb lb2">客观</span><span class="lb lb3">真诚</span>
+	<ul class="col tc search-condition relative">
+		<li class="col3">
+			<span>区域</span><span class="turndown">▼</span>
+			<dl class="col">
+				<dt class="col6">
+					<div>区域</div>
+					<div>地铁</div>
+				</dt>
+				<dt class="col6">
+					<div>丰台</div>
+					<div>丰台</div>
+					<div>丰台</div>
+					<div>朝阳</div>
+				</dt>
+			</dl>
+		</li>
+		<li class="col3">
+			<span>总价 </span><span class="turndown">▼</span>
+			<dl>
+				<dd>不限</dd>
+				<dd>&lt;200万</dd>
+				<dd>200-400万</dd>
+				<dd>400-500万</dd>
+				<dd>500-600万</dd>
+				<dd>600-800万</dd>
+				<dd>800-1000万</dd>
+				<dd>1000-2000万</dd>
+				<dd>&gt;2000万</dd>
+				<dt class="col">
+					<div class="col3">自定义价格</div>
+					<div class="col6">
+						<input type="text" placeholder="最低">
+						-
+						<input type="text" placeholder="最高">
 					</div>
-					<div class="tel"><i class="ico icon_b_wenda"></i><i class="ico icon_tel"></i></div>
-				</div>
-				<div class="sch">毕业于太原理工大学</div>
-				<div class="feedback fs12">
-					咨询人数<em class="fs14">2302人</em>
-					满意度<em class="fs14">99.91%</em>
-				</div>
-				<h4>最新工作随笔</h4>
-				<div class="noticeContent t-overflow">最近客户咨询次数逐渐增多，通过微信可能不能及时添加到您各位，建议您可以用一下我们最新的app“居理新房”，里面可以点击我的头像进行在线咨询。我看到之后一定第一时间给您回复。谢谢您的认可，如果可以，也请您帮我们这个可爱的小猫头鹰多多做宣传哈！                            </div>
-				<div class="tc  noticeContent-exp"><span class="bg-icon icon-down"></span></div>
-			</li>
-		</ul>
-	</a>
+					<div class="col3">
+						<a href="btn btn-info">确定</a>
+					</div>
+				</dt>
+			</dl>
+		</li>
+		<li class="col3">
+			<span>户型</span><span class="turndown">▼</span>
+			<dl>
+				<dd>不限</dd>
+				<dd>一居</dd>
+				<dd>二居</dd>
+				<dd>三居</dd>
+				<dd>四居</dd>
+				<dd>五居及以上</dd>
+			</dl>
+		</li>
+		<li class="col3">
+			<span>更多</span><span class="turndown">▼</span>
+			<dl>
+				<dt>类型</dt>
+				<dd>
+					<span class="active"> 不限</span>
+					<span>住宅</span>
+					<span>别墅</span>
+				</dd>
+				<dt>特色</dt>
+				<dd>
+					<span class="active"> 不限</span>
+					<span>住宅</span>
+					<span>别墅</span>
+				</dd>
+				<dt>环线</dt>
+				<dd>
+					<span class="active"> 不限</span>
+					<span>二环内</span>
+					<span>二-三环内</span>
+					<span>三-四环内</span>
+					<span>四-五环内</span>
+					<span>五-六环内</span>
+					<span>六环外</span>
+				</dd>
+				<dt>售卖情况</dt>
+				<dd>
+					<span class="active"> 不限</span>
+					<span>未售</span>
+					<span>在售</span>
+					<span>售罄</span>
+					<span>待售</span>
+				</dd>
+
+				<dd>
+					<span>重置条件</span>
+					<span>确定</span>
+				</dd>
+			</dl>
+		</li>
+	</ul>
+
 </div>
 <!--:人物-->
 

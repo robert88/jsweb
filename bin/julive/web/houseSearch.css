@@ -1,0 +1,15 @@
+.search-condition{
+padding:15px 0;
+}
+.search-condition>li{
+ border-right:1px solid #e1e1e1;
+}
+.search-condition>li:last-child{
+	border-right:none;
+}
+.search-condition dl{
+	background:#fff;
+	position:absolute;
+	top:100%;
+}
+.turndown{ font-size: 14px; color:#999; margin-left:20px; }

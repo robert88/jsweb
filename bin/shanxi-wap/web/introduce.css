@@ -2,6 +2,21 @@
 	height:1.875rem;
 	background:url(/public/images/bg.jpg) no-repeat center top;
 	height: 12.222222222222221rem;
+	background-size: 100%;
+}
+.companyTitle{
+	background: url(/public/images/titlebg.png) no-repeat;
+	width: 430px;
+	height: 123px;
+	text-align: center;
+	color: #fff;
+	line-height: 123px;
+	font-size: 28px;
+	left: 50%;
+	top: 50%;
+	margin: -61.5px 0 0 -215px;
+	position: absolute;
+	z-index: 100;
 }
 .introduceWrap .title{
 	text-align: center;

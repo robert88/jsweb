@@ -236,7 +236,9 @@
 	background: #ffcc00;
 	border-radius: 50%;
 }
-
+.product-wrap .swiper-slide img{
+	height:164px;
+}
 .product-wrap .more-btn {
  background: #e6e6e6;
  padding: 5px 10px;

@@ -459,7 +459,8 @@
 	 *监听hashchange事件切换页面，监听事件load事件
 	 * */
 	$(window).on("hashchange", function() {
-		hashChange();
+		// hashChange();
+		window.location.reload();
 	});
 
 	/**
