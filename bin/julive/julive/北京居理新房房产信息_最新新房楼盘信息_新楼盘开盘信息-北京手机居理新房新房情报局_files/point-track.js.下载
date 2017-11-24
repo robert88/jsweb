@@ -1,0 +1,261 @@
+$(function() {
+    $(document).delegate('#dialog-ask-confirm-leave-phone, #dialog-ask-confirm-leave-phone2', 'pointTrack', function(event, data) {
+        if (data.response && data.response.code == 1) {
+            data.properties.leave_phone_state = '1';
+            data.properties.order_id = data.response.referrerDatas.order_id || '';
+        } else {
+            data.properties.leave_phone_state = '2';
+            data.properties.order_id = '';
+        }
+
+    }).delegate('#free-call-second-sub', 'mousedown', function(event) {
+        var $el     = $('#free-call-second-sub-point');
+        var $body   = $(this).parents('.dialog-body');
+        var $budget = $body.find('.budget-ipt');
+        var $area   = $body.find('.area-ipt');
+        var point   = $el.data('sa-point');
+        
+        if ($budget.text() != '您购房总价预算') {
+            point.properties.budget = [$budget.text()];
+        } else {
+            point.properties.budget = undefined;
+		}
+        if ($area.text() != '您购房的目标区域') {
+            point.properties.district = [$area.text()];
+        } else {
+            point.properties.district = undefined;
+        }
+
+        $el.trigger('pointTrack', point);
+    });
+});
+
+$.fn.extend({
+    isChecked: function() {
+        var $this = $(this);
+        var clazz = $this.data('checked');
+
+        if (clazz === undefined) {
+            var point = $this.data("sa-point");
+            if (point.event == 'e_click_like') {
+                clazz = 'opt-yz';
+            }
+        }
+
+        return $this.hasClass(clazz) || !!$this.find('.' + clazz).length || !!$this.parents('.' + clazz).length;
+    }
+});
+
+var _needAjax = false;
+var _timer  = null;
+var _object = null;
+
+$(document).ajaxSend(function(event, request, settings) {
+    // 有AJAX请求发起，拆除计时器
+    if (_timer) {
+        clearTimeout(_timer);
+    } else {
+        setTimeout(function() {
+            if (_timer) {
+                clearTimeout(_timer);
+            }
+        }, 200);
+    }
+
+}).ajaxComplete(function(event, request, settings) {
+
+    if (!_needAjax) {
+        return;
+    }
+
+    var data = null;
+
+    if (request.readyState == 4 && request.status == 200) {
+        data = request.responseText;
+        if (settings.dataType == 'json') {
+            data = JSON.parse(data);
+        } else if (settings.dataType == 'jsonp') {
+            data = JSON.parse(data.match(/^\w+\((.+)\)$/)[1]);
+        }
+    }
+
+    if (_object) {
+
+        var point = $(_object).data('sa-point');
+
+        point.response = data;
+
+        // 触发真正的上报事件
+        $(_object).trigger('pointTrack', point);
+
+        _object = null;
+    }
+});
+
+// 这个必须放在最后面
+$(function() {
+
+    $(document).delegate("[data-sa-point]", "pointTrack", function() {
+
+        // 上报神策
+        var point  = $(this).data("sa-point");
+        var common = {
+            // referer_type: page_view_properties.referer_type,
+            channel_id  : page_view_properties.channel_id,
+            channel_put : page_view_properties.channel_put,
+            device_type : page_view_properties.device_type,
+            select_city : page_view_properties.select_city,
+            product_id  : page_view_properties.product_id,
+            visitor_id  : page_view_properties.visitor_id,
+            julive_id   : page_view_properties.julive_id,
+            current_url : page_view_properties.current_url,
+        };
+
+        if (page_view_properties.project_id !== undefined) {
+            common.project_id = page_view_properties.project_id;
+        }
+        if (page_view_properties.employee_id !== undefined) {
+            common.adviser_id = page_view_properties.employee_id;
+        }
+        if (page_view_properties.question_id !== undefined) {
+            common.question_id = page_view_properties.question_id;
+        }
+
+        sa.track(point.event, $.extend({}, common, point.properties));
+
+    }).delegate("[data-sa-point]", "mousedown", function(e) {
+        var $this = $(this);
+        var point = $this.data("sa-point");
+
+        // 处理AJAX回调
+        _needAjax = $this.data('need-ajax');
+        if (_needAjax === undefined) {
+            if (point.event == 'e_click_affirm_login' || point.event == 'e_click_confirm_leave_phone') {
+                _needAjax = true;
+                // if (point.event == 'e_click_affirm_login' && $this.data('target') === undefined) {
+                //     $this.data('target', 'affirm-login-btn');
+                // }
+                
+            } else {
+                _needAjax = false;
+            }
+        }
+
+        if (_needAjax) {
+
+            point.response = null;
+            
+            if ($this.data('target')) {
+                if ($('#' + $this.data('target')).length == 0) {
+                    _object = $('<a id="' + $this.data('target') + '">').appendTo('body');
+                    _object.attr('data-sa-point', $this.attr('data-sa-point'));
+                } else {
+                    _object = $('#' + $this.data('target'));
+                }
+
+            } else {
+                _object = $this;
+            }
+
+            if (_timer) {
+                clearTimeout(_timer);
+            }
+
+            // 定一个200ms的定时器，检查是否有AJAX请求发起
+            // 如果没有，则肯定是前端验证失败，直接上报埋点
+            // 如果有，则中断计时器，将埋点放到AJAX请求完成后再上报
+            _timer = setTimeout(function() {
+                // 触发真正的上报事件
+				point = $(_object).data('sa-point');
+				point.response = null;
+                _object.trigger('pointTrack', point);
+            }, 200);
+
+            // 阻止立刻上报
+            return false;
+        }
+
+        // 处理各种事件
+
+        if (point.event.substring(0, 14) == 'e_click_search') {
+            // 搜索事件，设置query
+            var query = $this.data('query');
+            if (query) {
+                point.properties.query = $('#' + query).val();
+            } else {
+                point.properties.query = $this.parents('form').find(':input:eq(0)').val();
+            }
+
+        } else if (point.event.substring(0, 8) == 'e_click_' && point.event.substr(-4) == '_tag') {
+            // 点击TAG事件, 设置tag_title
+            if (!point.properties.tag_title) {
+                point.properties.tag_title = $.trim($this.text());
+            }
+
+        } else if (point.event.substring(0, 8) == 'e_click_' && point.event.substr(-4) == '_tab') {
+            // 点击TAB事件, 设置tab_title
+            if (!point.properties.tab_title) {
+                point.properties.tab_title = $.trim($this.text());
+            }
+
+        } else if (point.event == 'e_click_unfold' || point.event == 'e_click_fold') {
+            // 展开/收起，自动切换
+            if ($this.data('toggle-fold') !== false && e.which === 1) {
+                if (point.click_times === undefined) {
+                    point.click_times = 0;
+                }
+
+                // 切换展开/收起
+                if (!(point.click_times++ % 2)) {
+                    point.event = 'e_click_unfold';
+                    point.properties.fromItem = 'i_unfold';
+                } else {
+                    point.event = 'e_click_fold';
+                    point.properties.fromItem = 'i_fold';
+                }
+            }
+
+        } else if (point.event == 'e_click_like' || point.event == 'e_click_collection' || point.event == 'e_click_subscripition') {
+            // 点赞/收藏/订阅
+
+            // 是否需要登陆
+            var needLogin = $this.data('need-login');
+
+            if (needLogin === undefined) {
+                needLogin = true;
+            }
+
+            if (needLogin && page_view_properties.julive_id == -1) {
+                point.properties.toModule = 'm_user_login_window';
+                $this.trigger("pointTrack", point);
+                return;
+            }
+
+            // 当前状态
+            var checked = $this.isChecked();
+            var enableCancel = $this.data('enable-cancel') || false; // 默认不允许取消
+            var action = point.event.split('_').pop();
+
+            if (enableCancel) {
+                // 允许取消，切换状态
+                var name = action + '_action';
+                point.properties[name] = checked ? 2 : 1;
+
+                if (action == 'like') {
+                    point.properties[name] += '';
+                }
+
+            } else if (checked) {
+                // 不允许取消，已选中时再点不上报
+                return false;
+
+            } else {
+                point.properties.toModule = '';
+            }
+
+        }
+
+        // 触发真正的上报事件
+        $this.trigger("pointTrack", point);
+    });
+});

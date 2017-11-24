@@ -1,0 +1,60 @@
+$(function(){
+    //筛选条件
+    $(".input-area").each(function(){
+        var _item = $(this);
+        var _ipt = _item.children(".ipt");
+        _ipt.click(function(){
+            if(_ipt.next(".dropdown-list").is(":hidden")){
+                _ipt.next(".dropdown-list").stop().slideDown();
+                _ipt.parents(".input-area").parents(".tr").addClass("on");
+                _ipt.parents(".input-area").parents(".tr").siblings().removeClass('on');
+                _ipt.next(".dropdown-list").children("li").click(function(){
+                    var defaultValue = _ipt.next(".dropdown-list").children("li:first").text();
+                    _ipt.parents(".input-area").parents(".tr").removeClass("on");
+                    _ipt.text($(this).text());
+                    var dataCapture = $(this).attr("data-capture");
+                    var dataKey = $(this).parents(".dropdown-list").prev(".ipt").attr("data-key");
+                    switch(dataKey)
+                    {
+                        case 'area':
+                            _ipt.attr('data-area',dataCapture);
+                            break;
+                        case 'budget':
+                            _ipt.attr('data-budget',dataCapture);
+                            break;
+                        case 'house':
+                            _ipt.attr('data-house',dataCapture);
+                            break;
+                        case 'size':
+                            _ipt.attr('data-size',dataCapture);
+                            break;
+                    }
+                    if(_ipt.text() == defaultValue){
+                        _ipt.css({
+                            color: "#999"
+                        });
+                    }else{
+                        _ipt.css({
+                            color: "#333"
+                        });
+                    }
+
+                    $(this).parents(".dropdown-list").slideUp("fast");
+                });
+            }else if(_ipt.next(".dropdown-list").is(":visible")){
+                $(".dropdown-list").slideUp("fast");
+                _ipt.parents(".input-area").parents(".tr").removeClass("on");
+            }
+        });
+
+    });
+
+    //点击空白区域关闭下拉选择框
+    $(document).mouseup(function(e){
+        var _con = $(".dropdown-list");   // 设置目标区域
+        if(!_con.is(e.target) && _con.has(e.target).length === 0){ // Mark 1
+            $(".dropdown-list").slideUp();
+        }
+    });
+
+});

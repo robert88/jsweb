@@ -1,0 +1,253 @@
+//预约报名页面脚本
+
+$(function(){
+
+    $('#teambuy_submit').click(function () {
+        if($('.ga_btn_success').data('content') != '' && $('.ga_btn_success').data('content') != null)
+        {
+            googleAnalytics($('.ga_btn_success').data('content'));
+        }
+        var mobile = $('#input_mobile').val();
+        var project_id = $('#intent_project_id').val();
+        input_code = $('#input_code').val();
+        var capture  = $('.ga_btn_success').data('capture');
+        mobile = mobile.replace(/(\s+)/g,'');
+        $('#input_mobile').val(mobile);
+        var item = $(this);
+        if (mobile == "") {
+            msg_tip('请填写手机号');
+            return false;
+        }
+        if ( !checkTel(mobile) ) {
+            msg_tip('手机号码格式不正确，请核对后重新输入');
+            return false;
+        }
+        $('#input_code').val(input_code);
+        if (input_code == "") {
+            msg_tip('请填写收到的验证码');
+            return false;
+        }
+        var clickSource =$(this).attr('clickSource');
+        if(checkCaptcha(input_code)){//验证码流程
+            $.ajax({
+                type: "POST",
+                url: check_mobile_captcha_update,
+                data: {
+                    mobile: mobile,
+                    captcha:input_code
+                },
+                beforeSend: function () {
+                },
+                success: function (rsps) {
+                    rsps = eval('(' + rsps + ')');
+                    if(rsps.code == 2){
+                        msg_tip('验证码已经过期，请重新获取验证码');
+                        return false;
+                    }else if(rsps.code == 3){
+                        msg_tip('验证码错误，请填写正确的验证码');
+                        return false;
+                    }else if(rsps.code == 1){
+                        if(clickSource == 'clickSource_hot_page_yuyuekanfang_page_button' || clickSource == 'clickSource_hot_ad_today_headline_button')
+                        {
+                            free2_call_ajax_submit(mobile, clickSource, _csrf, user_apply_over_to,capture);
+                        }
+                        if(clickSource == 'clickSource_hot_page_button')
+                        {
+                            free2_call_ajax_submit(mobile, clickSource, _csrf, '',capture);
+                        }
+                        item.attr('disabled','disabled').addClass('disabled');
+                    }
+                },
+                error: function (error) {
+                    return false;
+                },
+                complete: function () {
+                }
+            });
+        }else{//原有流程
+            if(clickSource == 'clickSource_hot_page_yuyuekanfang_page_button' || clickSource == 'clickSource_hot_ad_today_headline_button' || clickSource == 'clickSource_book_info' || clickSource == 'clickSource_book_new_price_change_info'  || clickSource == 'clickSource_book_next_open_time_info')
+            {
+                free2_call_ajax_submit(mobile, clickSource, _csrf, user_apply_over_to,capture,project_id);
+            }
+            if(clickSource == 'clickSource_hot_page_button' || clickSource == 'clickSource_view_bottom_take_a_call_button')
+            {
+                free2_call_ajax_submit(mobile, clickSource, _csrf, '',capture,project_id);
+            }
+            item.attr('disabled','disabled').addClass('disabled');
+        }
+
+    });
+
+    $("#btnSearch").click(function(){
+        btnSearchOnclick();
+    });
+
+})
+
+function free2_call_ajax_submit(mobile, clickSource, _csrf, redirect_url,capture,project_id)
+{
+    $.ajax({
+            type: 'POST',
+            url: user_see_create_url,
+            data: {
+                user_mobile: mobile,
+                clickSource:clickSource,
+                status: 1,
+                type: 2,
+                _csrf: _csrf,
+                project_id:project_id
+            },
+            beforeSend: function () {
+                $(this).attr('disabled', 'disabled');
+            },
+            success: function (rsp) {
+                if (rsp == 1)
+                {
+                    if(checkCaptcha(input_code)){
+                        $('.book-success').show(0).siblings('.book-house').hide(0);
+                        setTimeout(function(){
+                            if(redirect_url != '')
+                            {
+                                window.history.go(-1);
+                                //window.location.href = redirect_url;
+                            }else{
+                                $('#input_mobile').val('');
+                            }
+                        },5000);
+                    }else{
+                        if(confirm('提交成功，咨询师将用'+phone_number_free_call_back+'号码联系您，免费专车带您看房！')){
+                            if(redirect_url != '')
+                            {
+                                window.history.go(-1);
+                                //window.location.href = redirect_url;
+                            }else{
+                                $('#input_mobile').val('');
+                            }
+                        }
+                        setTimeout(recovers,5000);
+
+                    }
+
+                    if(capture != '' && capture != null)
+                    {
+                        googleAnalytics(capture);
+                    }
+
+                } else {
+                    alert(rsp);
+                }
+            },
+            complete: function () {
+                $(this).removeAttr('disabled');
+            }
+    });
+}
+
+function btnSearchOnclick()
+{
+    var keywords = $("#keywords").val();
+    if (keywords !== '请输入楼盘名称…')
+    {
+        location.href = project_search_url + '?name=' + keywords;
+    }
+}
+
+/*首次获取验证码*/
+$(document).on('click', '.send_part_code', function () {
+    $('.send_part_code').attr('disabled', 'disabled');
+    get_captcha_click($(this));
+});
+
+/***验证获取验证码的手机是否有效
+ *  无效给出错误提示，有效直接获取验证码
+ * @returns {boolean}
+ */
+function get_captcha_click(obj) {
+    var mobile = $('#input_mobile').val();
+    if (!checkTel(mobile)) {
+        msg_tip('请输入正确的手机号');
+        return false;
+    } else {
+        /*获取验证码方法*/
+        timeNumListen(30);
+        get_captcha(mobile);
+    }
+}
+
+/**
+ * 验证码已经发送，按钮timenum 秒内不能点击
+ * @param timenum int 监听秒数
+ **/
+function timeNumListen(timenum) {
+    settimenum();
+    function settimenum() {
+        if (timenum > 0) {
+            $('.send_part_code').text(timenum + '秒后可重发验证码').attr('disabled', 'disabled').css({'color': '#a5a5a5'});
+            setTimeout(settimenum, 1000);
+            timenum = timenum - 1;
+        } else {
+            $('.send_part_code').text('发送验证码').removeAttr('disabled').css({'color': '#333'});
+        }
+    }
+}
+
+/**
+ * 获取验证码方法
+ * @param mobile 获取验证码的手机号码
+ */
+function get_captcha(mobile) {
+    $.ajax({
+        type: "POST",
+        url: get_mobile_captcha_save,
+        data: {
+            mobile: mobile,
+        },
+        beforeSend: function () {
+        },
+        success: function (rsps) {
+        },
+        error: function (error) {
+            return false;
+        },
+        complete: function () {
+        }
+    });
+
+}
+/**
+ * 获取验证码方法
+ * @param mobile 获取验证码的手机号码
+ */
+function check_captcha(mobile,input_code) {
+    $.ajax({
+        type: "POST",
+        url: check_mobile_captcha,
+        data: {
+            mobile: mobile,
+            input_code:input_code
+        },
+        beforeSend: function () {
+        },
+        success: function (rsps) {
+            rsps = eval('(' + rsps + ')');
+            if(rsps.code == 2){
+                msg_tip('验证码已经过期，请重新获取验证码');
+                return '2';
+            }else if(rsps.code == 3){
+                msg_tip('验证码错误，请填写正确的验证码');
+                return '3';
+            }
+        },
+        error: function (error) {
+            return false;
+        },
+        complete: function () {
+        }
+    });
+
+}
+
+function recovers() {
+    $('#teambuy_submit').removeClass('disabled');
+    $('#teambuy_submit').removeAttr('disabled');
+}

@@ -1,0 +1,87 @@
+/**
+ * Created by Administrator on 2016/1/8.
+ * 咨询师列表页脚本
+ */
+$(function(){
+    //咨询师搜索
+    $("#btnSearch").click(function(){
+        btnSearchOnclick();
+    });
+    //绑定下拉加载事件
+
+    $(window).scroll(function () {
+        if (typeof(page) == 'undefined') {
+            return false;
+        }
+        //$(window).scrollTop()这个方法是当前滚动条滚动的距离
+        //$(window).height()获取当前窗体的高度
+        //$(document).height()获取当前文档的高度
+        var bot = $('.layer-help').height(); //bot是底部距离的高度
+        if ((bot + $(window).scrollTop()) >= ($(document).height() - $(window).height())) {
+            //当底部基本距离+滚动的高度〉=文档的高度-窗体的高度时；
+            //我们需要去异步加载数据了
+            if(page >= TotalPage){
+                $(".loading-waiting").show(0).html('就这么多了...').css({'margin':0});
+            }else if(prePage == page){
+                var url = window.location.href;
+
+                //上拉咨询师列表页 -- 埋点
+                $("#hidden_loading_more_track").trigger("mousedown");
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:{
+                        page:page
+                    },
+                    beforeSend:function(){
+                        $(".loading-waiting").show(0);
+                        prePage = page + 1;//prePage为标识变量，防止读取重复数据
+                    },
+                    success: function (data) {
+                        if ($(".course-list").size() != 0) {
+                            $(".course-list").children('.course').last().after(data);
+                        } else {
+                            $(".consultant-list").children('.consultant-item').last().after(data);
+                        }
+                        //当前页加1
+                        setEmotion();
+                        $(".loading-waiting").hide(0);
+                        page = page + 1;
+                        // 加载更多 -- 埋点
+                        $("#loading_more_track").trigger("pointTrack");
+                    }
+                });
+            }
+        }
+    });
+    //更多点评
+    //$(document).on('click',".counselor-item .media3-more .more",function(){
+    //    var mediaInfo = $(this).attr("data-text");
+    //    var mediaInfoShort = $(this).attr("data-short");
+    //    var mediaInfoContainer = $(this).parent().siblings(".info2").children(".note");
+    //    var _item = $(this);
+    //    if(_item.hasClass("more-hide")){
+    //        _item.removeClass("more-hide");
+    //        mediaInfoContainer.html(mediaInfoShort);
+    //    }else {
+    //        _item.addClass("more-hide");
+    //        mediaInfoContainer.html(mediaInfo);
+    //    }
+    //});
+
+
+});
+
+
+function btnSearchOnclick(){
+    var keywords = $("#keywords").val();
+    var keywordsDefaultVal = $("#keywords").prop("placeholder");
+    if (keywords !== keywordsDefaultVal){
+        var header_search_url = $("#keywords").attr('data-search-url');
+        location.href = commonLocation(site_url,header_search_url + 'keywords=' + keywords);
+    }
+}
+
+$('#btnSearch').bind("pointTrack", function(event, data) {
+    data.properties.query =  $('#keywords').val();
+}); 

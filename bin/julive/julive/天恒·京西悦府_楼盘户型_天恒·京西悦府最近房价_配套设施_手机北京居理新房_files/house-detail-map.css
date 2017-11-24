@@ -1,0 +1,89 @@
+@charset "utf-8";
+/*
+ * name:house-detail-map.css
+ * 使用范围：楼盘详情页首页周边环境中的地图
+ */
+
+.project-text{
+    width: auto;
+    position: absolute;
+    color: #48b3e2;
+    text-align: center;
+    font-size: 14px;
+    direction:ltr;
+    line-height: 24px;
+    white-space: nowrap;
+}
+.project-text p{
+    border-radius: 5px;
+    border: 1px solid rgba(72,179,226,.9);
+    color: rgba(72,179,226,.9);
+    background: rgba(255,255,255,.9);
+}
+.project-text{
+    z-index: 20;
+}
+.project-text p{
+    padding: 0 5px;
+}
+.project-pos{
+    display: block;
+    width: 25px;
+    height: 38px;
+    background: url(../../images/ico-points.png) no-repeat -89px -283px;
+    background-size: 120px 320px;
+    z-index: 2;
+    margin: 4px auto 0;
+}
+.project-text .ico-point{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 13px;
+    margin: 0 auto;
+    color: rgba(72,179,226,.9);
+    background: url("../../images/ico-point-p.png") no-repeat center -3px;
+    top:25px;
+}
+.mark-pos{
+    position: absolute;
+    height: 32px;
+    z-index: 5;
+    width: 22px;
+}
+/*教育*/
+.mark-pos.edu{
+    background: url(../../images/ico-points.png) no-repeat -29px -128px;
+    background-size: 120px 320px;
+}
+.mark-pos.edu.cur{
+    background: url(../../images/ico-points.png) no-repeat 0 -128px;
+    background-size: 120px 320px;
+}
+/*购物*/
+.mark-pos.shopping{
+    background: url(../../images/ico-points.png) no-repeat -29px -64px;
+    background-size: 120px 320px;
+}
+.mark-pos.shopping.cur{
+    background: url(../../images/ico-points.png) no-repeat 0 -64px;
+    background-size: 120px 320px;
+}
+/*交通*/
+.mark-pos.traffic{
+    background: url(../../images/ico-points.png) no-repeat -29px 0;
+    background-size: 120px 320px;
+}
+.mark-pos.traffic.cur{
+    background: url(../../images/ico-points.png) no-repeat 0 0;
+    background-size: 120px 320px;
+}
+/*医疗*/
+.mark-pos.hospital{
+    background: url(../../images/ico-points.png) no-repeat -29px -96px;
+    background-size: 120px 320px;
+}
+.mark-pos.hospital.cur{
+    background: url(../../images/ico-points.png) no-repeat 0 -96px;
+    background-size: 120px 320px;
+}

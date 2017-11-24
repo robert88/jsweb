@@ -1,0 +1,1656 @@
+adhoc('init', {
+    appKey: abtest_appkey
+});
+//变量名，事件名，回调函数（处理具体页面结构的逻辑，每个测试需要单独写各自的回调函数）
+adhoc.satrack = function(flag_name, sa_event, callback, params) {
+    adhoc('getFlags', function(flags) {
+        var flag_value = flags.get(flag_name);
+        if (flag_value == null || flag_value == undefined || flag_value == '') {
+            flag_value = abtest_default_version;
+        }
+        //向神策上报AB测试数据
+        sa.track(sa_event, { abtest_name: flag_name, abtest_value: flag_value });
+        //把AB测试数据存cookie,方便留电以及点击事件等其他关联功能记录AB测试数据
+        setCookie('abtest_event_values_' + flag_name, "{\"abtest_event\":\"" + sa_event + "\",\"abtest_name\":\"" + flag_name + "\",\"abtest_value\":\"" + flag_value + "\"}", 30 * 24 * 3600);
+        if (typeof callback === "function") {
+            callback(flag_value, params);
+        }
+    });
+};
+
+//公共底部页面加载时就需要调用
+if($.inArray(cur_page_url_name,JSON.parse(except_page_footer_abtest)) == -1 & requestRoute != 'site/error'){//不引用底部公共悬浮的页面，需要过滤掉
+    adhoc.satrack(abtest_app_download_im,abtest_event_name,footer_tab_abtest);
+}
+
+/**
+ * 通过ab测试的结果，对M站底部在线咨询与下载APP做AB测试
+ * @param flag_value
+ */
+// function help_find_abtest(flag_value) {
+//     if (flag_value == abtest_default_version) {
+//         $('[for=ab_no_default_help]').remove();
+//         $('[for=ab_default_help]').show();
+//     } else {
+//         $('[for=ab_default_help]').remove();
+//         $('[for=ab_no_default_help]').show();
+//     }
+// }
+
+
+function footer_tab_abtest(flag_value) {
+    //开启AB测试时打开下面注释
+    if (flag_value == abtest_default_version) {
+        $('[for=ab_app_download]').remove();
+        $('[for=ab_online_ask]').show();
+    } else {
+        $('[for=ab_online_ask]').remove();
+        $('[for=ab_app_download]').show();
+    }
+}
+
+$(function() {
+    setEmotion(); //解析表情
+});
+/**
+ * 获取url参数
+ * @param name
+ * @returns {null}
+ */
+function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+    var r = window.location.search.substr(1).match(reg); //匹配目标参数
+    if (r != null) return unescape(r[2]);
+    return null; //返回参数值
+}
+
+/**
+ * 楼盘详情页，搜索周边专用的获取URL中的值
+ * @returns {*}
+ */
+function getDetailUrlParam() {
+    var url = window.location.href;
+    if (url != '') {
+        var url_arr = url.split('/');
+        if (url_arr != '') {
+            return url_arr[url_arr.length - 1];
+        }
+    }
+    return;
+}
+
+//手机号码的校验
+function checkTel(value) {
+    var isPhone = /^([0-9]{3,4}-)?[0-9]{7,8}$/;
+    var isMob = /^((\+?86)|(\(\+86\)))?(13[0123456789][0-9]{8}|15[012356789][0-9]{8}|1[78][0123456789][0-9]{8}|14[57][0-9]{8}|1349[0-9]{7})$/;
+    if (isMob.test(value) || isPhone.test(value)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function setCookie(name, value, tm) { //设置cookie
+    if (tm == null || tm < 59) tm = 60;
+    var exp = new Date();
+    exp.setTime(exp.getTime() + tm * 1000);
+    document.cookie = name + "=" + escape(value) + ";path=/;expires=" + exp.toGMTString();
+}
+
+function getCookie(name) //取cookies函数
+{
+    var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+    if (arr != null) return unescape(arr[2]);
+    return null;
+}
+
+function delCookie(name) //删除cookie
+{
+    var exp = new Date();
+    exp.setTime(exp.getTime() - 1);
+    var cval = getCookie(name);
+    if (cval != null) document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
+}
+
+
+/**
+ * //兼容性的公共的一句话提示弹窗，对已经封装好的弹窗的又一次封装
+ * @param msg
+ * @param msgType 一句话信息提示 交互按钮 ，1：只有一个确定按钮，2：有确定取消两个按钮
+ */
+function msg_tip(msg, msgType, func, data, commit_url) {
+    if (msgType == '' || msgType == undefined) {
+        msgType = 1;
+        popLayer(1, msg, msgType);
+    } else if (msgType == 2) {
+        popLayer(1, msg, msgType, func, data, commit_url);
+    }
+}
+
+
+//筛选条件
+$(function() {
+    $('.query-mnore .query-panel .btn-area2').children('.btn-confirm').click(function() {
+        var search_arr = new Array;
+        //（区域，环线，地铁三者互斥）,如果不存在环线，获取区域或地铁的值
+        var loop = $('.mod3-loop').find('li.on a').attr('data-search-key');
+        if (loop == undefined || loop == '' || loop == 'i0') {
+            var dd = $('.query-list .query-area').find('li.cur-selected a').attr('data-search-key');
+            search_arr.push(dd);
+        }
+
+        // 获取总价已选中的条件
+        $('.query-list').find('.query-price li.cur-selected a').each(function() {
+            var search_key = $(this).attr('data-search-key');
+            if (search_key.match(/^[A-Za-z][0]/) == null) {
+                search_arr.push($(this).attr('data-search-key'));
+            }
+        });
+        //自定义总价
+        var min_price = $('.btn-confirm1').parents('.btn-area1').find('.btn-minimum').val();
+        var max_price = $('.btn-confirm1').parents('.btn-area1').find('.btn-highest').val();
+        if (min_price != undefined && max_price != undefined && min_price != '' && max_price != '') {
+            var diy_price = 'x' + min_price + ',' + max_price;
+            search_arr.push(diy_price);
+        }
+
+        // 获取户型已选中的条件
+        $('.query-list').find('.query-housetype li.cur-selected a').each(function() {
+
+            var search_key = $(this).attr('data-search-key');
+            if (search_key.match(/^[A-Za-z][0]/) == null) {
+                search_arr.push($(this).attr('data-search-key'));
+            }
+        });
+        //更多条件
+        $('.query-list').find('.mod3 li.on a').each(function() {
+            var search_key = $(this).attr('data-search-key');
+            if (search_key.match(/^[A-Za-z][0]/) == null) {
+                search_arr.push($(this).attr('data-search-key'));
+            }
+        });
+        if (search_arr.length > 0) {
+            var arr_last = new Array;
+            $.unique(search_arr);
+
+            var area = $('.area-type-item.area-list').find('li.cur-selected a').attr('data-search-key');
+            for (var i = 0; i < search_arr.length; i++) {
+                if (search_arr[i] != undefined && search_arr[i] != area) {
+                    arr_last.push(search_arr[i]);
+                }
+            }
+            arr_last.sort();
+            // 区域放在第一位，其余按字母排序
+            if (loop == undefined || loop == '' || loop == 'i0') {
+                if (area != undefined && area != 'a0') {
+                    arr_last.unshift(area);
+                }
+            }
+            var search_str = arr_last.join('-');
+            window.location.href = commonLocation(site_url, 'project/' + search_str);
+        } else {
+            window.location.href = commonLocation(site_url, 'project');
+        }
+        click_close($(this));
+    });
+
+    //总价自定义筛选
+    $('.btn-confirm1').click(function () {
+        var _item = $(this);
+        var cur_url = cur_page_price_url;
+        var min_price = _item.parents('.btn-area1').find('.btn-minimum').val();
+        var max_price = _item.parents('.btn-area1').find('.btn-highest').val();
+        if(min_price == ''&& max_price !=''){
+            msg_tip('请填写最小值');
+        }else if(min_price != '' && max_price ==''){
+            msg_tip('请填写最大值');
+        }else if(min_price == '' && max_price ==''){//最大最小值都为空，默认不限
+            var text3 = '总价';
+            $(this).parents('.query-panel').find('li').removeClass('cur-selected');
+            $(this).parents('.query-price').find('.query-txt').html(text3);
+            var jump = $(this).parents('.query-price').find('.price-item').children('li').eq(0).children('a').attr('href');
+            window.location.href = jump;
+            return false;
+        }else if(!(intCheck(min_price)) || !(intCheck(max_price))){
+            msg_tip('请输入正确数字区间');
+            return false;
+        }else if (min_price != '' && max_price != '') {
+            if(parseInt(min_price) > parseInt(max_price)){
+                msg_tip('最小值不允许大于最大值');
+                return false;
+            }
+            var text3 = min_price +'-'+max_price+'万';
+
+            $(this).parents('.query-panel').find('li').removeClass('cur-selected');
+            $(this).parents('.query-price').find('.query-txt').html(text3);
+
+            if(intCheck(min_price) && intCheck(max_price)) {
+                click_close($(this));
+                var new_url = user_search('x', min_price, max_price);
+                if (new_url == ''){
+                    var end_url = 'project';
+                }else{
+                    var end_url = 'project/'+new_url;
+                };
+                window.location.href = commonLocation(site_url,end_url);
+            }
+        }
+
+    });
+
+});
+
+    //根据用户自定义搜索的参数来拼接URI
+    //type 即:x,y,m  分别为:总价c,单价f,面积g
+    //min,max参数即为用户输入的最大最小值
+    function user_search(type, min, max) {
+        if (min.length > 0 && max.length > 0) {
+            var param = type + min + ',' + max;
+            var new_url = add_user_input(type, param);
+            return new_url;
+        }
+    }
+
+
+    //把用户输入的,拼接到uri中
+    //type 即:x,y,m  分别为:总价c,单价f,面积g
+    function add_user_input(type, param) {
+
+        //var hide = $("#hidden_show_more").val();
+        //if (hide == 1) {
+        //    hide = 'w1';
+        //} else {
+        //    hide = 'w2';
+        //}
+        //先删除对应的选项,留其一
+        if (type == 'x') {
+            var u1 = del_param('c');
+            var new_u1 = add_param(u1, param);
+            new_u1 = del_param_from_url_str(new_u1, 'w');
+            //new_u1 = add_param(new_u1, hide);
+            return new_u1;
+        } else if (type == 'y') {
+            var u1 = del_param('f');
+            var new_u1 = add_param(u1, param);
+            new_u1 = del_param_from_url_str(new_u1, 'w');
+            //new_u1 = add_param(new_u1, hide);
+            return new_u1;
+        } else if (type == 'm') {
+            var u1 = del_param('g');
+            var new_u1 = add_param(u1, param);
+            new_u1 = del_param_from_url_str(new_u1, 'w');
+            //new_u1 = add_param(new_u1, hide);
+            return new_u1;
+        }
+
+        return 'project/';
+    }
+
+
+
+    //从当前链接的uri中删除某个选项
+    //返回新的uri
+    function del_param(param) {
+        var url_arr = window.location.pathname.split('/');
+        var uri_str = url_arr.pop();
+
+        if (uri_str == 'project' || uri_str == 's') {
+            return window.location.pathname;
+        }
+        var uri_arr = uri_str.split('-');
+        for (var i = 0; i < uri_arr.length; i++) {
+            var v = uri_arr[i];
+            var reg = /^z[0-9]*$/;
+            var match = reg.test(v);
+            if (match) {
+                uri_arr.splice(i, 1);
+            }
+            if (typeof v != 'undefined') {
+                if (v.length <= 3) {
+                    var patt = new RegExp(param, "g");
+                    if (patt.exec(v) != null) {
+                        //删掉
+                        uri_arr.splice(i, 1);
+                        i = i - 1;
+                    }
+                } else if (param.length >= 3) {
+                    //删掉
+                    uri_arr.splice(i, 1);
+                    i = i - 1;
+                } else {
+                    var reg = "^" + param + "\\d[%2C,0-9]+$";
+                    var patt = new RegExp(reg, "g");
+                    if (patt.exec(v) != null) {
+                        //删掉
+                        uri_arr.splice(i, 1);
+                        i = i - 1;
+                    }
+                }
+            }
+        }
+        url_arr.push(uri_arr.join('-'));
+        var op_url_str = url_arr.join('/');
+        return op_url_str;
+    }
+
+    //从传入的 url 中增加一个 param
+    function add_param(url, param) {
+        url = del_param_from_url_str(url, param);
+        var url_arr = url.split('/');
+        var uri_str = url_arr.pop();
+        if (uri_str == 'project') {
+            url_arr.push('project');
+            uri_str = '';
+        }
+        if (uri_str == 'index') {
+            uri_str = '';
+        }
+        // if (uri_str == '') {
+        //     url_arr.push('s');
+        //     uri_str = '';
+        // }
+        var uri_arr = uri_str.split('-');
+        // if(url == '/project/')
+        // {
+        //     uri_arr.push('s');
+        // }
+        uri_arr.push(param);
+        //排序
+        var area = '';
+        //先删掉区域
+        for (var i = 0, len = uri_arr.length; i < len; i++) {
+            var v = uri_arr[i];
+            if (typeof v != 'undefined') {
+                if (v.length <= 3) {
+                    var patt = new RegExp('a', "g");
+                    if (patt.exec(v) != null) {
+                        //删掉
+                        area = v;
+                        uri_arr.splice(i, 1);
+                    }
+                } else {
+                    var patt = new RegExp(',', "g");
+                    if (patt.exec(v) == null) {
+                        var patt2 = new RegExp('%2C', "g");
+                        if (patt2.exec(v) == null) {
+                            //删掉
+                            area = v;
+                            uri_arr.splice(i, 1);
+                        }
+                    }
+                }
+            }
+        }
+        uri_arr.sort();
+        //再把区域加进去
+        if (area.length >= 2) {
+            uri_arr.unshift(area);
+        }
+        var op_url_str = '';
+        for (var i = 0, len = uri_arr.length; i < len; i++) {
+            if (uri_arr[i] == 's') {
+                op_url_str += 's/';
+            } else {
+                op_url_str += uri_arr[i] + '-';
+            }
+        }
+
+        var op_url = op_url_str.replace(/(^-)|(-$)/g, '');
+        return op_url.replace(/--/g, '-');
+    }
+
+
+
+    //从传入的url中删除uri的某个选项
+    //返回新的uri
+    function del_param_from_url_str(url_str, param) {
+
+        var url_arr = url_str.split('/');
+        var uri_str = url_arr.pop();
+        if (uri_str == 'project' || uri_str == 's') {
+            return url_str;
+        }
+
+        var uri_arr = uri_str.split('-');
+        for (var i = 0; i < uri_arr.length; i++) {
+            var v = uri_arr[i];
+            if (typeof v != 'undefined') {
+                if (v.length <= 3) {
+                    //uri各项字符串长度小于等于3的情况，删除原有的带param的参数
+                    param = param.substr(0, 1);
+                    var patt = new RegExp(param, "g");
+                    if (patt.exec(v) != null) {
+                        //删掉
+                        uri_arr.splice(i, 1);
+                        i = i - 1;
+                    }
+                } else {
+                    //uri各项字符串长度大于3的情况，判断uri各项是否带逗号
+                    var pa_str = new RegExp(",", "g");
+                    var pa_str_code = new RegExp('%2C', "g");
+                    if ((pa_str.exec(v) != null) || (pa_str_code.exec(v) != null)) {
+                        //uri各项带逗号（如果带逗号说明是用户输入的自定义区间条件）
+                        var param2 = param.substr(0, 1);
+                        var patt = new RegExp('^' + param2, "g");
+                        if (patt.exec(v) != null) {
+                            uri_arr.splice(i, 1);
+                            i = i - 1;
+                        }
+                    } else {
+                        //uri各项不带逗号 并且判断传进来的参数param
+                        //如果param不带逗号（区域）传进的参数如果是a(区域一类)，或者字符串长度大于3并且字符串内部没有逗号 符合条件的删除
+                        if (param == 'a' || (param.length > 3 && pa_str.exec(param) == null)) {
+                            uri_arr.splice(i, 1);
+                            i = i - 1;
+                        }
+                    }
+                }
+            }
+        }
+        url_arr.push(uri_arr.join('-'));
+        var op_url_str = url_arr.join('/');
+        return op_url_str;
+    }
+
+
+
+
+    //整形验证
+    function intCheck(value) {
+        if ((/^(\+|-)?\d+$/.test(value)) && value >= 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+//轮播
+$(function() {
+    $(".thum li").click(function() {
+        $(this).remove();
+    });
+
+
+    //表情
+    $(document).on('click', '.btn-face', function(event) {
+        if (!$("#sinaEmotion").is(":visible")) {
+            $(this).sinaEmotion();
+            event.stopPropagation();
+        }
+    });
+});
+
+
+//信息弹层提示顶部html结构
+var layerTopHtml = '<div class="layer layer-del-tips">' +
+    '<div class="close"><a href="javascript:void(0)">Close</a></div>' +
+    '<div class="layer-wrap">' +
+    '<div class="layer-body">' +
+    '<div class="layer-tips-info">';
+
+//信息弹层提示底部html结构 只有确定按钮的提示
+var layerBtnOneBottomHtml = '</div>' +
+    '<div class="btn-area">' +
+    '<a href="javascript:void(0)" class="btn btn02 btn-submit layer-one-submit">确 定</a>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</div>';
+
+
+//信息弹层提示底部html结构 有确定取消两个按钮的提示
+var layerBtnTwoBottomHtml = '</div>' +
+    '<div class="btn-area">' +
+    '<a href="javascript:void(0)" class="btn btn02 btn-submit layer-two-submit">确 定</a>' +
+    '<a href="javascript:void(0)" class="btn btn03 btn-cancel">取 消</a>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</div>';
+//信息弹层提示顶部html结构
+var layerBaseTopHtml = '<div class="layer layer-del-tips">' +
+    '<div class="close"><a href="javascript:void(0)">Close</a></div>' +
+    '<div class="layer-wrap">' +
+    '<div class="layer-body">' +
+    '<div class="layer-tips-info tip-img">';
+//信息弹层提示底部html结构 基本底部，无任何信息
+var layerBaseBottomHtml = '</div>' +
+    '</div>' +
+    '</div>' +
+    '</div>';
+
+/**
+ * 弹层方法
+ * @param  type Number 1:文字信息提示框，2:复杂的提示
+ * @param  htmlContent String type为1时，htmlContent为纯文字信息，居中显示；type为2时，htmlContent为提示框的html结构
+ * @param  msgType Number type为1时的两种情况，1:一个确定按钮的文字信息提示框（确定按钮 直接关闭弹层），2:确定和取消两个按钮的文字信息提示框（确定按钮 需要自定义事件）3:自定义提示(基本弹层的机构，内容自定义)
+ * @param func
+ * @param data func参数所需的数据，如果需要
+ * @param commit_url  确认按钮的跳转url
+ * */
+function popLayer(type, htmlContent, msgType, func, data, commit_url) {
+    closeLayer(); //弹出新弹层之前先清理一下，避免弹出多个弹层
+    var htmlContentStr = "";
+    var layerWidth = $(window).width();
+    var layerHeight = $(window).height();
+    if (layerWidth < 414) {
+        layerWidth = 300 + "px";
+        layerHeight = 'auto';
+    } else {
+        layerWidth = 400 + "px";
+        layerHeight = 'auto';
+    }
+    if (type == 1) {
+        if (msgType == 1) {
+            htmlContentStr = layerTopHtml + htmlContent + layerBtnOneBottomHtml;
+        } else if (msgType == 2) {
+            htmlContentStr = layerTopHtml + htmlContent + layerBtnTwoBottomHtml;
+        } else if (msgType == 3) {
+            htmlContentStr = layerBaseTopHtml + htmlContent + layerBaseBottomHtml;
+            layerWidth = $(window).width() + "px";
+            layerHeight = layerWidth;
+        }
+    }
+    if (type == 2) {
+        htmlContentStr = htmlContent;
+    }
+    var layerIndex = layer.open({
+        type: type,
+        title: false,
+        closeBtn: 1,
+        shadeClose: true,
+        scrollbar: false,
+        shade: 0.7,
+        area: [layerWidth, layerHeight],
+        content: htmlContentStr,
+        success: function() {
+            layer_func(func, data, commit_url); //弹层上的事件
+        }
+    });
+    $('.layui-layer').css({ 'background': 'none', 'box-shadow': 'none' });
+    return layerIndex;
+}
+
+function layer_func(func, data, commit_url) {
+
+    if (typeof commit_url != "undefined" && commit_url.length != 0) {
+        $(".btn-submit").on("click", function() {
+            location.href = commonLocation(site_url, commit_url);
+        });
+    }
+    if (typeof func != "undefined") {
+        $(document).on("click", ".btn-submit", function() {
+            var res = func(data);
+            if (res != false) {
+                closeLayer();
+            }
+        });
+    }
+}
+//关闭弹层
+$(document).on("click", ".layer .close a", function() {
+    $('.layui-layer-close').trigger('click');
+});
+//关闭弹层方法
+function closeLayer() {
+    $('.layui-layer-close').trigger('click');
+}
+//弹层的取消按钮事件
+$(document).on("click", ".layer .btn-cancel, .layer .layer-one-submit", function() {
+    closeLayer();
+});
+
+//$(window).scroll(function () {
+//    //$(window).scrollTop()这个方法是当前滚动条滚动的距离
+//    //$(window).height()获取当前窗体的高度
+//    //$(document).height()获取当前文档的高度
+//    var bot = 100; //bot是底部距离的高度
+//    if ((bot + $(window).scrollTop()) >= ($(document).height() - $(window).height())) {
+//        //当底部基本距离+滚动的高度〉=文档的高度-窗体的高度时；
+//        //我们需要去异步加载数据了
+//    }
+//});
+
+/*
+ *
+ * */
+// $(".opr-commment,.show-inn").click(function(){
+//     commentShowMore($(this));
+// });
+// $(document).on("click",".opr-commment,.show-inn",function(){
+//     commentShowMore($(this));
+// })
+//
+
+
+// //搜索
+// $('.pro_search').on('click', function () {
+//     var _item = $('#keywords-house');
+//     var d = _item.val();
+//     d = d.replace(/(^\s+)|(\s+$)/g, '');
+//     _item.val(d);
+//     var url = 'project/index?name='+d;
+//     window.location.href = commonLocation(site_url,url);
+// });
+//搜索
+$('.pro_search').on('click', function() {
+    var _item = $('#keywords-house');
+    var d = _item.val();
+    d = d.replace(/(^\s+)|(\s+$)/g, '');
+    _item.val(d);
+    var url = 'project/index?name=' + d;
+    window.location.href = commonLocation(site_url, url);
+});
+
+/**
+ * sina_emotion 表情插件2.1版本 解析表情方法.
+ * 在涉及到表情解析的元素上添加类 setEmotion ，异步加载需要解析表情的时候调用setEmotion()即可
+ */
+function setEmotion() {
+    if ($('.setEmotion').length > 0) {
+        $('.setEmotion').parseEmotion();
+    }
+}
+
+
+//删除上传的图片
+$(document).on('click', '.ico-del', function() {
+    $(this).parent().parent().remove();
+});
+
+
+//关注
+function add_note(pro_id, is_login, obj) {
+    if (is_login == 0) {
+        msg_tip("请您先登录呦", 2, function() {
+            window.location.href = login_url;
+        });
+        return false;
+    }
+    $.ajax({
+        type: 'POST',
+        url: add_note_url,
+        data: {
+            id: pro_id
+        },
+        beforeSend: function() {
+            $(obj).attr('disabled', 'disabled');
+        },
+        success: function(rsp) {
+            if (rsp == 1) {
+                var tip_item = $(obj).find('.nav-txt');
+                var tip_ico = $(obj).find('.ico');
+                var tip = tip_item.text();
+                if (tip == '取消关注') {
+                    tip_item.text('关注');
+                    tip_ico.removeClass('favorite_on');
+                } else {
+                    tip_item.text('取消关注');
+                    tip_ico.addClass('favorite_on');
+                }
+                //$(obj).removeAttr('onclick');
+            } else {
+                msg_tip('评论失败，请您刷新网页之后重新提交');
+            }
+        },
+        complete: function() {
+            $(obj).removeAttr('disabled');
+        }
+    });
+}
+
+$(function() {
+    $(document).on('click', '.click_op_act', function() {
+        collectOpData($(this));
+    })
+});
+/**
+ * M站整站事件监控点击统计数据收集方法
+ * 点击按钮或元素记录OP_TYPE 同时收入神策
+ */
+function collectOpData(obj) {
+    var op_type = obj.data('op-type');
+    var page_id = obj.data('page-id');
+    var project_id = obj.data('project-id');
+    var house_type_id = obj.data('house-type-id');
+    if (op_type == undefined || op_type == '') {
+        alert('请设置正确OP!');
+    }
+    if (page_id == undefined) {
+        page_id = '';
+    }
+    if (project_id == undefined) {
+        project_id = '';
+    }
+    if (house_type_id == undefined) {
+        house_type_id = '';
+    }
+    var data = {
+        op_type: op_type,
+        page_id: page_id,
+        project_id: project_id,
+        house_type_id: house_type_id
+    };
+    $.ajax({
+        type: 'POST',
+        url: collect_op_data_url,
+        data: data,
+        success: function(rsp) {}
+    })
+}
+
+var free_call_mobile_ab_test = '';
+
+function abtest(ab_key, ab_value, ab_url, ab_user, ab_data, ab_id) {
+    $.ajax({
+        type: 'get',
+        url: url_ab_test,
+        data: {
+            key: ab_key,
+            value: ab_value,
+            url: ab_url,
+            user: ab_user,
+            data: ab_data,
+            id: ab_id
+        },
+        success: function(rsp) {
+            // free_call_mobile_ab_test = rsp;
+            //$('body').append('<input type="hidden" value="'+free_call_mobile_ab_test+'" id="free_call_mobile_ab_test_id"/>');
+            //$('#free_call_mobile_ab_test_id').attr('id',free_call_mobile_ab_test);
+            // setCookie('free_call_mobile_ab_test_id',free_call_mobile_ab_test,3600);
+        }
+    });
+}
+
+// 今日头条使用控制百分比下的高度不统一情况
+$(function() {
+    var itemHeight = $('.good-header').children('.bd').children('.cons-list').children('li').eq(0).height();
+    // 同类型的兄弟节点统一高度
+    $('.good-header').children('.bd').children('.cons-list').children('li').css({ 'height': itemHeight + 'px' });
+});
+
+/*短信验证码的校验*/
+function checkCaptcha(value) {
+    var captchaRule = /^[0-9]{4}$/;
+    if (!captchaRule.exec(value)) {
+        return false;
+    } else {
+        return true;
+    }
+}
+//站点前缀+具体url方法封装，目的是解决m.comjia.com/sh/  通过window.location.href 进行跳转是将/sh/丢掉而进入北京站的问题。
+function commonLocation(prefix, url) {
+    return prefix + url;
+}
+
+$(function() {
+    /**
+     * M站app下载
+     */
+    $('.down_app, .app-download').click(function() {
+        location.href = commonLocation(site_url, 'app/download');
+        // var ua = navigator.userAgent.toLowerCase();
+        // if (/iphone|ipad|ipod/.test(ua)) {
+        //     // alert("抱歉，居理新房APP暂仅有安卓版，ios版正在努力研发中，敬请期待~");
+        //     location.href = 'https://appsto.re/cn/C6q9gb.i';
+        // } else if (/android/.test(ua)) {
+        //     location.href = commonLocation(site_url,'common/downapp');
+        // } else {
+        //     location.href = commonLocation(site_url,'common/downapp');
+        // }
+    });
+
+    /**
+     * 根据不同渠道下载不同包的APP
+     */
+    $('.diy-download').click(function() {
+        // 不同页面根据渠道不同，下载不同包
+        var url_arr = window.location.pathname.split('/');
+        if($.inArray('lp3.html',url_arr) !==-1 || (($.inArray('lp2.html',url_arr) !==-1) && (cur_city_id.toString() == '20000001'))){//新静态落地页user-see/lp3.html(上海lp2.html 使用包2)  下载APP   不需要下载承接页  如果需要下载承接页 换成 app/download  即可
+            mobileAppInstall.open('comjia://app.comjia.com/home',commonLocation(site_url,'common/downapp?utm_source=affiliate_2'));
+        }else{
+            mobileAppInstall.open('comjia://app.comjia.com/home',commonLocation(site_url,'common/downapp?utm_source=affiliate_1'));
+        }
+    });
+});
+
+/* 留电口追加op_log*/
+$(function() {
+    $(document).on('click', '.click_op_type_ajax', function() {
+        var tourl = $(this).attr("tourl");
+        var ownop = $(this).attr("ownop");
+        if (ownop == undefined || ownop == '') {
+            return false;
+        }
+        $.ajax({
+            type: 'POST',
+            url: ajax_add_op,
+            data: { ownop: ownop },
+            _csrf: _csrf,
+            success: function(rsp) {
+                if (rsp == 1 && tourl != undefined && tourl != '') {
+                    window.location.href = tourl;
+                }
+            },
+            error: function(rsp) {
+
+            }
+        });
+    })
+});
+
+
+/**公共留电统一化梳理
+ * （原有方法保留，新写公共方法，根据需求逐一调整为统一留电方式）
+ * 统一入口类 ：common-free-mobile-btn
+ */
+$(document).on('click', '.common-free-mobile-btn', function() {
+    var leave_phone = {
+        item: $(this),
+        leave: function() {
+            var common_free_conf_arr = eval("(" + common_mobile_conf + ")");
+            var data_content = $(leave_phone.item).data('content');
+            if(typeof data_content == 'object'){
+                var data_content_arr = data_content;
+                var clickSourceCheck = data_content_arr['clickSource'];
+            }else{
+                var data_content_arr = eval("(" + data_content + ")");
+                var clickSourceCheck = eval("(" + data_content_arr['clickSource'] + ")");
+            }
+
+            var domain = '';
+            if (data_content_arr['domain'] != undefined && data_content_arr['domain'] != '') {
+                domain = data_content_arr['domain']
+            }
+            if (clickSourceCheck.length != 2) {
+                alert('clickSource参数错误;正确格式[op_before,op_success]例如：123,456');
+                return false;
+            }
+            if (common_free_conf_arr[clickSourceCheck[1]] != undefined) {
+                var input_type = common_free_conf_arr[clickSourceCheck[1]]['input_type'];
+            }
+
+            if (input_type == 'no-layer') { //在本页面输入框直接输入手机号的方式
+                // adhoc('getFlags', function(flags) {
+                //     var flag_value = flags.get(abtest_new_suc_popup);
+                    var flag_value = 'V1';
+                    if (flag_value == null || flag_value == undefined || flag_value == '') {
+                        flag_value = abtest_default_version;
+                    }
+                    var abtest_name_value = abtest_new_suc_popup;
+                    var except_op_arr = eval("(" + data_content_arr['clickSource'] + ")");
+                    var abtest_except_tag = true;
+                    var abtest_obj = {};
+                    if (except_op_arr.length == 2) {
+                        var except_abtest_op_arr = eval("(" + except_abtest_op + ")");
+                        for (var i = 0; i < except_abtest_op_arr.length; i++) {
+                            if (except_op_arr[1] == except_abtest_op_arr[i]) {
+                                abtest_except_tag = false;
+                                break;
+                            }
+                        }
+                    }
+                    if (abtest_except_tag) {
+                        abtest_obj = { 'abtest_name': abtest_name_value, 'abtest_value': flag_value }
+                    }
+                    common_free_mobile_submit(leave_phone.item, data_content_arr, abtest_obj); //提交表单
+                // });
+            } else if (input_type == 'layer') { //打开新页面输入手机号的方式
+                if (common_free_conf_arr[clickSourceCheck[1]]['view_tpl'] == '') {
+                    alert('layer方式的留电，必须有view模板参数！');
+                    return false;
+                }
+                var split_str = '/user-see/';
+                var str = common_mobile_view_url.split(split_str);
+                if (domain == '') {
+                    var cur_host = str[0] + split_str;
+                } else {
+                    var cur_host = domain + split_str;
+                }
+                if (data_content_arr['project_id'] != undefined) { //楼盘ID+op一对值
+                    if (data_content_arr['project_id'] != '') { //楼盘ID有效
+                        cur_host = cur_host + data_content_arr['project_id'] + '-';
+                    }
+                    if (clickSourceCheck[0] != undefined) { //op_before有效
+                        cur_host = cur_host + clickSourceCheck[0] + '-';
+                    }
+                    if (clickSourceCheck[1] != undefined) { //op_success有效
+                        cur_host = cur_host + clickSourceCheck[1] + '.html';
+                    }
+                } else { //只有op一对值
+                    if (clickSourceCheck[0] != undefined) { //op_before有效
+                        cur_host = cur_host + clickSourceCheck[0] + '-';
+                    }
+                    if (clickSourceCheck[1] != undefined) { //op_success有效
+                        cur_host = cur_host + clickSourceCheck[1] + '.html';
+                    }
+                }
+
+                window.location.href = cur_host;
+            } else {
+                alert('input_type参数错误;');
+                return false;
+            }
+        }
+    };
+    if ($(this).attr('data-value') == undefined) {
+        leave_phone.leave();
+    } else {
+        mobileAppInstall.openAppCallback($(this).attr('data-value'), leave_phone.leave);
+    }
+});
+
+$(document).on('click', '.common-free-mobile-submit', function() {
+    var obj = $(this);
+
+    var data_content = obj.data('content');
+    if(typeof data_content == 'object'){
+        var data_content_obj = data_content;
+        var cur_op_type = data_content_obj['clickSource'];
+    }else{
+        var data_content_obj = eval( "(" + data_content + ")" );
+        var cur_op_type = eval("("+data_content_obj['clickSource']+")");
+    }
+    var url_page_name = JSON.parse(url_page_name_arr);
+    //提交表单的时候，查看是否有除了手机号以外的其他表单字段，如果有，调用获取表单值的方法，获取表单数据值
+    var form_field_data = get_form_data(obj);
+    //向神策上报交互非正确数据
+    var page_name = '';
+    if(url_page_name[cur_op_type[1]] == '' || url_page_name[cur_op_type[1]] == undefined){
+        page_name = cur_page_url_name;
+    }else{
+        page_name = url_page_name[cur_op_type[1]];
+    }
+    if(typeof form_field_data == 'string'){
+        // if(cur_op_type[1] != 473) {
+            leave_false_track('e_click_confirm_leave_phone',cur_op_type[1].toString(),page_name,data_content_obj);
+        // }
+        msg_tip(form_field_data);
+        return false
+    }
+    var mobile = obj.parents('.form-box').find('#input_mobile').val();
+    if(mobile == undefined || mobile == ''){
+        mobile = obj.parents('.form-box').find('.ipt').val();
+    }
+    if(mobile == '' || mobile == undefined){
+        //向神策上报交互非正确数据
+        // if(cur_op_type[1] != 473) {
+            leave_false_track('e_click_confirm_leave_phone',cur_op_type[1].toString(),page_name,data_content_obj);
+        // }
+        msg_tip('请填写手机号');
+        return false;
+    }
+    if ( !checkTel(mobile) ) {
+        //向神策上报交互非正确数据
+        // if(cur_op_type[1] != 473) {
+            leave_false_track('e_click_confirm_leave_phone',cur_op_type[1].toString(),page_name,data_content_obj);
+        // }
+        msg_tip('手机号码格式不正确，请核对后重新输入');
+        return false;
+    }
+    data_content_obj['mobile'] = mobile;
+    //手机号及属性信息与独立表单其他字段信息合并
+    $.extend(data_content_obj, form_field_data);
+
+    //绑定订阅所需参数
+    var is_subscription = $("#is_subscription").val();
+    var subscription_type = $("#subscription_type").val();
+    var extention_id = $("#extention_id").val();
+    if (is_subscription != undefined) {
+        data_content_obj["is_subscription"] = is_subscription;
+    }
+    if (subscription_type != undefined) {
+        data_content_obj["subscription_type"] = subscription_type;
+    }
+    if (extention_id != undefined) {
+        data_content_obj["extention_id"] = extention_id;
+    }
+
+        // adhoc('getFlags', function(flags){
+            // var flag_value = flags.get(abtest_new_suc_popup);
+            var flag_value = 'V1';
+            if(flag_value == null || flag_value == undefined || flag_value == ''){
+                flag_value = abtest_default_version;
+            }
+            var abtest_name_value = abtest_new_suc_popup;
+            var abtest_obj = {'abtest_name':abtest_name_value,'abtest_value':flag_value}
+            common_free_mobile_submit(obj,data_content_obj,abtest_obj);
+        // });
+
+});
+
+var successHtml1 = $(document).find(".dialog-success1");
+var successHtml2 = $(document).find(".dialog-success2");
+
+/**
+ * M站留电入口 表单提交动作
+ * @param obj
+ * @param data
+ */
+function common_free_mobile_submit(obj, data, other_data_obj) {
+    var data_end = new Array();
+    var mobile = obj.parents('.form-box').find('#input_mobile').val();
+    if(mobile == undefined || mobile == ''){
+        mobile = obj.parents('.form-box').find('.ipt').val();
+    }
+    var cur_op_type = eval("("+data['clickSource']+")");
+
+    if (other_data_obj != undefined && other_data_obj != null && other_data_obj) {
+        data_end = $.extend(data, other_data_obj);
+    } else {
+        data_end = data;
+    }
+
+    //向神策上报交互非正确数据
+    var url_page_name = JSON.parse(url_page_name_arr);
+    var page_name = '';
+    if(url_page_name[cur_op_type[1]] == '' || url_page_name[cur_op_type[1]] == undefined){
+        page_name = cur_page_url_name;
+    }else{
+        page_name = url_page_name[cur_op_type[1]];
+    }
+
+    if (mobile == '' || mobile == undefined) {
+        leave_false_track('e_click_confirm_leave_phone',cur_op_type[1].toString(),page_name,data_end);
+        msg_tip('请填写手机号');
+        return false;
+    }
+    if (!checkTel(mobile)) {
+        leave_false_track('e_click_confirm_leave_phone',cur_op_type[1].toString(),page_name,data_end);
+        msg_tip('手机号码格式不正确，请核对后重新输入');
+        return false;
+    }
+    data_end['mobile'] = mobile;
+    $.ajax({
+        type: 'POST',
+        url: common_mobile_submit_url,
+        data: data_end,
+        _csrf: _csrf,
+        beforeSend: function() {
+            obj.attr('disabled', 'disabled');
+        },
+        success: function(rsp) {
+            if (data['jinritoutiao_convert_id'] != 0 && data['jinritoutiao_convert_id'] != '' && data['jinritoutiao_convert_id'] != undefined) {
+                _taq.push({ convert_id: data['jinritoutiao_convert_id'], event_type: "form" });
+            }
+            if(baidu_ocpc_tag){
+                //百度OCPC 需求  http://cwiki.comjia.com/pages/viewpage.action?pageId=132088074
+                // setTimeout(function () {
+                    window._bdSiteLogger && window._bdSiteLogger.submitCallback({
+                        type: 'form', // 必须包含 type，且 type 必须为 tel、sms、msg、book、download 中的一种
+                        comp_id: 'dom-uniq-id-'+cur_op_type[1].toString() // 选填，form.html 页面转化元素的id，用于区分页面有多个转化元素的时候，一条转化究竟是哪个元素带来的
+                    }); // 提交 form 成功后调用
+                // }, 2000);
+            }
+            var res = eval('(' + rsp + ')');
+            if (res['res'] == '1') {
+                if (other_data_obj.abtest_name == abtest_new_suc_popup && other_data_obj.abtest_value != abtest_default_version) {
+                    var flag = 1;
+                } else {
+                    var flag = 0;
+                }
+
+                var except_op_arr = eval("(" + data_end['clickSource'] + ")");
+                var abtest_except_tag = true;
+                if (except_op_arr.length == 2) {
+                    var except_abtest_op_arr = eval("(" + except_abtest_op + ")");
+                    for (var i = 0; i < except_abtest_op_arr.length; i++) {
+                        if (except_op_arr[1] == except_abtest_op_arr[i]) {
+                            abtest_except_tag = false;
+                            flag = 0;
+                            break;
+                        }
+                    }
+                }
+
+                if (abtest_except_tag) {
+                    // adhoc.satrack(abtest_new_suc_popup, abtest_event_name, free_call_success_abtest, res['data']);
+                    free_call_success_abtest('V1',res['data']);
+                }
+                if (flag == 0) {
+                    if (confirm('提交成功，咨询师将用' + phone_number_free_call_back + '号码联系您，免费专车带您看房！')) {
+                        if (data['redirect_or_not'] == 0) {
+                            window.location.href = window.location.href;
+                        } else {
+                            var back_url = getCookie('common_free_mobile_back_url');
+                            var exec_subscription_flag = $(obj).attr('data-id');
+                            var page_data_flag = $(obj).attr('data-flag');
+                            if (exec_subscription_flag == undefined) {
+                                if (back_url == null || back_url == undefined || back_url == '') {
+                                    window.history.go(-1);
+                                } else {
+                                    window.location.href = back_url;
+                                }
+                            } else {
+                                //弹出【订阅成功】提示框
+                                if (page_data_flag == undefined) {
+                                    $(".layer-dy").addClass("ly-fade-show");
+                                } else if (page_data_flag == 'help') {
+                                    $(".layer-com").addClass("ly-fade-show");
+                                }
+
+                                /*关闭订阅弹出框*/
+                                $(document).on("click", ".close-layer a, .btn-cancel", function() {
+                                    var layer = $(this).parents(".ly-fade");
+                                    layer.removeClass("ly-fade-show");
+                                    if (back_url == null || back_url == undefined || back_url == '') {
+                                        window.history.go(-1);
+                                    } else {
+                                        window.location.href = back_url;
+                                    }
+                                });
+                            }
+                        }
+                    }
+                } else if (flag == 1) { //存在留电AB测试，并且版本非默认版本
+                    //使用AB测试最新的留电成功弹层提示
+                    showDialog(1, successHtml1,dialog_logic(obj));
+                    $(document).find('.second-sub-form').find('.ipt.budget-ipt').attr({ 'data-budget': '', 'style': '' }).html('您购房总价预算');
+                    $(document).find('.second-sub-form').find('.ipt.area-ipt').attr({ 'data-area': '', 'style': '' }).html('您购房的目标区域');
+                    check_clue_quality(other_data_obj, res['data']['order_id']);
+                }
+
+            } else {
+                var res = eval("(" + rsp + ")");
+                msg_tip(res['msg']);
+            }
+        },
+        complete: function() {
+            obj.removeAttr('disabled');
+        }
+    });
+}
+
+/**
+ * 留电失败上报数据
+ * @param event
+ * @param op_type
+ * @param page_name
+ * @param data_content
+ */
+function leave_false_track(event,op_type,page_name,data_content){
+    if(page_view_properties !== undefined) {
+        var leave_false_common_track_arr = $.extend({}, page_view_properties);
+        leave_false_common_track_arr['leave_phone_state'] = '2';
+        leave_false_common_track_arr['source'] = '4';
+        leave_false_common_track_arr['fromItemIndex'] = '-1';
+        leave_false_common_track_arr['op_type'] = op_type;
+        leave_false_common_track_arr['fromItem'] = 'i_confirm_leave_phone';
+        leave_false_common_track_arr['fromPage'] = page_name;
+        leave_false_common_track_arr['toPage'] = page_name;
+        if(data_content['project_id'] !== undefined){
+            leave_false_common_track_arr['project_id'] = data_content['project_id'];
+	}
+        sa.track(event, leave_false_common_track_arr);
+    }
+}
+
+function check_clue_quality(abtest_obj, order_id) {
+    //根据AB测试结果修改是否优质字段
+    if (abtest_obj != null) {
+        $.ajax({
+            type: "POST",
+            url: check_clue_qulity,
+            data: {
+                order_id: order_id,
+                abtest_name: abtest_obj.abtest_name,
+                abtest_value: abtest_obj.abtest_value,
+                _csrf: _csrf
+            },
+            beforeSend: function() {
+
+            },
+            success: function(rsp) {}
+        })
+    }
+}
+
+/**
+ * 弹层 关闭相关逻辑部分，通过showDialog() 中的回调函数进行调用
+ */
+function dialog_logic(obj){
+    $(document).on("click", ".dialog-btn-cancel,.close-dialog", function() {
+        closeDialog();
+
+        var back_url = getCookie('common_free_mobile_back_url');
+        var layer = obj.parents(".ly-fade");
+        layer.removeClass("ly-fade-show");
+        if (back_url == null || back_url == undefined || back_url == '') {
+            window.history.go(-1);
+        } else {
+            window.location.href = back_url;
+        }
+    });
+
+    $(document).on("click", ".dialog-btn-commit", function() {
+        closeDialog();
+        if (typeof callback != "undefined") {
+            callback();
+        }
+    });
+    if ($(".dialog .app-info").text() === "订阅成功!") {
+        setTimeout(function() {
+            layer.closeAll();
+        }, 1500);
+    }
+}
+
+function showDialog(type, content, callback) {
+    layer.open({
+        type: type,
+        title: false,
+        closeBtn: false,
+        shade: 0.6,
+        area: ['auto', 'auto'],
+        shadeClose: true,
+        content: content,
+        success: function() {
+
+        }
+    });
+}
+
+
+$(document).on("click", ".dialog-btn-cancel,.close-dialog", function() {
+    closeDialog();
+
+    var back_url = getCookie('common_free_mobile_back_url');
+    var layer = $(this).parents(".ly-fade");
+    layer.removeClass("ly-fade-show");
+    if (back_url == null || back_url == undefined || back_url == '') {
+        window.history.go(-1);
+    } else {
+        window.location.href = back_url;
+    }
+});
+
+$(document).on("click", ".dialog-btn-commit", function() {
+    closeDialog();
+    if (typeof callback != "undefined") {
+        callback();
+    }
+});
+if ($(".dialog .app-info").text() === "订阅成功!") {
+    setTimeout(function() {
+        layer.closeAll();
+    }, 1500);
+}
+
+//关闭弹层
+function closeDialog() {
+    layer.closeAll();
+}
+
+
+
+
+/**
+ * 获取点击对象所对应表单的字段信息
+ * @param obj
+ */
+function get_form_data(obj) {
+    if (obj.data('form-field') != undefined) {
+        //如果有表单字段，先判断是输入框样式的还是下拉框样式的
+        var form_field = obj.data('form-field');
+        var form_field_arr = eval("(" + form_field + ")");
+        var form_field_arr_data = [];
+        for (var i = 0; i < form_field_arr.length; i++) {
+            if (form_field_arr[i]['type'] != undefined && form_field_arr[i]['type'] == 'input') { //输入框选填
+                var field = form_field_arr[i]['class'].split('-')[0];
+                var item_val = obj.parents('.form-box').find('.' + form_field_arr[i]['class']).val();
+                if (item_val != '' && item_val != undefined && item_val != null) {
+                    form_field_arr_data[field] = item_val;
+                }
+
+            } else {
+                var field = form_field_arr[i]['class'].split('-')[0];
+                var item_val = obj.parents('.form-box').find('.' + form_field_arr[i]['class']).attr('data-' + field);
+                if (item_val == '' || item_val == undefined || item_val == null) {
+                    return form_field_arr[i]['rules']['require'];
+                } else {
+                    form_field_arr_data[field] = item_val;
+                }
+            }
+        }
+        return form_field_arr_data;
+    }
+}
+
+/**
+ *ab测试展示不同留电成功页面
+ * @param flag_value
+ * @param params
+ */
+function free_call_success_abtest(flag_value, params) {
+    if (flag_value == abtest_default_version) {
+        $('[for=ab_no_default]').remove();
+        $('[for=ab_default]').show();
+    } else {
+        $('[for=ab_default]').remove();
+        $('[for=ab_no_default]').show();
+        $(document).find('#free-call-second-sub').data('order-id', params.order_id);
+    }
+}
+
+
+$(document).on('click', '#free-call-second-sub', function() {
+    var obj = $(this);
+    var data_identity = obj.data('identity');
+    var order_id = obj.data('order-id');
+    var area = obj.parents('.form-box').find('.input-area.area .ipt').attr('data-area');
+    var budget = obj.parents('.form-box').find('.input-area.budget .ipt').attr('data-budget');
+    //修改订单中的是否优质字段信息
+    $.ajax({
+        type: "POST",
+        url: second_sub_free_mobile,
+        data: {
+            order_id: order_id,
+            district: area,
+            price: budget,
+            identity: data_identity,
+            _csrf: _csrf
+        },
+        beforeSend: function() {
+
+        },
+        success: function(rsp) {
+            var res = eval("(" + rsp + ")");
+            //提交成功后展示最后一个提示页面
+            showDialog(1, successHtml2, dialog_logic(obj));
+        }
+    })
+});
+
+
+
+
+
+/**
+ * 通用加载页面
+ * 上滑：加载更多；
+ * 下滑：获取最新（如果 【只是获取最新】则无需传任何参数）
+ * @date 2017-03-22
+ * @author gaoqing
+ * @param string ajaxDownUrl ajax上拉加载更多请求的url
+ * @param string ajaxUpUrl ajax下拉更新请求的url
+ * @param function   ajaxJsonParamCallback ajax请求时的绑定json类型参数的回调函数
+ *                  tips:    方法中可以设置自己的请求参数，并返回 json 类型的参数集
+ * @param string appendIdentify 绑定响应数据的父级 页面标识
+ *  例如：
+ *      .container div ul （class 类型）；
+ *      #content          （id 类型）；
+ * @param string loadingIdentify 滑动加载时，页面显示的 加载动画 页面标识，使用规则 和 appendIdentify 一致
+ * @param bool isUpDownRefresh 是否使用 下拉刷新 功能（默认不使用）
+ * @param function userCallback 需要额外操作的回调函数
+ * @param string setUpdateNumCookie 需要设置的更新数Cookie名
+ * @param string totalNumber 需要设置的总页数的容器 (id/class)
+ */
+function commonAjaxLoading(ajaxDownUrl, ajaxUpUrl, ajaxJsonParamCallback, appendIdentify, loadingIdentify, isUpRefresh, isDownRefresh, userCallback, setUpdateNumCookie, totalNumber) {
+    var idRepeatRefresh = 0;
+
+
+    $(window).scroll(function() {
+        //下拉刷新
+        if (isUpRefresh == true) {
+            var ajaxJsonParam = ajaxJsonParamCallback();
+            //谷歌浏览器不感冒下拉刷新,自带下拉刷新功能
+            if ($(document).scrollTop() < -100) {
+                if (navigator.userAgent.indexOf("CriOS") != -1) {} else {
+                    pullUpdateNumAjax('GET', ajaxUpUrl, ajaxJsonParam, setUpdateNumCookie, userCallback, 86400);
+                }
+            }
+            //qq,uc,华为,vivo,oppo浏览器scrolltop的值最小为0
+            if ((navigator.userAgent.indexOf("MQQBrowser") != -1 || navigator.userAgent.indexOf("UCBrowser") != -1 || navigator.userAgent.indexOf("HUAWEI") != -1 || navigator.userAgent.indexOf("vivo") != -1 || navigator.userAgent.indexOf("OPPO") != -1) && $(document).scrollTop() == 0) {
+                pullUpdateNumAjax('GET', ajaxUpUrl, ajaxJsonParam, setUpdateNumCookie, userCallback, 86400);
+            }
+        }
+
+        if (isDownRefresh == true) {
+            //上滑加载
+            if (ajaxDownUrl != undefined && ajaxDownUrl != '' && appendIdentify != undefined && appendIdentify != '') {
+                if (idRepeatRefresh == 0 && $(document).scrollTop() >= ($(document).height() - $(window).height())) {
+                    var ajaxJsonParam = ajaxJsonParamCallback();
+                    //隐藏 加载动画
+                    if (totalNumber != '' && (typeof ajaxJsonParam['page'] != undefined)) {
+                        if (parseInt(ajaxJsonParam['page']) < parseInt($(totalNumber).val())) {
+                            $(loadingIdentify).show();
+                        } else {
+                            $(loadingIdentify).hide();
+                        }
+                    }
+
+                    //如果返回值为 false， 则停止当前所有操作
+                    if (ajaxJsonParam === false) {
+                        return;
+                    }
+                    //判断是否是 json Object
+                    if (typeof(ajaxJsonParam) !== "object") {
+                        ajaxJsonParam = eval('(' + ajaxJsonParam + ')');
+                    }
+                    //防止 页面未加载出来时，重复滑动，重复加载的问题（loadingIdentity 为 1 时，说明正在请求数据中，重复滑动，不予加载！）
+                    idRepeatRefresh = 1;
+                    if (typeof ajaxJsonParam['page'] != undefined) {
+                        ajaxJsonParam['page']++;
+                    }
+
+
+                    $.ajax({
+                        type: "GET",
+                        url: ajaxDownUrl,
+                        data: ajaxJsonParam,
+                        success: function(data) {
+                            idRepeatRefresh = 0;
+
+                            $(appendIdentify).append(data);
+                            userCallback();
+                        },
+                        error: function() {
+                            idRepeatRefresh = 0;
+                        },
+                        complete: function() {
+                            if (loadingIdentify != '') {
+                                $(loadingIdentify).hide();
+                            }
+                        }
+                    });
+                }
+            }
+        }
+
+    });
+}
+
+function pullUpdateNumAjax(method, url, param, cookiename, userCallback, expire) {
+    $.ajax({
+        type: method,
+        url: url,
+        data: param,
+        success: function(data) {
+            setCookie(cookiename, data, expire);
+            userCallback();
+            window.location.reload(true);
+        },
+        error: function() {
+            idRepeatRefresh = 0;
+        }
+    });
+}
+/**
+ * 汉字校验
+ */
+function chn_check(str) {
+    var reg = /^[\u4e00-\u9fa5]{0,}$/;
+    var match = reg.test(str);
+    if (match) {
+        return true;
+    } else {
+        return '请正确填写汉字信息';
+    }
+}
+/**
+ * 非负整数校验
+ * @param int
+ */
+function int_check(int) {
+    var reg = /^[1-9]\d*|0$/;
+    var match = reg.test(int);
+    if (match) {
+        return true;
+    } else {
+        return '请正确填写非负整数信息';
+    }
+}
+
+//用户中心点击唤醒app
+$(".link-ucenter a,.header-top .user a,.ucenter a").click(function() {
+    var appurl = $(this).attr("data-value");
+    mobileAppInstall.openAppCallback(appurl, function() {
+        $(".layer-app").addClass("ly-fade-show");
+    });
+});
+
+/*关闭*/
+$(document).on("click", ".close-layer a", function() {
+    var curr_obj = $(this);
+    var page_identity = getPageIdentity();
+    //设置埋点
+    $.get(common_set_event, {
+        type: 'close',
+        page_identity: page_identity,
+        window_comment: $(curr_obj).parent().parent().find("h1:first").text()
+    });
+    var layer = $(this).parents(".ly-fade");
+    layer.removeClass("ly-fade-show");
+});
+//取消
+$(document).on("click", ".btn-cancel", function() {
+    var page_identity = getPageIdentity();
+    //设置埋点
+    $.get(common_set_event, {
+        type: 'cancel',
+        page_identity: page_identity
+    });
+    var layer = $(this).parents(".ly-fade");
+    layer.removeClass("ly-fade-show");
+});
+
+$(document).ready(function() {
+    $("a[data-id='layer_download_btn']").each(function() {
+        $(this).on('click', function() {
+            var curr_obj = $(this);
+            var page_identity = getPageIdentity();
+
+            //设置埋点
+            $.get(common_set_event, {
+
+                type: 'download',
+                page_identity: page_identity,
+                window_comment: $(curr_obj).parent().parent().find("h1:first").text()
+            });
+            window.location.href = $(curr_obj).attr('data-value');
+        });
+    });
+});
+
+function getPageIdentity() {
+    var window_referer = document.referrer;
+    var page_identity = '';
+
+    if ($("#page_identity").val() == undefined) {
+        if (window_referer.match(/project$/)) {
+            page_identity = 'project_list_page';
+        }
+        if (window_referer.match(/project\/[a-z].*/)) {
+            page_identity = 'project_list_page';
+        }
+        if (window_referer.match(/project\/\d+\.html/)) {
+            page_identity = 'project_detail';
+        }
+        if (window_referer.match(/tops/)) {
+            page_identity = 'info_flow_page';
+        }
+        if (window_referer == ("http://" + window.location.host)) {
+            page_identity = 'index_page';
+        }
+        //如果当前页面是 index 的话，将当前的 page_identity 覆盖为 index_page （首页中的弹出框的下载，要已经首页的 url 来判断）
+        if (document.URL == ("http://" + window.location.host + "/")) {
+            page_identity = 'index_page';
+        }
+    } else {
+        page_identity = $("#page_identity").val();
+    }
+    return page_identity;
+}
+
+
+//筛选条件
+// $(".input-area").each(function(){
+//     var _item = $(this);
+//     var _ipt = _item.children(".ipt");
+//     _ipt.click(function(){
+//         if(_ipt.next(".dropdown-list").is(":hidden")){
+//             _ipt.next(".dropdown-list").stop().slideDown();
+//             _ipt.parents(".input-area").parents(".tr").addClass("on");
+//             _ipt.parents(".input-area").parents(".tr").siblings().removeClass('on');
+//             _ipt.next(".dropdown-list").children("li").click(function(){
+//                 var defaultValue = _ipt.next(".dropdown-list").children("li:first").text();
+//                 _ipt.parents(".input-area").parents(".tr").removeClass("on");
+//                 _ipt.text($(this).text());
+//                 var dataCapture = $(this).attr("data-capture");
+//                 var dataKey = $(this).parents(".dropdown-list").prev(".ipt").attr("data-key");
+//                 switch(dataKey)
+//                 {
+//                     case 'area':
+//                         _ipt.attr('data-area',dataCapture);
+//                         break;
+//                     case 'budget':
+//                         _ipt.attr('data-budget',dataCapture);
+//                         break;
+//                     case 'house':
+//                         _ipt.attr('data-house',dataCapture);
+//                         break;
+//                     case 'size':
+//                         _ipt.attr('data-size',dataCapture);
+//                         break;
+//                 }
+//                 if(_ipt.text() == defaultValue){
+//                     _ipt.css({
+//                         color: "#999"
+//                     });
+//                 }else{
+//                     _ipt.css({
+//                         color: "#333"
+//                     });
+//                 }
+//
+//                 $(this).parents(".dropdown-list").slideUp("fast");
+//             });
+//         }else if(_ipt.next(".dropdown-list").is(":visible")){
+//             $(".dropdown-list").slideUp("fast");
+//             _ipt.parents(".input-area").parents(".tr").removeClass("on");
+//         }
+//     });
+//
+// });
+//
+// //点击空白区域关闭下拉选择框
+// $(document).mouseup(function(e){
+//     var _con = $(".dropdown-list");   // 设置目标区域
+//     if(!_con.is(e.target) && _con.has(e.target).length === 0){ // Mark 1
+//         $(".dropdown-list").slideUp();
+//     }
+// });
+
+//弹出框 -- 统一触发操作
+$(document).on("input", ".dialog input.ipt,.dialog6 input.ipt,.dialog8 input.ipt", function() {
+    var iptLength = $(this).val().toString().length;
+    if (iptLength >= 1) {
+        $(this).siblings(".btn-area").children(".btn-find").attr("disabled", false);
+    } else {
+        $(this).siblings(".btn-area").children(".btn-find").attr("disabled", true);
+    }
+});
+//下载APP关闭按钮，点击关闭按钮记录cookie,24小时之后失效
+$(document).find(".topbar .close").click(function () {
+    setCookie('manual_close_app_down','1',86400);
+});

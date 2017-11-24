@@ -1,0 +1,161 @@
+$(function(){
+    setCookie('info_flow_page_num', 1);
+    //获取更新多少条信息流cookie
+    var currentUpdateNum = getCookie('currentUpdateNum');
+    if(currentUpdateNum != null){
+        if(currentUpdateNum == 0){
+            flowProgEmpty();
+        }else{
+            showPropMsg(2000,currentUpdateNum);
+        }
+        delCookie('currentUpdateNum');
+    }
+
+    flowSetCookie('currentDateTime',$('.time-line').children('.info-item').first().children('.info-detail').children('.items_publish_time').val());
+
+    //搜索关键字
+    $(".btn-search").click(function(){
+        btnSearchInfoOnclick();
+    });
+    //模拟回车搜索关键字
+    $('#keyword').focus(function (event) {
+        $(document).keydown(function(event){
+            if(event.keyCode==13){
+                btnSearchInfoOnclick();
+            }
+        });
+    });
+
+    //关键字
+    function btnSearchInfoOnclick(){
+        var keyword = $("#keyword").val();
+        var keywordDefaultVal = $("#keyword").prop("placeholder");
+        if ((keyword !== '') && (keyword !== keywordDefaultVal)){
+            var info_search_url = '';
+            location.href = commonLocation(m_info_flow_list,info_search_url + '/tag/' + keyword);
+        }
+    }
+
+    //上拉刷新/下拉分页 公用方法
+    commonAjaxLoading(
+        window.location.href,//上拉加载url
+        ajaxUpUrl,//下拉刷新url
+        function () {//返回的参数
+            var items_publish_time = $('.time-line').children('.info-item').last().children('.info-detail').children('.items_publish_time').val();
+            if(items_publish_time == 0){
+                items_publish_time = -1;
+            }
+            if ( items_publish_time != null || items_publish_time != undefined ){
+                paramJson = {
+                    "items_publish_time" : items_publish_time,
+                    "tagword":$('.tagword').val(),
+                    "currentDateTime":flowGetCookie('currentDateTime')
+                };
+            }
+            return paramJson;
+        },
+        '.time-line',//数据加载回来放得容器名
+        '',//加载更多栏容器名
+        true,//是否下拉刷新
+        true,//是否上拉加载
+        function () {//需要执行的回调函数
+            //上拉新房情报局页 -- 埋点
+            $("#hidden_info_loading_track").trigger('mousedown');
+
+            videoPlay();
+            delCookie('currentDateTime');
+        },
+        'currentUpdateNum'//需要设置的cookie名
+    );
+
+    //关联楼盘埋点
+    $(document).on("click",".assoc-project",function(){
+        var _this = $(this);
+        //获取当前信息流id、该楼盘id
+        var flow_id = _this.attr('items_flow_id');
+        var pro_id = _this.attr('items_pro_id');
+        var propertiesArr = $.parseJSON(properties);
+        propertiesArr['flow_id'] = flow_id;
+        propertiesArr['pro_id'] = pro_id;
+        propertiesArr['assoc_type'] = 'project';
+        var sa_event = "info_flow_list_click_bury";
+        sa.track(sa_event, propertiesArr);
+    });
+
+    //订阅关联楼盘埋点
+    $(document).on("click",".assoc-project-book",function(){
+        var _this = $(this);
+        //获取当前信息流id、该楼盘id
+        var flow_id = _this.attr('items_flow_id');
+        var pro_id = _this.attr('items_pro_id');
+        var propertiesArr = $.parseJSON(properties);
+        propertiesArr['flow_id'] = flow_id;
+        propertiesArr['pro_id'] = pro_id;
+        propertiesArr['assoc_type'] = 'project_book';
+        var sa_event = "info_flow_list_click_bury";
+        sa.track(sa_event, propertiesArr);
+    });
+
+    //关联案例分析埋点
+    $(document).on("click",".assoc-case",function(){
+        var _this = $(this);
+        //获取当前信息流id、该楼盘id
+        var flow_id = _this.attr('items_flow_id');
+        var items_case_id = _this.attr('items_case_id');
+        var items_case_assoc_project_id = _this.attr('items_case_assoc_project_id');
+        var propertiesArr = $.parseJSON(properties);
+        propertiesArr['flow_id'] = flow_id;
+        propertiesArr['case_id'] = items_case_id;
+        propertiesArr['case_assoc_project_id'] = items_case_assoc_project_id;
+        propertiesArr['assoc_type'] = 'case';
+        var sa_event = "info_flow_list_click_bury";
+        sa.track(sa_event, propertiesArr);
+    });
+    //关联资讯埋点
+    $(document).on("click",".assoc-info",function(){
+        var _this = $(this);
+        //获取当前信息流id、该楼盘id
+        var flow_id = _this.attr('items_flow_id');
+        var items_info_id = _this.attr('items_info_id');
+        var items_tag =_this.attr('items_tag');
+        var propertiesArr = $.parseJSON(properties);
+        propertiesArr['flow_id'] = flow_id;
+        propertiesArr['info_id'] = items_info_id;
+        propertiesArr['tag'] = items_tag;
+        propertiesArr['assoc_type'] = 'info';
+        var sa_event = "info_flow_list_click_bury";
+        sa.track(sa_event, propertiesArr);
+    });
+});
+
+//点赞
+function likeflow(param){
+    var _this = $(param);
+    $("div[data-id='zan_div']").attr("on-click", "0");
+    _this.attr("on-click", "1");
+    if(_this.find("span:first").attr('like-dis') == flow_favor_status_unlike){
+        checkApp.wakeupApp($(_this).attr('data-value'));
+    }
+}
+
+function flowSetCookie(name,value) {
+    setCookie(name,value,86400);
+}
+function flowGetCookie(name) {
+    return getCookie(name);
+}
+
+function flowProgEmpty(){
+    var propMsg = $(".prop-msg");
+    propMsg.find(".text").text('已经是最新的情报啦');
+    propMsg.fadeIn(0,function () {
+        propMsg.fadeOut(2000);
+    });
+}
+
+$(document).delegate('.information-flow .time-line .carousel-img li', 'click', function () {
+    var fadeDisplay = $('.fade').css('display');
+    if (fadeDisplay != undefined && fadeDisplay != 'block'){
+        $(this).find('.hidden_img_track').trigger('mousedown');
+    }
+});

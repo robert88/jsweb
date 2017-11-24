@@ -1,0 +1,305 @@
+
+/**
+ * 登录注册 脚本
+ */
+
+/**
+ * 检查登录表单元素，并提交
+ * @returns {boolean}
+ */
+function check_login_form(obj) {
+    $form = obj.parents('.login_form');
+    var login_mobile = $form.find('.mobile').val();
+    var login_password = '';
+    var captcha_login = 0;//默认不是短信登录
+    var captcha_login_captcha_input = $('#captcha_login');
+
+    if (!checkTel(login_mobile)) {
+        msg_tip('请输入正确的手机号！');
+        return false;
+    }
+
+    if (captcha_login_captcha_input.parent().hasClass('selected')) {
+        login_password = $form.find('.captcha-login-password').val();
+        captcha_login = 1;
+        if(!checkCaptcha(login_password)){
+            msg_tip('请输入准确的验证码！');
+            return false;
+        }
+    } else {
+        login_password = $form.find('#login-password').val();
+        if(!checkPassword(login_password)){
+            msg_tip('请输入密码格式为6-16数字与字母组合！');
+            return false;
+        }
+    }
+    $.ajax({
+        type: "POST",
+        url: submit_login,
+        data: {
+            mobile: login_mobile,
+            password: login_password,
+            captcha_login:captcha_login
+        },
+        beforeSend: function () {
+            $('#submit-login-btn').attr('disabled', 'disabled');
+        },
+        success: function (rsps) {
+            var rsp = eval('(' + rsps + ')');
+            if (rsp.code == 1) {
+                if (window.history.length > 0) {
+                    window.location.href=document.referrer;
+                } else {
+                    window.location.href = site_url;
+                }
+            } else if(rsp.code == 3 || rsp.code == 4) {
+                msg_tip(rsp.msg);
+                return false;
+            }else{
+                msg_tip('密码错误，请正确填写密码，或找回密码');
+                return false;
+            }
+        },
+        error: function (error) {
+            msg_tip("服务器出错,请刷新网页后重新提交");
+            return false;
+        },
+        complete: function () {
+            $('#submit-login-btn').removeAttr('disabled');
+        }
+    });
+}
+
+
+$(document).ready(function () {
+    /*首次  获取验证码  */
+    $(document).on('click', '#register-get-captcha-btn', function () {
+        $('#register-get-captcha-btn').attr('disabled', 'disabled');
+        get_captcha_click($(this));
+    });
+    /*点击  注册   按钮提交注册表单*/
+    $(document).on('click', '#submit-register-btn', function () {
+        $(this).attr('disabled','disabled');
+        check_register_form();
+    });
+    //点击  登录   按钮提交登录表单
+    $(document).on('click', '.submit-login-btn', function () {
+        $(this).attr('disabled','disabled');
+        check_login_form($(this));
+    });
+    //验证码实施验证
+    $(document).on('blur','#register-captcha',function(){
+        blurCheckCaptcha($(this));
+    });
+    $(document).on('focus','.user-info input.ipt',function(){
+        if($(document).find('#submit-login-btn')){
+            $('#submit-login-btn').removeAttr('disabled');
+        }
+        if($(document).find('#submit-register-btn')){
+            $('#submit-register-btn').removeAttr('disabled');
+        }
+    });
+
+});
+/**
+ * 失去焦点验证手机合法性
+ * @param obj
+ * @returns {boolean}
+ */
+function blurCheckMobile(obj){
+    var tel = obj.val();
+    if(tel.length == 0){
+        msg_tip('手机号码不能为空！');
+        return false;
+    }else{
+        $.ajax({
+            type: "POST",
+            url: check_mobile_ajax,
+            data: {
+                mobile: tel
+            },
+            success: function(rsps){
+                var rsp = eval('(' + rsps + ')');
+                if (rsp.code == 0) {
+                    msg_tip(rsp.msg);
+                    return false;
+                }
+            }
+        });
+    }
+}
+
+/**
+ * 失去焦点验证验证码的正确性
+ * @param obj
+ * @returns {boolean}
+ */
+function blurCheckCaptcha(obj){
+    var cap = obj.val();
+    if(cap.length == 0){
+        msg_tip('验证码不能为空！');
+        return false;
+    }else{
+        if(!checkCaptcha(cap)){
+            msg_tip('验证码错误,请正确填写接收到的验证码，或重新获取');
+            return false;
+        }else{
+            var login_mobile = $('#mobile').val();
+            $.ajax({
+                type: "POST",
+                url: check_captcha_ajax,
+                data: {
+                    mobile: login_mobile,
+                    captcha: cap
+                },
+                success: function(rsps){
+                    var rsp = eval('(' + rsps + ')');
+                    if (rsp.code == 0) {
+                        msg_tip(rsp.msg);
+                        return false;
+                    }else{
+
+                    }
+                }
+            });
+        }
+    }
+}
+
+/**
+ * 检查注册，重置密码表单元素并提交
+ * @returns {boolean}
+ */
+function check_register_form() {
+    var register_mobile = $('#mobile').val();
+    var register_captcha = $('#register-captcha').val();
+    var register_password = $('#register-password').val();
+    var reset = 0;
+    var capture = $(this).data('capture');
+
+    ////手机号再次验证
+    if (!checkTel(register_mobile)) {
+        msg_tip('请输入正确的手机号');
+        return false;
+    }
+    if($('#register-password').attr('reset_flag') == 1){//1表示找回密码
+        reset = $('#register-password').attr('reset_flag');
+    }
+    $.ajax({
+        type: "POST",
+        url: submit_register,
+        data: {
+            mobile: register_mobile,
+            password: register_password,
+            captcha: register_captcha,
+            reset: reset
+        },
+        beforeSend: function () {
+            $('#register-get-captcha-btn').attr('disabled', 'disabled');
+        },
+        success: function (rsps) {
+            var rsp = eval('(' + rsps + ')');
+            if (rsp.code == '1') {
+                if(capture != '' && capture != null)
+                {
+                    googleAnalytics(capture);
+                }
+                window.location.href = commonLocation(site_url,'');
+            } else {
+                msg_tip(rsp.msg);
+            }
+        },
+        error: function (error) {
+            msg_tip("服务器出错,请刷新网页后重新提交");
+        },
+        complete: function () {
+            $('#register-get-captcha-btn').removeAttr('disabled');
+        }
+    });
+
+}
+
+/***验证获取验证码的手机是否有效
+ *  无效给出错误提示，有效直接获取验证码
+ * @returns {boolean}
+ */
+function get_captcha_click(obj) {
+    var $form = obj.parents('.login_form');
+    var mobile = $form.find('.mobile').val();
+    if (!checkTel(mobile)) {
+        msg_tip('请输入正确的手机号');
+        return false;
+    } else {
+        /*获取验证码方法*/
+        var resetFlag = obj.attr('reset_flag');
+        timeNumListen(60);
+        get_captcha(mobile,resetFlag);
+    }
+}
+/**
+ * 获取验证码方法
+ * @param mobile 获取验证码的手机号码
+ * @param resetFlag 是否重置密码的标识参数（0 代表注册，1代表重置密码）
+ */
+function get_captcha(mobile,resetFlag) {
+    $.ajax({
+        type: "POST",
+        url: get_mobile_captcha,
+        data: {
+            phone: mobile,
+            resetFlag: resetFlag
+        },
+        beforeSend: function () {
+            $('#register-get-captcha-btn').attr('disabled', 'disabled');
+        },
+        success: function (rsps) {
+        },
+        error: function (error) {
+            return false;
+        },
+        complete: function () {
+            $('#register-get-captcha-btn').attr('disabled', '');
+        }
+    });
+}
+
+/**
+ * 验证码已经发送，按钮timenum 秒内不能点击
+ * @param timenum int 监听秒数
+ **/
+function timeNumListen(timenum) {
+    settimenum();
+    function settimenum() {
+        if (timenum > 0) {
+            $('#register-get-captcha-btn').text(timenum + '秒后可重发验证码').attr('disabled', 'disabled').css({'color': '#a5a5a5'});
+            setTimeout(settimenum, 1000);
+            timenum = timenum - 1;
+        } else {
+            $('#register-get-captcha-btn').text('发送验证码').removeAttr('disabled').css({'color': '#333'});
+        }
+    }
+}
+
+
+/*密码长度或组合的校验*/
+function checkPassword(value) {
+    var pwdRule=/^[\w@!#]{6,16}$/;
+    if (!pwdRule.exec(value)){
+        return false;
+    }else{
+        return true;
+    }
+}
+
+//手机号码的校验
+function checkTel(value) {
+    var isPhone = /^([0-9]{3,4}-)?[0-9]{7,8}$/;
+    var isMob = /^((\+?86)|(\(\+86\)))?(13[0123456789][0-9]{8}|15[012356789][0-9]{8}|1[78][02356789][0-9]{8}|147[0-9]{8}|1349[0-9]{7})$/;
+    if (isMob.test(value) || isPhone.test(value)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+

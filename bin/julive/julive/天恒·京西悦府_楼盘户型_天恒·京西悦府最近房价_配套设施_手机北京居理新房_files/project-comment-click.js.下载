@@ -1,0 +1,169 @@
+
+$(function() {
+    if(navigator.userAgent.indexOf("CriOS") != -1 || navigator.userAgent.indexOf("Chrome") != -1){
+        $('.page').val(1);
+    }
+    //上拉刷新/下拉分页 公用方法
+    commonAjaxLoading(
+        window.location.href,//上拉加载url
+        '',//下拉刷新url
+        function () {//返回的参数
+            var paramJson = {
+                "page" : $('.page').val(),
+                "id" : $('.id').val(),
+                'filter': $('.filter').val()
+            };
+            return paramJson;
+        },
+        '#clickti',//数据加载回来放得容器名
+        '.loading-waiting',//加载更多栏容器名
+        false,//是否下拉刷新
+        true,//是否上拉加载
+        function () {//需要执行的回调函数
+            var pages = $('.page').val();
+            pages++;
+            $('.page').val(pages);
+            ajax_pd();
+            var user_cmt = $(".user-cmt").find("li");
+            fd(user_cmt);
+        },
+        '',//需要设置的cookie名
+        '.ReviewTotalNum'//总条数
+    );
+});
+
+//用户评论标签切换
+function clickswitch(i,n){
+    $('.filter').val(i);
+    $('.page').val(1);
+     $.ajax({
+        type:'post',
+        url:user_comment_click,
+        data:{filters:i,
+        		id:n,page:$('.page').val()
+        },
+        _csrf:_csrf,
+        success:function(w){
+        	$("#clickti").html(w);
+            ajax_pd();
+            var user_cmt = $(".user-cmt").find("li");
+            fd(user_cmt);
+        }
+
+     })
+
+
+}
+
+  var cmt_hot_words = $('.cmt-hot-words');
+    var cmt_li = cmt_hot_words.find('li');
+    cmt_li.each(function(){
+        var that = $(this);
+        that.on("click",function(){
+            that.addClass("on").siblings().removeClass("on")
+        })
+    })
+
+
+/*ajax切换时执行*/
+function ajax_pd() {
+
+    var nr_user_cmt = $(".nr-user-cmt");
+    var user_cmt = nr_user_cmt.find("#clickti .user-cmt");
+
+    user_cmt.each(function () {
+        var that = $(this);
+        var cmt_detail = that.find(".cmt-detail");
+        var cssHeight = parseInt(cmt_detail.css("max-height"));
+        var relHeight = parseInt(cmt_detail[0].scrollHeight);
+        var dp_showMore = that.find(".show-more");
+        var dp_detail = that.find(".cmt-detail");
+        if(relHeight > cssHeight*1.2){
+            dp_showMore.show();
+        }
+        dp_showMore.unbind('click');
+        dp_showMore.on("click",function () {
+            dp_showMore.toggleClass("xz");
+            dp_detail.toggleClass("zk");
+        })
+    });
+}
+
+var user_cmt = $(".user-cmt").find("li");
+            fd(user_cmt);
+
+
+function click_ytpe(obj,n){
+
+var url =obj+'/usercom.html';
+var f = document.createElement("form"); 
+
+document.body.appendChild(f); 
+
+var s = document.createElement("input"); 
+var x = document.createElement("input"); 
+f.appendChild(s); 
+f.appendChild(x); 
+s.name ="_csrf";
+s.value = _csrf;
+x.name = "type_status"; 
+x.value = n; 
+f.method= "post";
+f.action = url; 
+
+f.submit();
+}
+
+/**
+ * 跳转到写点评页
+ * @date 2017-06-12
+ * @author gaoqing
+ */
+function goWriteCommentLink() {
+    if ( $("#page_identity").val() == 'project_detail'){
+        $("#page_flag").val("project_detail_go_comment_write");
+    }else {
+        $("#page_flag").val("comment_list_go_write_comment");
+    }
+    checkApp.wakeupApp($(".link-comment").attr('data-value'));
+}
+
+function UserFavortive(w){
+        var id = $("#UserProject").val();
+        var obj = $("#collection").attr("class");
+        //如果等于2说明是已经登录并且已经收藏
+        if(obj=='ico ico-heart ico-heart-on'){
+            $.ajax({
+                type: "GET",
+                url: user_collection_click,
+                data:{
+                    id:id,
+                    type:'delete'
+                },
+                success: function (rsps) {
+                   if(rsps==2){
+                        alert('取消收藏成功');
+                        $("#collection").removeClass("ico-heart-on");
+                        $("#collection").next("p").text("收藏");
+
+                        //添加埋点
+                       $(w).bind('pointTrack', function (event, data) {
+                           data.properties.collection_action = 1;
+                       });
+                    }
+                }
+            });
+        }else{
+            $("#page_flag").val("project_detail_favorite");
+            checkApp.wakeupApp($(w).attr('data-value'));
+        }
+}
+
+//楼盘收藏 -- 埋点
+ $(document).on('pointTrack', '#favoriteProject', function (event, data) {
+     if ($("#collection").attr('class').match("ico-heart-on")){
+         data.properties.collection_action = 2;
+     }else{
+         data.properties.collection_action = 1;
+     }
+ });

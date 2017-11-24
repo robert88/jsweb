@@ -1,0 +1,53 @@
+/**
+ * 楼盘详情页用户点评点赞
+ */
+$(function(){
+    $(document).on('click','.opt-zan',function(){
+        $("div[data-id='zan_div']").attr("on-click", "0");
+        $(this).attr("on-click", "1");
+        if($(this).hasClass('opt-yz')){
+            return false;
+        }else{
+            if ( $("#page_identity").val() == 'project_detail'){
+                $("#page_flag").val("project_detail_like");
+            }else {
+                $("#page_flag").val("comment_list_write_comment");
+            }
+            checkApp.wakeupApp($(this).attr('data-value'));
+        }
+    });
+});
+
+
+
+function click_like(obj){
+    var comment_id = obj.data('comment-id');
+    $.ajax({
+        type: "POST",
+        url: user_comment_click_like,
+        data: {
+            comment_id: comment_id,
+            type: 'web'
+        },
+        success: function (rsps) {
+            var res = eval('('+rsps+')');
+            if(res['error_code'] == 0){
+                obj.addClass('opt-yz').children('.txt').html('赞 '+res['data']['like_num']);
+            }
+        },
+        error: function (error) {
+            return false;
+        }
+    });
+}
+
+// 周边配套 展开-收起 埋点
+$('#project_zb .ico-showmore').bind('pointTrack', function(event, data) {
+    if ($(this).parent().hasClass('hide-more')) {
+        data.event = 'e_click_fold';
+        data.properties.fromItem = 'i_fold';
+    } else {
+        data.event = 'e_click_unfold';
+        data.properties.fromItem = 'i_unfold';
+    }
+});

@@ -1,0 +1,1 @@
+$(function(){$(document).on("click",".consultant-footer",function(){var t=$(this).parents(".consultant-item").find(".note-detail");t.hasClass("data-detail")?($(this).removeClass("note-remove-more"),t.removeClass("data-detail")):($(this).addClass("note-remove-more"),t.addClass("data-detail"))})});

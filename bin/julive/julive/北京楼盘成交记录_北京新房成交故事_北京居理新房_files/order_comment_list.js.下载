@@ -1,0 +1,59 @@
+/**
+ * Created by Administrator on 2016/1/8.
+ * 成交记录列表页脚本
+ */
+$(function(){
+    //绑定下拉加载事件
+
+    $(window).scroll(function () {
+        //$(window).scrollTop()这个方法是当前滚动条滚动的距离
+        //$(window).height()获取当前窗体的高度
+        //$(document).height()获取当前文档的高度
+        var bot = 10; //bot是底部距离的高度
+        if ((bot + $(window).scrollTop()) >= ($(document).height() - $(window).height())) {
+            //当底部基本距离+滚动的高度〉=文档的高度-窗体的高度时；
+            //我们需要去异步加载数据了
+            if (page > TotalPage) {
+                $(".loading-waiting").show(0).html('就这么多了...').css({'margin':0});
+            } else if(prePage == page){
+            var url = window.location.href;
+
+                //上拉成交故事列表页 -- 埋点
+                $("#hidden_order_comment_loading_track").trigger('mousedown');
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:{
+                        page:page
+                    },
+                    beforeSend:function(){
+                        $(".loading-waiting").show(0);
+                        prePage = page + 1;//prePage为标识变量，防止读取重复数据
+                    },
+                    success: function (data) {
+                        $(".counselor-item").children('.media6').last().after(data);
+                        //当前页加1
+                        page = page + 1;
+                        // 加载更多 -- 埋点
+                        $("#loading_more_track").trigger("pointTrack");
+                    }
+                });
+            }
+
+        }
+    });
+
+    //上海M站客户评价展开与收起
+    $('.show-option').click(function(){
+        if($(this).hasClass('short')){
+            $(this).siblings('.data-short').removeClass('ing').hide();
+            $(this).siblings('.data-detail').addClass('ing').show();
+            $(this).html('收起').removeClass('short').addClass('detail');
+        }else if($(this).hasClass('detail')){
+            $(this).siblings('.data-detail').removeClass('ing').hide();
+            $(this).siblings('.data-short').addClass('ing').show();
+            $(this).html('查看全文').removeClass('detail').addClass('short');
+        }
+    });
+});
+

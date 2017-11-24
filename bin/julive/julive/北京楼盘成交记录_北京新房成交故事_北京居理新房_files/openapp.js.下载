@@ -1,0 +1,106 @@
+/**
+ * 移动浏览器上app下载
+ * 
+ */
+var share_base_url = "comjia://app.comjia.com/share?data=";
+var mobileAppInstall = (function() {
+    var ua = navigator.userAgent,
+    loadIframe, win = window;
+
+    function getIntentIframe() {
+        if (!loadIframe) {
+            var iframe = document.createElement("iframe");
+            iframe.style.cssText = "display:none;width:0px;height:0px;";
+            document.body.appendChild(iframe);
+            loadIframe = iframe;
+        }
+        return loadIframe;
+    }
+
+    function getChromeIntent(url) {
+        // 根据自己的产品修改吧
+        return "intent://t.qq.com/#Intent;scheme=" + url + ";package=com.comjia.kanjiaestate;end";
+    }
+    var appInstall = {
+        isChrome: ua.match(/Chrome\/([\d.]+)/) || ua.match(/CriOS\/([\d.]+)/),
+        isAndroid: ua.match(/(Android);?[\s\/]+([\d.]+)?/),
+        isNative: ua.match(/(comjia)/i),
+        timeout: 500,
+        /**
+         * 尝试跳转appurl,如果跳转失败，进入h5url
+         * @param {Object} appurl 应用地址
+         * @param {Object} h5url  http地址
+         */
+        open: function(appurl, h5url) {
+            var t = Date.now();
+            console.log('open app url: ' + appurl);
+            appInstall.openApp(appurl);
+            if (!appInstall.isNative) {
+                setTimeout(function() {
+                    if (Date.now() - t < appInstall.timeout + 100) {
+                        h5url && appInstall.openH5(h5url);
+                        console.log('open h5 url: ' + h5url);
+                    }
+                },
+                appInstall.timeout)
+            }
+        },
+        openApp: function(appurl) {
+            if (appInstall.isAndroid) {
+                console.log('iframe open app url: ' + appurl);
+                getIntentIframe().src = appurl;
+            } else {
+                win.location.href = appurl;
+                // getIntentIframe().src = appurl;
+            }
+        },
+        openH5: function(h5url) {
+            win.location.href = h5url;
+        },
+        openInNative : function(appurl) {
+            console.log('openInNative:' + appurl);
+            getIntentIframe().src = appurl;
+        },
+        openAppCallback: function (appurl, callback) {
+            var t = Date.now();
+            appInstall.openApp(appurl);
+            console.log('open app url: ' + appurl);
+            if (!appInstall.isNative) {
+                setTimeout(function() {
+                    if (Date.now() - t < appInstall.timeout + 100) {
+                        callback();
+                    }
+                },
+                appInstall.timeout)
+            }
+            
+        }
+    }
+
+    return appInstall;
+})();
+
+/**
+ * 通过ua获得app信息
+ * @param  {string} ua user agent
+ * @return {obj}    app info
+ */
+var getAppInfoFromUA = function(ua) {
+    if (!ua) {
+        ua = typeof navigator !== 'undefined' ? navigator.userAgent || '' : '';
+    }
+    if (/comjia/i.test(ua)) {
+        var match = ua.match(/comjia\s*\(\s*(\d+)\s*;\s*(\d+)\s*\)/i);
+        var rst = {
+            appId : (match && match.length > 1 && match[1]) || '',
+            version : (match && match.length > 1 && match[2]) || ''
+        }
+        return rst;
+    } else {
+        return false;
+    }
+}
+
+$('.ipt').bind("pointTrack", function(event, data) {
+        data.properties.query = $(this).val();
+});

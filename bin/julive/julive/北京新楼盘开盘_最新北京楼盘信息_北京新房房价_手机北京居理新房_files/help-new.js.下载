@@ -1,0 +1,213 @@
+$(function(){
+    //筛选条件
+    $(".input-area").each(function(){
+        var _item = $(this);
+        var _ipt = _item.children(".ipt");
+        _ipt.click(function(){
+            if(_ipt.next(".dropdown-list").is(":hidden")){
+                _ipt.next(".dropdown-list").stop().slideDown();
+                _ipt.parents(".input-area").parents(".tr").addClass("on");
+
+                _ipt.next(".dropdown-list").children("li").click(function(){
+                    var defaultValue = _ipt.next(".dropdown-list").children("li:first").text();
+                    _ipt.parents(".input-area").parents(".tr").removeClass("on");
+                    _ipt.text($(this).text());
+                    var dataCapture = $(this).attr("data-capture");
+                    var dataKey = $(this).parents(".dropdown-list").prev(".ipt").attr("data-key");
+                    switch(dataKey)
+                    {
+                        case 'area':
+                            _ipt.attr('data-area',dataCapture);
+                            break;
+                        case 'budget':
+                            _ipt.attr('data-budget',dataCapture);
+                            break;
+                        case 'house':
+                            _ipt.attr('data-house',dataCapture);
+                            break;
+                        case 'size':
+                            _ipt.attr('data-size',dataCapture);
+                            break;
+                    }
+                    if(_ipt.text() == defaultValue){
+                        _ipt.css({
+                            color: "#999"
+                        });
+                    }else{
+                        _ipt.css({
+                            color: "#333"
+                        });
+                    }
+
+                    $(this).parents(".dropdown-list").slideUp("fast");
+                });
+            }else if(_ipt.next(".dropdown-list").is(":visible")){
+                $(".dropdown-list").slideUp("fast");
+                _ipt.parents(".input-area").parents(".tr").removeClass("on");
+            }
+        });
+
+    });
+    //点击空白区域关闭下拉选择框
+    $(document).mouseup(function(e){
+        var _con = $(".dropdown-list");   // 设置目标区域
+        if(!_con.is(e.target) && _con.has(e.target).length === 0){ // Mark 1
+            $(".dropdown-list").slideUp();
+        }
+    });
+
+    $('#get-captcha-btn').click(function(){
+        var mobile = $('.mobile_number').val();
+        get_captcha(mobile);
+    });
+
+
+    $('.btn-send').click(function(){
+        var area = $('.area-ipt').attr('data-area');
+        var budget = $('.budget-ipt').attr('data-budget');
+        var house = $('.house-ipt').attr('data-house');
+        var size = $('.size-ipt').attr('data-size');
+        var mobile = $('.mobile_number').val();
+        var captcha = $('.captcha').val();
+        if($('.btn-send').attr('disable')=='disable'){
+            return false;
+        }
+        if(area === '' || area < 0){
+            $('.tips-info').html('请填写购房区域');
+            return false;
+        }else if(budget === '' || budget < 0){
+            $('.tips-info').html('请填写购房预算');
+            return false;
+        }else if(house === '' || house < 0){
+            $('.tips-info').html('请填写购房户型');
+            return false;
+        }else if(size === '' || size < 0){
+            $('.tips-info').html('请填写购房面积');
+            return false;
+        }else if(mobile == ''){
+            $('.tips-info').html('请填写手机号');
+            return false;
+        }else if(!checkTel(mobile)){
+            $('.tips-info').html('请填写正确的手机号');
+            return false;
+        }else if(captcha == '' ){
+            if(no_captcha == ''){
+                $('.tips-info').html('请填写验证码');
+                return false;
+            }
+        }else{
+            $('.btn-send').attr('disable','disable');
+            $.ajax({
+                type: "POST",
+                url: user_see_create,
+                data: {
+                    mobile:mobile,
+                    area: area,
+                    budget: budget,
+                    house: house,
+                    size: size,
+                    no_captcha:no_captcha,
+                    op_log:op_log,
+                    captcha:captcha
+                },
+                success: function (rsps) {
+                    var rsp = eval('(' + rsps + ')');
+                    if(rsp.code == 1)
+                    {
+                        $('.tips-info').html(rsp.msg);
+                        setTimeout(recovers,5000)
+                    }else{
+
+                        $('.tips-info').html(rsp.msg);
+
+                        return false;
+                    }
+                },
+                error: function (error) {
+                    return false;
+                },
+            });
+        }
+    });
+
+    /**
+     * 获取验证码方法
+     * @param mobile 获取验证码的手机号码
+     * @param resetFlag 是否重置密码的标识参数（0 代表注册，1代表重置密码）
+     */
+
+    function get_captcha(mobile) {
+        if(mobile == '' || !checkTel(mobile)) {
+            $('.tips-info').html('请填写正确的手机号');
+            return false;
+        }else{
+            $.ajax({
+                type: "POST",
+                url: get_mobile_captcha,
+                data: {
+                    mobile: mobile
+                    //_csrf: csrfToken
+                },
+                beforeSend: function () {
+                    $('#get-captcha-btn').attr('disabled', 'disabled');
+                },
+                success: function (rsps) {
+                    timeNumListen(30);
+                    var rsp = eval('(' + rsps + ')');
+                    $('.tips-info').html(rsp.msg);
+                },
+                error: function (error) {
+                    return false;
+                },
+                complete: function () {
+                    $('#get-captcha-btn').attr('disabled', '');
+                }
+            });
+        }
+    }
+
+    /**
+     * 验证码已经发送，按钮timenum 秒内不能点击
+     * @param timenum int 监听秒数
+     **/
+    function timeNumListen(timenum) {
+        settimenum();
+        function settimenum() {
+            if (timenum > 0) {
+                $('#get-captcha-btn').text(timenum + '秒后可重发验证码').attr('disabled', 'disabled').css({'color': '#a5a5a5'});
+                setTimeout(settimenum, 1000);
+                timenum = timenum - 1;
+            } else {
+                $('#get-captcha-btn').text('发送验证码').removeAttr('disabled').css({'color': '#333'});
+            }
+        }
+    }
+
+    // 手机号码的校验
+    function checkTel(value) {
+        var isPhone = /^([0-9]{3,4}-)?[0-9]{7,8}$/;
+        var isMob = /^((\+?86)|(\(\+86\)))?(13[0123456789][0-9]{8}|15[012356789][0-9]{8}|1[78][02356789][0-9]{8}|147[0-9]{8}|1349[0-9]{7})$/;
+        if (isMob.test(value) || isPhone.test(value)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    var btnSend = $(".btn-send");
+    var mask = $(".mask");
+    mask.on("click touchmove",function (e) {
+        if(e.target.className == "mask" || e.target.className == "mask-close" || e.target.classList.contains("btn-sure")){
+            mask.hide();
+            btnSend.removeClass("btn-clicked");
+
+
+        }
+    })
+
+});
+
+function recovers() {
+    $('.btn-send').removeAttr('disable');
+    window.history.go(-1);
+}

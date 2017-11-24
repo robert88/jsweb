@@ -101,10 +101,10 @@
 			refrence:$(window).width(),
 			refrenceMax:640,
 			refrenceMin:300,
-			setMax:125,
-			setMin:75,
+			setMax:1,
+			setMin:.6666666666666666,
 		},function(rem){
-			$("html").css("font-size", rem + "%");
+			$("html").css("font-size", rem + "px");
 		});
 	}
 	$(window).on("resize",function () {

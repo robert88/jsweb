@@ -1,0 +1,14 @@
+$(function() {
+
+    $('.zan').click(function() {
+        /*var $('.zan') = $(this);*/
+        $.getJSON($('.zan').data('url'), function(response) {
+            $('.zan').find('.num').text('有用(' + response.num + ')')
+            if ($('.zan').hasClass('zan-on')) {
+                $('.zan').removeClass('zan-on').find('img').removeClass('ico-zan-nc').attr('src', '/images/ico-like.png');
+            } else {
+                $('.zan').addClass('zan-on').find('img').addClass('ico-zan-nc').attr('src', '/images/icon_like.gif');
+            }
+        });
+    });
+});

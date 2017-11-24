@@ -5575,3 +5575,15 @@
     at Error (native)
 [error][2017/11/24 07:27:34][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
     at Error (native)
+[error][2017/11/25 06:38:37][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/25 06:38:38][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/25 06:56:52][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/25 06:56:52][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/25 07:00:19][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)
+[error][2017/11/25 07:00:20][function handlerErr(err,response,name)]:domainErrorEvent : Error: EISDIR: illegal operation on a directory, read
+    at Error (native)

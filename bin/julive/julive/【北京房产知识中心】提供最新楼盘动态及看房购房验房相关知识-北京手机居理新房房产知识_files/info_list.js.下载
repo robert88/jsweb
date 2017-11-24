@@ -1,0 +1,64 @@
+/**
+ * Created by Administrator on 2016/1/8.
+ * 资讯列表页脚本
+ */
+$(function(){
+    //咨询师搜索
+    $("#btnSearchInfo").click(function(){
+        btnSearchInfoOnclick();
+    });
+    //模拟回车搜索
+    $('#keyword').focus(function (event) {
+        $(document).keydown(function(event){
+            if(event.keyCode==13){
+                btnSearchInfoOnclick();
+            }
+        });
+    });
+    //绑定下拉加载事件
+
+    $(window).scroll(function () {
+        //$(window).scrollTop()这个方法是当前滚动条滚动的距离
+        //$(window).height()获取当前窗体的高度
+        //$(document).height()获取当前文档的高度
+
+        var bot = $('.a-footer-layer').height(); //bot是底部距离的高度
+        if ((bot + $(window).scrollTop()) >= ($(document).height() - $(window).height())) {
+            //当底部基本距离+滚动的高度〉=文档的高度-窗体的高度时；
+            //我们需要去异步加载数据了
+            if(page >= TotalPage){
+                //$(".loading-waiting").show(0).html('就这么多了...').css({'margin':0});
+            }else if(prePage == page){
+                var url = window.location.href;
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data:{
+                        page:page,
+                        keyword:$('#keyword').val()
+                    },
+                    beforeSend:function(){
+                        $(".loading-waiting").show(0);
+                        prePage = page + 1;//prePage为标识变量，防止读取重复数据
+                    },
+                    success: function (data) {
+                        $(".tab-center").children('.nrpart').children('.n-media').last().after(data);
+                        //当前页加1
+                        page = page + 1;
+                        $(".loading-waiting").hide();
+                    }
+                });
+            }
+        }
+    });
+});
+
+
+function btnSearchInfoOnclick(){
+    var keyword = $("#keyword").val();
+    var keywordDefaultVal = $("#keyword").prop("placeholder");
+    if ((keyword !== '') && (keyword !== keywordDefaultVal)){
+        var info_search_url = $("#keyword").attr('data-search-url');
+        location.href = commonLocation(m_yw_data_collection_list,info_search_url + '/tag/' + keyword);
+    }
+}

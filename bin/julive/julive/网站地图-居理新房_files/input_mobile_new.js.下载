@@ -1,0 +1,191 @@
+//预约报名页面脚本
+
+$(function(){
+    $('#teambuy_submit').click(function () {
+        if($('.ga_btn_success').data('content') != '' && $('.ga_btn_success').data('content') != null)
+        {
+            googleAnalytics($('.ga_btn_success').data('content'));
+        }
+
+        var mobile = $('#input_mobile').val();
+        var project_id = $('#intent_project_id').val();
+        var item = $(this);
+
+        if (mobile == "") {
+            $('.tips-info').show();
+            $('.tips-info').html('请填写手机号');
+            return false;
+        }
+                
+        if ( !checkTel(mobile) ) {
+            $('.tips-info').show();
+            $('.tips-info').html('手机号码格式不正确，请核对后重新输入');
+            return false;
+        }
+
+        var clickSource = $(this).attr('clickSource');
+        var opLogSource = $(this).attr('opLogSource');
+
+        $('.tips-info').hide();
+        free2_call_ajax_submit(mobile, clickSource, _csrf, '',project_id, opLogSource);
+        item.attr('disabled','disabled').addClass('disabled');
+
+    });
+
+    $("#btnSearch").click(function(){
+        btnSearchOnclick();
+    });
+
+})
+
+function free2_call_ajax_submit(mobile, clickSource, _csrf, redirect_url,project_id, opLogSource)
+{
+    $.ajax({
+            type: 'POST',
+            url: user_see_create_url,
+            data: {
+                user_mobile: mobile,
+                clickSource:clickSource,
+                status: 1,
+                type: 2,
+                _csrf: _csrf,
+                project_id:project_id,
+                opLogSource: opLogSource
+            },
+            beforeSend: function () {
+                $(this).attr('disabled', 'disabled');
+            },
+            success: function (rsp) {
+                if (rsp == 1)
+                {
+                    if(confirm('提交成功，咨询师将用'+phone_number_free_call_back+'号码联系您，免费专车带您看房！')){
+                        if(redirect_url){
+                            window.location.href=redirect_url;
+                        }else{
+                            $(this).removeAttr('disabled');
+                            $('#input_mobile').val('');
+                        }
+                    }else{
+                        $(this).removeAttr('disabled');
+                    }
+                    setTimeout(recovers,5000);
+                } else {
+                    alert(rsp);
+                }
+            },
+            complete: function () {
+                $(this).removeAttr('disabled');
+            }
+    });
+}
+
+function btnSearchOnclick()
+{
+    var keywords = $("#keywords").val();
+    if (keywords !== '请输入楼盘名称…')
+    {
+        location.href = project_search_url + '?name=' + keywords;
+    }
+}
+
+/*首次获取验证码*/
+$(document).on('click', '.send_part_code', function () {
+    $('.send_part_code').attr('disabled', 'disabled');
+    get_captcha_click($(this));
+});
+
+/***验证获取验证码的手机是否有效
+ *  无效给出错误提示，有效直接获取验证码
+ * @returns {boolean}
+ */
+function get_captcha_click(obj) {
+    var mobile = $('#input_mobile').val();
+    if (!checkTel(mobile)) {
+        $('.tips-info').show();
+        $('.tips-info').html('请输入正确的手机号');
+        return false;
+    } else {
+        /*获取验证码方法*/
+        timeNumListen(30);
+        get_captcha(mobile);
+    }
+}
+
+/**
+ * 验证码已经发送，按钮timenum 秒内不能点击
+ * @param timenum int 监听秒数
+ **/
+function timeNumListen(timenum) {
+    settimenum();
+    function settimenum() {
+        if (timenum > 0) {
+            $('.send_part_code').text(timenum + '秒后可重发验证码').attr('disabled', 'disabled').css({'color': '#a5a5a5'});
+            setTimeout(settimenum, 1000);
+            timenum = timenum - 1;
+        } else {
+            $('.send_part_code').text('发送验证码').removeAttr('disabled').css({'color': '#333'});
+        }
+    }
+}
+
+/**
+ * 获取验证码方法
+ * @param mobile 获取验证码的手机号码
+ */
+function get_captcha(mobile) {
+    $.ajax({
+        type: "POST",
+        url: get_mobile_captcha_save,
+        data: {
+            mobile: mobile,
+        },
+        beforeSend: function () {
+        },
+        success: function (rsps) {
+        },
+        error: function (error) {
+            return false;
+        },
+        complete: function () {
+        }
+    });
+
+}
+/**
+ * 获取验证码方法
+ * @param mobile 获取验证码的手机号码
+ */
+function check_captcha(mobile,input_code) {
+    $.ajax({
+        type: "POST",
+        url: check_mobile_captcha,
+        data: {
+            mobile: mobile,
+            input_code:input_code
+        },
+        beforeSend: function () {
+        },
+        success: function (rsps) {
+            rsps = eval('(' + rsps + ')');
+            if(rsps.code == 2){
+                $('.tips-info').show();
+                $('.tips-info').html('验证码已经过期，请重新获取验证码');
+                return '2';
+            }else if(rsps.code == 3){
+                $('.tips-info').show();
+                $('.tips-info').html('验证码错误，请填写正确的验证码');
+                return '3';
+            }
+        },
+        error: function (error) {
+            return false;
+        },
+        complete: function () {
+        }
+    });
+
+}
+function recovers() {
+    $('#teambuy_submit').removeClass('disabled');
+    $('#teambuy_submit').removeAttr('disabled');
+}

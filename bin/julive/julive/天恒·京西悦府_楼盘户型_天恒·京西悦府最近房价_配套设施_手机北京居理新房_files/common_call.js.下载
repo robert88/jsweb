@@ -1,0 +1,377 @@
+
+//新的公共弹出层 -- gaoqing -- 2017-09-19 Start -- 详情备注信息，请参阅：http://cwiki.comjia.com/pages/viewpage.action?pageId=109674773
+var commonCall = {
+    entrySelector:  '.common-call',                                         //统一留电点击入口的 class
+    commitSelector: '.common-call-commit',                                  //统一留电提交的 class
+    secondCommitSelector: '.common-call-second-commit',                     //统一二次留电提交的 class
+    commonCallConf: JSON.parse(common_call_conf),                           //CommonCallConstant 类中，配置的模板相关的数据集对象
+    emptyReg: /^\s\t\n\r*$/,
+    init: function(){
+        //点击输入框时，隐藏 【错误提示】信息部分
+        $(document).delegate('.layui-layer-content .ipt', 'click', function(){
+            $('.layui-layer-content .error-tips span').hide();
+        });
+    },
+    commonCall: function(selector){
+        selector = selector || commonCall.entrySelector;
+        $(document).delegate(selector, 'click', function() {
+            var callReferrerDatas = $(this).data('call-referrer-datas');
+            if (!callReferrerDatas){
+                console.info("please put in your logic datas");
+                return false;
+            }
+            callReferrerDatas['curr_obj'] = this;
+            //需要 abtest 时：
+            if(callReferrerDatas.hasOwnProperty("abtest_flag") && !(callReferrerDatas['abtest_flag'].match(commonCall.emptyReg))){
+                try {
+                    adhoc.satrack(callReferrerDatas['abtest_flag'], abtest_event_name, commonCall.abtest, callReferrerDatas);
+                } catch (error) {
+                    console.info("abtest 服务发生错误！");
+
+                    //当abtest 服务发生异常时，临时使用的新版本
+                    commonCall.abtest("V1", callReferrerDatas);   
+                }
+            }else{
+                commonCall.openPopup(callReferrerDatas);
+            }
+        });
+    },
+    abtest: function(abtestVersion, callReferrerDatas){
+        if(abtestVersion != undefined && !(abtestVersion.match(commonCall.emptyReg))){
+            callReferrerDatas["abtest_version"] = abtestVersion;
+
+            var opTypeKey = callReferrerDatas['op_type'] + "_" + abtestVersion;
+            if(commonCall.commonCallConf.hasOwnProperty(opTypeKey) && commonCall.commonCallConf[opTypeKey].hasOwnProperty("page_type")){
+                callReferrerDatas["page_type"] = commonCall.commonCallConf[opTypeKey]["page_type"];
+            }
+        }
+        //添加埋点数据 -- abtest 时，执行此埋点方法
+        commonCall.triggerTrack(callReferrerDatas);
+        commonCall.openPopup(callReferrerDatas);
+    },
+    getPagesMapKey: function(callReferrerDatas){
+        var pagesMapKey = '';
+        if(callReferrerDatas.hasOwnProperty("identity")){
+            pagesMapKey = callReferrerDatas["identity"];
+
+            //如果有 abtest 的话，则 key 是由：callReferrerDatas["identity"] + "_" + callReferrerDatas["abtest_version"] 组成
+            if(callReferrerDatas.hasOwnProperty("abtest_version") && callReferrerDatas["abtest_version"] != abtest_default_version){
+                pagesMapKey = callReferrerDatas["identity"] + "_" + callReferrerDatas["abtest_version"];
+            }
+        }
+        return pagesMapKey;
+    },
+    openPopup: function(callReferrerDatas) {
+        var pagesMapKey = commonCall.getPagesMapKey(callReferrerDatas);
+        if(pagesMapKey){
+            var settingParams = {};
+            var afterOpenDialog = commonCallPopupStandard.emptyCallback;
+            if(pagesMap.hasOwnProperty(pagesMapKey)){
+                settingParams = pagesMap[pagesMapKey];
+                if(settingParams.hasOwnProperty("afterOpenDialog")){
+                    afterOpenDialog = settingParams["afterOpenDialog"];
+                }
+            }
+            //移除 curr_obj 对象
+            delete callReferrerDatas["curr_obj"];
+            $.ajax({
+                type:       "GET",
+                url:        common_call_view,
+                data:       {"referrer_datas": callReferrerDatas},
+                dataType:   "html",
+                success: function(responseHtml) {
+                    showDialog(1, responseHtml);
+                    afterOpenDialog();
+                }
+            });
+        }
+    },
+    triggerTrack: function(callReferrerDatas){
+        if(callReferrerDatas.hasOwnProperty("abtest_flag") && !(callReferrerDatas["abtest_flag"].match(commonCall.emptyReg))){
+            //找到当前点击对象的 hidden_track 对象
+            var track_obj = $(callReferrerDatas['curr_obj']).find('.hidden_track');
+            var page_type = callReferrerDatas['page_type'];
+            if(callReferrerDatas.hasOwnProperty("abtest_version")){
+                var saPoint = $(track_obj).data("sa-point");
+                saPoint["properties"]["abtest_value"] = callReferrerDatas["abtest_version"];
+                if(page_type == common_call_page_types["PAGE_TYPE_POPUP"]){
+                    saPoint["properties"]["toPage"] = saPoint["properties"]["fromPage"];
+                }else{
+                    saPoint["properties"]["toModule"] = '';
+                }
+                $(track_obj).data("sa-point", saPoint);
+            }
+            $(track_obj).trigger('mousedown');
+        }
+    },
+    secondTriggerTrack: function(callReferrerDatas){
+         //找到当前点击对象的 hidden_track 对象
+         var track_obj = $("#common_call_second_popup_track");
+         var saPoint = $(track_obj).data("sa-point");
+         var district = $(".layui-layer-content .input-area .area-ipt").text();
+         var districtDefaultValue = $(".layui-layer-content .input-area .area-ipt").data('default');
+         var budget = $(".layui-layer-content .input-area .budget-ipt").text();
+         var budgetDefaultValue = $(".layui-layer-content .input-area .budget-ipt").data('default');
+         if(district != districtDefaultValue){
+            saPoint["properties"]["district"] = [district];
+         }
+         if(budget != budgetDefaultValue){
+            saPoint["properties"]["budget"] = [budget];
+         }
+         $(track_obj).data("sa-point", saPoint);
+
+         $(track_obj).trigger('mousedown');
+    },
+    callCommit: function(selector) {
+        selector = selector || commonCall.commitSelector;
+        $(document).delegate(selector, 'click', function() {
+            var callReferrerDatas = $(this).data('call-referrer-datas');
+            var pagesMapKey = commonCall.getPagesMapKey(callReferrerDatas);
+            if(pagesMapKey){
+                var settingParams = {};
+                var datasCallback = commonCallPopupStandard.emptyCallback;
+                var beforeSendCallback = commonCallPopupStandard.emptyCallback;
+                var successCallback = commonCallPopupStandard.emptyCallback;
+                var completeCallback = commonCallPopupStandard.emptyCallback;
+                if(pagesMap.hasOwnProperty(pagesMapKey)){
+                    settingParams = pagesMap[pagesMapKey];
+                    if(settingParams.hasOwnProperty("ajaxParmas")){
+                        var ajaxParmas = settingParams["ajaxParmas"];
+                        if(ajaxParmas.hasOwnProperty("datas")){
+                            datasCallback = ajaxParmas["datas"];
+                        }
+                        if(ajaxParmas.hasOwnProperty("beforeSend")){
+                            beforeSendCallback = ajaxParmas["beforeSend"];
+                        }
+                        if(ajaxParmas.hasOwnProperty("success")){
+                            successCallback = ajaxParmas["success"];
+                        }
+                        if(ajaxParmas.hasOwnProperty("complete")){
+                            completeCallback = ajaxParmas["complete"];
+                        }
+                    }
+                }
+                //获取提交时的数据
+                var datas = datasCallback();
+                if (!datas){
+                    console.info('parameters are fault, please check your method !');
+                    return false;
+                }
+                datas["referrer_datas"] = callReferrerDatas;
+                $.ajax({
+                    type:       "POST",
+                    url:        common_call_submit,
+                    data:       datas,
+                    dataType:   "json",
+                    beforeSend: beforeSendCallback,
+                    success:    successCallback,
+                    complete:   completeCallback
+                });
+            }
+        });
+    },
+    callCommitSecond: function(selector){
+        selector = selector || commonCall.secondCommitSelector;
+        $(document).delegate(selector, 'click', function() {
+            var callReferrerDatas = $(this).data('call-referrer-datas');
+            var pagesMapKey = commonCall.getPagesMapKey(callReferrerDatas);
+            if(pagesMapKey){
+                var settingParams = {};
+                var successCallback = commonCallPopupStandard.emptyCallback;
+                if(pagesMap.hasOwnProperty(pagesMapKey)){
+                    settingParams = pagesMap[pagesMapKey];
+                    if(settingParams.hasOwnProperty("ajaxParmas")){
+                        var ajaxParmas = settingParams["ajaxParmas"];
+                        if(ajaxParmas.hasOwnProperty("second_success")){
+                            successCallback = ajaxParmas["second_success"];
+                        }
+                    }
+                }
+                //执行埋点
+                commonCall.secondTriggerTrack(callReferrerDatas);
+
+                callReferrerDatas["district"] = $(".layui-layer-content .input-area .area-ipt").attr('data-area');
+                callReferrerDatas["price"] = $(".layui-layer-content .input-area .budget-ipt").attr('data-budget');
+                //修改订单中的是否优质字段信息
+                $.ajax({
+                    type: "POST",
+                    url: common_call_second_submit,
+                    data: {"referrer_datas": callReferrerDatas},
+                    beforeSend: function() {
+                        $(commonCall.secondCommitSelector).attr('disabled', 'disabled');
+                    },
+                    success: successCallback,
+                    complete: function(){
+                        $(commonCall.secondCommitSelector).removeAttr('disabled');
+                    }
+                });
+            }
+        });
+    },
+    triggerOpenPopupSecond: function(callReferrerDatas){
+        //初始化所需数据
+        $("#common_call_second_hidden").data("call-referrer-datas", JSON.parse(call_call_second_fields));
+
+        var dataCallReferrerDatas = $("#common_call_second_hidden").data("call-referrer-datas");
+        if(callReferrerDatas.hasOwnProperty("success_title")){
+            dataCallReferrerDatas["success_title"] = callReferrerDatas['success_title'];
+        }
+        if(callReferrerDatas.hasOwnProperty("success_msg")){
+            dataCallReferrerDatas["success_msg"] = callReferrerDatas['success_msg'];
+        }
+        if(callReferrerDatas.hasOwnProperty("extension_fields")){
+            dataCallReferrerDatas["extension_fields"] = callReferrerDatas['extension_fields'];
+        }
+        dataCallReferrerDatas["order_id"] = callReferrerDatas['order_id'];
+        dataCallReferrerDatas["from_op_type"] = callReferrerDatas['op_type'];
+        dataCallReferrerDatas["referrer_url"] = callReferrerDatas['referrer_url'];
+        $("#common_call_second_hidden").data("call-referrer-datas", dataCallReferrerDatas);
+
+        // 关闭现有的弹出框
+        closeDialog();
+        $("#common_call_second_hidden").trigger('click');
+    },
+    triggerOpenOldPopupSecond: function(callReferrerDatas){
+        //旧的二次留电弹出层 -- 逻辑
+        showDialog(1, successHtml1);
+        $('.layui-layer-content .dialog-success1 .title').html(callReferrerDatas["success_title"]);
+        $('.layui-layer-content .dialog-success1 .msg').html(callReferrerDatas["success_msg"]);
+        $(document).find('.second-sub-form').find('.ipt.budget-ipt').attr({ 'data-budget': '', 'style': '' }).html('您购房总价预算');
+        $(document).find('.second-sub-form').find('.ipt.area-ipt').attr({ 'data-area': '', 'style': '' }).html('您购房的目标区域');
+        $(".layui-layer-content .dialog-success1 .dialog-btn-commit").data('order-id', callReferrerDatas['order_id']);
+        $(".layui-layer-content .dialog-success1 .dialog-btn-commit").data('identity', callReferrerDatas['identity']);
+    },
+    commonCheckTel: function(){
+        //验证手机号码
+        var phone = $('.layui-layer-content .ipt').val();
+        /* if (!checkTel(phone)) {
+            $('.layui-layer-content .error-tips span').show();
+            $('.layui-layer-content .error-tips span').html("请输入正确的手机号码！");
+            return false;
+        } */
+        $('.layui-layer-content .error-tips span').hide();
+        return phone;
+    }
+};
+//标准（通用）-- 回调函数对象
+var commonCallPopupStandard = {
+    emptyCallback: function(){},
+    afterOpenDialog: function(){
+        if($('.red-number').length > 0){
+            /*字符串解析*/
+            var number_html = '';
+            var $value = $('.red-number').attr("data-value");
+            for (i = 0; i < $value.length; i++) {
+                number_html += '<span>' + $value.charAt(i) + '</span>';
+            }
+            $('.red-number b').append(number_html);
+        }
+    },
+    ajaxParmas: {
+        datas: function(){
+            var phone = commonCall.commonCheckTel();
+            if(!phone){
+                return false;
+            }
+            return {
+                'user_phone': phone,
+            }
+        },
+        beforeSend: function(){
+            $(commonCall.commitSelector).attr('disabled', 'disabled');
+        },
+        success: function(response){
+            var referrerDatas = response.referrerDatas;
+            var order_id = referrerDatas.hasOwnProperty("order_id") ? referrerDatas["order_id"] : 0 ;
+            if (response.code == 0) {
+                $('.layui-layer-content .error-tips span').show();
+                $('.layui-layer-content .error-tips span').text("提交失败，请重试！");
+                return false;
+            }
+            if (response.code == 2) {
+                $('.layui-layer-content .error-tips span').show();
+                $('.layui-layer-content .error-tips span').html("请输入正确的手机号码！");
+                return false;
+            }
+            $('.layui-layer-content .error-tips span').hide();
+            if (response.code == 1) {
+                //使用新的二次留电弹出框
+                if(referrerDatas["identity"] != "ask"){
+                    commonCall.triggerOpenPopupSecond(referrerDatas);
+                }else{
+                    commonCall.triggerOpenOldPopupSecond(referrerDatas);
+                }
+            }
+        },
+        second_success: function(response){
+            if (response.code == 1) {
+                closeDialog();
+            }
+        },
+        complete: function(){
+            $(commonCall.commitSelector).removeAttr('disabled');
+        }
+    }
+};
+//自定义 -- 问问 -- 回调函数对象
+var commonCallPopupAsk = {
+    // 问答 -- ajax 提交时获取 data 的回调
+    ajaxParmas: {
+        datas: function(){
+            var phone = commonCall.commonCheckTel();
+            if(!phone){
+                return false;
+            }
+            return {
+                'user_question': $('.layui-layer-content .dialog-text').val(),
+                'user_phone': phone,
+            }
+        },
+        success: function(response){
+            
+        }
+    }
+};
+var commonStandardParams = {                                
+    "afterOpenDialog": commonCallPopupStandard.afterOpenDialog,
+    "ajaxParmas": {
+        "datas": commonCallPopupStandard.ajaxParmas.datas,
+        "beforeSend": commonCallPopupStandard.ajaxParmas.beforeSend,
+        "success": commonCallPopupStandard.ajaxParmas.success,
+        "complete": commonCallPopupStandard.ajaxParmas.complete
+    }
+};
+//根据弹出层标识（identity），配置的回调函数对象
+var pagesMap = {
+    "common_call":      commonStandardParams,    //M站 （弹层优化）-- 通用弹出层 -- 无 abtest
+    "common_call_V1":   commonStandardParams,    //M站 （弹层优化）-- 通用弹出层 -- abtest value = V1
+    "common_commit":    commonStandardParams,    //M站 （弹层优化）-- 通用弹出层 -- 直接提交 -- 无 abtest
+    "common_commit_V1": commonStandardParams,    //M站 （弹层优化）-- 通用弹出层 -- 直接提交 -- abtest value = V1
+    "ask": {                                                    //问答 -- 弹出框
+        "afterOpenDialog": commonCallPopupStandard.afterOpenDialog,
+        "ajaxParmas": {
+            "datas": commonCallPopupAsk.ajaxParmas.datas,
+            "beforeSend": commonCallPopupStandard.ajaxParmas.beforeSend,
+            "success": commonCallPopupStandard.ajaxParmas.success,
+            "complete": commonCallPopupStandard.ajaxParmas.complete
+        }
+    },
+    "project_popup_test_1_V1": {                                //M站 V3.2（弹层优化）-- abtest 部分
+        "ajaxParmas": {
+            "datas": commonCallPopupStandard.ajaxParmas.datas,
+            "beforeSend": commonCallPopupStandard.ajaxParmas.beforeSend,
+            "success": commonCallPopupStandard.ajaxParmas.success,
+            "complete": commonCallPopupStandard.ajaxParmas.complete
+        }
+    },
+    "common_call_second": {                                     //通用二次留电弹出框部分
+        "ajaxParmas": {
+            "second_success": commonCallPopupStandard.ajaxParmas.second_success,
+        }
+    }
+};
+commonCall.init();
+commonCall.commonCall();                        //通用弹窗口 -- 弹出窗口
+commonCall.callCommit();                        //通用弹窗口 -- 提交留电
+commonCall.callCommitSecond();                  //通用弹窗口 -- 提交留电 -- 二次弹出框
+//新的公共弹出层 -- gaoqing -- 2017-09-19 End

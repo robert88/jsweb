@@ -1,0 +1,353 @@
+/**
+ * Created by Administrator on 2015/12/28 0028.
+ * 楼盘详情子页面 地图 脚本
+ */
+//几个全局变量
+var NumArr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ];
+
+//检测用户手机是Android还是iOS
+var u = navigator.userAgent, app = navigator.appVersion;
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+var sale_point_map_link = '';//售楼处链接初始化
+var point_map_link = '';//楼盘链接初始化
+//解决腾讯相关产品屏蔽百度地图的问题
+var browser={
+    versions:function(){
+        var u = navigator.userAgent, app = navigator.appVersion;
+        return {
+            trident: u.indexOf('Trident') > -1, //IE内核
+            presto: u.indexOf('Presto') > -1, //opera内核
+            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//火狐内核
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+            iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+            iPad: u.indexOf('iPad') > -1, //是否iPad
+            webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+            weixin: u.indexOf('MicroMessenger') > -1, //是否微信 （2015-01-22新增）
+            qq: u.match(/\sQQ/i) == " qq",//是否QQ
+            qqbrowser: u.toLowerCase().toString().indexOf('qqbrowser') > -1
+        };
+    }(),
+    language:(navigator.browserLanguage || navigator.language).toLowerCase()
+}
+
+$(function(){
+    if ($("#map-box").attr("data-id") != undefined){
+        search_insert(0, 'view_new');
+    }else {
+        search_insert(0);
+    }
+    $('.map-nav li,.m-nav li').click(function(){
+        var moduleName = $(this).attr('data-id');
+        if (moduleName != undefined){
+            $(".map-layer-list").hide();
+            $("#" + moduleName + "_around").show();
+        }else {
+            var index_li = $(this).index();
+            if($("#map-box").length > 0){
+                map.clearOverlays();
+            }
+            search_insert(index_li);
+            var search_id = $(this).data('search-id');
+            $('.map-layer .'+search_id).siblings('.map-layer-list').hide(0);
+            $('.map-layer .'+search_id).show(0);
+
+            var default_cur_point_order = '';
+            var default_cur_point_name = '抱歉，暂无相关配套。';
+            var default_cur_point_distance = '';
+            if($('.map-layer .'+search_id).children('li.no-data').size()>0){
+                $('.cur-point-show').hide(0);
+                default_cur_point_order = '';
+                default_cur_point_name = '抱歉，暂无相关配套。';
+                default_cur_point_distance = '';
+            }else{
+                $('.cur-point-show').show(0);
+                default_cur_point_order = 'A';
+                default_cur_point_name = $('.map-layer .'+search_id).children('li').children('.name').html();
+                default_cur_point_distance = $('.map-layer .'+search_id).children('li').children('.distance').html();
+            }
+
+            $('.cur-point-show').children('.cur-point').children('.pointOrder').html(default_cur_point_order);
+            $('.cur-point-show').children('.cur-point').children('.pointName').html(default_cur_point_name);
+            $('.cur-point-show').children('.cur-point').children('.distance').html(default_cur_point_distance);
+
+        }
+    });
+});
+
+//楼盘周边配套地图调用
+/** 初始化地图实例
+ * 如果存在地图容器map，则初始化
+ */
+if($("#map-box").length > 0){
+    var map = new BMap.Map("map-box");// 创建地图实例
+    var default_point = '116.404,39.915';  // 创建点坐标
+    //地图
+    //楼盘坐标处理
+    lng = centerX;
+    lat = centerY;
+    //售楼处坐标处理
+    sale_lng = salePointX;
+    sale_lat = salePointY;
+    var projectpoint = new BMap.Point(lng, lat);//楼盘项目坐标
+    var projectSalePoint = new BMap.Point(sale_lng, sale_lat);//售楼处坐标
+    map.centerAndZoom(projectpoint, 15);
+
+    if ($("#map-box").attr("data-id") == undefined){
+        map.enableScrollWheelZoom(true);
+    }else {
+        map.enableScrollWheelZoom(false);
+        map.disableDragging();
+    }
+    var pointBgUrl = '';
+    var clickPointBgUrl = '';
+}
+
+
+//腾讯相关产品的链接
+var tencent_sale_point_map_link = $('#Map_project_sale_link a.point-web-link').attr('href');//楼盘售楼处坐标  PC及其他
+var tencent_point_map_link = $('#Map_project_link a.point-web-link').attr('href');//楼盘坐标  PC及其他
+if(browser.versions.qqbrowser || browser.versions.weixin){
+    sale_point_map_link = tencent_sale_point_map_link;
+    point_map_link = tencent_point_map_link;
+}else{
+    //百度地图标点链接地址
+    if(isAndroid){
+        point_map_link = $('#Map_project_link a.point-android-link').attr('href');//楼盘坐标  Android
+        sale_point_map_link = $('#Map_project_sale_link a.point-android-link').attr('href');//楼盘售楼处坐标  Android
+    }else if(isiOS){
+        point_map_link = $('#Map_project_link a.point-ios-link').attr('href');//楼盘坐标 IOS
+        sale_point_map_link = $('#Map_project_sale_link a.point-ios-link').attr('href');//楼盘售楼处坐标  IOS
+    }else{
+        sale_point_map_link = tencent_sale_point_map_link;
+        point_map_link = tencent_point_map_link;
+    }
+}
+
+
+function search_insert(id, mark) {
+    var data = [];
+    for(var ii in project_around_data[id]){
+        var pos = project_around_data[id][ii].tar_coordinate.split(',');
+        var posX = pos[1];
+        var posY = pos[0];
+        data[ii] = {
+            tar_name : project_around_data[id][ii].tar_name,
+            tar_distance : project_around_data[id][ii].tar_distance,
+            search_id : project_around_data[id][ii].search_id,
+            posX : posX,
+            posY : posY,
+            key : parseInt(ii)+1
+        };
+    }
+
+    var floorData = {
+        centerX: centerX,
+        centerY: centerY,
+        salePointX: salePointX,
+        salePointY: salePointY,
+        data: data
+    };
+
+    var sarr = floorData.data;
+    if ('view_new' != mark){
+        for (var i = 0; i < sarr.length; i++) {
+            // if (!sarr[i].posX) {
+            //     break;
+            // };
+            //地图标记
+            positiontip(i, new BMap.Point(sarr[i].posX, sarr[i].posY), sarr[i].tar_name,sarr);
+        }
+    }
+
+    //楼盘坐标
+    positiontip(-1, projectpoint, project_name,sarr);
+    //售楼处坐标
+    // positiontip(-2, projectSalePoint, project_name,sarr);
+
+}
+
+
+function positiontip(i, corpoint, title,sarr) {
+    // 复杂的自定义覆盖物
+    function ComplexCustomOverlay(point, text, mouseoverText) {
+        this._point = point;
+        this._text = text;
+        this._overText = mouseoverText;
+    }
+
+    ComplexCustomOverlay.prototype = new BMap.Overlay();
+    ComplexCustomOverlay.prototype.initialize = function (map) {
+        this._map = map;
+        // div.style.position = "absolute";
+        // div.style.zIndex = BMap.Overlay.getZIndex(this._point.lat);
+        //区分楼盘坐标，售楼处坐标和周边坐标
+        if (i == -1) {//楼盘位置标记
+            var div = this._div = document.createElement("div");
+            div.setAttribute("class", "project-text");
+            var txt_p = this._p = document.createElement("p");
+            txt_p.appendChild(document.createTextNode(title));
+            div.appendChild(txt_p);
+
+            var point_span_ico = this._span = document.createElement("span");
+            point_span_ico.setAttribute("class", "ico-point");
+            div.appendChild(point_span_ico);
+
+            var point_span = this._span = document.createElement("span");
+            point_span.setAttribute("class", "project-pos");
+            div.appendChild(point_span);
+            div.onclick = function () {
+                window.location.href = point_map_link;
+            };
+            //百度地图覆盖物点击事件BUG，在移动端点击不会触发，用以下方法进行修复即可
+            webAppClick(div,tencent_point_map_link,point_map_link);
+        }
+        ////售楼处暂不显示
+        // else if(i == -2){//售楼处位置标记
+        //     div.style.background = "url("+base_image_url+"/images/ico-points.png) no-repeat -89px -244px";
+        //     div.style.color = "white";
+        //     div.style.width = "25px";
+        //     div.style.height = "37px";
+        //     div.style.backgroundSize = "120px 320px";
+        //     div.style.cursor = "pointer";
+        //
+        //     var span = this._span = document.createElement("span");
+        //     span.style.display = "block";
+        //     span.style.background = "url("+base_image_url+"/images/point_tip.png) no-repeat";
+        //     span.style.backgroundSize = "130px 40px";
+        //     span.style.width = "130px";
+        //     span.style.height = "40px";
+        //     span.style.lineHeight = "36px";
+        //     span.style.color = "#333";
+        //     span.style.fontSize = "12px";
+        //     span.style.paddingLeft = "15px";
+        //     span.style.marginLeft = "22px";
+        //     span.style.marginTop = "0";
+        //     span.appendChild(document.createTextNode('售楼处(点击可导航)'));
+        //     div.appendChild(span);
+        //
+        //     div.onclick = function () {
+        //         window.location.href = sale_point_map_link;
+        //     };
+        //     //百度地图覆盖物点击事件BUG，在移动端点击不会触发，用以下方法进行修复即可
+        //     webAppClick(div,tencent_sale_point_map_link,sale_point_map_link);
+        //
+        // }
+        else {//标记显示与点击事件
+            var div = this._div = document.createElement("div");
+            div.setAttribute("class", "mark-pos");
+            if(sarr[i].search_id == 3){//交通
+                div.setAttribute("class", "mark-pos traffic");
+            }else if(sarr[i].search_id == 0){//购物
+                div.setAttribute("class", "mark-pos shopping");
+            }else if(sarr[i].search_id == 1){//医疗
+                div.setAttribute("class", "mark-pos hospital");
+            }else if(sarr[i].search_id == 2){//学校
+                div.setAttribute("class", "mark-pos edu");
+            }
+
+            div.setAttribute("data-p-order",NumArr[i]);
+            div.setAttribute("data-p-name",sarr[i].tar_name);
+            div.setAttribute("data-p-distance",'距离'+parseInt(sarr[i].tar_distance)+'米');
+
+            div.onclick = function () {
+                //点击配套标识点展示标识的详细信息
+                $(this).siblings('.mark-pos').removeClass('cur');
+                $(this).addClass('cur');
+                 $(this).siblings('div[data-order]').css({'background':pointBgUrl,'backgroundSize': "120px 320px"});
+                $(this).css({'background':clickPointBgUrl,'backgroundSize': "120px 320px"});
+                $('.cur-point-show').children('.cur-point').children('.pointOrder').html($(this).data('p-order'));
+                $('.cur-point-show').children('.cur-point').children('.pointName').html($(this).data('p-name'));
+                $('.cur-point-show').children('.cur-point').children('.distance').html($(this).data('p-distance'));
+
+            };
+            //百度地图覆盖物点击事件BUG，在移动端点击不会触发，用以下方法进行修复即可
+            pointClickInfo(div);//配套标识点击展示详细信息
+        }
+        map.getPanes().labelPane.appendChild(div);
+        return div;
+    };
+    ComplexCustomOverlay.prototype.draw = function () {
+        var map = this._map;
+        var pixel = map.pointToOverlayPixel(this._point);
+        //修改位置偏移
+        if(i == -1 || i == -2) {
+           //楼盘和售楼处坐标偏移量调整
+           this._div.style.left = pixel.x - 46 + "px";
+           this._div.style.top = pixel.y - 60 + "px";
+        }else{
+            //小标记位偏移量调整
+            this._div.style.left = pixel.x - 12 + "px";
+            this._div.style.top = pixel.y - 30 + "px";
+        }
+    };
+
+    if (i == -1 || i == -2) {
+        var myCompOverlay = new ComplexCustomOverlay(corpoint, "", "");
+    } else {
+        var txt = NumArr[i], mouseoverTxt = txt + " " + title;
+        var myCompOverlay = new ComplexCustomOverlay(corpoint, NumArr[i], mouseoverTxt);
+    }
+    map.addOverlay(myCompOverlay);
+}
+
+
+/**
+ * 判断百度地图App是否安装 未安装跳转网页版地图，安装直接调起百度地图app
+ * @param web_link string  网页版地图链接
+ * @param app_link string app链接
+ */
+function isInstalled(web_link,app_link){
+
+    window.location.href = app_link;//打开某手机上的百度地图app应用
+    setTimeout(function(){
+        window.location.href = web_link;//如果超时就跳转到网页版的百度地图
+    },500);
+}
+
+/**
+ * 修复移动端web页面百度地图覆盖物触发不了点击事件的BUG
+ * @param obj object 绑定点击事件的元素对象
+ * @param web_link string 网页版地图链接
+ * @param app_link string app链接
+ */
+function webAppClick(obj,web_link,app_link){
+    var tmpfun = map.onclick;
+    map.onclick = null;
+    obj.addEventListener("touchstart", function() {
+        map.onclick = tmpfun;
+        isInstalled(web_link,app_link);
+    });
+}
+/**
+ * 配套标识点击展示标识详细信息
+ * @param obj 点击的DOM对象
+ */
+function pointClickInfo(obj){
+    var tmpfun = map.onclick;
+    map.onclick = null;
+    obj.addEventListener("touchstart", function() {
+        map.onclick = tmpfun;
+        //点击配套标识点展示标识的详细信息
+        $(this).siblings('.mark-pos').removeClass('cur');
+        $(this).addClass('cur');
+        $(this).siblings('div[data-order]').css({'background':pointBgUrl,'backgroundSize': "120px 320px"});
+        $(this).css({'background':clickPointBgUrl,'backgroundSize': "120px 320px"});
+        $('.cur-point-show').children('.cur-point').children('.pointOrder').html($(this).data('p-order'));
+        $('.cur-point-show').children('.cur-point').children('.pointName').html($(this).data('p-name'));
+        $('.cur-point-show').children('.cur-point').children('.distance').html($(this).data('p-distance'));
+    });
+}
+
+//点击 放大缩小地图级别
+$('.map-opr li').click(function(){
+    if($(this).hasClass('map-expand')){
+        map.zoomTo(map.getZoom() + 1);
+    }else if($(this).hasClass('map-reduce')){
+        map.zoomTo(map.getZoom() - 1);
+    }
+});
