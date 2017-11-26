@@ -4,7 +4,7 @@ select, input {
 	font-size: inherit;
 	outline: 0;
 	outline-offset:0;
-	border:1px solid #a9a9a9;
+	border: 1px solid #e1e1e1;
 }
 select{
 	box-sizing: content-box;
@@ -26,6 +26,18 @@ select {
 }
 /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
 select::-ms-expand { display: none; }
+::-webkit-input-placeholder{	font-weight: inherit;
+	color: #bbb;
+	font-size: inherit;}    /* 使用webkit内核的浏览器 */
+:-moz-placeholder{	font-weight: inherit;
+	color: #bbb;
+	font-size: inherit;}                  /* Firefox版本4-18 */
+::-moz-placeholder{	font-weight: inherit;
+	color: #bbb;
+	font-size: inherit;}                  /* Firefox版本19+ */
+:-ms-input-placeholder{	font-weight: inherit;
+	color: #bbb;
+	font-size: inherit;}           /* IE浏览器 */
 fieldset {
 	border: 0
 }
@@ -61,8 +73,7 @@ fieldset {
 }
 .ipt{
 	display: inline-block;
-	line-height: 25rem;
-	height: 25rem;
+	line-height: 30px;
 	width:100%;
 	box-sizing: border-box;
 	padding-left:5px;

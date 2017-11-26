@@ -10,6 +10,30 @@ padding:15px 0;
 .search-condition dl{
 	background:#fff;
 	position:absolute;
+	display: none;
+	z-index: 10;
 	top:100%;
+	left: 0;
+	width: 100%;
 }
 .turndown{ font-size: 14px; color:#999; margin-left:20px; }
+.case-type.current{color:#428bca}
+.case-type-item{display: none}
+.case-type-item.active{display: block}
+.case-type-option.selected{color:#428bca}
+
+.case-ipt{display: inline-block;width:40%;border: none;vertical-align: middle;background: #f4f1ea;}
+.case-more .case-type-option.selected{
+	color: #48B3E2;
+	border-color: #48B3E2;
+	background: rgba(72,179,226,.2);
+}
+.case-more .case-type-option{
+	display: inline-block;
+	text-align: center;
+	color: #999;
+	padding: 0 12px;
+	margin: 5px 5px;
+	border: 1px solid #c6c6c6;
+	border-radius: 2px;
+}

@@ -87,7 +87,7 @@
     background-color: #727272;
 }
 .bg-muted {
-    background-color: #B3B3B3
+    background-color: #f4f1ea;
 }
 .bg-dark {
     border-color: #1e1e1e
@@ -269,7 +269,6 @@
 }
 .btn-warn {
     background-color: #ffc600;
-    border-color: #FFD002;
     color: #fff;
 }
 
@@ -295,9 +294,12 @@
     color:#5bc0de;
 }
 .btn-info {
-    background-color: #5bc0de;
-    border-color:#3881ca;
+    background-color: #48B3E2;
     color:#fff;
+}
+.btn-info.btn-empty{
+    background-color: transparent;
+    color:#5bc0de;
 }
 .btn-dodger-blue{
     background-color: #428bca;

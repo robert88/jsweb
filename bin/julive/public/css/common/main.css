@@ -73,7 +73,7 @@ h1,h2,h3,h4{
 .mr20{margin-right:1.25rem;}
 .mt20{margin-top:1.25rem;}
 .mlr20{margin-right:1.25rem;margin-left:1.25rem}
-.mtb20{margin-bottom:11.25rem;margin-top:1.25rem}
+.mtb20{margin-bottom: 1.25rem;margin-top:1.25rem;}
 /*30*/
 .m30{margin:1.875rem;}
 .mt30{margin-top:1.875rem;}
@@ -183,10 +183,13 @@ h1,h2,h3,h4{
 	margin-right:auto;
 	margin-left:auto;
 }
+img{width:100%}
 .btn{
-	padding: 2px 0.625rem;
+	padding: 0px 0.625rem;
 	display: inline-block;
 	border-radius: 4px;
+	border: 1px solid;
+	text-align: center;
 }
 .btn-no-radius{
 	padding:2px 10px;
