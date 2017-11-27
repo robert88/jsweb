@@ -387,3 +387,7 @@ body{
 .selectWrap .option p{height: 1.6666666666666667rem;line-height: 1.6666666666666667rem;font-size: 0.875rem;}
 .selectWrap .option p:hover{background: #0046ad;color: #fff;}
 .selectWrap.active .option{top: 100%;display: block;}
+
+.disabled{
+    opacity: 0.3;
+}

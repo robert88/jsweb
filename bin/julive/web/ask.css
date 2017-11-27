@@ -1,1 +1,4 @@
-.img{display: inline-block;width:201px;height: 136px}
+@import url(askQuestion.css);
+.banner .img{display: inline-block;width:201px;height: 136px}
+.askHeader>span{text-align: center;min-width: 100px;color: #999;box-sizing: border-box;padding: 5px 10px;display: inline-block;margin: 9px;border-radius: 8px;background-color: #F4F4F4;}
+.askHeader>span.active{background-color: #48B3E2;color: #fff;}
